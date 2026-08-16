@@ -28,9 +28,10 @@ data/
 base_teste_modelo_api.csv
 dicionario-vigitel-*.xlsx
 
-# Results directory - only keep .gitkeep
+# Results directory - only keep .gitkeep and documentation
 resultados/*
 !resultados/.gitkeep
+!resultados/README.md
 
 # OS
 Thumbs.db

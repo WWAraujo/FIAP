@@ -1,11 +1,36 @@
+# Python
 __pycache__/
 *.py[cod]
+*.pyc
 .venv/
 .pytest_cache/
+venv/
+
+# IDE
 .DS_Store
+.idea/
+*.iml
+*.swp
+*.swo
+
+# Large binary files (>100MB)
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.pth
+
+# Data files
+*.csv
+*.xlsx
+*.xls
 data/
+base_teste_modelo_api.csv
+dicionario-vigitel-*.xlsx
+
+# Results directory - only keep .gitkeep
 resultados/*
 !resultados/.gitkeep
-*.joblib
 
-/resultados/
+# OS
+Thumbs.db

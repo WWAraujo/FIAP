@@ -1,0 +1,11 @@
+{
+  "nome": "experimento_a",
+  "population_size": 12,
+  "generations": 8,
+  "mutation_rate": 0.1,
+  "crossover_rate": 0.8,
+  "elite_size": 2,
+  "tournament_size": 3,
+  "patience": 5,
+  "random_state": 101
+}

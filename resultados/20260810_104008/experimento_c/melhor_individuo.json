@@ -1,0 +1,16 @@
+{
+  "n_estimators": 200,
+  "max_depth": 12,
+  "min_samples_split": 12,
+  "min_samples_leaf": 15,
+  "max_features": "sqrt",
+  "criterion": "gini",
+  "class_weight": "balanced",
+  "threshold": 0.5,
+  "fitness": 0.6832229873523332,
+  "accuracy": 0.69415,
+  "precision": 0.5004944064214669,
+  "recall": 0.7023644328354148,
+  "f1": 0.5844899807539907,
+  "roc_auc": 0.7672479934007975
+}

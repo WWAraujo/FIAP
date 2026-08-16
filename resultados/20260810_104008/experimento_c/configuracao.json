@@ -1,0 +1,11 @@
+{
+  "nome": "experimento_c",
+  "population_size": 30,
+  "generations": 15,
+  "mutation_rate": 0.3,
+  "crossover_rate": 0.9,
+  "elite_size": 3,
+  "tournament_size": 4,
+  "patience": 7,
+  "random_state": 303
+}

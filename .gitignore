@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+data/
+resultados/*
+!resultados/.gitkeep
+*.joblib
+
+/resultados/

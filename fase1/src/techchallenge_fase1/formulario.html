@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Estimativa de Risco de Hipertensão</title>
+
+  <style>
+    :root {
+      --page-bg: #eef7f4;
+      --surface: #fffdf8;
+      --surface-soft: #f4f8f6;
+      --surface-blue: #edf7fb;
+      --line: #d9e6e1;
+      --line-strong: #b8cbc5;
+      --text: #172033;
+      --muted: #64748b;
+      --muted-strong: #475569;
+      --primary: #2f6f8f;
+      --primary-dark: #1f4f68;
+      --primary-soft: #dceff5;
+      --accent: #8fb9a8;
+      --success: #16a34a;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --shadow-soft: 0 20px 50px rgba(31, 79, 104, 0.11);
+      --shadow-card: 0 10px 28px rgba(31, 79, 104, 0.075);
+      --focus-ring: 0 0 0 4px rgba(47, 111, 143, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(143, 185, 168, 0.30), transparent 28%),
+        radial-gradient(circle at 92% 0%, rgba(166, 200, 224, 0.28), transparent 30%),
+        linear-gradient(180deg, #fbf6ed 0%, var(--page-bg) 46%, #e8f1ee 100%);
+      color: var(--text);
+      padding: 34px 18px;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(100%, 980px);
+      margin: 0 auto;
+    }
+
+    .hero,
+    .result-fixed,
+    .form-card {
+      background: rgba(255, 253, 248, 0.90);
+      border: 1px solid rgba(217, 230, 225, 0.95);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 5vw, 54px);
+      margin-bottom: 22px;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(143, 185, 168, 0.18), transparent 55%),
+        radial-gradient(circle at top right, rgba(166, 200, 224, 0.22), transparent 35%);
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -72px;
+      top: -72px;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      background: rgba(143, 185, 168, 0.18);
+      border: 26px solid rgba(166, 200, 224, 0.14);
+      z-index: -1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(47, 111, 143, 0.09);
+      border: 1px solid rgba(47, 111, 143, 0.18);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      margin-bottom: 18px;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(143, 185, 168, 0.18);
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(34px, 5.6vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      max-width: 800px;
+      color: var(--muted-strong);
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.72;
+    }
+
+    .result-fixed {
+      display: grid;
+      grid-template-columns: minmax(150px, 190px) 1fr auto;
+      align-items: center;
+      gap: 22px;
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .result-title {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .probability {
+      font-size: clamp(38px, 5vw, 52px);
+      font-weight: 900;
+      letter-spacing: -0.055em;
+      color: #0f172a;
+    }
+
+    .result-desc {
+      color: #243047;
+      font-size: 17px;
+      font-weight: 750;
+      margin-bottom: 12px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 11px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+      box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--success), var(--warning), var(--danger));
+      transition: width 0.55s ease;
+    }
+
+    .risk-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+      color: #334155;
+      background: #eef4f1;
+      border: 1px solid #dbe4ef;
+    }
+
+    .risk-low {
+      background: #dcfce7;
+      color: #166534;
+      border-color: #bbf7d0;
+    }
+
+    .risk-mid {
+      background: #fef3c7;
+      color: #92400e;
+      border-color: #fde68a;
+    }
+
+    .risk-high {
+      background: #fee2e2;
+      color: #991b1b;
+      border-color: #fecaca;
+    }
+
+    .form-card {
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .form-header {
+      margin-bottom: 26px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .form-header h2 {
+      font-size: clamp(24px, 3vw, 30px);
+      color: #111827;
+      letter-spacing: -0.035em;
+      margin-bottom: 8px;
+    }
+
+    .form-header p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .form-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .field {
+      background: linear-gradient(180deg, #fffdf8 0%, #f4f8f6 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: clamp(18px, 3vw, 24px);
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+
+    .field:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-1px);
+    }
+
+    .field:focus-within {
+      border-color: rgba(47, 111, 143, 0.58);
+      box-shadow: var(--shadow-card), var(--focus-ring);
+      background: #fffdf8;
+    }
+
+    .field.hidden {
+      display: none;
+    }
+
+    .field.auto-filled {
+      border-color: rgba(143, 185, 168, 0.85);
+      box-shadow: var(--shadow-card), 0 0 0 4px rgba(143, 185, 168, 0.20);
+    }
+
+    .field.auto-filled .hint::after {
+      content: " • preenchido automaticamente";
+      color: #2f6f5f;
+      font-weight: 750;
+    }
+
+    .field-row {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      align-items: stretch;
+    }
+
+    label {
+      display: block;
+      color: #172033;
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+      margin-bottom: 5px;
+    }
+
+    .hint {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      min-height: 52px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      background: #fffdf8;
+      color: var(--text);
+      padding: 14px 15px;
+      font-size: 16px;
+      font-weight: 650;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    input[type="number"]::placeholder {
+      color: #94a3b8;
+    }
+
+    input[type="number"]:focus {
+      border-color: var(--primary);
+      box-shadow: var(--focus-ring);
+      background: #fbf8f0;
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 11px;
+      width: 100%;
+    }
+
+    .radio-option {
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    .radio-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-option span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      width: 100%;
+      padding: 13px 15px;
+      border-radius: var(--radius-sm);
+      background: #fffdf8;
+      border: 1px solid var(--line-strong);
+      color: #334155;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+      text-align: center;
+      white-space: normal;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      user-select: none;
+    }
+
+    .radio-option span:hover {
+      border-color: rgba(47, 111, 143, 0.48);
+      background: #f4faf7;
+      transform: translateY(-1px);
+    }
+
+    .radio-option input:focus-visible + span {
+      border-color: var(--primary);
+      box-shadow: var(--focus-ring);
+    }
+
+    .radio-option input:checked + span {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-color: transparent;
+      color: #ffffff;
+      box-shadow: 0 12px 26px rgba(47, 111, 143, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .radio-option input:checked + span::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      min-height: 50px;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    button:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 16px 30px rgba(47, 111, 143, 0.26);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 34px rgba(47, 111, 143, 0.32);
+    }
+
+    .btn-secondary {
+      background: #fffdf8;
+      color: #334155;
+      border: 1px solid var(--line-strong);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(47, 111, 143, 0.45);
+      color: var(--primary-dark);
+      background: #f4faf7;
+    }
+
+    .message {
+      margin-top: 18px;
+      padding: 15px 16px;
+      border-radius: var(--radius-sm);
+      background: #f4f8f6;
+      border: 1px solid var(--line);
+      color: var(--muted-strong);
+      display: none;
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .message.show {
+      display: block;
+    }
+
+    .message code {
+      display: block;
+      overflow-x: auto;
+      margin-top: 4px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 12px;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.52);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 999;
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal {
+      width: min(520px, 100%);
+      background:
+        radial-gradient(circle at top right, rgba(143, 185, 168, 0.18), transparent 38%),
+        #ffffff;
+      border: 1px solid rgba(217, 230, 225, 0.95);
+      border-radius: 30px;
+      box-shadow: 0 28px 80px rgba(15, 23, 42, 0.28);
+      padding: clamp(26px, 5vw, 38px);
+      text-align: center;
+      animation: pop 0.25s ease;
+    }
+
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.96) translateY(12px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal h3 {
+      color: #0f172a;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .modal .probability {
+      font-size: clamp(58px, 10vw, 78px);
+      margin: 16px 0 8px;
+    }
+
+    .modal p {
+      color: var(--muted-strong);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .hero,
+      .result-fixed,
+      .form-card {
+        border-radius: 22px;
+      }
+
+      .result-fixed {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+      }
+
+      .radio-group {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .button-group {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="hero">
+      <div class="badge">Inteligência artificial aplicada à saúde</div>
+      <h1>Estimativa de Risco de Hipertensão</h1>
+      <p class="subtitle">
+        Responda algumas perguntas simples sobre saúde e hábitos pessoais para receber uma estimativa de risco.
+        O resultado é apenas orientativo e não substitui uma avaliação médica.
+      </p>
+    </section>
+
+    <section class="result-fixed">
+      <div>
+        <div class="result-title">Estimativa atual</div>
+        <div id="probability" class="probability">--%</div>
+      </div>
+
+      <div>
+        <div id="resultDesc" class="result-desc">
+          Preencha os dados e clique em calcular estimativa.
+        </div>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <span id="riskPill" class="risk-pill">Aguardando análise</span>
+    </section>
+
+    <section class="form-card">
+      <div class="form-header">
+        <h2>Dados para análise</h2>
+        <p>
+          O formulário solicita apenas informações de fácil preenchimento. As variáveis técnicas necessárias ao modelo são calculadas automaticamente.
+        </p>
+      </div>
+
+      <form id="predictionForm">
+        <div id="formFlow" class="form-flow"></div>
+
+        <div class="button-row">
+          <div class="button-group">
+            <button class="btn-secondary" type="button" onclick="preencherExemplo()">Usar exemplo</button>
+            <button class="btn-secondary" type="button" onclick="limparFormulario()">Limpar</button>
+          </div>
+
+          <div class="button-group">
+            <button class="btn-secondary" type="button" onclick="verificarAPI()">Verificar conexão</button>
+            <button class="btn-primary" type="submit">Calcular estimativa</button>
+          </div>
+        </div>
+
+        <div id="message" class="message"></div>
+      </form>
+
+      <p class="footer-note">
+        Esta ferramenta utiliza um modelo estatístico treinado com dados públicos de saúde.
+        O resultado é uma estimativa e deve ser interpretado apenas como apoio informativo.
+      </p>
+    </section>
+
+  </main>
+
+  <div id="resultModal" class="modal-overlay">
+    <div class="modal">
+      <h3>Estimativa calculada</h3>
+      <div id="modalProbability" class="probability">--%</div>
+      <p id="modalDescription">Resultado gerado com sucesso.</p>
+      <span id="modalRiskPill" class="risk-pill">Resultado</span>
+      <br><br>
+      <button class="btn-primary" type="button" onclick="fecharModal()">Voltar</button>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE_URL = "http://127.0.0.1:8000";
+
+    const variaveisNumericas = [
+      "diab", "iddpapa", "imc", "excpeso", "imc_i", "iddpapa_old",
+      "excpeso_i", "af", "exfuma", "obesid", "obesid_i",
+      "ind_med_db", "med_db", "atiocu", "af3dominios_insu_2023",
+      "dislip", "af3dominios_2023", "inativo_2023", "saruim"
+    ];
+
+    const campos = [
+      {
+        nome: "sexo",
+        label: "Sexo",
+        hint: "Essa informação adapta automaticamente as próximas perguntas.",
+        tipo: "select",
+        valor: "feminino",
+        opcoes: [
+          { valor: "feminino", texto: "Feminino" },
+          { valor: "masculino", texto: "Masculino" }
+        ],
+        naoEnviar: true
+      },
+      {
+        nome: "idade_usuario",
+        label: "Qual é a sua idade?",
+        hint: "Usada apenas para ajustar automaticamente algumas perguntas preventivas.",
+        tipo: "number",
+        step: "1",
+        valor: "45",
+        naoEnviar: true
+      },
+      {
+        nome: "altura_usuario",
+        label: "Qual é a sua altura?",
+        hint: "Informe em metros. Exemplo: 1,70.",
+        tipo: "number",
+        step: "0.01",
+        valor: "1.70",
+        naoEnviar: true
+      },
+      {
+        nome: "peso_usuario",
+        label: "Qual é o seu peso?",
+        hint: "Informe em quilos. Exemplo: 79,5.",
+        tipo: "number",
+        step: "0.1",
+        valor: "79.5",
+        naoEnviar: true
+      },
+      {
+        nome: "diab",
+        label: "Possui diabetes?",
+        hint: "Informe se há diagnóstico prévio de diabetes.",
+        tipo: "select",
+        valor: "0",
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "ind_med_db",
+        label: "Usa medicação para diabetes?",
+        hint: "Informe se utiliza medicação para diabetes.",
+        tipo: "select",
+        valor: "0",
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "af",
+        label: "Pratica atividade física regularmente?",
+        hint: "Essa resposta ajusta automaticamente os demais indicadores de atividade física.",
+        tipo: "select",
+        valor: "0",
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "exfuma",
+        label: "Já fumou anteriormente?",
+        hint: "Informe se já foi fumante em algum momento.",
+        tipo: "select",
+        valor: "0",
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "dislip",
+        label: "Possui colesterol ou triglicerídeos alterados?",
+        hint: "Pode deixar como não informado caso não saiba.",
+        tipo: "select",
+        valor: "",
+        opcoes: [
+          { valor: "", texto: "Não sei" },
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "saruim",
+        label: "Como avalia sua saúde atualmente?",
+        hint: "Autoavaliação geral do estado de saúde.",
+        tipo: "select",
+        valor: "0",
+        opcoes: [
+          { valor: "0", texto: "Boa ou regular" },
+          { valor: "1", texto: "Ruim" }
+        ]
+      },
+      {
+        nome: "preventivo_feminino",
+        label: "Já realizou exame preventivo feminino?",
+        hint: "Usado para considerar histórico de acompanhamento preventivo.",
+        tipo: "select",
+        valor: "0",
+        somenteFeminino: true,
+        naoEnviar: true,
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+      {
+        nome: "mamografia_feminino",
+        label: "Já realizou mamografia?",
+        hint: "Usado para considerar histórico de rastreamento mamográfico.",
+        tipo: "select",
+        valor: "0",
+        somenteFeminino: true,
+        naoEnviar: true,
+        opcoes: [
+          { valor: "0", texto: "Não" },
+          { valor: "1", texto: "Sim" }
+        ]
+      },
+
+      { nome: "imc", label: "IMC calculado", hint: "Campo técnico calculado automaticamente.", tipo: "number", step: "0.1", valor: "", oculto: true },
+      { nome: "imc_i", label: "Classificação do IMC", hint: "Campo técnico calculado automaticamente.", tipo: "number", step: "1", valor: "", oculto: true },
+      { nome: "excpeso", label: "Excesso de peso", hint: "Campo técnico calculado automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não" }, { valor: "1", texto: "Sim" }] },
+      { nome: "excpeso_i", label: "Classificação do peso", hint: "Campo técnico calculado automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Peso dentro da faixa esperada" }, { valor: "1", texto: "Acima da faixa esperada" }] },
+      { nome: "obesid", label: "Obesidade", hint: "Campo técnico calculado automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não" }, { valor: "1", texto: "Sim" }] },
+      { nome: "obesid_i", label: "Classificação de obesidade", hint: "Campo técnico calculado automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não possui obesidade" }, { valor: "1", texto: "Possui obesidade" }] },
+      { nome: "atiocu", label: "Atividade física no trabalho", hint: "Campo técnico preenchido automaticamente.", tipo: "select", valor: "1", oculto: true, opcoes: [{ valor: "0", texto: "Não" }, { valor: "1", texto: "Sim" }] },
+      { nome: "af3dominios_2023", label: "Atividade física geral", hint: "Campo técnico preenchido automaticamente.", tipo: "select", valor: "1", oculto: true, opcoes: [{ valor: "0", texto: "Baixa ou inexistente" }, { valor: "1", texto: "Presente" }] },
+      { nome: "af3dominios_insu_2023", label: "Atividade física insuficiente", hint: "Campo técnico preenchido automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não" }, { valor: "1", texto: "Sim" }] },
+      { nome: "inativo_2023", label: "Inatividade física", hint: "Campo técnico preenchido automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não" }, { valor: "1", texto: "Sim" }] },
+      { nome: "med_db", label: "Tratamento para diabetes", hint: "Campo técnico preenchido automaticamente.", tipo: "select", valor: "0", oculto: true, opcoes: [{ valor: "0", texto: "Não realiza" }, { valor: "1", texto: "Realiza" }] },
+      { nome: "iddpapa", label: "Código preventivo feminino", hint: "Campo técnico calculado automaticamente.", tipo: "number", step: "1", valor: "", oculto: true },
+      { nome: "iddpapa_old", label: "Histórico preventivo feminino", hint: "Campo técnico calculado automaticamente.", tipo: "number", step: "1", valor: "", oculto: true },
+      { nome: "iddmamo", label: "Código mamografia", hint: "Campo técnico calculado automaticamente.", tipo: "select", valor: "", oculto: true, opcoes: [{ valor: "", texto: "Não informado" }, { valor: "1", texto: "Faixa 1" }, { valor: "2", texto: "Faixa 2" }, { valor: "3", texto: "Faixa 3" }, { valor: "4", texto: "Faixa 4" }] }
+    ];
+
+    const exemplo = {
+      sexo: "feminino",
+      idade_usuario: 45,
+      altura_usuario: 1.70,
+      peso_usuario: 79.5,
+      diab: 0,
+      af: 1,
+      exfuma: 0,
+      dislip: null,
+      ind_med_db: 0,
+      saruim: 0,
+      preventivo_feminino: 1,
+      mamografia_feminino: 1
+    };
+
+    const form = document.getElementById("predictionForm");
+    const formFlow = document.getElementById("formFlow");
+    const message = document.getElementById("message");
+
+    const probabilityEl = document.getElementById("probability");
+    const resultDescEl = document.getElementById("resultDesc");
+    const riskPillEl = document.getElementById("riskPill");
+    const progressBarEl = document.getElementById("progressBar");
+
+    const resultModal = document.getElementById("resultModal");
+    const modalProbability = document.getElementById("modalProbability");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalRiskPill = document.getElementById("modalRiskPill");
+
+    function criarCampo(campo) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "field";
+      wrapper.dataset.nome = campo.nome;
+
+      if (campo.oculto) {
+        wrapper.classList.add("hidden");
+      }
+
+      if (campo.somenteFeminino) {
+        wrapper.dataset.somenteFeminino = "true";
+      }
+
+      const fieldRow = document.createElement("div");
+      fieldRow.className = "field-row";
+
+      const textBox = document.createElement("div");
+
+      const label = document.createElement("label");
+      label.setAttribute("for", campo.nome);
+      label.textContent = campo.label;
+
+      const hint = document.createElement("div");
+      hint.className = "hint";
+      hint.textContent = campo.hint;
+
+      textBox.appendChild(label);
+      textBox.appendChild(hint);
+
+      let inputArea;
+
+      if (campo.tipo === "select") {
+        inputArea = document.createElement("div");
+        inputArea.className = "radio-group";
+        inputArea.id = `${campo.nome}_group`;
+
+        campo.opcoes.forEach((opcao) => {
+          const radioLabel = document.createElement("label");
+          radioLabel.className = "radio-option";
+
+          const radio = document.createElement("input");
+          radio.type = "radio";
+          radio.name = campo.nome;
+          radio.value = opcao.valor;
+
+          if (String(opcao.valor) === String(campo.valor)) {
+            radio.checked = true;
+          }
+
+          radio.addEventListener("change", function () {
+            executarRegrasAutomaticas(campo.nome);
+          });
+
+          const span = document.createElement("span");
+          span.textContent = opcao.texto;
+
+          radioLabel.appendChild(radio);
+          radioLabel.appendChild(span);
+          inputArea.appendChild(radioLabel);
+        });
+      } else {
+        inputArea = document.createElement("input");
+        inputArea.type = "number";
+        inputArea.step = campo.step || "1";
+        inputArea.value = campo.valor || "";
+        inputArea.id = campo.nome;
+        inputArea.name = campo.nome;
+
+        inputArea.addEventListener("input", function () {
+          executarRegrasAutomaticas(campo.nome);
+        });
+      }
+
+      fieldRow.appendChild(textBox);
+      fieldRow.appendChild(inputArea);
+      wrapper.appendChild(fieldRow);
+
+      return wrapper;
+    }
+
+    function renderizarFormulario() {
+      formFlow.innerHTML = "";
+
+      campos.forEach((campo) => {
+        const elemento = criarCampo(campo);
+        formFlow.appendChild(elemento);
+      });
+
+      aplicarRegrasSexo();
+      aplicarRegrasIMC();
+      aplicarRegrasAtividadeFisica();
+      aplicarRegrasMedicacaoDiabetes();
+      aplicarRegrasPreventivosFemininos();
+    }
+
+    function getRadioValue(nome) {
+      const selecionado = document.querySelector(`input[name="${nome}"]:checked`);
+      return selecionado ? selecionado.value : null;
+    }
+
+    function setRadioValue(nome, valor, auto = true) {
+      const valorNormalizado = valor === null || valor === undefined ? "" : String(valor);
+      const radio = document.querySelector(`input[name="${nome}"][value="${valorNormalizado}"]`);
+
+      if (radio) {
+        radio.checked = true;
+
+        if (auto) {
+          marcarCampoAutoPreenchido(nome);
+        }
+      }
+    }
+
+    function setInputValue(nome, valor, auto = true) {
+      const campo = document.getElementById(nome);
+
+      if (campo) {
+        campo.value = valor;
+
+        if (auto) {
+          marcarCampoAutoPreenchido(nome);
+        }
+      }
+    }
+
+    function marcarCampoAutoPreenchido(nome) {
+      const elemento = document.querySelector(`[data-nome="${nome}"]`);
+
+      if (!elemento || elemento.classList.contains("hidden")) {
+        return;
+      }
+
+      elemento.classList.add("auto-filled");
+
+      setTimeout(() => {
+        elemento.classList.remove("auto-filled");
+      }, 1400);
+    }
+
+    function aplicarRegrasSexo() {
+      const sexo = getRadioValue("sexo") || "feminino";
+
+      document.querySelectorAll("[data-somente-feminino='true']").forEach((elemento) => {
+        const nome = elemento.dataset.nome;
+        const campoInput = document.getElementById(nome);
+        const radios = document.querySelectorAll(`input[name="${nome}"]`);
+
+        if (sexo === "masculino") {
+          elemento.classList.add("hidden");
+
+          if (campoInput) {
+            campoInput.value = "";
+            campoInput.disabled = true;
+          }
+
+          radios.forEach((radio) => {
+            radio.checked = false;
+            radio.disabled = true;
+          });
+        } else {
+          elemento.classList.remove("hidden");
+
+          if (campoInput) {
+            campoInput.disabled = false;
+
+            if (campoInput.value === "") {
+              const config = campos.find((item) => item.nome === nome);
+              campoInput.value = config?.valor || "";
+            }
+          }
+
+          radios.forEach((radio) => {
+            radio.disabled = false;
+          });
+
+          const config = campos.find((item) => item.nome === nome);
+
+          if (config?.tipo === "select" && !getRadioValue(nome)) {
+            setRadioValue(nome, config.valor || "0", false);
+          }
+        }
+      });
+    }
+
+    function executarRegrasAutomaticas(campoAlterado) {
+      if (campoAlterado === "sexo") {
+        aplicarRegrasSexo();
+        aplicarRegrasPreventivosFemininos();
+        return;
+      }
+
+      if (
+        campoAlterado === "altura_usuario" ||
+        campoAlterado === "peso_usuario"
+      ) {
+        aplicarRegrasIMC();
+        return;
+      }
+
+      if (campoAlterado === "idade_usuario") {
+        aplicarRegrasPreventivosFemininos();
+        return;
+      }
+
+      if (campoAlterado === "preventivo_feminino") {
+        aplicarRegrasPreventivosFemininos();
+        return;
+      }
+
+      if (campoAlterado === "mamografia_feminino") {
+        aplicarRegrasPreventivosFemininos();
+        return;
+      }
+
+      if (campoAlterado === "af") {
+        aplicarRegrasAtividadeFisica();
+        return;
+      }
+
+      if (campoAlterado === "ind_med_db") {
+        aplicarRegrasMedicacaoDiabetes();
+      }
+    }
+
+    function aplicarRegrasIMC() {
+      const altura = Number(getValorCampo("altura_usuario"));
+      const peso = Number(getValorCampo("peso_usuario"));
+
+      if (
+        Number.isNaN(altura) ||
+        Number.isNaN(peso) ||
+        altura <= 0 ||
+        peso <= 0
+      ) {
+        return;
+      }
+
+      const imc = peso / (altura * altura);
+      const imcArredondado = Number(imc.toFixed(1));
+
+      let classificacaoIMC = 1;
+      let excessoPeso = 0;
+      let classificacaoPeso = 0;
+      let obesidade = 0;
+      let classificacaoObesidade = 0;
+
+      if (imc < 18.5) {
+        classificacaoIMC = 1;
+      } else if (imc < 25) {
+        classificacaoIMC = 2;
+      } else if (imc < 30) {
+        classificacaoIMC = 3;
+        excessoPeso = 1;
+        classificacaoPeso = 1;
+      } else {
+        classificacaoIMC = 4;
+        excessoPeso = 1;
+        classificacaoPeso = 1;
+        obesidade = 1;
+        classificacaoObesidade = 1;
+      }
+
+      setInputValue("imc", imcArredondado);
+      setInputValue("imc_i", classificacaoIMC);
+      setRadioValue("excpeso", String(excessoPeso));
+      setRadioValue("excpeso_i", String(classificacaoPeso));
+      setRadioValue("obesid", String(obesidade));
+      setRadioValue("obesid_i", String(classificacaoObesidade));
+    }
+
+    function aplicarRegrasAtividadeFisica() {
+      const praticaAF = getValorCampo("af");
+
+      if (praticaAF === null) {
+        return;
+      }
+
+      if (Number(praticaAF) === 1) {
+        setRadioValue("atiocu", "1");
+        setRadioValue("af3dominios_2023", "1");
+        setRadioValue("af3dominios_insu_2023", "0");
+        setRadioValue("inativo_2023", "0");
+      } else {
+        setRadioValue("atiocu", "0");
+        setRadioValue("af3dominios_2023", "0");
+        setRadioValue("af3dominios_insu_2023", "1");
+        setRadioValue("inativo_2023", "1");
+      }
+    }
+
+    function aplicarRegrasMedicacaoDiabetes() {
+      const usaMedicacao = getValorCampo("ind_med_db");
+
+      if (usaMedicacao === null) {
+        setRadioValue("med_db", "0");
+        return;
+      }
+
+      if (Number(usaMedicacao) === 1) {
+        setRadioValue("med_db", "1");
+      } else {
+        setRadioValue("med_db", "0");
+      }
+    }
+
+    function aplicarRegrasPreventivosFemininos() {
+      const sexo = getRadioValue("sexo") || "feminino";
+      const idade = Number(getValorCampo("idade_usuario"));
+      const fezPreventivo = getValorCampo("preventivo_feminino");
+      const fezMamografia = getValorCampo("mamografia_feminino");
+
+      if (sexo === "masculino") {
+        setInputValue("iddpapa", "", false);
+        setInputValue("iddpapa_old", "", false);
+        setRadioValue("iddmamo", "", false);
+        return;
+      }
+
+      if (!Number.isNaN(idade)) {
+        if (idade < 25) {
+          setInputValue("iddpapa", 1);
+          setRadioValue("iddmamo", "1");
+        } else if (idade < 40) {
+          setInputValue("iddpapa", 2);
+          setRadioValue("iddmamo", "2");
+        } else if (idade < 60) {
+          setInputValue("iddpapa", 3);
+          setRadioValue("iddmamo", "3");
+        } else {
+          setInputValue("iddpapa", 4);
+          setRadioValue("iddmamo", "4");
+        }
+      }
+
+      if (fezPreventivo === null) {
+        setInputValue("iddpapa_old", "", false);
+      } else if (Number(fezPreventivo) === 1) {
+        setInputValue("iddpapa_old", 2);
+      } else {
+        setInputValue("iddpapa_old", 1);
+      }
+
+      if (fezMamografia === null) {
+        setRadioValue("iddmamo", "", false);
+      }
+    }
+
+    function showMessage(texto, tipo = "info") {
+      message.className = "message show";
+      message.innerHTML = texto;
+
+      if (tipo === "erro") {
+        message.style.background = "#fee2e2";
+        message.style.borderColor = "#fecaca";
+        message.style.color = "#991b1b";
+      } else if (tipo === "sucesso") {
+        message.style.background = "#dcfce7";
+        message.style.borderColor = "#86efac";
+        message.style.color = "#166534";
+      } else {
+        message.style.background = "#edf7fb";
+        message.style.borderColor = "#b8cbc5";
+        message.style.color = "#1f4f68";
+      }
+    }
+
+    function limparMensagem() {
+      message.className = "message";
+      message.innerHTML = "";
+
+      message.style.background = "";
+      message.style.borderColor = "";
+      message.style.color = "";
+    }
+
+    function getValorCampo(nome) {
+      const radioSelecionado = document.querySelector(`input[name="${nome}"]:checked`);
+
+      if (radioSelecionado) {
+        const valorRadio = radioSelecionado.value;
+
+        if (valorRadio === "") {
+          return null;
+        }
+
+        if (variaveisNumericas.includes(nome)) {
+          const numero = Number(valorRadio);
+          return Number.isNaN(numero) ? null : numero;
+        }
+
+        return valorRadio;
+      }
+
+      const campo = document.getElementById(nome);
+
+      if (!campo || campo.disabled) {
+        return null;
+      }
+
+      const valor = campo.value;
+
+      if (valor === "") {
+        return null;
+      }
+
+      if (variaveisNumericas.includes(nome)) {
+        const numero = Number(valor);
+        return Number.isNaN(numero) ? null : numero;
+      }
+
+      return valor;
+    }
+
+    function montarPayload() {
+      aplicarRegrasIMC();
+      aplicarRegrasAtividadeFisica();
+      aplicarRegrasMedicacaoDiabetes();
+      aplicarRegrasPreventivosFemininos();
+
+      return {
+        diab: getValorCampo("diab"),
+        iddpapa: getValorCampo("iddpapa"),
+        imc: getValorCampo("imc"),
+        excpeso: getValorCampo("excpeso"),
+        imc_i: getValorCampo("imc_i"),
+        iddpapa_old: getValorCampo("iddpapa_old"),
+        excpeso_i: getValorCampo("excpeso_i"),
+        iddmamo: getValorCampo("iddmamo"),
+        af: getValorCampo("af"),
+        exfuma: getValorCampo("exfuma"),
+        obesid: getValorCampo("obesid"),
+        obesid_i: getValorCampo("obesid_i"),
+        ind_med_db: getValorCampo("ind_med_db"),
+        med_db: getValorCampo("med_db"),
+        atiocu: getValorCampo("atiocu"),
+        af3dominios_insu_2023: getValorCampo("af3dominios_insu_2023"),
+        dislip: getValorCampo("dislip"),
+        af3dominios_2023: getValorCampo("af3dominios_2023"),
+        inativo_2023: getValorCampo("inativo_2023"),
+        saruim: getValorCampo("saruim")
+      };
+    }
+
+    function classificarRisco(probabilidade) {
+      if (probabilidade < 0.4) {
+        return { texto: "Baixa probabilidade", classe: "risk-low" };
+      }
+
+      if (probabilidade < 0.6) {
+        return { texto: "Probabilidade intermediária", classe: "risk-mid" };
+      }
+
+      return { texto: "Alta probabilidade", classe: "risk-high" };
+    }
+
+    function aplicarClasseRisco(elemento, risco) {
+      elemento.className = "risk-pill";
+      elemento.classList.add(risco.classe);
+      elemento.textContent = risco.texto;
+    }
+
+    function atualizarResultadoVisual(resultado) {
+      riskPillEl.className = "risk-pill";
+
+      if (!resultado) {
+        probabilityEl.textContent = "--%";
+        resultDescEl.textContent = "Preencha os dados e clique em calcular estimativa.";
+        riskPillEl.textContent = "Aguardando análise";
+        progressBarEl.style.width = "0%";
+        return;
+      }
+
+      const percentual = resultado.probabilidade_percentual;
+      const probabilidade = resultado.probabilidade_hipertensao;
+      const risco = classificarRisco(probabilidade);
+
+      probabilityEl.textContent = `${percentual}%`;
+      resultDescEl.textContent = resultado.descricao;
+      aplicarClasseRisco(riskPillEl, risco);
+      progressBarEl.style.width = `${Math.min(Math.max(percentual, 0), 100)}%`;
+    }
+
+    function abrirModalResultado(resultado) {
+      const percentual = resultado.probabilidade_percentual;
+      const probabilidade = resultado.probabilidade_hipertensao;
+      const risco = classificarRisco(probabilidade);
+
+      modalProbability.textContent = `${percentual}%`;
+      modalDescription.textContent = resultado.descricao;
+      aplicarClasseRisco(modalRiskPill, risco);
+
+      resultModal.classList.add("show");
+    }
+
+   function fecharModal() {
+
+  resultModal.classList.remove("show");
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+    function preencherExemplo() {
+      Object.entries(exemplo).forEach(([campo, valor]) => {
+        const config = campos.find((item) => item.nome === campo);
+
+        if (config?.tipo === "select") {
+          setRadioValue(campo, valor === null ? "" : String(valor), false);
+          return;
+        }
+
+        const elemento = document.getElementById(campo);
+        if (!elemento) return;
+
+        elemento.value = valor === null ? "" : valor;
+      });
+
+      aplicarRegrasSexo();
+      aplicarRegrasIMC();
+      aplicarRegrasAtividadeFisica();
+      aplicarRegrasMedicacaoDiabetes();
+      aplicarRegrasPreventivosFemininos();
+
+      atualizarResultadoVisual(null);
+
+      showMessage(
+        "Exemplo preenchido com sucesso. Clique em <strong>Calcular estimativa</strong> para gerar o resultado.",
+        "sucesso"
+      );
+    }
+
+    function limparFormulario() {
+      renderizarFormulario();
+      atualizarResultadoVisual(null);
+      limparMensagem();
+    }
+
+    async function verificarAPI() {
+      limparMensagem();
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/health`);
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(JSON.stringify(data));
+        }
+
+        showMessage("Conexão verificada com sucesso. O serviço está pronto para uso.", "sucesso");
+      } catch (error) {
+        showMessage(
+          "Não foi possível conectar ao serviço de análise. Verifique se a API está em execução.",
+          "erro"
+        );
+      }
+    }
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      limparMensagem();
+
+      const payload = montarPayload();
+
+      showMessage("Calculando estimativa. Aguarde alguns segundos...", "info");
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/prever`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(JSON.stringify(data, null, 2));
+        }
+
+        atualizarResultadoVisual(data);
+        abrirModalResultado(data);
+        limparMensagem();
+
+      } catch (error) {
+        atualizarResultadoVisual(null);
+
+        showMessage(
+          `Erro ao calcular a estimativa.<br><br><code>${error.message}</code>`,
+          "erro"
+        );
+      }
+    });
+
+    resultModal.addEventListener("click", function (event) {
+      if (event.target === resultModal) {
+        fecharModal();
+      }
+    });
+
+    renderizarFormulario();
+  </script>
+</body>
+</html>

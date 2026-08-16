@@ -1,0 +1,80 @@
+{
+    "nome_modelo": "modelo_hipertensao_api",
+    "algoritmo": "RandomForestClassifier",
+    "descricao": "Modelo Random Forest treinado com as 20 variáveis mais importantes, alinhado ao resultado do Jupyter.",
+    "target": "hart",
+    "descricao_target": {
+        "0": "Sem hipertensão",
+        "1": "Com hipertensão"
+    },
+    "threshold_classificacao": 0.5,
+    "hiperparametros": {
+        "n_estimators": 200,
+        "max_depth": 12,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "random_state": 42
+    },
+    "variaveis_entrada": [
+        "diab",
+        "iddpapa",
+        "imc",
+        "excpeso",
+        "imc_i",
+        "iddpapa_old",
+        "excpeso_i",
+        "iddmamo",
+        "af",
+        "exfuma",
+        "obesid",
+        "obesid_i",
+        "ind_med_db",
+        "med_db",
+        "atiocu",
+        "af3dominios_insu_2023",
+        "dislip",
+        "af3dominios_2023",
+        "inativo_2023",
+        "saruim"
+    ],
+    "variaveis_numericas": [
+        "diab",
+        "iddpapa",
+        "imc",
+        "excpeso",
+        "imc_i",
+        "iddpapa_old",
+        "excpeso_i",
+        "af",
+        "exfuma",
+        "obesid",
+        "obesid_i",
+        "ind_med_db",
+        "med_db",
+        "atiocu",
+        "af3dominios_insu_2023",
+        "dislip",
+        "af3dominios_2023",
+        "inativo_2023",
+        "saruim"
+    ],
+    "variaveis_categoricas": [
+        "iddmamo"
+    ],
+    "metricas_modelo_completo": {
+        "quantidade_variaveis": 90,
+        "accuracy": 0.7007,
+        "precision": 0.5083,
+        "recall": 0.7018,
+        "f1_score": 0.5895,
+        "roc_auc": 0.7729
+    },
+    "metricas_modelo_api_top20": {
+        "quantidade_variaveis": 20,
+        "accuracy": 0.6955,
+        "precision": 0.5021,
+        "recall": 0.6979,
+        "f1_score": 0.584,
+        "roc_auc": 0.7672
+    }
+}

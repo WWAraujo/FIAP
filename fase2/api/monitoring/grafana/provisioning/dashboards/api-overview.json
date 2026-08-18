@@ -1,0 +1,219 @@
+{
+  "title": "API Hipertensão - Visão Geral",
+  "uid": "api-hipertensao-overview",
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 3,
+  "refresh": "10s",
+  "time": { "from": "now-30m", "to": "now" },
+  "panels": [
+    { "id": 100, "type": "row", "title": "Saúde da Aplicação", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 } },
+    {
+      "id": 1,
+      "title": "Réplicas UP agora",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 1 },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "thresholds": { "mode": "absolute", "steps": [
+            { "color": "red", "value": null },
+            { "color": "green", "value": 2 }
+          ] }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "textMode": "value_and_name" },
+      "targets": [{ "expr": "sum(up{job=\"api\"})", "legendFormat": "réplicas UP" }]
+    },
+    {
+      "id": 2,
+      "title": "Status por instância",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 1 },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "type": "value", "options": { "1": { "text": "UP", "color": "green" } } },
+            { "type": "value", "options": { "0": { "text": "DOWN", "color": "red" } } }
+          ],
+          "thresholds": { "mode": "absolute", "steps": [
+            { "color": "red", "value": null },
+            { "color": "green", "value": 1 }
+          ] }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "textMode": "value_and_name" },
+      "targets": [{ "expr": "up{job=\"api\"}", "legendFormat": "{{instance}}" }]
+    },
+    {
+      "id": 3,
+      "title": "Taxa de erro HTTP 5xx (5m)",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 12, "y": 1 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "thresholds": { "mode": "absolute", "steps": [
+            { "color": "green", "value": null },
+            { "color": "yellow", "value": 1 },
+            { "color": "red", "value": 5 }
+          ] }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] } },
+      "targets": [{
+        "expr": "100 * (sum(rate(api_http_requests_total{status_code=~\"5..\"}[5m])) or vector(0)) / clamp_min(sum(rate(api_http_requests_total[5m])), 1)"
+      }]
+    },
+    {
+      "id": 4,
+      "title": "Erros de predição (5m)",
+      "type": "stat",
+      "gridPos": { "h": 6, "w": 6, "x": 18, "y": 1 },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": { "mode": "absolute", "steps": [
+            { "color": "green", "value": null },
+            { "color": "red", "value": 1 }
+          ] }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] } },
+      "targets": [{ "expr": "sum(increase(api_predicoes_erro_total[5m])) or vector(0)" }]
+    },
+
+    { "id": 101, "type": "row", "title": "Requisições", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 7 } },
+    {
+      "id": 5,
+      "title": "Requisições por segundo (por status)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "targets": [
+        { "expr": "sum(rate(api_http_requests_total[1m])) by (status_code)", "legendFormat": "status {{status_code}}" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Latência global (p50 / p95 / p99)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "fieldConfig": { "defaults": { "unit": "s" }, "overrides": [] },
+      "targets": [
+        { "expr": "histogram_quantile(0.50, sum(rate(api_http_request_duration_seconds_bucket[5m])) by (le))", "legendFormat": "p50" },
+        { "expr": "histogram_quantile(0.95, sum(rate(api_http_request_duration_seconds_bucket[5m])) by (le))", "legendFormat": "p95" },
+        { "expr": "histogram_quantile(0.99, sum(rate(api_http_request_duration_seconds_bucket[5m])) by (le))", "legendFormat": "p99" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Requisições por rota",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+      "targets": [
+        { "expr": "sum(rate(api_http_requests_total[1m])) by (path)", "legendFormat": "{{path}}" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Taxa de erro (%) ao longo do tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+      "fieldConfig": { "defaults": { "unit": "percent", "min": 0 }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "100 * (sum(rate(api_http_requests_total{status_code=~\"5..\"}[5m])) or vector(0)) / clamp_min(sum(rate(api_http_requests_total[5m])), 1)",
+          "legendFormat": "erro 5xx"
+        }
+      ]
+    },
+
+    { "id": 102, "type": "row", "title": "Predições do Modelo", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 24 } },
+    {
+      "id": 9,
+      "title": "Predições por classe",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 25 },
+      "targets": [
+        { "expr": "sum(rate(api_predicoes_total[5m])) by (classe_prevista)", "legendFormat": "classe {{classe_prevista}}" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Probabilidade mediana prevista",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 25 },
+      "fieldConfig": { "defaults": { "min": 0, "max": 1 }, "overrides": [] },
+      "targets": [
+        { "expr": "histogram_quantile(0.5, sum(rate(api_predicao_probabilidade_bucket[5m])) by (le))", "legendFormat": "p50 probabilidade" }
+      ]
+    },
+
+    { "id": 103, "type": "row", "title": "Infraestrutura & Escalabilidade", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 33 } },
+    {
+      "id": 11,
+      "title": "Réplicas ativas vs mín/máx",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 34 },
+      "fieldConfig": { "defaults": { "min": 0 }, "overrides": [] },
+      "targets": [
+        { "expr": "autoscaler_current_replicas", "legendFormat": "réplicas atuais" },
+        { "expr": "autoscaler_min_replicas", "legendFormat": "mínimo" },
+        { "expr": "autoscaler_max_replicas", "legendFormat": "máximo" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "CPU média das réplicas (autoscaler)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 8, "x": 8, "y": 34 },
+      "fieldConfig": { "defaults": { "min": 0, "unit": "percent" }, "overrides": [] },
+      "targets": [
+        { "expr": "autoscaler_avg_cpu_percent", "legendFormat": "CPU média" }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "CPU por container (cAdvisor)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 8, "x": 16, "y": 34 },
+      "fieldConfig": { "defaults": { "unit": "percent" }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "sum(rate(container_cpu_usage_seconds_total{container_label_hipertensao_role=\"api\"}[1m])) by (name) * 100",
+          "legendFormat": "{{name}}"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Memória (working set) por container",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 42 },
+      "fieldConfig": { "defaults": { "unit": "bytes" }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "container_memory_working_set_bytes{container_label_hipertensao_role=\"api\"}",
+          "legendFormat": "{{name}}"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Rede por container (RX/TX)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 42 },
+      "fieldConfig": { "defaults": { "unit": "Bps" }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "sum(rate(container_network_receive_bytes_total{container_label_hipertensao_role=\"api\"}[1m])) by (name)",
+          "legendFormat": "{{name}} rx"
+        },
+        {
+          "expr": "sum(rate(container_network_transmit_bytes_total{container_label_hipertensao_role=\"api\"}[1m])) by (name)",
+          "legendFormat": "{{name}} tx"
+        }
+      ]
+    }
+  ]
+}

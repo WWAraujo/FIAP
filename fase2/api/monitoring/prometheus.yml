@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Descoberta dinâmica das réplicas da API. O container "autoscaler"
+  # mantém esse arquivo atualizado a cada ciclo com o IP:porta de cada
+  # réplica viva (baseline + criadas por escala automática).
+  - job_name: "api"
+    file_sd_configs:
+      - files:
+          - /etc/prometheus/targets/api-targets.json
+        refresh_interval: 15s
+
+  # Métricas de CPU/memória/rede por container (usadas pelo autoscaler
+  # e pelo dashboard do Grafana).
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
+
+  # Métricas do próprio autoscaler (réplicas atuais, decisões de escala).
+  - job_name: "autoscaler"
+    static_configs:
+      - targets: ["autoscaler:9200"]
+
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]

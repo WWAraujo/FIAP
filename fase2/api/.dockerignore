@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.git/
+.DS_Store
+.idea/
+
+modelo_api/dicionario-vigitel-*.xlsx
+
+autoscaler/
+monitoring/
+nginx/
+docker-compose.yml
+ARCHITECTURE.md
+README.md

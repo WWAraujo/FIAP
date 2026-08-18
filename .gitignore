@@ -20,6 +20,10 @@ venv/
 *.h5
 *.pth
 
+# Exceção: modelo de produção da API (Fase 2), podado para ~70MB
+# especificamente para caber no limite de tamanho do GitHub.
+!fase2/api/modelo_api/modelo_genetico_vencedor.joblib
+
 # Data files
 *.csv
 *.xlsx

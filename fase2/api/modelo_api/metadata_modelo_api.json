@@ -1,0 +1,112 @@
+{
+    "nome_modelo": "modelo_genetico_vencedor",
+    "algoritmo": "RandomForestClassifier",
+    "descricao": "Modelo Random Forest com hiperparametros otimizados por algoritmo genetico (Fase 2, experimento_a), treinado sobre as mesmas 20 variaveis de entrada selecionadas na Fase 1. Podado de 400 para 50 arvores apos o treino (ver 'poda_pos_treino') para caber no limite de tamanho do GitHub e acelerar o carregamento em producao, com impacto desprezivel nas metricas.",
+    "origem": "fase2/tech_challenge_fase2.py - experimento_a (busca genetica de hiperparametros)",
+    "poda_pos_treino": {
+        "motivo": "Reduzir tamanho do artefato (limite de 100MB do GitHub) e tempo de carregamento sob CPU limitada em producao, sem re-treinar.",
+        "metodo": "Mantidas as primeiras 50 das 400 arvores originais do RandomForest ja treinado (arvores de um RandomForest sao estatisticamente intercambiaveis - cada uma foi ajustada em uma amostra bootstrap independente).",
+        "n_estimators_original": 400,
+        "n_estimators_apos_poda": 50,
+        "tamanho_original_mb": 549,
+        "tamanho_apos_poda_mb": 70,
+        "impacto_metricas": "Ver 'metricas_modelo_genetico_teste' (medidas apos a poda, no mesmo conjunto de teste). Delta vs. modelo com 400 arvores: F1 +0.0001, ROC-AUC -0.0005 (dentro do ruido estatistico)."
+    },
+    "target": "hart",
+    "descricao_target": {
+        "0": "Sem hipertensão",
+        "1": "Com hipertensão"
+    },
+    "threshold_classificacao": 0.5,
+    "hiperparametros": {
+        "n_estimators": 50,
+        "max_depth": 24,
+        "min_samples_split": 24,
+        "min_samples_leaf": 20,
+        "max_features": 0.3,
+        "criterion": "entropy",
+        "class_weight": "balanced",
+        "random_state": 42
+    },
+    "variaveis_entrada": [
+        "diab",
+        "iddpapa",
+        "imc",
+        "excpeso",
+        "imc_i",
+        "iddpapa_old",
+        "excpeso_i",
+        "iddmamo",
+        "af",
+        "exfuma",
+        "obesid",
+        "obesid_i",
+        "ind_med_db",
+        "med_db",
+        "atiocu",
+        "af3dominios_insu_2023",
+        "dislip",
+        "af3dominios_2023",
+        "inativo_2023",
+        "saruim"
+    ],
+    "variaveis_numericas": [
+        "diab",
+        "iddpapa",
+        "imc",
+        "excpeso",
+        "imc_i",
+        "iddpapa_old",
+        "excpeso_i",
+        "af",
+        "exfuma",
+        "obesid",
+        "obesid_i",
+        "ind_med_db",
+        "med_db",
+        "atiocu",
+        "af3dominios_insu_2023",
+        "dislip",
+        "af3dominios_2023",
+        "inativo_2023",
+        "saruim"
+    ],
+    "variaveis_categoricas": [
+        "iddmamo"
+    ],
+    "metricas_modelo_completo": {
+        "quantidade_variaveis": 90,
+        "accuracy": 0.7007,
+        "precision": 0.5083,
+        "recall": 0.7018,
+        "f1_score": 0.5895,
+        "roc_auc": 0.7729
+    },
+    "metricas_modelo_api_top20": {
+        "quantidade_variaveis": 20,
+        "accuracy": 0.6955,
+        "precision": 0.5021,
+        "recall": 0.6979,
+        "f1_score": 0.584,
+        "roc_auc": 0.7672
+    },
+    "metricas_modelo_genetico_validacao": {
+        "quantidade_variaveis": 20,
+        "fitness": 0.6810499226640733,
+        "accuracy": 0.695710747360004,
+        "precision": 0.5023307271939313,
+        "recall": 0.6983453667329564,
+        "f1_score": 0.5843380036928424,
+        "roc_auc": 0.7659724261055606
+    },
+    "metricas_modelo_genetico_teste": {
+        "quantidade_variaveis": 20,
+        "nota": "Medidas apos a poda pos-treino (50 arvores). Para referencia, o mesmo modelo com as 400 arvores originais mediu accuracy=0.6942, precision=0.5006, recall=0.6996, f1_score=0.5836, roc_auc=0.7655, fitness=0.6813 no mesmo conjunto de teste.",
+        "fitness": 0.6814,
+        "accuracy": 0.6941,
+        "precision": 0.5005,
+        "recall": 0.7001,
+        "f1_score": 0.5837,
+        "roc_auc": 0.7651
+    }
+}

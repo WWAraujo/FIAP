@@ -6,23 +6,28 @@ O repositório foi reorganizado para separar os projetos de **Fase 1** e **Fase 
 
 ```
 FIAP/
-├── fase1/                          # Projeto Fase 1: API de Triagem
+├── fase1/                          # Projeto Fase 1: API de Triagem (baseline original)
 │   ├── src/techchallenge_fase1/   # Código-fonte da API
 │   ├── modelo_api/                # Artefatos do modelo treinado
 │   ├── Dockerfile                 # Docker configuration
 │   ├── requirements.txt           # Dependências específicas
 │   └── README.md                  # Instruções de Fase 1
 │
-├── fase2/                          # Projeto Fase 2: Otimização Genética
-│   ├── src/techchallenge_fase2/   # Código-fonte da otimização
+├── fase2/                          # Projeto Fase 2: Otimização Genética + deploy do vencedor
+│   ├── src/                       # Código-fonte da otimização genética
 │   ├── tests/                     # Testes unitários
 │   ├── scripts/                   # Scripts executáveis
 │   │   ├── run_experiments.py    # Encaminhador para programa principal
 │   │   └── smoke_test.py         # Testes de fumaça
-│   ├── tech_challenge_fase2.py   # Programa principal
+│   ├── tech_challenge_fase2.py   # Programa principal (gera modelo_genetico_vencedor.joblib)
 │   ├── pyproject.toml            # Configuração setuptools
 │   ├── requirements.txt          # Dependências
-│   └── README.md                 # Instruções de Fase 2
+│   └── api/                       # API v2.0.0 servindo o modelo vencedor (escalável + observável)
+│       ├── src/app/api_modelo.py # Aplicação FastAPI (logging JSON + métricas Prometheus)
+│       ├── modelo_api/           # modelo_genetico_vencedor.joblib + metadata
+│       ├── docker-compose.yml    # API escalável + nginx + autoscaler + Prometheus + Grafana
+│       ├── nginx/, autoscaler/, monitoring/
+│       └── ARCHITECTURE.md       # Arquitetura, decisões e trade-offs do deploy
 │
 ├── shared/                        # Recursos compartilhados
 │   ├── configs/                  # Configurações de experimentos
@@ -65,7 +70,7 @@ python src/techchallenge_fase1/api_modelo.py
 
 Localização: `./fase2/`
 
-**Objetivo:** Otimizar o modelo da Fase 1 usando algoritmo genético para encontrar o melhor subconjunto de variáveis.
+**Objetivo:** Otimizar o modelo da Fase 1 usando algoritmo genético para encontrar os melhores hiperparâmetros.
 
 **Stack:**
 - Algoritmo genético customizado
@@ -86,13 +91,36 @@ python tech_challenge_fase2.py
 3. Executa 3 configurações do algoritmo genético
 4. Revalida vencedores no conjunto de treino
 5. Avalia melhor modelo no teste isolado
-6. Compara com baseline e salva artefatos
+6. Compara com baseline e salva artefatos (`modelo_genetico_vencedor.joblib`)
 
 **Testes:**
 ```bash
 python -m pytest tests/
 python scripts/smoke_test.py  # Teste de fumaça rápido
 ```
+
+### Fase 2 · API: deploy do modelo vencedor
+
+Localização: `./fase2/api/`
+
+**Objetivo:** Servir `modelo_genetico_vencedor.joblib` (mesmas 20 variáveis
+da Fase 1, hiperparâmetros otimizados pelo algoritmo genético) via API
+escalável, com autoscaling automático baseado em CPU, load balancer,
+logging estruturado e monitoramento. Independente de `fase1/`, que
+permanece inalterada como baseline histórico. Arquitetura completa,
+decisões e trade-offs em [fase2/api/ARCHITECTURE.md](fase2/api/ARCHITECTURE.md).
+
+**Stack:**
+- FastAPI + Uvicorn + Prometheus client (métricas)
+- scikit-learn (modelo) + pandas + joblib
+- Docker Compose: nginx (load balancer) + autoscaler customizado (CPU-based) + Prometheus + Grafana + cAdvisor
+
+**Como usar:**
+```bash
+cd fase2/api
+docker compose up -d --build
+```
+API/formulário em `http://localhost:8000`, dashboards em `http://localhost:3000`.
 
 ## Recursos Compartilhados
 
@@ -134,6 +162,16 @@ pandas>=2.2,<3
 scikit-learn>=1.5,<2
 ```
 
+### Fase 2 · API (`fase2/api/requirements.txt`)
+```
+fastapi==0.111.0
+uvicorn==0.30.1
+joblib
+pandas
+scikit-learn==1.5.0
+prometheus-client==0.20.0
+```
+
 ## Desenvolvimento
 
 Para trabalhar no projeto como um todo:
@@ -168,6 +206,17 @@ shared/data/                               │         │
                                                       │
                                                       v
                                                 resultados/[timestamp]/
+                                                      │
+                                                      │ vencedor salvo na raiz do repo
+                                                      v
+                                        modelo_genetico_vencedor.joblib
+                                                      │
+                                                      │ copiado para
+                                                      v
+                                fase2/api/modelo_api/modelo_genetico_vencedor.joblib
+                                                      │
+                                                      v
+                                fase2/api/ (API v2.0.0, docker-compose)
 ```
 
 ## Próximos Passos
@@ -175,5 +224,5 @@ shared/data/                               │         │
 - [ ] Adicionar testes para Fase 1 em `fase1/tests/`
 - [ ] Documentação de API (FastAPI docs, Swagger)
 - [ ] CI/CD pipeline (GitHub Actions)
-- [ ] Containerização completa (docker-compose)
+- [x] Containerização completa (docker-compose) — ver [fase2/api/ARCHITECTURE.md](fase2/api/ARCHITECTURE.md)
 - [ ] Notebook de análise em `shared/notebooks/`

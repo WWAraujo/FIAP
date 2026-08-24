@@ -6,8 +6,10 @@ from __future__ import annotations
 
 import random
 import statistics
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from typing import Any, Callable
+
+from joblib import Parallel, delayed
 
 from .chromosome import SearchSpace
 from .fitness import FitnessResult
@@ -68,6 +70,7 @@ class GeneticOptimizer:
         config: GeneticConfig,
         evaluator: Callable[[dict[str, Any]], FitnessResult],
         search_space: SearchSpace | None = None,
+        n_jobs_populacao: int = -1,
     ) -> None:
         self.config = config
         self.evaluator = evaluator
@@ -75,17 +78,35 @@ class GeneticOptimizer:
         self.rng = random.Random(config.random_state)
         self.cache: dict[tuple[Any, ...], FitnessResult] = {}
         self.evaluations: list[dict[str, Any]] = []
+        self.n_jobs_populacao = n_jobs_populacao
 
-    def _avaliar(self, cromossomo: dict[str, Any], geracao: int) -> FitnessResult:
-        # Evita treinar novamente um cromossomo que já foi avaliado.
-        chave = self.search_space.chave(cromossomo)
-        if chave not in self.cache:
-            resultado = self.evaluator(cromossomo)
-            self.cache[chave] = resultado
-            self.evaluations.append(
-                {"geracao_primeira_avaliacao": geracao, **cromossomo, **resultado.to_dict()}
+    def _avaliar_populacao(
+        self,
+        populacao: list[dict[str, Any]],
+        geracao: int,
+    ) -> list[FitnessResult]:
+        # Só os cromossomos ainda não vistos entram na avaliação paralela;
+        # o cache evita retrabalho entre gerações e dentro da mesma geração
+        # (comum após crossover, quando filhos repetem combinações dos pais).
+        pendentes: list[dict[str, Any]] = []
+        chaves_pendentes: list[tuple[Any, ...]] = []
+        for individuo in populacao:
+            chave = self.search_space.chave(individuo)
+            if chave not in self.cache:
+                pendentes.append(individuo)
+                chaves_pendentes.append(chave)
+
+        if pendentes:
+            resultados_novos = Parallel(n_jobs=self.n_jobs_populacao)(
+                delayed(self.evaluator)(individuo) for individuo in pendentes
             )
-        return self.cache[chave]
+            for individuo, chave, resultado in zip(pendentes, chaves_pendentes, resultados_novos):
+                self.cache[chave] = resultado
+                self.evaluations.append(
+                    {"geracao_primeira_avaliacao": geracao, **individuo, **resultado.to_dict()}
+                )
+
+        return [self.cache[self.search_space.chave(individuo)] for individuo in populacao]
 
     def _torneio(
         self,
@@ -111,9 +132,9 @@ class GeneticOptimizer:
 
         for geracao in range(self.config.generations):
             # ----------------------------------------------------
-            # 2) AVALIAÇÃO E RANKING DA GERAÇÃO ATUAL
+            # 2) AVALIAÇÃO (PARALELA) E RANKING DA GERAÇÃO ATUAL
             # ----------------------------------------------------
-            resultados = [self._avaliar(individuo, geracao) for individuo in populacao]
+            resultados = self._avaliar_populacao(populacao, geracao)
             ranking = sorted(
                 range(len(populacao)),
                 key=lambda indice: resultados[indice].fitness,

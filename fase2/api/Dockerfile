@@ -16,11 +16,13 @@ COPY . .
 # Expõe a porta padrão do FastAPI/Uvicorn (geralmente 8000)
 EXPOSE 8000
 
+# Seta PYTHONPATH para permitir imports relativos
+ENV PYTHONPATH=/app/src:$PYTHONPATH
+
 # Healthcheck usado pelo Docker/Compose para saber se o container está
 # pronto para receber tráfego (nginx e orquestração de escala dependem disso).
 HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)" || exit 1
 
-# api_modelo.py vive em src/app/; --app-dir aponta o uvicorn para lá sem
-# exigir que o pacote seja instalado.
-CMD ["uvicorn", "api_modelo:app", "--app-dir", "src/app", "--host", "0.0.0.0", "--port", "8000"]
+# Roda uvicorn com PYTHONPATH configurado para imports relativos funcionarem
+CMD ["uvicorn", "app.api_modelo:app", "--host", "0.0.0.0", "--port", "8000"]

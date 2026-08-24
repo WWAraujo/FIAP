@@ -49,9 +49,8 @@ from techchallenge_fase2.modeling import cromossomo_baseline  # noqa: E402
 # CAMINHOS PADRÃO
 # ============================================================
 
-ARQUIVO_BASE_PADRAO = PASTA_PROJETO / "vigitel.csv"
-PASTA_FASE1 = PASTA_PROJETO / "techchallenge_fase1"
-ARQUIVO_METADATA_FASE1_PADRAO = PASTA_FASE1 / "modelo_api" / "metadata_modelo_api.json"
+ARQUIVO_BASE_PADRAO = PASTA_PROJETO.parent / "shared" / "data" / "vigitel.csv"
+ARQUIVO_METADATA_FASE1_PADRAO = PASTA_PROJETO / "api" / "modelo_api" / "metadata_modelo_api.json"
 PASTA_CONFIGURACOES = PASTA_PROJETO / "configs"
 PASTA_RESULTADOS = PASTA_PROJETO / "resultados"
 
@@ -87,10 +86,13 @@ def ler_argumentos() -> argparse.Namespace:
         help="Quantidade de folds da validação cruzada.",
     )
     parser.add_argument(
-        "--cv-jobs",
+        "--n-jobs-populacao",
         type=int,
-        default=1,
-        help="Quantidade de processos paralelos na validação cruzada.",
+        default=-1,
+        help=(
+            "Processos paralelos usados para avaliar os indivíduos da "
+            "população do GA (-1 = usa todos os núcleos disponíveis)."
+        ),
     )
     parser.add_argument(
         "--output",
@@ -150,6 +152,7 @@ def main() -> None:
     pasta_execucao = Path(argumentos.output) / run_id
     log_info(f"Execução: {run_id}")
     log_info(f"Pasta de resultados: {pasta_execucao}")
+    log_info(f"Processos paralelos por população: {argumentos.n_jobs_populacao}")
 
     # --------------------------------------------------------
     # 4) OTIMIZAÇÃO, REVALIDAÇÃO E TESTE FINAL
@@ -164,7 +167,7 @@ def main() -> None:
         baseline_chromosome=cromossomo_baseline(metadata),
         sample_size=argumentos.sample_size,
         folds=argumentos.folds,
-        cv_jobs=argumentos.cv_jobs,
+        n_jobs_populacao=argumentos.n_jobs_populacao,
     )
 
     # --------------------------------------------------------
@@ -184,4 +187,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

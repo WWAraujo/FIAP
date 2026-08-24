@@ -521,7 +521,7 @@
     }
 
     .modal {
-      width: min(520px, 100%);
+      width: min(720px, 100%);
       background:
         radial-gradient(circle at top right, rgba(143, 185, 168, 0.18), transparent 38%),
         #ffffff;
@@ -613,6 +613,10 @@
         <div id="resultDesc" class="result-desc">
           Preencha os dados e clique em calcular estimativa.
         </div>
+        <div id="llmInterpretation" style="display: none; margin-top: 16px; padding: 14px; background: rgba(143, 185, 168, 0.12); border-left: 4px solid var(--accent); border-radius: 8px; font-size: 0.95em; line-height: 1.6; color: var(--text);">
+          <strong style="display: block; margin-bottom: 8px; color: var(--primary);">🤖 O que a IA achou dos seus dados:</strong>
+          <span id="llmText"></span>
+        </div>
         <div class="progress">
           <div id="progressBar" class="progress-bar"></div>
         </div>
@@ -661,6 +665,10 @@
       <div id="modalProbability" class="probability">--%</div>
       <p id="modalDescription">Resultado gerado com sucesso.</p>
       <span id="modalRiskPill" class="risk-pill">Resultado</span>
+      <div id="modalLLMInterpretation" style="display: none; margin-top: 18px; padding: 14px; background: rgba(143, 185, 168, 0.12); border-left: 4px solid var(--accent); border-radius: 8px; font-size: 0.95em; line-height: 1.6; color: var(--text);">
+        <strong style="display: block; margin-bottom: 8px; color: var(--primary);">🤖 O que a IA achou dos seus dados:</strong>
+        <span id="modalLLMText"></span>
+      </div>
       <br><br>
       <button class="btn-primary" type="button" onclick="fecharModal()">Voltar</button>
     </div>
@@ -1318,12 +1326,15 @@
 
     function atualizarResultadoVisual(resultado) {
       riskPillEl.className = "risk-pill";
+      const llmInterpretationEl = document.getElementById("llmInterpretation");
+      const llmTextEl = document.getElementById("llmText");
 
       if (!resultado) {
         probabilityEl.textContent = "--%";
         resultDescEl.textContent = "Preencha os dados e clique em calcular estimativa.";
         riskPillEl.textContent = "Aguardando análise";
         progressBarEl.style.width = "0%";
+        llmInterpretationEl.style.display = "none";
         return;
       }
 
@@ -1335,16 +1346,34 @@
       resultDescEl.textContent = resultado.descricao;
       aplicarClasseRisco(riskPillEl, risco);
       progressBarEl.style.width = `${Math.min(Math.max(percentual, 0), 100)}%`;
+
+      // Exibe a interpretação do LLM se disponível
+      if (resultado.interpretacao_llm && resultado.llm_habilitado) {
+        llmTextEl.textContent = resultado.interpretacao_llm;
+        llmInterpretationEl.style.display = "block";
+      } else {
+        llmInterpretationEl.style.display = "none";
+      }
     }
 
     function abrirModalResultado(resultado) {
       const percentual = resultado.probabilidade_percentual;
       const probabilidade = resultado.probabilidade_hipertensao;
       const risco = classificarRisco(probabilidade);
+      const modalLLMInterpretationEl = document.getElementById("modalLLMInterpretation");
+      const modalLLMTextEl = document.getElementById("modalLLMText");
 
       modalProbability.textContent = `${percentual}%`;
       modalDescription.textContent = resultado.descricao;
       aplicarClasseRisco(modalRiskPill, risco);
+
+      // Exibe a interpretação do LLM no modal se disponível
+      if (resultado.interpretacao_llm && resultado.llm_habilitado) {
+        modalLLMTextEl.textContent = resultado.interpretacao_llm;
+        modalLLMInterpretationEl.style.display = "block";
+      } else {
+        modalLLMInterpretationEl.style.display = "none";
+      }
 
       resultModal.classList.add("show");
     }
@@ -1424,7 +1453,7 @@
 
       const payload = montarPayload();
 
-      showMessage("Calculando estimativa. Aguarde alguns segundos...", "info");
+      showMessage("🔄 Processando predição do modelo... Aguarde alguns segundos para a análise detalhada.", "info");
 
       try {
         const response = await fetch(`${API_BASE_URL}/prever`, {
@@ -1441,15 +1470,29 @@
           throw new Error(JSON.stringify(data, null, 2));
         }
 
+        // Mostrar sucesso, avisando quando a interpretação veio de um LLM
+        let mensagemSucesso = "✅ Pronto! Já calculei sua estimativa de risco — dá uma olhada no resultado abaixo.";
+
+        if (data.interpretacao_llm && data.llm_habilitado) {
+          const tempoLLM = data.duracao_llm_segundos ? ` (levou ${data.duracao_llm_segundos}s)` : "";
+          mensagemSucesso =
+            `✅ Estimativa pronta! Além do resultado numérico, pedi a uma IA (LLM) para ` +
+            `traduzir isso em uma explicação em linguagem simples${tempoLLM} — você confere ` +
+            `os dois no modal abaixo.`;
+        } else {
+          mensagemSucesso += " (a interpretação por IA não estava disponível desta vez, mas o resultado do modelo está completo.)";
+        }
+
+        showMessage(mensagemSucesso, "sucesso");
+
         atualizarResultadoVisual(data);
         abrirModalResultado(data);
-        limparMensagem();
 
       } catch (error) {
         atualizarResultadoVisual(null);
 
         showMessage(
-          `Erro ao calcular a estimativa.<br><br><code>${error.message}</code>`,
+          `❌ Erro ao calcular a estimativa.<br><br><code>${error.message}</code>`,
           "erro"
         );
       }

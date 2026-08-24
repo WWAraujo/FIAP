@@ -70,20 +70,41 @@ def parametros_modelo(cromossomo: dict[str, Any]) -> dict[str, Any]:
 
 
 # ============================================================
-# CONSTRUÇÃO DO PIPELINE RANDOM FOREST
+# CONSTRUÇÃO DO MODELO (SEM PRÉ-PROCESSADOR)
 # ============================================================
+# Separado do pipeline completo porque, no GA, o pré-processador é sempre
+# o mesmo — só a RandomForest muda entre cromossomos. Recriar o
+# ColumnTransformer/OneHotEncoder a cada avaliação era custo repetido
+# desnecessário; ver fitness.py, que agora faz fit_transform uma única vez.
+
+def construir_modelo(
+    cromossomo: dict[str, Any],
+    random_state: int = 42,
+    n_jobs: int = 1,
+) -> RandomForestClassifier:
+    parametros = parametros_modelo(cromossomo)
+    return RandomForestClassifier(
+        **parametros,
+        random_state=random_state,
+        n_jobs=n_jobs,
+    )
+
+
+# ============================================================
+# CONSTRUÇÃO DO PIPELINE COMPLETO
+# ============================================================
+# Mantido para uso fora do GA (treino final, baseline, avaliação em teste
+# isolado), onde não há reaproveitamento de pré-processamento entre
+# múltiplos cromossomos e o pipeline único é mais simples de persistir
+# com joblib.
 
 def construir_pipeline(
     X: pd.DataFrame,
     cromossomo: dict[str, Any],
     random_state: int = 42,
+    n_jobs: int = -1,
 ) -> Pipeline:
-    parametros = parametros_modelo(cromossomo)
-    modelo = RandomForestClassifier(
-        **parametros,
-        random_state=random_state,
-        n_jobs=1,
-    )
+    modelo = construir_modelo(cromossomo, random_state=random_state, n_jobs=n_jobs)
     return Pipeline(
         [
             ("prep", construir_preprocessador(X)),

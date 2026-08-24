@@ -10,9 +10,9 @@ from typing import Any
 import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
-from sklearn.model_selection import StratifiedKFold, cross_val_predict
+from sklearn.model_selection import StratifiedKFold
 
-from ..modeling import construir_pipeline
+from ..modeling import construir_modelo, construir_preprocessador
 
 
 # ============================================================
@@ -37,7 +37,14 @@ class FitnessResult:
 # ============================================================
 
 class MedicalFitnessEvaluator:
-    """Avalia indivíduos apenas com predições out-of-fold do conjunto de treino."""
+    """Avalia indivíduos apenas com predições out-of-fold do conjunto de treino.
+
+    O pré-processador (imputação/escala/one-hot) é ajustado uma única vez
+    por fold no __init__, não a cada cromossomo avaliado. Como só os
+    hiperparâmetros da RandomForest mudam entre indivíduos, isso elimina
+    o custo repetido de recriar o ColumnTransformer centenas de vezes
+    durante a busca genética.
+    """
 
     def __init__(
         self,
@@ -45,33 +52,41 @@ class MedicalFitnessEvaluator:
         y: pd.Series,
         folds: int = 3,
         random_state: int = 42,
-        cv_jobs: int = 1,
+        n_jobs_modelo: int = 1,
         precision_minima: float = 0.50,
     ) -> None:
         self.X = X
         self.y = y
         self.folds = folds
         self.random_state = random_state
-        self.cv_jobs = cv_jobs
+        self.n_jobs_modelo = n_jobs_modelo
         self.precision_minima = precision_minima
 
+        # --------------------------------------------------------
+        # PRÉ-PROCESSAMENTO CALCULADO UMA ÚNICA VEZ POR FOLD
+        # --------------------------------------------------------
+        cv = StratifiedKFold(n_splits=folds, shuffle=True, random_state=random_state)
+        self._folds: list[tuple[np.ndarray, np.ndarray, Any, Any]] = []
+        for treino_idx, val_idx in cv.split(X, y):
+            prep = construir_preprocessador(X)
+            X_treino_prep = prep.fit_transform(X.iloc[treino_idx])
+            X_val_prep = prep.transform(X.iloc[val_idx])
+            self._folds.append((treino_idx, val_idx, X_treino_prep, X_val_prep))
+
     def __call__(self, cromossomo: dict[str, Any]) -> FitnessResult:
-        # O pipeline completo é recriado em cada fold. Isso impede que imputação,
-        # escala ou One-Hot Encoding aprendam informações da validação.
-        pipeline = construir_pipeline(self.X, cromossomo, self.random_state)
-        cv = StratifiedKFold(
-            n_splits=self.folds,
-            shuffle=True,
-            random_state=self.random_state,
-        )
-        probabilidades = cross_val_predict(
-            pipeline,
-            self.X,
-            self.y,
-            cv=cv,
-            method="predict_proba",
-            n_jobs=self.cv_jobs,
-        )[:, 1]
+        probabilidades = np.empty(len(self.y), dtype=float)
+
+        # Cada fold reaproveita o pré-processamento já ajustado; só a
+        # RandomForest é recriada e treinada para este cromossomo.
+        for treino_idx, val_idx, X_treino_prep, X_val_prep in self._folds:
+            modelo = construir_modelo(
+                cromossomo,
+                random_state=self.random_state,
+                n_jobs=self.n_jobs_modelo,
+            )
+            modelo.fit(X_treino_prep, self.y.iloc[treino_idx])
+            probabilidades[val_idx] = modelo.predict_proba(X_val_prep)[:, 1]
+
         threshold = float(cromossomo["threshold"])
         predicoes = (probabilidades >= threshold).astype(int)
 

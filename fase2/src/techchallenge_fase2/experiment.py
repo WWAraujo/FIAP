@@ -12,8 +12,8 @@ import joblib
 import pandas as pd
 
 from .data import amostra_estratificada
-from .genetic import GeneticConfig, GeneticOptimizer, MedicalFitnessEvaluator
-from .genetic.fitness import FitnessResult, avaliar_no_teste
+from .genetic.optimizer import GeneticConfig, GeneticOptimizer
+from .genetic.fitness import MedicalFitnessEvaluator, FitnessResult, avaliar_no_teste
 from .logging_utils import imprimir_linha, log_etapa, log_info
 from .modeling import construir_pipeline
 from .reporting import salvar_json, salvar_resultado_experimento

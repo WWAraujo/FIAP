@@ -19,4 +19,4 @@ EXPOSE 8000
 # Comando para rodar o Uvicorn
 # Substitua "api_modelo" pelo nome do seu arquivo .py (sem a extensão)
 # E "app" pelo nome da variável da sua instância FastAPI (ex: app = FastAPI())
-CMD ["uvicorn", "api_modelo:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.techchallenge_fase1.api_modelo:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -4,3 +4,6 @@ joblib
 pandas
 scikit-learn==1.5.0
 prometheus-client==0.20.0
+requests>=2.31.0
+google-generativeai>=0.5.0
+python-dotenv>=1.0.0

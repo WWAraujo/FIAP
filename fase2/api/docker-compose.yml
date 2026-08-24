@@ -23,6 +23,8 @@ services:
       - "hipertensao.role=api"
     environment:
       - LOG_LEVEL=INFO
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - GOOGLE_MODEL=${GOOGLE_MODEL:-gemini-1.5-flash}
     networks:
       - hipertensao_net
     deploy:

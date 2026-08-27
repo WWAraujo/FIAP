@@ -4,10 +4,14 @@ from typing import Any, Dict
 
 import joblib
 import pandas as pd
+import time
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
+from google import genai
 
+
+client = genai.Client(api_key="CHAVE GEMINI")
 
 # ============================================================
 # CONFIGURAÇÕES
@@ -52,6 +56,37 @@ THRESHOLD = metadata.get("threshold_classificacao", 0.5)
 # ============================================================
 # CRIAÇÃO DA API
 # ============================================================
+
+def gerar_interpretacao_llm(dados_paciente: dict, classe: int, probabilidade: float, max_tentativas: int = 3) -> str:
+    status = "Com indicativo de hipertensão" if classe == 1 else "Sem indicativo de hipertensão"
+    
+    prompt = f"""
+    Você é um assistente médico virtual de IA auxiliando na triagem de pacientes.
+    
+    Dados do paciente:
+    {json.dumps(dados_paciente, indent=2, ensure_ascii=False)}
+    
+    Nosso modelo avaliou o paciente com {probabilidade}% de probabilidade de hipertensão (Diagnóstico: {status}).
+    
+    Sua tarefa:
+    1. Gere uma explicação clara em linguagem natural desse diagnóstico.
+    2. Transforme os dados em insights acionáveis, destacando fatores de risco presentes.
+    3. Mantenha um tom profissional, ético e lembre que você é uma IA de suporte à decisão.
+    """
+    
+    for tentativa in range(max_tentativas):
+        try:
+            resposta = client.models.generate_content(
+                model='gemini-3.5-flash-lite', 
+                contents=prompt
+            )
+            return resposta.text
+        except Exception as e:
+            if "503" in str(e) and tentativa < max_tentativas - 1:
+                time.sleep(2 ** tentativa)
+                continue
+            return f"Não foi possível gerar a interpretação. Detalhe: {str(e)}"
+
 
 app = FastAPI(
     title="API Modelo de Hipertensão",
@@ -189,6 +224,12 @@ def prever_hipertensao(dados: Dict[str, Any]):
     else:
         descricao = "Sem indicativo de hipertensão"
 
+    interpretacao_ia = gerar_interpretacao_llm(
+        dados_paciente=entrada_modelo,
+        classe=classe_prevista,
+        probabilidade=round(probabilidade * 100, 2)
+    )
+
     return {
         "classe_prevista": classe_prevista,
         "descricao": descricao,
@@ -196,5 +237,6 @@ def prever_hipertensao(dados: Dict[str, Any]):
         "probabilidade_percentual": round(probabilidade * 100, 2),
         "threshold_utilizado": THRESHOLD,
         "modelo": metadata.get("algoritmo", "RandomForestClassifier"),
-        "variaveis_recebidas": entrada_modelo
+        "variaveis_recebidas": entrada_modelo,
+        "interpretacao_llm": interpretacao_ia
     }

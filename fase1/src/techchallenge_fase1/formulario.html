@@ -589,6 +589,8 @@
       }
     }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -661,6 +663,15 @@
       <div id="modalProbability" class="probability">--%</div>
       <p id="modalDescription">Resultado gerado com sucesso.</p>
       <span id="modalRiskPill" class="risk-pill">Resultado</span>
+      <span id="modalRiskPill" class="risk-pill">Resultado</span>
+      
+      <!-- NOVA CAIXA DA IA AQUI -->
+      <div id="resultado-llm" style="margin-top: 20px; padding: 15px; border-left: 4px solid #10b981; background-color: #f0fdf4; display: none; text-align: left; max-height: 250px; overflow-y: auto; border-radius: 8px;">
+          <h4 style="margin-top: 0; color: #047857; font-size: 16px;">🧠 Análise do Copiloto Médico (IA):</h4>
+          <div id="texto-ia" style="margin-bottom: 0; color: #064e3b; font-size: 14px; line-height: 1.5;"></div>
+      </div>
+      <!-- FIM DA CAIXA -->
+
       <br><br>
       <button class="btn-primary" type="button" onclick="fecharModal()">Voltar</button>
     </div>
@@ -1441,8 +1452,18 @@
           throw new Error(JSON.stringify(data, null, 2));
         }
 
+
         atualizarResultadoVisual(data);
         abrirModalResultado(data);
+
+        if (data.interpretacao_llm) {
+            document.getElementById('resultado-llm').style.display = 'block';
+            document.getElementById('texto-ia').innerHTML = marked.parse(data.interpretacao_llm);
+        } else {
+            document.getElementById('resultado-llm').style.display = 'none';
+        }
+
+        
         limparMensagem();
 
       } catch (error) {

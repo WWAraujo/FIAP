@@ -2,7 +2,15 @@
 
 ## Visão Geral
 
-A API agora integra um **LLM (Large Language Model) gratuito** do Hugging Face para gerar interpretações contextualizadas das predições de hipertensão. Isso transforma a resposta da API de uma simples probabilidade em uma análise compreensível para não-especialistas.
+A API integra um **LLM** para gerar interpretações contextualizadas das
+predições de hipertensão, transformando uma probabilidade crua em uma
+análise legível para não-especialistas. Dois provedores são suportados,
+escolhidos em tempo de execução:
+
+- **Google Gemini** — via API paga (com tier gratuito), qualidade mais
+  alta e mais rápido
+- **Ollama** — modelo rodando localmente, sem custo e sem depender de
+  internet/créditos, mais lento e dependente do hardware local
 
 ### Exemplo de Resposta
 
@@ -23,152 +31,194 @@ A API agora integra um **LLM (Large Language Model) gratuito** do Hugging Face p
   "descricao": "Com indicativo de hipertensão",
   "probabilidade_hipertensao": 0.75,
   "probabilidade_percentual": 75.0,
-  "interpretacao_llm": "Com base nos dados fornecidos, existe um risco elevado de hipertensão (75%). Fatores como pressão arterial elevada e circunferência da cintura aumentada são indicativos importantes. Recomenda-se consulta médica para confirmação diagnóstica e possível início de tratamento.",
+  "interpretacao_llm": "Com base nos dados fornecidos, existe um risco elevado de hipertensão (75%). O excesso de peso e a inatividade física são fatores de risco identificados. Recomenda-se consulta médica para confirmação diagnóstica e acompanhamento preventivo.",
+  "duracao_llm_segundos": 2.1,
   "llm_habilitado": true
 }
 ```
+
+`llm_habilitado` reflete se **essa chamada específica** gerou
+interpretação — não se um provedor em particular está configurado, já
+que qualquer um dos dois pode ter sido usado.
 
 ---
 
 ## Como Configurar
 
-### Pré-requisitos
+### Opção A — Google Gemini
 
-1. **Conta no Hugging Face** (gratuita)
-   - Acesse: https://huggingface.co
-   - Crie uma conta (se ainda não tiver)
+1. Acesse https://aistudio.google.com/app/apikey
+2. Clique em "Create API Key" e copie o valor
+3. No `.env`:
+   ```env
+   GOOGLE_API_KEY=sua_chave_aqui
+   GOOGLE_MODEL=gemini-3.7-flash
+   ```
 
-2. **Token de API do Hugging Face**
-   - Vá para: https://huggingface.co/settings/tokens
-   - Clique em "New token"
-   - Selecione "Read" como tipo de acesso
-   - Copie o token (começa com `hf_`)
+### Opção B — Ollama local (sem custo)
 
-### Passos de Configuração
+1. Instale o [Ollama](https://ollama.com)
+2. Baixe um modelo: `ollama pull qwen3.5`
+3. Confirme que está rodando: `ollama list`
+4. No `.env`:
+   ```env
+   OLLAMA_URL=http://host.docker.internal:11434
+   OLLAMA_MODEL=qwen3.5
+   ```
+   `host.docker.internal` é necessário porque a API roda em Docker —
+   de dentro do container, `localhost` aponta para o próprio container,
+   não para o Ollama rodando no host. Rodando a API fora do Docker, use
+   `http://localhost:11434`.
 
-#### 1. Instale as dependências
-```bash
-pip install -r requirements.txt
+### Escolhendo o provedor padrão
+
+```env
+LLM_PROVIDER=google   # ou "ollama"
 ```
 
-#### 2. Configure as variáveis de ambiente
+Usado sempre que uma requisição a `/prever` não especifica o provedor
+explicitamente.
 
-**Opção A: Arquivo `.env`**
-```bash
-cp .env.example .env
-# Edite o arquivo .env e adicione seu token
-# HF_API_TOKEN=hf_seu_token_aqui
-```
+### Docker Compose
 
-**Opção B: Variáveis de ambiente do sistema**
-```bash
-export HF_API_TOKEN="hf_seu_token_aqui"
-export HF_MODEL_URL="https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
-export TIMEOUT_LLM=10
-```
-
-**Opção C: Docker/Docker Compose**
-Adicione no `docker-compose.yml`:
+As variáveis do `.env` **não chegam automaticamente** ao container —
+precisam estar listadas em `environment:` no `docker-compose.yml`:
 ```yaml
 environment:
-  - HF_API_TOKEN=hf_seu_token_aqui
-  - HF_MODEL_URL=https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1
-  - TIMEOUT_LLM=10
+  - LLM_PROVIDER=${LLM_PROVIDER:-google}
+  - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+  - GOOGLE_MODEL=${GOOGLE_MODEL:-gemini-3.7-flash}
+  - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
+  - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen3.5}
+  - TIMEOUT_LLM=${TIMEOUT_LLM:-300}
+```
+Depois de editar, é preciso recriar o container (variáveis de ambiente
+só são lidas na criação):
+```bash
+docker compose up -d --build --force-recreate
 ```
 
-#### 3. Inicie a API
-```bash
-# Desenvolvimento
-uvicorn app.api_modelo:app --reload
+### Iniciar a API (fora do Docker)
 
-# Produção
-uvicorn app.api_modelo:app --host 0.0.0.0 --port 8000
+```bash
+uvicorn app.api_modelo:app --reload                          # desenvolvimento
+uvicorn app.api_modelo:app --host 0.0.0.0 --port 8000         # produção
 ```
 
 ---
 
-## Modelos Disponíveis
+## Escolhendo o provedor por requisição
 
-O Hugging Face oferece vários modelos **gratuitos** de linguagem. Escolha um conforme sua necessidade:
+Além do padrão configurado no `.env`, cada chamada a `/prever` pode
+escolher o provedor e o modelo via query params, sobrescrevendo o
+padrão:
 
-| Modelo | URL | Tamanho | Velocidade | Qualidade |
-|--------|-----|--------|-----------|-----------|
-| **Mistral-7B** (padrão) | `https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1` | 7B | ⭐⭐⭐⭐ Muito rápido | ⭐⭐⭐⭐ Excelente |
-| Zephyr-7B | `https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta` | 7B | ⭐⭐⭐⭐ Muito rápido | ⭐⭐⭐⭐ Excelente |
-| Llama-2-7B | `https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf` | 7B | ⭐⭐⭐ Rápido | ⭐⭐⭐⭐ Bom |
-| Mistral-Medium | `https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.1` | 7B | ⭐⭐⭐ Rápido | ⭐⭐⭐⭐ Excelente |
+```bash
+curl -X POST "http://localhost:8000/prever?provedor=ollama&modelo=qwen3.5" \
+  -H "Content-Type: application/json" \
+  -d @exemplo_entrada_api.json
+```
 
-**Recomendação:** Use **Mistral-7B** por padrão — oferece o melhor balanço entre velocidade e qualidade.
+Útil para comparar qualidade/latência entre provedores sem reiniciar a
+API, ou para usar o Ollama pontualmente quando o Google estiver sem
+créditos.
 
 ---
 
 ## Comportamento
 
-### Quando o LLM está ativado
+### Quando o LLM gera interpretação com sucesso
 
-- A resposta inclui o campo `interpretacao_llm` com a análise do modelo
-- A resposta inclui `llm_habilitado: true`
-- Se houver timeout ou erro na chamada ao LLM, a interpretação será `null` mas a predição continua normal
-- Logs são registrados com a duração da chamada ao LLM
+- `interpretacao_llm` traz o texto (já sem marcações Markdown — ver
+  seção "Formatação da resposta" abaixo)
+- `llm_habilitado: true`
+- Log: `Interpretação LLM gerada com sucesso`, com `provedor`, `modelo`
+  e `duracao_segundos`
 
-### Quando o LLM está desativado
+### Quando o LLM falha ou está indisponível
 
-- Se `HF_API_TOKEN` não estiver configurado:
-  - `interpretacao_llm` será `null`
-  - `llm_habilitado: false`
-  - A API continua funcionando normalmente
-- Útil para desenvolvimento local ou quando não há quota disponível
+- `interpretacao_llm` vem `null`, `llm_habilitado: false`
+- A predição continua normal — o LLM nunca bloqueia a resposta da API
+- Log: `Erro ao gerar interpretação com LLM`, com `tipo_erro` e `erro`
+- Casos comuns: `GOOGLE_API_KEY` vazia (provedor `google`), Ollama fora
+  do ar (provedor `ollama`), timeout, provedor desconhecido
+
+---
+
+## Formatação da resposta (remoção de Markdown)
+
+O prompt instrui o modelo a responder em texto simples, mas LLMs nem
+sempre obedecem — é comum a resposta vir com `**negrito**`, `*itálico*`
+ou marcadores de lista. Como o formulário exibe texto puro (não
+renderiza Markdown), a resposta passa por uma limpeza automática antes
+de ser devolvida (`_remover_markdown` em `llm_interpreter.py`), que
+remove esses símbolos independente do provedor usado.
+
+## Decodificação das variáveis no prompt
+
+As variáveis de entrada chegam ao modelo já codificadas (`0`/`1`,
+faixas numeradas) — é assim que o RandomForest foi treinado. Para o
+LLM, esses códigos são traduzidos para texto legível antes de montar o
+prompt (`VARIAVEIS_NOMES_CLINICOS` para os nomes, `VALORES_CLINICOS`
+para os valores — ex.: `dislip: 1` vira `Dislipidemia: Sim`), usando o
+dicionário oficial do VIGITEL como referência. Essa tradução é só para
+o texto enviado ao LLM — os valores usados na predição do modelo não
+mudam.
 
 ---
 
 ## Troubleshooting
 
-### Problema: "Modelo carregando ou indisponível" (HTTP 503)
+### Google: `GOOGLE_API_KEY não configurada`
 
-**Causa:** O modelo está sendo carregado pela primeira vez no servidor Hugging Face.
+O provedor `google` requer chave; sem ela a chamada é recusada antes
+de sair da API (não chega a bater na rede). Configure `GOOGLE_API_KEY`
+ou troque para `provedor=ollama`.
 
-**Solução:**
-- Espere 30-60 segundos
-- Tente a requisição novamente
-- A chamada será bem-sucedida na segunda tentativa
+### Google: erro 500 / resposta vazia ou truncada
 
-### Problema: "Authorization failed" (HTTP 401)
+Verifique se `GOOGLE_MODEL` está correto e se a chave ainda tem
+créditos/quota disponível. O endpoint usado
+(`/v1beta/interactions`) tem um formato de resposta diferente do
+endpoint clássico `generateContent` — se `GOOGLE_MODEL` apontar para
+um modelo que não usa esse endpoint, a chamada falha.
 
-**Causa:** Token inválido ou não configurado.
+### Ollama: `Erro de conexão` / timeout
 
-**Solução:**
-1. Verifique se o token está correto em `HF_API_TOKEN`
-2. Certifique-se de que está usando um token com permissão de "Read"
-3. Regenere o token em https://huggingface.co/settings/tokens se necessário
+- Confirme que o Ollama está rodando: `ollama list`
+- Se a API roda em Docker, `OLLAMA_URL` precisa usar
+  `host.docker.internal`, não `localhost`
+- Teste a partir de dentro do container:
+  ```bash
+  docker compose exec api python -c "import requests; print(requests.get('http://host.docker.internal:11434/api/tags').json())"
+  ```
 
-### Problema: Timeout na chamada ao LLM
+### `LLM_PROVIDER` (ou qualquer variável) sempre volta `None`/padrão
 
-**Causa:** A rede está lenta ou o servidor Hugging Face está congestionado.
+A variável está no `.env` mas não está listada em `environment:` no
+`docker-compose.yml` — o Compose não repassa `.env` automaticamente
+para o container, só o que está explicitamente declarado. Adicione a
+variável na lista e recrie o container com `--force-recreate`.
 
-**Solução:**
-- Aumente o valor de `TIMEOUT_LLM` (padrão: 10 segundos)
-- A interpretação não bloqueará a predição — ela retornará `null`
-- A API continua respondendo normalmente
+### Interpretação vazia ou muito curta
 
-### Problema: Interpretação vazia ou muito curta
-
-**Causa:** O modelo retornou uma resposta inadequada.
-
-**Solução:**
-- Ajuste o prompt em `llm_interpreter.py` na função `_construir_prompt()`
-- Experimente com diferentes valores de `temperature` (0.5-0.8)
-- Aumente `max_new_tokens` para respostas mais longas
+- Ajuste o prompt em `llm_interpreter.py`, função `_construir_prompt`
+- Para o Google, aumente `TIMEOUT_LLM` se a resposta estiver sendo
+  cortada por lentidão de rede
+- Para o Ollama, modelos menores tendem a gerar respostas mais curtas
+  — considere um modelo maior se a qualidade for insuficiente
 
 ---
 
 ## Custos
 
-✅ **100% Gratuito!**
+| Provedor | Custo |
+|---|---|
+| **Google Gemini** | Tier gratuito com cota limitada; acima disso, cobrado por uso — confirme o plano/cota atual em https://aistudio.google.com |
+| **Ollama** | Gratuito, roda no seu hardware — custo é o de infraestrutura local (CPU/GPU/RAM), sem chamadas de rede externas |
 
-- Hugging Face Inference API é gratuita para modelos públicos
-- Sem limite de requisições (apenas rate-limiting justo)
-- Sem necessidade de cartão de crédito
-- Ideal para prototipagem e educação
+Ollama é a opção recomendada para desenvolvimento/testes intensivos ou
+quando não há créditos disponíveis no Google.
 
 ---
 
@@ -179,26 +229,14 @@ O Hugging Face oferece vários modelos **gratuitos** de linguagem. Escolha um co
 ```bash
 curl -X POST "http://localhost:8000/prever" \
   -H "Content-Type: application/json" \
-  -d '{
-    "idade": 45,
-    "sexo": "M",
-    "pressao_sistolica": 150,
-    "pressao_diastolica": 95,
-    "imc": 28.5,
-    "cintura": 95,
-    "frequencia_cardiaca": 75,
-    "glicose": 110,
-    "colesterol": 240,
-    "hdl": 35,
-    "ldl": 160,
-    "triglicerides": 200,
-    "fumante": 1,
-    "consumo_alcool": 1,
-    "atividade_fisica": 0,
-    "estresse": 3,
-    "diabetes": 0,
-    "medicamentos_hipertensao": 0
-  }'
+  -d @modelo_api/exemplo_entrada_api.json
+```
+
+Escolhendo o provedor explicitamente:
+```bash
+curl -X POST "http://localhost:8000/prever?provedor=ollama&modelo=qwen3.5" \
+  -H "Content-Type: application/json" \
+  -d @modelo_api/exemplo_entrada_api.json
 ```
 
 ### Via Python
@@ -208,16 +246,31 @@ import requests
 
 url = "http://localhost:8000/prever"
 
+# As 20 variáveis esperadas pelo modelo (ver GET /variaveis)
 dados = {
-    "idade": 45,
-    "sexo": "M",
-    "pressao_sistolica": 150,
-    "pressao_diastolica": 95,
-    "imc": 28.5,
-    # ... restante das variáveis
+    "diab": 0,
+    "iddpapa": 3,
+    "imc": 27.5,
+    "excpeso": 1,
+    "imc_i": 3,
+    "iddpapa_old": 1,
+    "excpeso_i": 1,
+    "iddmamo": None,
+    "af": 0,
+    "exfuma": 0,
+    "obesid": 0,
+    "obesid_i": 0,
+    "ind_med_db": 0,
+    "med_db": 0,
+    "atiocu": 0,
+    "af3dominios_insu_2023": 1,
+    "dislip": 0,
+    "af3dominios_2023": 0,
+    "inativo_2023": 1,
+    "saruim": 0,
 }
 
-response = requests.post(url, json=dados)
+response = requests.post(url, json=dados, params={"provedor": "ollama"})
 resultado = response.json()
 
 print(f"Predição: {resultado['classe_prevista']}")
@@ -225,45 +278,59 @@ print(f"Probabilidade: {resultado['probabilidade_percentual']}%")
 print(f"Interpretação: {resultado['interpretacao_llm']}")
 ```
 
+### Script de teste dedicado
+
+```bash
+python scripts/testar_llm_integration.py
+```
+Importa `gerar_interpretacao_llm` diretamente (não precisa da API
+rodando) e testa 3 cenários de risco contra o provedor configurado em
+`LLM_PROVIDER`.
+
 ---
 
 ## Observações Técnicas
 
 ### Privacidade
 
-- As variáveis de entrada são enviadas ao Hugging Face para gerar a interpretação
-- Use `HF_API_TOKEN` com cuidado e não a exponha em repositórios públicos
-- Considere usar um servidor Hugging Face privado em produção se houver preocupações
+- No provedor `google`, as variáveis de entrada (já decodificadas em
+  texto) são enviadas à API do Google para gerar a interpretação
+- No provedor `ollama`, os dados não saem da máquina — toda a inferência
+  é local
+- Nunca commite `GOOGLE_API_KEY` no repositório (mantenha `.env` fora
+  do controle de versão)
 
 ### Performance
 
-- Tempo de resposta típico: 2-5 segundos (inclui latência de rede)
-- A predição é feita localmente (~50ms)
-- A geração de texto via LLM é o gargalo principal (~2-4 segundos)
-- Implementar cache de respostas pode melhorar performance
+- Predição do modelo: ~50ms, local, independe do provedor de LLM
+- Google Gemini: tipicamente 2-5s (rede + geração)
+- Ollama: variável, depende do hardware local e do tamanho do modelo —
+  pode ser mais lento que o Google em máquinas sem GPU dedicada
 
 ### Escalabilidade
 
-- Em produção com múltiplas réplicas, considere:
-  - Usar um servidor Hugging Face dedicado
-  - Implementar fila/async para processar interpretações em background
-  - Cache de interpretações para pacientes similares
+- Em produção com múltiplas réplicas da API, todas compartilham o
+  mesmo `.env`/config — não há isolamento de provedor por réplica
+- Ollama rodando fora do container Docker da API não escala
+  automaticamente com as réplicas da API (é um serviço único); considere
+  isso ao decidir Ollama vs. Google para produção com autoscaling
 
 ---
 
 ## Próximos Passos
 
-1. ✅ Implementar interpretações via LLM
-2. ⏳ Adicionar cache de respostas
-3. ⏳ Usar filas (Celery/RabbitMQ) para processar interpretações async
-4. ⏳ Criar métricas Prometheus específicas para LLM
-5. ⏳ Adicionar modelos menores/mais rápidos como fallback
+1. ✅ Interpretação via Google Gemini
+2. ✅ Fallback local via Ollama, selecionável por variável de ambiente
+   ou por requisição
+3. ⏳ Cache de interpretações para entradas repetidas/similares
+4. ⏳ Métricas Prometheus específicas por provedor de LLM
+5. ⏳ Fila/processamento assíncrono para não bloquear a resposta em
+   picos de latência do LLM
 
 ---
 
 ## Referências
 
-- [Hugging Face Inference API](https://huggingface.co/inference-api)
-- [Modelos disponíveis](https://huggingface.co/models)
-- [Documentação de autenticação](https://huggingface.co/docs/api-inference/quicktour)
-- [Limite de rate limiting](https://huggingface.co/docs/api-inference/rate-limits)
+- [Google AI Studio — API Keys](https://aistudio.google.com/app/apikey)
+- [Documentação Ollama](https://ollama.com)
+- [Ollama API — /api/generate](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-completion)

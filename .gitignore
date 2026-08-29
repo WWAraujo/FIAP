@@ -40,3 +40,4 @@ resultados/*
 # OS
 Thumbs.db
 /fase2/resultados/
+fase2/api/.env

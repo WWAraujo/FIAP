@@ -61,6 +61,12 @@ def _gerar_interpretacao(probabilidade: float, classe_prevista: int, entrada_mod
         variaveis_nomes_clinicos=VARIAVEIS_NOMES_CLINICOS
     )
     duracao_llm = round(time.perf_counter() - inicio_llm, 3)
+
+    log_evento(
+        "Interpretação LLM gerada",
+        duracao_segundos=duracao_llm,
+        tem_interpretacao=bool(interpretacao)
+    )
     return interpretacao, duracao_llm
 
 

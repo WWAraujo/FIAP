@@ -23,8 +23,11 @@ services:
       - "hipertensao.role=api"
     environment:
       - LOG_LEVEL=INFO
+      - LLM_PROVIDER=${LLM_PROVIDER:-google}
+      - OLLAMA_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=qwen3.5
       - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
-      - GOOGLE_MODEL=${GOOGLE_MODEL:-gemini-1.5-flash}
+      - GOOGLE_MODEL=${GOOGLE_MODEL:-gemini-3.5-flash}
     networks:
       - hipertensao_net
     deploy:

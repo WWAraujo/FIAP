@@ -13,19 +13,12 @@ from fastapi.responses import HTMLResponse
 # CONFIGURAÇÕES
 # ============================================================
 
-PASTA_PROJETO = os.path.dirname(os.path.abspath(__file__))
+PASTA_PROJETO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 PASTA_MODELO_API = os.path.join(PASTA_PROJETO, "modelo_api")
 
-CAMINHO_MODELO = os.path.join(
-    PASTA_MODELO_API,
-    "modelo_hipertensao_api.joblib"
-)
-
-CAMINHO_METADATA = os.path.join(
-    PASTA_MODELO_API,
-    "metadata_modelo_api.json"
-)
+CAMINHO_MODELO = os.path.join(PASTA_MODELO_API, "modelo_hipertensao_api.joblib")
+CAMINHO_METADATA = os.path.join(PASTA_MODELO_API, "metadata_modelo_api.json")
 
 
 # ============================================================

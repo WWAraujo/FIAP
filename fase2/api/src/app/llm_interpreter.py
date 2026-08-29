@@ -19,18 +19,32 @@ from .logging_config import log_evento
 # ============================================================
 
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "")
-GOOGLE_MODEL = os.environ.get("GOOGLE_MODEL", "gemini-3.7-flash")
+GOOGLE_MODEL = os.environ.get("GOOGLE_MODEL", "gemini-3.5-flash")
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
-TIMEOUT_LLM = int(os.environ.get("TIMEOUT_LLM", "20"))
+
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen3.5")
+
+# Provedor usado quando a chamada não especifica um explicitamente.
+PROVEDOR_PADRAO = os.environ.get("LLM_PROVIDER", "google").lower()
+
+TIMEOUT_LLM = int(os.environ.get("TIMEOUT_LLM", "300"))
 
 PREVIEW_MAX_CHARS = 200
 
+# "Habilitado" aqui só cobre o Google (precisa de chave). O Ollama roda
+# local sem chave, então é considerado sempre disponível — se o servidor
+# não estiver de pé, a chamada falha e vira um log de erro normal.
 LLM_HABILITADO = bool(GOOGLE_API_KEY.strip())
 
-if LLM_HABILITADO:
-    log_evento("LLM inicializado", provedor="google_gemini", modelo=GOOGLE_MODEL)
-else:
-    log_evento("LLM desabilitado: GOOGLE_API_KEY não configurada", nivel="warning")
+log_evento(
+    "LLM inicializado",
+    provedor_padrao=PROVEDOR_PADRAO,
+    google_disponivel=LLM_HABILITADO,
+    google_modelo=GOOGLE_MODEL,
+    ollama_url=OLLAMA_URL,
+    ollama_modelo=OLLAMA_MODEL,
+)
 
 
 # ============================================================
@@ -42,30 +56,50 @@ def gerar_interpretacao_llm(
     classe_prevista: int,
     variaveis_entrada: Dict[str, Any],
     variaveis_nomes_clinicos: Optional[Dict[str, str]] = None,
+    provedor: Optional[str] = None,
+    modelo: Optional[str] = None,
 ) -> Optional[str]:
-    """Gera uma interpretação em linguagem natural da predição usando o LLM."""
+    """Gera uma interpretação em linguagem natural da predição usando o LLM.
 
-    if not LLM_HABILITADO:
-        log_evento("Chamada ao LLM ignorada: LLM desabilitado", nivel="debug")
+    provedor: "google" ou "ollama". Se omitido, usa PROVEDOR_PADRAO
+    (variável de ambiente LLM_PROVIDER).
+    modelo: nome do modelo a usar nesse provedor. Se omitido, usa o
+    padrão do provedor (GOOGLE_MODEL ou OLLAMA_MODEL).
+    """
+
+    provedor = (provedor or PROVEDOR_PADRAO).lower()
+
+    if provedor == "google":
+        if not LLM_HABILITADO:
+            log_evento("Chamada ao LLM ignorada: GOOGLE_API_KEY não configurada", nivel="warning")
+            return None
+        modelo_usado = modelo or GOOGLE_MODEL
+        chamar = lambda prompt: _chamar_gemini_api(prompt, modelo_usado)  # noqa: E731
+    elif (provedor == "ollama"):
+        modelo_usado = modelo or OLLAMA_MODEL
+        chamar = lambda prompt: _chamar_ollama_api(prompt, modelo_usado)  # noqa: E731
+    else:
+        log_evento("Provedor de LLM desconhecido", nivel="error", provedor=provedor)
         return None
 
     contexto_variaveis = _formatar_variaveis_contexto(variaveis_entrada, variaveis_nomes_clinicos)
     prompt = _construir_prompt(probabilidade, classe_prevista, contexto_variaveis)
 
     log_evento(
-        "Iniciando chamada ao LLM",
-        provedor="google_gemini",
-        modelo=GOOGLE_MODEL,
+        "Iniciando a chamada ao LLM",
+        provedor=provedor,
+        modelo=modelo_usado,
         tamanho_prompt_caracteres=len(prompt),
     )
 
     inicio = time.perf_counter()
     try:
-        resposta = _chamar_gemini_api(prompt)
+        resposta = chamar(prompt)
         duracao = round(time.perf_counter() - inicio, 3)
         log_evento(
             "Interpretação LLM gerada com sucesso",
-            modelo=GOOGLE_MODEL,
+            provedor=provedor,
+            modelo=modelo_usado,
             duracao_segundos=duracao,
             tamanho_resposta_caracteres=len(resposta),
             resposta_preview=_truncar(resposta),
@@ -77,7 +111,8 @@ def gerar_interpretacao_llm(
         log_evento(
             "Erro ao gerar interpretação com LLM",
             nivel="error",
-            modelo=GOOGLE_MODEL,
+            provedor=provedor,
+            modelo=modelo_usado,
             duracao_segundos=duracao,
             tipo_erro=type(erro).__name__,
             erro=str(erro),
@@ -149,7 +184,7 @@ ou qualquer outra formatação) — apenas frases corridas, em linguagem acessí
 adequada para comunicação direta com pacientes."""
 
 
-def _chamar_gemini_api(prompt: str) -> str:
+def _chamar_gemini_api(prompt: str, modelo: str) -> str:
     """
     Chama a API Gemini (endpoint /v1beta/interactions) e devolve o texto
     da resposta. Levanta exceção em qualquer falha — quem chamou decide
@@ -161,7 +196,7 @@ def _chamar_gemini_api(prompt: str) -> str:
             "Content-Type": "application/json",
             "x-goog-api-key": GOOGLE_API_KEY,
         },
-        json={"model": GOOGLE_MODEL, "input": prompt},
+        json={"model": modelo, "input": prompt},
         timeout=TIMEOUT_LLM,
     )
     resposta.raise_for_status()
@@ -180,6 +215,27 @@ def _chamar_gemini_api(prompt: str) -> str:
                 return _remover_markdown(parte["text"].strip())
 
     raise RuntimeError("Resposta do Gemini sem texto em model_output")
+
+
+def _chamar_ollama_api(prompt: str, modelo: str) -> str:
+    """
+    Chama um servidor Ollama local (endpoint /api/generate) e devolve o
+    texto da resposta. Levanta exceção em qualquer falha — quem chamou
+    decide o que logar (ver gerar_interpretacao_llm).
+    """
+    resposta = requests.post(
+        f"{OLLAMA_URL}/api/generate",
+        json={"model": modelo, "prompt": prompt, "stream": False},
+        timeout=TIMEOUT_LLM,
+    )
+    resposta.raise_for_status()
+    dados = resposta.json()
+
+    texto = dados.get("response", "").strip()
+    if not texto:
+        raise RuntimeError(f"Ollama retornou resposta vazia (done_reason={dados.get('done_reason')})")
+
+    return _remover_markdown(texto)
 
 
 def _remover_markdown(texto: str) -> str:

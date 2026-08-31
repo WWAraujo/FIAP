@@ -12,8 +12,10 @@ Arquitetura completa, decisões e trade-offs: [ARCHITECTURE.md](./ARCHITECTURE.m
 > de forma independente aqui, apontando para o modelo otimizado pelo
 > algoritmo genético.
 
+---
 ## Pré Requisito: Criar a chave de autenticação da API Gemini
-## Para criar sua AppKey Gemini, clique [aqui](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
+### Para criar sua AppKey Gemini, clique [aqui](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
+### Após a criação da KEY, colocar no arquivo Dokerfile, linha 19 ENV GEMINI_API_KEY=*SUA APP KEY DO GEMINI*
 ---
 
 ## 1. Passo a passo: clone e setup do zero

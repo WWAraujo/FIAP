@@ -13,7 +13,7 @@ Arquitetura completa, decisões e trade-offs: [ARCHITECTURE.md](./ARCHITECTURE.m
 > algoritmo genético.
 
 ## Pré Requisito: Criar a chave de autenticação da API Gemini
-## Criar sua [Appkey](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
+## Para criar sua AppKey Gemini, clique [aqui](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
 ---
 
 ## 1. Passo a passo: clone e setup do zero

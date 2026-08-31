@@ -15,7 +15,7 @@ Arquitetura completa, decisões e trade-offs: [ARCHITECTURE.md](./ARCHITECTURE.m
 ---
 ## Pré Requisito: Criar a chave de autenticação da API Gemini
 ### Para criar sua AppKey Gemini, clique [aqui](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br)
-### Após a criação da KEY, colocar no arquivo [Dokerfile] (./src/api/Dokerfile), linha 19 ENV GEMINI_API_KEY=*SUA APP KEY DO GEMINI*
+### Após a criação da KEY, colocar no arquivo Dokerfile (./src/api/Dokerfile), no parâmetro ENV GEMINI_API_KEY=*SUA APP KEY DO GEMINI*
 ---
 
 ## 1. Passo a passo: clone e setup do zero

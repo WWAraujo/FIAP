@@ -4,3 +4,4 @@ joblib
 pandas
 scikit-learn==1.5.0
 prometheus-client==0.20.0
+google-genai

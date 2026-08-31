@@ -16,6 +16,7 @@ COPY . .
 # Expõe a porta padrão do FastAPI/Uvicorn (geralmente 8000)
 EXPOSE 8000
 
+ENV GEMINI_API_KEY=*SUA APP KEY DO GEMINI
 # Healthcheck usado pelo Docker/Compose para saber se o container está
 # pronto para receber tráfego (nginx e orquestração de escala dependem disso).
 HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=3 \

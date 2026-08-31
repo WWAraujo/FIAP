@@ -7,6 +7,7 @@ import time
 import uuid
 from datetime import datetime, timezone
 from typing import Any, Dict
+from google import genai
 
 import joblib
 import pandas as pd
@@ -25,6 +26,8 @@ from prometheus_client import (
 # ============================================================
 # CONFIGURAÇÕES
 # ============================================================
+
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 PASTA_ARQUIVO_ATUAL = os.path.dirname(os.path.abspath(__file__))
 
@@ -193,6 +196,54 @@ log_evento(
 # ============================================================
 # CRIAÇÃO DA API
 # ============================================================
+
+def traduzir_dados_para_ia(dados_brutos: dict) -> dict:
+    """Traduz códigos numéricos para linguagem natural para a LLM entender melhor."""
+    sim_nao = {1: "Sim", 0: "Não", "1": "Sim", "0": "Não"}
+    map_mamo = {"1": "Até 39 anos", "2": "40 a 49 anos", "3": "50 a 69 anos", "4": "70+ anos"}
+
+    return {
+        "Idade/Sexo": f"IMC calculado: {dados_brutos.get('imc')} (Excesso de peso: {sim_nao.get(dados_brutos.get('excpeso', 0))})",
+        "Diabetes": sim_nao.get(dados_brutos.get("diab"), "Não"),
+        "Usa Medicação Diabetes": sim_nao.get(dados_brutos.get("med_db"), "Não"),
+        "Pratica Atividade Física": sim_nao.get(dados_brutos.get("af"), "Não"),
+        "Ex-fumante": sim_nao.get(dados_brutos.get("exfuma"), "Não"),
+        "Autoavaliação de saúde ruim": sim_nao.get(dados_brutos.get("saruim"), "Não"),
+        "Faixa Etária Mamografia": map_mamo.get(str(dados_brutos.get("iddmamo", "")), "Não se aplica")
+    }
+
+def gerar_interpretacao_llm(dados_brutos: dict, status: str, probabilidade: float) -> str:
+    dados_traduzidos = traduzir_dados_para_ia(dados_brutos)
+
+    prompt = f"""
+    Você é um sistema de IA de suporte à decisão clínica. 
+    O leitor deste relatório é o MÉDICO ou PROFISSIONAL DE SAÚDE responsável pelo caso.
+    
+    Perfil do Paciente:
+    {json.dumps(dados_traduzidos, indent=2, ensure_ascii=False)}
+    
+    Risco de Hipertensão detectado pelo modelo preditivo: {probabilidade}% ({status}).
+    
+    Sua tarefa:
+    1. Gere uma explicação técnica e direta sobre o que esse risco estatístico representa no contexto clínico deste paciente.
+    2. Transforme os dados em insights acionáveis para o médico, destacando quais fatores do perfil exigem investigação mais a fundo (ex: sedentarismo e IMC).
+    3. Mantenha um tom profissional, analítico e objetivo. Evite jargões conversacionais ou falar diretamente com o paciente.
+    """
+
+    max_tentativas = 5
+    for tentativa in range(max_tentativas):
+        try:
+            resposta = client.models.generate_content(
+                model='gemini-3.5-flash-lite', 
+                contents=prompt
+            )
+            return resposta.text
+        except Exception as e:
+            print(f"🚨 ERRO NA TENTATIVA {tentativa}: {e}")
+            if tentativa == max_tentativas - 1:
+                return "⚠️ *Aviso do Sistema:* A análise detalhada da IA está temporariamente indisponível devido a alto volume de requisições. Por favor, considere a estimativa numérica exibida e consulte um médico."
+            time.sleep(3 ** tentativa)
+
 
 app = FastAPI(
     title="API Modelo de Hipertensão",
@@ -414,6 +465,13 @@ def prever_hipertensao(dados: Dict[str, Any]):
     else:
         descricao = "Sem indicativo de hipertensão"
 
+    # --- CHAMAR A IA ---
+    interpretacao_ia = gerar_interpretacao_llm(
+        dados_brutos=entrada_modelo, 
+        status=descricao, 
+        probabilidade=round(probabilidade * 100, 2)
+    )
+
     return {
         "classe_prevista": classe_prevista,
         "descricao": descricao,
@@ -423,5 +481,6 @@ def prever_hipertensao(dados: Dict[str, Any]):
         "modelo": metadata.get("algoritmo", "RandomForestClassifier"),
         "nome_modelo": NOME_MODELO,
         "instance_id": INSTANCE_ID,
-        "variaveis_recebidas": entrada_modelo
+        "variaveis_recebidas": entrada_modelo,
+        "interpretacao_llm": interpretacao_ia 
     }

@@ -48,7 +48,7 @@ ls -lh fase2/api/modelo_api/modelo_genetico_vencedor.joblib
 > Só é preciso gerar o modelo do zero se você quiser retreinar/reotimizar
 > (não para simplesmente rodar a API). Nesse caso, rode o pipeline da
 > Fase 2 (`cd fase2 && python tech_challenge_fase2.py` — requer a base
-> `vigitel-2024.csv` em `shared/data/`, peça o link ao time) e substitua
+> `vigitel-2024.csv` em `fase2/data/`, peça o link ao time) e substitua
 > `fase2/api/modelo_api/modelo_genetico_vencedor.joblib` pelo resultado.
 
 ### Passo 2 — Subir a stack completa

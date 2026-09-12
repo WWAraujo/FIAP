@@ -28,9 +28,14 @@ venv/
 *.csv
 *.xlsx
 *.xls
+*.zip
+*.pdf
 data/
 base_teste_modelo_api.csv
 dicionario-vigitel-*.xlsx
+vigitel*.csv
+vigitel*.zip
+vigitel*.pdf
 
 # Results directory - only keep .gitkeep and documentation
 resultados/*

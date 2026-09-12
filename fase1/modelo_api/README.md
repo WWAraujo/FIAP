@@ -1,69 +1,80 @@
-# Modelo API - Artefatos
+# Modelo API - Artefatos Treinados
 
-Este diretório contém os artefatos do modelo Random Forest treinado na Fase 1.
+Este diretório contém os artefatos do modelo Random Forest treinado na Fase 1 do projeto FIAP Tech Challenge.
 
-## Arquivos Necessários
+## Arquivos
 
-### ⚠️ Arquivos Grandes (não versionados no git)
+### modelo_hipertensao_api.joblib
+- **Descrição:** Modelo Random Forest treinado com 20 variáveis mais importantes
+- **Algoritmo:** RandomForestClassifier
+- **Tamanho:** ~57 MB
+- **Variáveis:** 20 features selecionadas (diab, iddpapa, imc, excpeso, etc.)
+- **Métricas:**
+  - Accuracy: 0.6955
+  - Precision: 0.5021
+  - Recall: 0.6979
+  - F1-Score: 0.584
+  - ROC-AUC: 0.7672
 
-Os seguintes arquivos precisam ser baixados ou gerados localmente:
+### metadata_modelo_api.json
+- **Descrição:** Metadados completos do modelo
+- **Conteúdo:**
+  - Hiperparâmetros do modelo
+  - Lista de variáveis de entrada
+  - Métricas de performance
+  - Threshold de classificação (0.5)
+  - Descrição do target
 
-1. **`modelo_hipertensao_api.joblib`** (~100+ MB)
-   - Modelo Random Forest treinado
-   - Necessário para rodar a API
+### exemplo_entrada_api.json
+- **Descrição:** Exemplo de entrada para testes da API
+- **Uso:** Referência para formatar requisições à API
 
-2. **`dicionario-vigitel-2006-2024.xlsx`** (~50+ MB)
-   - Dicionário de variáveis do Vigitel
-   - Usado como referência
+### modelo_api_random_forest.py
+- **Descrição:** Script de treinamento do modelo
+- **Uso:** Referência para como o modelo foi treinado
 
-### ✅ Arquivos Versionados no Git
+## Como Usar
 
-- `metadata_modelo_api.json` - Metadados do modelo
-- `exemplo_entrada_api.json` - Exemplo de entrada para testes
-- `base_teste_modelo_api.csv` - Base de testes
-
-## Como Obter os Arquivos Grandes
-
-### Opção 1: Download do Google Drive/OneDrive
-Solicitar ao grupo responsável os links para download:
-
-```bash
-# Fazer download dos arquivos
-# modelo_hipertensao_api.joblib -> fase1/modelo_api/
-# dicionario-vigitel-2006-2024.xlsx -> fase1/modelo_api/
-```
-
-### Opção 2: Retraining
-Se o notebook estiver disponível, reexecutar:
-
-```bash
-cd fase1
-jupyter notebook src/techchallenge_fase1/tech_challenge.ipynb
-```
-
-Os modelos treinados serão salvos em `modelo_api/`.
-
-## Estrutura de Arquivos
-
-```
-modelo_api/
-├── README.md (este arquivo)
-├── metadata_modelo_api.json ✅
-├── exemplo_entrada_api.json ✅
-├── base_teste_modelo_api.csv ✅
-├── modelo_api_random_forest.py
-├── modelo_hipertensao_api.joblib ⚠️ (não versionado)
-└── dicionario-vigitel-2006-2024.xlsx ⚠️ (não versionado)
-```
-
-## Para Rodar a API
-
-Certifique-se de que `modelo_hipertensao_api.joblib` está presente:
-
+### Via API FastAPI
 ```bash
 cd fase1
 pip install -r requirements.txt
 python src/techchallenge_fase1/api_modelo.py
 ```
 
-A API ficará disponível em `http://localhost:8000`.
+A API ficará disponível em `http://localhost:8000`
+
+### Via Python (direto)
+```python
+import joblib
+import pandas as pd
+
+# Carregar modelo
+modelo = joblib.load('fase1/modelo_api/modelo_hipertensao_api.joblib')
+
+# Carregar metadados
+import json
+with open('fase1/modelo_api/metadata_modelo_api.json', 'r') as f:
+    metadata = json.load(f)
+
+# Fazer predição
+# ... seu código de predição
+```
+
+## Retreinamento
+
+Para treinar novamente o modelo, use o notebook:
+```bash
+cd fase1/src/techchallenge_fase1
+jupyter notebook tech_challenge.ipynb
+```
+
+Siga as instruções no notebook para executar os blocos de treinamento.
+
+## Notas
+
+- Este modelo é o baseline da Fase 1
+- Para otimização genética, consulte a Fase 2
+- O modelo usa 20 variáveis selecionadas por feature importance
+- Threshold de classificação: 0.5
+- Tratamento de data leakage aplicado durante treinamento

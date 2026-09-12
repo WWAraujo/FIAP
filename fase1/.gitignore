@@ -1,5 +1,15 @@
-vigitel.csv
+# Dados Vigitel (arquivos grandes)
+vigitel*.csv
+vigitel*.zip
+vigitel*.pdf
+dicionario-vigitel-*.xlsx
+
+# Arquivos de processamento
 base_tratada_sem_vazamento.csv
+
+# Python
 __pycache__/
 .ipynb_checkpoints/
+
+# Resultados
 resultados_sem_vazamento/

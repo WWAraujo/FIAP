@@ -1,0 +1,16 @@
+{
+  "nome": "experimento_a",
+  "descricao": "Configuração baseline - Segurança Clínica",
+  "objetivo": "Priorizar Recall para capturar máximo de doentes na triagem",
+  "algoritmo_genetico": {
+    "populacao_tamanho": 50,
+    "geracoes": 20,
+    "taxa_crossover": 0.8,
+    "taxa_mutacao": 0.1,
+    "elitismo": 2
+  },
+  "modelo": {
+    "class_weight": "balanced",
+    "threshold": 0.5
+  }
+}

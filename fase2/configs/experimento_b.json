@@ -1,0 +1,16 @@
+{
+  "nome": "experimento_b",
+  "descricao": "Configuração alta precisão - Eficiência Médica",
+  "objetivo": "Eliminar alarmes falsos otimizando Precisão",
+  "algoritmo_genetico": {
+    "populacao_tamanho": 30,
+    "geracoes": 15,
+    "taxa_crossover": 0.7,
+    "taxa_mutacao": 0.15,
+    "elitismo": 1
+  },
+  "modelo": {
+    "class_weight": null,
+    "threshold": 0.6
+  }
+}

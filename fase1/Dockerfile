@@ -5,18 +5,22 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copia o arquivo de dependências primeiro para otimizar o cache do Docker
-COPY requirements.txt .
+COPY fase1/requirements.txt .
 
 # Instala as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia todo o conteúdo do projeto para dentro do container
-COPY . .
+# Copia dados de treinamento da fase1
+COPY fase1/data/ ./data/
+
+# Copia código da API
+COPY fase1/src/ ./src/
+
+# Copia modelo treinado da fase1
+COPY fase1/modelo_api/ ./modelo_api/
 
 # Expõe a porta padrão do FastAPI/Uvicorn (geralmente 8000)
 EXPOSE 8000
 
 # Comando para rodar o Uvicorn
-# Substitua "api_modelo" pelo nome do seu arquivo .py (sem a extensão)
-# E "app" pelo nome da variável da sua instância FastAPI (ex: app = FastAPI())
-CMD ["uvicorn", "api_modelo:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.techchallenge_fase1.api_modelo:app", "--host", "0.0.0.0", "--port", "8000"]

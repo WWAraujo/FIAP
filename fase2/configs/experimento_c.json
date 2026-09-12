@@ -1,0 +1,16 @@
+{
+  "nome": "experimento_c",
+  "descricao": "Configuração impacto puro - Validação Científica",
+  "objetivo": "Isolar ganho estatístico das novas variáveis",
+  "algoritmo_genetico": {
+    "populacao_tamanho": 40,
+    "geracoes": 25,
+    "taxa_crossover": 0.75,
+    "taxa_mutacao": 0.12,
+    "elitismo": 2
+  },
+  "modelo": {
+    "class_weight": "balanced",
+    "threshold": 0.5
+  }
+}

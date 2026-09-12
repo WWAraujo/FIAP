@@ -9,12 +9,19 @@ FIAP/
 ├── fase1/                          # Projeto Fase 1: API de Triagem (baseline original)
 │   ├── src/techchallenge_fase1/   # Código-fonte da API
 │   ├── modelo_api/                # Artefatos do modelo treinado
+│   ├── data/                       # Dados de treinamento (vigitel.csv, dicionário, variáveis)
+│   ├── scripts/                   # Scripts utilitários (download_vigitel.py)
 │   ├── Dockerfile                 # Docker configuration
 │   ├── requirements.txt           # Dependências específicas
 │   └── README.md                  # Instruções de Fase 1
 │
 ├── fase2/                          # Projeto Fase 2: Otimização Genética + deploy do vencedor
 │   ├── src/                       # Código-fonte da otimização genética
+│   ├── configs/                   # Configurações de experimentos
+│   │   ├── experimento_a.json
+│   │   ├── experimento_b.json
+│   │   └── experimento_c.json
+│   ├── data/                      # Dados de treinamento da fase2
 │   ├── tests/                     # Testes unitários
 │   ├── scripts/                   # Scripts executáveis
 │   │   ├── run_experiments.py    # Encaminhador para programa principal
@@ -28,14 +35,6 @@ FIAP/
 │       ├── docker-compose.yml    # API escalável + nginx + autoscaler + Prometheus + Grafana
 │       ├── nginx/, autoscaler/, monitoring/
 │       └── ARCHITECTURE.md       # Arquitetura, decisões e trade-offs do deploy
-│
-├── shared/                        # Recursos compartilhados
-│   ├── configs/                  # Configurações de experimentos
-│   │   ├── experimento_a.json
-│   │   ├── experimento_b.json
-│   │   └── experimento_c.json
-│   ├── scripts/                  # Scripts utilitários compartilhados
-│   └── data/                     # Datasets compartilhados
 │
 ├── resultados/                    # Outputs dos experimentos
 │   └── [timestamp]/              # Resultados por data/hora
@@ -63,7 +62,8 @@ python src/techchallenge_fase1/api_modelo.py
 
 **Arquivos principais:**
 - `src/techchallenge_fase1/api_modelo.py` - Aplicação principal
-- `modelo_api/modelo_hipertensao_api.joblib` - Modelo treinado
+- `modelo_api/` - Modelo treinado e metadados
+- `data/` - Dados de treinamento (vigitel.csv, dicionário, variáveis)
 - `formulario.html` - Interface web
 
 ## Fase 2: Otimização Genética
@@ -189,34 +189,39 @@ cd fase2 && pip install -e .
 ## Fluxo de Dados
 
 ```
-fase1/modelo_api/
+fase1/data/
+    ├── vigitel.csv
     ├── dicionario-vigitel-2006-2024.xlsx
-    ├── metadata_modelo_api.json        ─────┐
-    ├── modelo_api_random_forest.py           │
-    └── modelo_hipertensao_api.joblib        │
-                                              │ Fase 2 lê metadados e carrega modelo
-                                              │
-shared/configs/                              │
-    ├── experimento_a.json ────────────────┐ │
-    ├── experimento_b.json                 │ │
-    └── experimento_c.json  ──────────────┼─┴─> fase2/tech_challenge_fase2.py
-                                           │         │
-shared/data/                               │         │
-    └── vigitel-2024.csv ───────────────────────> Processamento e otimização
+    └── variaveis.txt                           ─────> Treinamento do modelo
                                                       │
                                                       v
-                                                resultados/[timestamp]/
-                                                      │
-                                                      │ vencedor salvo na raiz do repo
-                                                      v
-                                        modelo_genetico_vencedor.joblib
-                                                      │
-                                                      │ copiado para
-                                                      v
-                                fase2/api/modelo_api/modelo_genetico_vencedor.joblib
-                                                      │
-                                                      v
-                                fase2/api/ (API v2.0.0, docker-compose)
+fase1/modelo_api/
+    ├── metadata_modelo_api.json                 ─────┐
+    ├── modelo_api_random_forest.py                   │
+    └── modelo_hipertensao_api.joblib                │
+                                                       │ Fase 2 lê metadados e carrega modelo
+                                                       │
+fase2/configs/                                       │
+    ├── experimento_a.json ────────────────────────┐ │
+    ├── experimento_b.json                         │ │
+    └── experimento_c.json  ──────────────────────┼─┴─> fase2/tech_challenge_fase2.py
+                                                  │         │
+fase2/data/                                        │         │
+    └── vigitel.csv ──────────────────────────────────> Processamento e otimização
+                                                             │
+                                                             v
+                                                       resultados/[timestamp]/
+                                                             │
+                                                             │ vencedor salvo na raiz do repo
+                                                             v
+                                             modelo_genetico_vencedor.joblib
+                                                             │
+                                                             │ copiado para
+                                                             v
+                             fase2/api/modelo_api/modelo_genetico_vencedor.joblib
+                                                             │
+                                                             v
+                             fase2/api/ (API v2.0.0, docker-compose)
 ```
 
 ## Próximos Passos

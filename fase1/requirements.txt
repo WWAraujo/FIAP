@@ -3,3 +3,5 @@ uvicorn==0.30.1
 joblib
 pandas
 scikit-learn==1.5.0
+requests
+beautifulsoup4

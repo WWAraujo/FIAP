@@ -15,7 +15,8 @@ from fastapi.responses import HTMLResponse
 
 PASTA_PROJETO = os.path.dirname(os.path.abspath(__file__))
 
-PASTA_MODELO_API = os.path.join(PASTA_PROJETO, "modelo_api")
+# Caminho para modelo_api (local da fase1)
+PASTA_MODELO_API = os.path.join(PASTA_PROJETO, "..", "..", "modelo_api")
 
 CAMINHO_MODELO = os.path.join(
     PASTA_MODELO_API,

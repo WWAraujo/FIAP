@@ -6,6 +6,25 @@ Este projeto faz parte de um repositório maior que contém **Fase 1 e Fase 2**.
 
 Localização: `./fase1/` na raiz do repositório FIAP.
 
+**Estrutura da Fase 1:**
+```
+fase1/
+├── src/techchallenge_fase1/
+│   ├── api_modelo.py          # API FastAPI principal
+│   └── formulario.html        # Interface web
+├── modelo_api/                # Modelo treinado e metadados
+│   ├── modelo_hipertensao_api.joblib
+│   ├── metadata_modelo_api.json
+│   └── exemplo_entrada_api.json
+├── data/                      # Dados de treinamento
+│   ├── vigitel.csv
+│   ├── dicionario-vigitel-2006-2024.xlsx
+│   └── variaveis.txt
+├── requirements.txt
+├── Dockerfile
+└── README.md
+```
+
 ---
 
 ## 🏥 Cenário e Objetivo do Projeto
@@ -21,8 +40,16 @@ O modelo utiliza dados históricos da base pública **Vigitel** (Vigilância de 
 * **Target (Variável Alvo):** `hart` (Diagnóstico médico prévio de hipertensão).
 * **Tratamento de Data Leakage:** Durante os ciclos iniciais de desenvolvimento, foi detectado um vazamento de dados clássico (*data leakage*): variáveis como `trat_med_has` (tratamento médico para hipertensão) e `med_has` (uso de remédios para pressão) entregavam a resposta ao modelo antes da hora. O pipeline conta com uma rotina automatizada de auditoria que expurga essas variáveis "intrusas", forçando os modelos a aprenderem padrões clínicos e epidemiológicos reais (como idade, IMC, tabagismo, sedentarismo e hábitos alimentares).
 
-> ⚠️ **Nota sobre o Dataset:** Devido às restrições de tamanho de arquivos do GitHub (limite de 100MB), o arquivo bruto `vigitel.csv` está listado no `.gitignore`. O download do arquivo deve ser feito através do link externo disponibilizado pelo grupo e colado na raiz do diretório antes da execução.
-> 🔗 [Insira aqui o link do seu Google Drive/OneDrive onde salvou o vigitel.csv]
+> ⚠️ **Nota sobre o Dataset:** Devido às restrições de tamanho de arquivos do GitHub (limite de 100MB), o arquivo bruto `vigitel.csv` está listado no `.gitignore`. O download deve ser feito através do link oficial do Ministério da Saúde.
+>
+> **Fonte Oficial:** [Vigitel - Ministério da Saúde](https://svs.aids.gov.br/daent/cgdnt/vigitel/)
+>
+> **Arquivos disponíveis:**
+> - Base de dados Vigitel 2006-2024 (formato CSV - ZIP 83,1 MB)
+> - Dicionário de dados (Excel 91,1 KB)
+> - Orientações para análise (PDF 313,7 KB)
+>
+> **Download Automático:** Use o script `download_vigitel.py` em `fase1/scripts/` para baixar e extrair os arquivos automaticamente.
 
 
 ---

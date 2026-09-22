@@ -37,6 +37,26 @@ vigitel*.csv
 vigitel*.zip
 vigitel*.pdf
 
+# Fase 3: versionar somente a fonte sintética mínima e reproduzível.
+# Dados curados, splits, banco SQLite, logs e pesos continuam locais.
+!fase3/data/
+fase3/data/*
+!fase3/data/raw/
+fase3/data/raw/*
+!fase3/data/raw/dataset_medico.json
+
+# Fase 3: ambientes, pesos e execução local nunca são artefatos de código.
+fase3/.venv-org03/
+fase3/models/
+fase3/logs/
+.ollamassist/
+nul
+
+# Relatórios de benchmark são evidências pequenas e versionáveis.
+!fase3/artifacts/
+!fase3/artifacts/benchmarks/
+!fase3/artifacts/benchmarks/*.csv
+
 # Results directory - only keep .gitkeep and documentation
 resultados/*
 !resultados/.gitkeep

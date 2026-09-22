@@ -1,0 +1,262 @@
+{
+  "run_id": "20260920T190753Z",
+  "created_at_utc": "2026-09-20T19:44:49.521548+00:00",
+  "models_tested": [
+    "gemma3:4b",
+    "qwen3:8b",
+    "qwen2.5:7b-instruct",
+    "qwen3.8:27b"
+  ],
+  "models_downloaded_during_run": [
+    "gemma3:4b",
+    "qwen3:8b",
+    "qwen2.5:7b-instruct",
+    "qwen3.8:27b"
+  ],
+  "models_failed_download": [],
+  "configuration": {
+    "repetitions": 3,
+    "timeout_seconds": 180,
+    "download_timeout_seconds": 1800,
+    "max_parallel_downloads": 1,
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 600,
+      "num_ctx": 2048
+    },
+    "system_prompt": "Você é um assistente de apoio clínico para profissionais.\nUse somente o contexto fornecido. Não prescreva medicamentos, não conclua um\ndiagnóstico definitivo e indique validação humana quando houver conduta clínica.\nSe faltarem dados, declare a limitação. Responda em português e indique o\nprotocolo que sustentou a resposta. Forneça sua resposta diretamente, sem raciocínio interno.\n"
+  },
+  "environment": {
+    "python_version": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "ollama_version": "ollama version is 0.32.14"
+  },
+  "model_catalog": {
+    "meditron_q6_k:latest": {
+      "name": "meditron_q6_k:latest",
+      "model": "meditron_q6_k:latest",
+      "modified_at": "2026-09-20T09:17:16.6654292-03:00",
+      "size": 6596008109,
+      "digest": "e5b48d006618fd622a849db49646d5b051917cdf9d567a5549c53ec90b9f8652",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q6_K",
+        "context_length": 131072,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "openbiollm_q8_0:latest": {
+      "name": "openbiollm_q8_0:latest",
+      "model": "openbiollm_q8_0:latest",
+      "modified_at": "2026-09-20T09:11:49.4736597-03:00",
+      "size": 8540770710,
+      "digest": "f247b8cb4af7aeefe308fbd3b4ae121c316c0bebda996e13cbdd563ad7cce452",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q8_0",
+        "context_length": 8192,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "biomistral_q8_0:latest": {
+      "name": "biomistral_q8_0:latest",
+      "model": "biomistral_q8_0:latest",
+      "modified_at": "2026-09-20T09:09:23.7831929-03:00",
+      "size": 7695858633,
+      "digest": "6409538eda088852f3b348aefa884daf0e428822cec5348d3316543620b49e13",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "7.2B",
+        "quantization_level": "Q8_0",
+        "context_length": 32768,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "qwen_q3_k_xl:latest": {
+      "name": "qwen_q3_k_xl:latest",
+      "model": "qwen_q3_k_xl:latest",
+      "modified_at": "2026-09-18T21:45:18.930125-03:00",
+      "size": 13146394075,
+      "digest": "04e537bd3ea90623252f8a471c04e72f95be37e217ed9f2cf932f9de0b733495",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "27.3B",
+        "quantization_level": "Q3_K_L",
+        "context_length": 262144,
+        "embedding_length": 5120
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "qwen_iq4_xs:latest": {
+      "name": "qwen_iq4_xs:latest",
+      "model": "qwen_iq4_xs:latest",
+      "modified_at": "2026-09-18T21:33:09.5561111-03:00",
+      "size": 14252846555,
+      "digest": "9ace112cca9a1b6c277f57dcc90fdc5aec6b09dfedf7e6db5977a82db4b5ed02",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "27.3B",
+        "quantization_level": "IQ4_XS",
+        "context_length": 262144,
+        "embedding_length": 5120
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "gemma3:latest": {
+      "name": "gemma3:latest",
+      "model": "gemma3:latest",
+      "modified_at": "2026-09-12T21:25:26.6600844-03:00",
+      "size": 3338801804,
+      "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma3",
+        "families": [
+          "gemma3"
+        ],
+        "parameter_size": "4.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "gemma3:4b": {
+      "name": "gemma3:4b",
+      "model": "gemma3:4b",
+      "modified_at": "2026-09-20T16:07:53.8556253-03:00",
+      "size": 3338801804,
+      "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma3",
+        "families": [
+          "gemma3"
+        ],
+        "parameter_size": "4.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "qwen3:8b": {
+      "name": "qwen3:8b",
+      "model": "qwen3:8b",
+      "modified_at": "2026-09-20T16:10:02.5108094-03:00",
+      "size": 5225388164,
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "8.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    },
+    "qwen2.5:7b-instruct": {
+      "name": "qwen2.5:7b-instruct",
+      "model": "qwen2.5:7b-instruct",
+      "modified_at": "2026-09-20T16:11:52.8379415-03:00",
+      "size": 4683087332,
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "qwen3.8:27b": {
+      "name": "qwen3.8:27b",
+      "model": "qwen3.8:27b",
+      "modified_at": "2026-09-20T16:20:44.852379-03:00",
+      "size": 17741872154,
+      "digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "details": {
+        "parent_model": "qwen3.8:27b-q4_K_M",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "27.3B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 5120
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking",
+        "vision"
+      ]
+    }
+  },
+  "cases_file": "src\\medical_assistant\\evaluation\\clinical_cases.jsonl",
+  "case_count": 7,
+  "latency_ms_mean": 21379.93
+}

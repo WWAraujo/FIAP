@@ -1,0 +1,26 @@
+{
+  "train": {
+    "count": 1408,
+    "complete_sequences": 1408,
+    "answer_eos_retained": 1408,
+    "max_tokens": 512,
+    "max_answer_tokens": 112,
+    "medical_groups": 596
+  },
+  "validation": {
+    "count": 160,
+    "complete_sequences": 160,
+    "answer_eos_retained": 160,
+    "max_tokens": 512,
+    "max_answer_tokens": 97,
+    "medical_groups": 67
+  },
+  "test": {
+    "count": 160,
+    "complete_sequences": 160,
+    "answer_eos_retained": 160,
+    "max_tokens": 512,
+    "max_answer_tokens": 84,
+    "medical_groups": 69
+  }
+}

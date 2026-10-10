@@ -1,0 +1,732 @@
+{
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/challenge.jsonl",
+  "dataset_sha256": "0a9e02eedbd7ae5ded30b3433cd84fe41cafa2a287f206c3bf47c6cbccd97b2d",
+  "responses": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/base_challenge/20261005T145827Z_eval03/base.jsonl",
+  "responses_sha256": "32f569de2dbd0d4d9e5deff07dc8c62cbf87c4d812768a4d739c84428aba7bc5",
+  "metrics": {
+    "total": {
+      "count": 40,
+      "valid_json": 39,
+      "exact": 9,
+      "status": 35,
+      "data": 10,
+      "pending": 36,
+      "source": 29,
+      "human_validation": 39
+    },
+    "receita_modelo": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 0,
+      "status": 2,
+      "data": 0,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    },
+    "educativo_information": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 4,
+      "data": 0,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "educativo_inheritance": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 4,
+      "data": 0,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "limites": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 2,
+      "status": 2,
+      "data": 2,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    },
+    "faq_contextual": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 1,
+      "status": 2,
+      "data": 1,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    },
+    "educativo_genetic_changes": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 4,
+      "data": 0,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "documento_genetic_changes": {
+      "count": 3,
+      "valid_json": 3,
+      "exact": 0,
+      "status": 3,
+      "data": 0,
+      "pending": 3,
+      "source": 0,
+      "human_validation": 3
+    },
+    "documento_information": {
+      "count": 3,
+      "valid_json": 3,
+      "exact": 0,
+      "status": 3,
+      "data": 0,
+      "pending": 3,
+      "source": 0,
+      "human_validation": 3
+    },
+    "documento_inheritance": {
+      "count": 3,
+      "valid_json": 3,
+      "exact": 0,
+      "status": 3,
+      "data": 0,
+      "pending": 3,
+      "source": 0,
+      "human_validation": 3
+    },
+    "fonte_ausente": {
+      "count": 3,
+      "valid_json": 3,
+      "exact": 2,
+      "status": 2,
+      "data": 2,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 3
+    },
+    "alerta": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 0,
+      "status": 2,
+      "data": 0,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    },
+    "laudo": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 0,
+      "status": 0,
+      "data": 1,
+      "pending": 0,
+      "source": 2,
+      "human_validation": 2
+    },
+    "procedimento": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 2,
+      "status": 2,
+      "data": 2,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    },
+    "pendencias": {
+      "count": 2,
+      "valid_json": 1,
+      "exact": 0,
+      "status": 0,
+      "data": 0,
+      "pending": 1,
+      "source": 1,
+      "human_validation": 1
+    },
+    "protocolo": {
+      "count": 2,
+      "valid_json": 2,
+      "exact": 2,
+      "status": 2,
+      "data": 2,
+      "pending": 2,
+      "source": 2,
+      "human_validation": 2
+    }
+  },
+  "details": [
+    {
+      "source_id": "F2-SIM-challenge-00004",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "d6f93aa53aeb6b1ad448b331fbd0856a34bac5710dd5125da5f9fca7296b96f8"
+    },
+    {
+      "source_id": "F2-GHR-0000560-1",
+      "category": "educativo_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "41a787081cfcd19ec7f03cf87ff3fe082ea6e334c13ee504d744abdac24406ce"
+    },
+    {
+      "source_id": "F2-GARD-0004425-1",
+      "category": "educativo_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "5e1f3c5aec72783753da01bd0f92198a0449f6c20c486ae8002c643c37b6ea00"
+    },
+    {
+      "source_id": "F2-GHR-0000228-4",
+      "category": "educativo_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "25c2cd2cfba901c265e224d6c0937d8e5668a7c5b274ed9513c748cea6006339"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00006",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "91697d0019442b271d715e595c0568fae20689e674f5c9303d3c18c16c9557aa"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00014",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "68d78d92cc173f0628a114d451008cd354becb6d3560ee755345407f1759eb62"
+    },
+    {
+      "source_id": "F2-GARD-0001456-1",
+      "category": "educativo_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c66a42938a1f38596391bd64a81bd56c31bce14c125f5f7f0c61974eee172f3a"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00008",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "31b061b2e89fc5729b0dd97b3bff69c887cf873e51a4881334a6cb2d85d5ae41"
+    },
+    {
+      "source_id": "F2-GHR-0000510-4",
+      "category": "educativo_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "3a978105a6519bcb1be3ce917ab13815a9193298a5e08d4732398c095a545e45"
+    },
+    {
+      "source_id": "F2-GHR-0000815-3",
+      "category": "educativo_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "824c3d0418c12f5288d68ae96b994f37916f8f195c913f17f5b306615b91ea1d"
+    },
+    {
+      "source_id": "F2-GHR-0000613-3",
+      "category": "documento_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "548766c4f9589c82b734c9b4e1928097cd60603e72be89e8f27ada4cc2ee835f"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00000",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "9692e74213823b01d9dfbf53419e8371ed83186b535e4039f06068bb9005af78"
+    },
+    {
+      "source_id": "F2-GHR-0000524-1",
+      "category": "documento_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "b2994f86a500edfd472543a1d3484c6a37a75ddad9f41078f16351ca084c1fbd"
+    },
+    {
+      "source_id": "F2-GHR-0001050-4",
+      "category": "documento_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "01baa28040a32508035bff6f9f29a1098f5b280e2f263262662e1bdaa0d360f6"
+    },
+    {
+      "source_id": "F2-GHR-0000518-3",
+      "category": "educativo_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "7f3f75fe6918b1a723b754c5902d92f2a77014b214d95975acc6330621f472f9"
+    },
+    {
+      "source_id": "F2-GHR-0000793-3",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8b75e572e0335e4fa12a0e621fbdb59934be5e37a22f9f36f11d91d4a3b84d51"
+    },
+    {
+      "source_id": "F2-GHR-0000466-3",
+      "category": "documento_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "8930c8795dd8e801d7eb63d8237b4bf436c2092c3cdcfd3a149a1702f25a8734"
+    },
+    {
+      "source_id": "F2-GHR-0000489-3",
+      "category": "educativo_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "e0d8874ab85b4d1051ea6cc4b448317ddff7cf0acc25a4f03df3391a2ea2cc44"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00012",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f420dafe48eecb5b0d93ed6c4833c4b0c41c577609d486dc3b55fe8edb5a6765"
+    },
+    {
+      "source_id": "F2-GHR-0000271-4",
+      "category": "documento_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "adbdcddd27ffb3548b0af1a1b0d83ab0f5ec8a86941759cbb037b0f8b94d06d0"
+    },
+    {
+      "source_id": "F2-GHR-0000518-4",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "296196225f824657df5b23be9c91ee1f5c6bb37d67dc91696d4f5460b5ddf1a9"
+    },
+    {
+      "source_id": "F2-GHR-0000506-1",
+      "category": "educativo_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "085eb46ee3249d5cdaeb52cae18452e3998d0484a02a2a7440ce1bafbaa6d9dd"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00007",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "fba0d1ec73f284a883c7a7e43135a594b4a09848030d0ebb94a6b4cec83fc363"
+    },
+    {
+      "source_id": "F2-GHR-0000518-1",
+      "category": "documento_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "5affdea03fc72b9e2bbca1fd92d969f97af9e7293b1deff6486cf9fe9c524b3b"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00003",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "1e20ecc8dfb8a033a450c7c3020606f8ab27ad252010b40c30ab474b6a257dba"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00005",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "3b199ddbe4a3165aefe8b9af491c96a8a2dd8be6c537bb648f0151e33fd0b3e7"
+    },
+    {
+      "source_id": "F2-GARD-0000138-1",
+      "category": "documento_information",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "529a05d0dfd0a481acb29e18776adcf092ae8893645f4040228d41fea5281670"
+    },
+    {
+      "source_id": "F2-GHR-0001050-3",
+      "category": "documento_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "dc808284b22654314b5f1e78cf660149cbc08064717fd155279a479a2202ad64"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00011",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": true,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f569e1895f486e4349e094989620ef03113f55b85052c744bcfad589e741fd36"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00001",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": false,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": false
+      },
+      "response_sha256": "7421d3f51e304a44f5113e67453e9992c21bc1c63afda900a80dbc156d15ffa9"
+    },
+    {
+      "source_id": "F2-GHR-0000131-4",
+      "category": "documento_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "864fd4e936bd6639b010fe9773400238d54fea2f1bf8a38f31cccfcfe2e25439"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00002",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "07c090d78b9c4b696cc2e96a388c3e53540f720c4965be7bf1d53b58f7054399"
+    },
+    {
+      "source_id": "F2-GHR-0000613-4",
+      "category": "educativo_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "1a20d10b6022c05af8f995d1b292bb4aab1758edf2b70677fd0f8815c980f2b5"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00015",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "18e09bc4f70b12073b4030095937e1977f459caa38bbf4223dbe480ba0e8b26c"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00009",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "56bd3dc715a10c24eb0ee6bdf09a12a2c79871ccf5dfef97c03f34cc20cc1989"
+    },
+    {
+      "source_id": "F2-GHR-0000996-4",
+      "category": "educativo_inheritance",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "873c7e70d8c948b9c4cf44c5b5878890bd92266a4cdf14b84aba8279c0e557a5"
+    },
+    {
+      "source_id": "F2-GHR-0000620-3",
+      "category": "educativo_genetic_changes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f0d1e47df1edba04a1063485c4cd4d96626bb5c107447ce5d9a1687bede286a0"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00010",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "67033faa74b7622b49ec9485cc584fee1168fa3d493b6cdc6383812ff2e0a61c"
+    },
+    {
+      "source_id": "F2-GARD-0005115-1",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8b75e572e0335e4fa12a0e621fbdb59934be5e37a22f9f36f11d91d4a3b84d51"
+    },
+    {
+      "source_id": "F2-SIM-challenge-00013",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "95b1008979168b0e8288999b2a9da521e0de99698078b957f891c35cf1d10611"
+    }
+  ],
+  "clinical_validation": false,
+  "limitation": "Exatidão do contrato e trechos documentados; perguntas educativas gerais exigem revisão semântica separada. Sem validação clínica."
+}

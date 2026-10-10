@@ -1,0 +1,29 @@
+{
+  "registered_at": "2026-10-05T14:26:46.005573+00:00",
+  "model_response_contents_seen_by_reviewer": false,
+  "reviewer": "Revisão documental por IA; sem validação clínica",
+  "dataset_sha256": "0a9e02eedbd7ae5ded30b3433cd84fe41cafa2a287f206c3bf47c6cbccd97b2d",
+  "reviewed_source_ids": [
+    "F2-GARD-0001456-1",
+    "F2-GARD-0004425-1",
+    "F2-GHR-0000228-4",
+    "F2-GHR-0000489-3",
+    "F2-GHR-0000506-1",
+    "F2-GHR-0000510-4",
+    "F2-GHR-0000518-3",
+    "F2-GHR-0000560-1",
+    "F2-GHR-0000613-4",
+    "F2-GHR-0000620-3",
+    "F2-GHR-0000815-3",
+    "F2-GHR-0000996-4"
+  ],
+  "translation_verdict": "Sentido das primeiras frases preservado; nenhum caso excluído.",
+  "dataset_mutated": false,
+  "grading_note": "Rubrica da validação aplicada também ao teste. Referência curta não é lista exaustiva; considerar original completo e fontes primárias atuais.",
+  "exceptions": [
+    {
+      "source_id": "F2-GHR-0000620-3",
+      "note": "Causas de MMPSI/EIMFS não totalmente conhecidas não excluem genes hoje confirmados; aceitar alternativas documentadas, sem exigir repetir desconhecimento."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "seed": 2026100511,
+  "splits": {
+    "train": {
+      "count": 1408,
+      "max_tokens": 512,
+      "over_512": 0,
+      "question_types": {
+        "inheritance": 256,
+        "information": 512,
+        "genetic changes": 256
+      },
+      "categories": {
+        "educativo_inheritance": 192,
+        "educativo_information": 384,
+        "alerta": 48,
+        "fonte_ausente": 128,
+        "limites": 48,
+        "educativo_genetic_changes": 192,
+        "documento_genetic_changes": 32,
+        "laudo": 48,
+        "receita_modelo": 48,
+        "documento_inheritance": 32,
+        "documento_information": 64,
+        "pendencias": 48,
+        "faq_contextual": 48,
+        "procedimento": 48,
+        "protocolo": 48
+      }
+    },
+    "validation": {
+      "count": 160,
+      "max_tokens": 512,
+      "over_512": 0,
+      "question_types": {
+        "information": 32,
+        "inheritance": 32,
+        "genetic changes": 32
+      },
+      "categories": {
+        "educativo_genetic_changes": 16,
+        "documento_inheritance": 12,
+        "fonte_ausente": 12,
+        "procedimento": 8,
+        "documento_information": 12,
+        "educativo_information": 16,
+        "faq_contextual": 8,
+        "documento_genetic_changes": 12,
+        "laudo": 8,
+        "educativo_inheritance": 16,
+        "protocolo": 8,
+        "alerta": 8,
+        "receita_modelo": 8,
+        "pendencias": 8,
+        "limites": 8
+      }
+    },
+    "test": {
+      "count": 160,
+      "max_tokens": 512,
+      "over_512": 0,
+      "question_types": {
+        "genetic changes": 32,
+        "information": 32,
+        "inheritance": 32
+      },
+      "categories": {
+        "educativo_genetic_changes": 16,
+        "educativo_information": 16,
+        "faq_contextual": 8,
+        "fonte_ausente": 12,
+        "alerta": 8,
+        "pendencias": 8,
+        "documento_information": 12,
+        "documento_genetic_changes": 12,
+        "educativo_inheritance": 16,
+        "documento_inheritance": 12,
+        "laudo": 8,
+        "protocolo": 8,
+        "limites": 8,
+        "procedimento": 8,
+        "receita_modelo": 8
+      }
+    },
+    "challenge": {
+      "count": 40,
+      "max_tokens": 509,
+      "over_512": 0,
+      "question_types": {
+        "genetic changes": 8,
+        "information": 8,
+        "inheritance": 8
+      },
+      "categories": {
+        "receita_modelo": 2,
+        "educativo_information": 4,
+        "educativo_inheritance": 4,
+        "limites": 2,
+        "faq_contextual": 2,
+        "educativo_genetic_changes": 4,
+        "documento_genetic_changes": 3,
+        "documento_information": 3,
+        "documento_inheritance": 3,
+        "fonte_ausente": 3,
+        "alerta": 2,
+        "laudo": 2,
+        "procedimento": 2,
+        "pendencias": 2,
+        "protocolo": 2
+      }
+    }
+  },
+  "sha256": {
+    "train": "3f83d6a7506037780b3516aec69fae214e08ccd41f34b658588be25dc3335123",
+    "validation": "85dbe577fc128231f5319058de1b1b986485c6c4090ee1775378409bc421c4ab",
+    "test": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f",
+    "challenge": "0a9e02eedbd7ae5ded30b3433cd84fe41cafa2a287f206c3bf47c6cbccd97b2d"
+  },
+  "exclusions": {
+    "qualifier_mismatch": 68,
+    "length_or_incomplete": 515,
+    "history_statistics_or_boilerplate": 38,
+    "numbers_mismatch": 4,
+    "veto_or_metadata_mismatch": 10,
+    "tokens_train": 78,
+    "tokens_validation": 22,
+    "tokens_test": 24,
+    "tokens_challenge": 9
+  },
+  "primary": {
+    "url": "https://codeload.github.com/abachaa/MedQuAD/zip/577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+    "revision": "577bd37b96c02d1833b2c9eed2de9f96964e96cb",
+    "sha256": "161d948f8ce8f82accca1f5769a512dff2a01af2b3004d48f2b3da2758a38a09",
+    "license": "CC-BY-4.0",
+    "authors": "Asma Ben Abacha; Dina Demner-Fushman",
+    "paper": "https://doi.org/10.1186/s12859-019-3119-4"
+  },
+  "translation": {
+    "dataset": "recogna-nlp/drbode_dataset",
+    "url": "https://huggingface.co/datasets/recogna-nlp/drbode_dataset/resolve/5ce2ec87299adef39602d664209f79ed5914881a/train.json",
+    "revision": "5ce2ec87299adef39602d664209f79ed5914881a",
+    "sha256": "c28f714a238230f78cac56fd75a1d0a573b16d5d678e8a94b1d0b0a42c2a3aff",
+    "card_license": "MIT",
+    "paper": "https://arxiv.org/abs/2410.00163"
+  },
+  "curation": {
+    "matched_to_primary": true,
+    "sentence_only": true,
+    "lexical_correction": "Mutations → Mutações",
+    "automatic_checks": "completude, números, qualificadores, padrão de herança, metadados, tokens e grupos transitivos de doenças/sinônimos/CUIs",
+    "manual_ai_review": "35 definições bilingues e 16 trechos de genética/herança inspecionados; cinco documentos vetados. Revisão amostral, não revisão individual de todas as linhas.",
+    "clinical_validation": false
+  },
+  "limitations": [
+    "Concentrado em doenças raras/genética; não cobre toda a medicina.",
+    "Referências históricas; não são protocolos clínicos atuais.",
+    "Traduções não validadas por profissionais de saúde.",
+    "Respostas iguais de herança podem ocorrer para doenças diferentes; separação é por condição/grupo, não apenas por resposta.",
+    "Formulações da prova FT-10 já analisada informaram a diversificação; nova prova usa grupos reservados antes deste treino."
+  ]
+}

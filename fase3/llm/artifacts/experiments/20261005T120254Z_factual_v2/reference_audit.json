@@ -1,0 +1,103 @@
+{
+  "reviewed_before_model_validation_generation": true,
+  "reviewer": "Revisão documental por IA; sem validação clínica",
+  "dataset_sha256": "85dbe577fc128231f5319058de1b1b986485c6c4090ee1775378409bc421c4ab",
+  "reviewed_source_ids": [
+    "F2-GARD-0000702-1",
+    "F2-GARD-0001196-1",
+    "F2-GARD-0002992-1",
+    "F2-GARD-0003208-1",
+    "F2-GARD-0003308-1",
+    "F2-GARD-0004160-1",
+    "F2-GHR-0000057-4",
+    "F2-GHR-0000128-3",
+    "F2-GHR-0000135-1",
+    "F2-GHR-0000145-4",
+    "F2-GHR-0000183-4",
+    "F2-GHR-0000204-3",
+    "F2-GHR-0000251-3",
+    "F2-GHR-0000254-4",
+    "F2-GHR-0000283-4",
+    "F2-GHR-0000309-3",
+    "F2-GHR-0000318-3",
+    "F2-GHR-0000381-4",
+    "F2-GHR-0000390-1",
+    "F2-GHR-0000392-1",
+    "F2-GHR-0000401-1",
+    "F2-GHR-0000401-3",
+    "F2-GHR-0000435-3",
+    "F2-GHR-0000450-1",
+    "F2-GHR-0000464-4",
+    "F2-GHR-0000465-4",
+    "F2-GHR-0000495-4",
+    "F2-GHR-0000561-4",
+    "F2-GHR-0000571-3",
+    "F2-GHR-0000652-4",
+    "F2-GHR-0000688-1",
+    "F2-GHR-0000749-1",
+    "F2-GHR-0000805-4",
+    "F2-GHR-0000846-4",
+    "F2-GHR-0000870-1",
+    "F2-GHR-0000870-3",
+    "F2-GHR-0000870-4",
+    "F2-GHR-0000881-3",
+    "F2-GHR-0000933-3",
+    "F2-GHR-0000974-3",
+    "F2-GHR-0001013-1",
+    "F2-GHR-0001019-1",
+    "F2-GHR-0001019-3",
+    "F2-GHR-0001043-3",
+    "F2-GHR-0001054-3",
+    "F2-GHR-0001054-4",
+    "F2-GHR-0001093-3",
+    "F2-GHR-0001093-4"
+  ],
+  "translation_verdict": "48/48 preservam o sentido do trecho original, sem exclusões",
+  "grading_note": "Avaliar o núcleo da resposta e fatos adicionais contra o original completo ou fontes primárias atuais. O primeiro trecho não constitui lista exaustiva de causas ou genes. Não exigir igualdade textual para respostas gerais.",
+  "exceptions": [
+    {
+      "source_id": "F2-GARD-0003208-1",
+      "note": "IMT: linguagem benigno/intermediário/câncer pode variar; verificar núcleo e contexto, não penalizar somente o termo.",
+      "sources": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/inflammatory-myofibroblastic-tumor",
+        "https://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-soft-tissue-tumors/inflammatory-myofibroblastic-tumor"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-3",
+      "note": "ADAMTSL2 e FBN1 são causas confirmadas; primeiro trecho histórico não é exaustivo.",
+      "sources": [
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-3",
+      "note": "Forma clássica GJB2; variante LOR/LORICRIN. Aceitar distinção correta.",
+      "sources": [
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000283-4",
+      "note": "Padrão comum autossômico dominante; verificar subtipos incomuns caso mencionados.",
+      "sources": [
+        "https://medlineplus.gov/genetics/condition/diamond-blackfan-anemia/",
+        "https://medlineplus.gov/genetics/gene/gata1/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000974-3",
+      "note": "Lista de genes no trecho não é necessariamente exaustiva; verificar alegações adicionais.",
+      "sources": [
+        "https://medlineplus.gov/genetics/condition/tetrahydrobiopterin-deficiency/"
+      ]
+    }
+  ],
+  "operational_rubric_before_blind_review": {
+    "one_sentence": "Não exigir lista exaustiva de genes/sintomas se o enunciado pede uma frase e a resposta cita corretamente uma causa/manifestação sem exclusividade falsa.",
+    "definition": "Deve identificar a condição e pelo menos seu núcleo funcional/anatômico; apenas repetir o nome ou dizer doença genética/rara sem núcleo é parcial.",
+    "inheritance": "Preservar padrão de herança quando conhecido, ou natureza multifatorial/esporádica quando pertinente; afirmações genéricas sem o núcleo são parciais.",
+    "missing_answer": "Recusa ou pendência sem resposta educativa quando não há decisão individual pedida é inadequada.",
+    "format": "Pontuar JSON, campos e limite de geração separadamente; texto factual correto fora do formato pode ser semanticamente adequado."
+  }
+}

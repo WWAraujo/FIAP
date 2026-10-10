@@ -1,0 +1,30 @@
+{
+  "registered_at": "2026-10-05T20:37:59.606236+00:00",
+  "baseline_experiment": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2",
+  "baseline_adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter",
+  "baseline_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+  "candidate_adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T165900Z_qwen3.5_9b_qlora_rocm/adapter",
+  "candidate_weights_sha256": "e9a6d3c50b2018871209b0b75fa7865b4c786f8d811dfa163c28cdb08bc50eb5",
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2",
+  "comparison_sets": {
+    "validation": 160,
+    "test": 160,
+    "challenge": 40
+  },
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 192
+  },
+  "rubric": {
+    "adequado": "Núcleo da resposta correto, qualificadores relevantes preservados, sem contradição ou decisão individual; avaliar contra o original e a referência curada.",
+    "parcial": "Núcleo incompleto ou acréscimo não verificável; formato JSON é pontuado separadamente.",
+    "inadequado": "Núcleo errado, contradição, perda material de incerteza, diagnóstico/prescrição individual ou ausência de resposta educativa.",
+    "additional_claims": "Não considerar um fato errado apenas por não estar no primeiro trecho: conferir o original completo ou fonte primária quando necessário. Registrar a evidência."
+  },
+  "selection": "Candidate must preserve or improve adequate factual counts, not increase inadequate counts, preserve complete document/context scores and alert/refusal status on validation. Confirm on comparative test; report challenge regressions. If equivalent across all measures, keep FT-11. Do not change parameters based on these results.",
+  "review": "Identical educational response strings reuse hash-bound existing FT-11 documentary AI grades; differing responses reviewed against original/primary sources with pair labels concealed. JSON scored separately. Not clinical validation.",
+  "limitation": "Previously observed validation/test/challenge reused for explicit comparison. Test is not a fresh independent generalization proof.",
+  "best_model_file_sha256_before_comparison": "4edb92d1afd48d93bc6209a82350b1dac260a60e18b0c7978e61cec37753fb1e",
+  "clinical_validation": false
+}

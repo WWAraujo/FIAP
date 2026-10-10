@@ -1,0 +1,658 @@
+{
+  "selection_recorded_at": "2026-10-05T14:18:30.841377+00:00",
+  "selected_adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter",
+  "generation_started_at": "2026-10-05T14:19:02.537637+00:00",
+  "stage": "reserved_generation_completed",
+  "results": {
+    "base_test": {
+      "total": {
+        "count": 160,
+        "valid_json": 155,
+        "exact": 29,
+        "status": 142,
+        "data": 39,
+        "pending": 142,
+        "source": 121,
+        "human_validation": 155
+      },
+      "educativo_genetic_changes": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 0,
+        "status": 16,
+        "data": 0,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "educativo_information": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 0,
+        "status": 16,
+        "data": 0,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "faq_contextual": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 2,
+        "status": 8,
+        "data": 2,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "fonte_ausente": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 12,
+        "status": 12,
+        "data": 12,
+        "pending": 12,
+        "source": 12,
+        "human_validation": 12
+      },
+      "alerta": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 0,
+        "status": 6,
+        "data": 0,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "pendencias": {
+        "count": 8,
+        "valid_json": 3,
+        "exact": 0,
+        "status": 1,
+        "data": 0,
+        "pending": 3,
+        "source": 3,
+        "human_validation": 3
+      },
+      "documento_information": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 0,
+        "status": 12,
+        "data": 0,
+        "pending": 12,
+        "source": 1,
+        "human_validation": 12
+      },
+      "documento_genetic_changes": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 0,
+        "status": 11,
+        "data": 1,
+        "pending": 11,
+        "source": 1,
+        "human_validation": 12
+      },
+      "educativo_inheritance": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 0,
+        "status": 16,
+        "data": 0,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "documento_inheritance": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 0,
+        "status": 12,
+        "data": 0,
+        "pending": 12,
+        "source": 0,
+        "human_validation": 12
+      },
+      "laudo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 0,
+        "status": 0,
+        "data": 4,
+        "pending": 1,
+        "source": 8,
+        "human_validation": 8
+      },
+      "protocolo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 4,
+        "status": 8,
+        "data": 4,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "limites": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "procedimento": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 1,
+        "status": 8,
+        "data": 1,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "receita_modelo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 2,
+        "status": 8,
+        "data": 7,
+        "pending": 3,
+        "source": 8,
+        "human_validation": 8
+      }
+    },
+    "adapter_test": {
+      "total": {
+        "count": 160,
+        "valid_json": 160,
+        "exact": 104,
+        "status": 158,
+        "data": 105,
+        "pending": 158,
+        "source": 159,
+        "human_validation": 160
+      },
+      "educativo_genetic_changes": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 2,
+        "status": 16,
+        "data": 2,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "educativo_information": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 0,
+        "status": 16,
+        "data": 0,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "faq_contextual": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 0,
+        "status": 8,
+        "data": 0,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "fonte_ausente": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 12,
+        "status": 12,
+        "data": 12,
+        "pending": 12,
+        "source": 12,
+        "human_validation": 12
+      },
+      "alerta": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "pendencias": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "documento_information": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 12,
+        "status": 12,
+        "data": 12,
+        "pending": 12,
+        "source": 12,
+        "human_validation": 12
+      },
+      "documento_genetic_changes": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 10,
+        "status": 10,
+        "data": 11,
+        "pending": 10,
+        "source": 11,
+        "human_validation": 12
+      },
+      "educativo_inheritance": {
+        "count": 16,
+        "valid_json": 16,
+        "exact": 2,
+        "status": 16,
+        "data": 2,
+        "pending": 16,
+        "source": 16,
+        "human_validation": 16
+      },
+      "documento_inheritance": {
+        "count": 12,
+        "valid_json": 12,
+        "exact": 12,
+        "status": 12,
+        "data": 12,
+        "pending": 12,
+        "source": 12,
+        "human_validation": 12
+      },
+      "laudo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "protocolo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 6,
+        "status": 8,
+        "data": 6,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "limites": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "procedimento": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      },
+      "receita_modelo": {
+        "count": 8,
+        "valid_json": 8,
+        "exact": 8,
+        "status": 8,
+        "data": 8,
+        "pending": 8,
+        "source": 8,
+        "human_validation": 8
+      }
+    },
+    "base_challenge": {
+      "total": {
+        "count": 40,
+        "valid_json": 39,
+        "exact": 9,
+        "status": 35,
+        "data": 10,
+        "pending": 36,
+        "source": 29,
+        "human_validation": 39
+      },
+      "receita_modelo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 0,
+        "status": 2,
+        "data": 0,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "educativo_information": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "educativo_inheritance": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "limites": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "faq_contextual": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 1,
+        "status": 2,
+        "data": 1,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "educativo_genetic_changes": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "documento_genetic_changes": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 0,
+        "status": 3,
+        "data": 0,
+        "pending": 3,
+        "source": 0,
+        "human_validation": 3
+      },
+      "documento_information": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 0,
+        "status": 3,
+        "data": 0,
+        "pending": 3,
+        "source": 0,
+        "human_validation": 3
+      },
+      "documento_inheritance": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 0,
+        "status": 3,
+        "data": 0,
+        "pending": 3,
+        "source": 0,
+        "human_validation": 3
+      },
+      "fonte_ausente": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 3
+      },
+      "alerta": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 0,
+        "status": 2,
+        "data": 0,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "laudo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 0,
+        "status": 0,
+        "data": 1,
+        "pending": 0,
+        "source": 2,
+        "human_validation": 2
+      },
+      "procedimento": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "pendencias": {
+        "count": 2,
+        "valid_json": 1,
+        "exact": 0,
+        "status": 0,
+        "data": 0,
+        "pending": 1,
+        "source": 1,
+        "human_validation": 1
+      },
+      "protocolo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      }
+    },
+    "adapter_challenge": {
+      "total": {
+        "count": 40,
+        "valid_json": 40,
+        "exact": 24,
+        "status": 39,
+        "data": 24,
+        "pending": 39,
+        "source": 39,
+        "human_validation": 40
+      },
+      "receita_modelo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "educativo_information": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "educativo_inheritance": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "limites": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "faq_contextual": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 0,
+        "status": 2,
+        "data": 0,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "educativo_genetic_changes": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 4,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "documento_genetic_changes": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 3,
+        "status": 3,
+        "data": 3,
+        "pending": 3,
+        "source": 3,
+        "human_validation": 3
+      },
+      "documento_information": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 3,
+        "status": 3,
+        "data": 3,
+        "pending": 3,
+        "source": 3,
+        "human_validation": 3
+      },
+      "documento_inheritance": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 3,
+        "status": 3,
+        "data": 3,
+        "pending": 3,
+        "source": 3,
+        "human_validation": 3
+      },
+      "fonte_ausente": {
+        "count": 3,
+        "valid_json": 3,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 3
+      },
+      "alerta": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "laudo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 1,
+        "status": 2,
+        "data": 1,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "procedimento": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "pendencias": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "protocolo": {
+        "count": 2,
+        "valid_json": 2,
+        "exact": 2,
+        "status": 2,
+        "data": 2,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      }
+    }
+  },
+  "clinical_validation": false,
+  "completed_at": "2026-10-05T15:09:53.248683+00:00"
+}

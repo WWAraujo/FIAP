@@ -37,25 +37,54 @@ vigitel*.csv
 vigitel*.zip
 vigitel*.pdf
 
-# Fase 3: versionar somente a fonte sintética mínima e reproduzível.
-# Dados curados, splits, banco SQLite, logs e pesos continuam locais.
-!fase3/data/
-fase3/data/*
-!fase3/data/raw/
-fase3/data/raw/*
-!fase3/data/raw/dataset_medico.json
+# Fase 3: fonte sintética e corpora pequenos necessários ao treino FT-10/FT-11.
+# Dados operacionais, corpora antigos, logs e pesos continuam locais.
+!fase3/llm/data/
+fase3/llm/data/*
+!fase3/llm/data/raw/
+fase3/llm/data/raw/*
+!fase3/llm/data/raw/dataset_medico.json
+!fase3/llm/data/contextual_v1/
+!fase3/llm/data/contextual_v1/**
+!fase3/llm/data/factual_v2/
+!fase3/llm/data/factual_v2/**
+
+# O pacote Python de preparação de dados é código-fonte, não dado gerado.
+!fase3/llm/src/
+!fase3/llm/src/finetuning/
+!fase3/llm/src/finetuning/data/
+!fase3/llm/src/finetuning/data/**
 
 # Fase 3: ambientes, pesos e execução local nunca são artefatos de código.
 fase3/.venv-org03/
-fase3/models/
+fase3/llm/models/
 fase3/logs/
+fase3/llm/artifacts/adapters/**
+!fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/
+!fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/
+!fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/manifest.json
+!fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/environment.json
+!fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/manifest.json
+!fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/environment.json
+!fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/adapter/
+!fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter/
+!fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/adapter/adapter_config.json
+!fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter/adapter_config.json
+fase3/llm/artifacts/environment/
+fase3/llm/artifacts/evaluations/
+fase3/llm/artifacts/data_audits/
+fase3/llm/artifacts/experiments/**
+!fase3/llm/artifacts/experiments/**/
+!fase3/llm/artifacts/experiments/**/*.json
+!fase3/llm/artifacts/experiments/**/*.jsonl
+!fase3/llm/artifacts/experiments/**/*.md
 .ollamassist/
 nul
 
 # Relatórios de benchmark são evidências pequenas e versionáveis.
-!fase3/artifacts/
-!fase3/artifacts/benchmarks/
-!fase3/artifacts/benchmarks/*.csv
+!fase3/llm/artifacts/
+!fase3/llm/artifacts/benchmarks/
+!fase3/llm/artifacts/benchmarks/*.csv
 
 # Results directory - only keep .gitkeep and documentation
 resultados/*

@@ -1,0 +1,50 @@
+{
+  "F2-GARD-0001456-1": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GARD-0004425-1": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000228-4": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000489-3": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000506-1": {
+    "A": "adapter_challenge",
+    "B": "base_challenge"
+  },
+  "F2-GHR-0000510-4": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000518-3": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000560-1": {
+    "A": "base_challenge",
+    "B": "adapter_challenge"
+  },
+  "F2-GHR-0000613-4": {
+    "A": "adapter_challenge",
+    "B": "base_challenge"
+  },
+  "F2-GHR-0000620-3": {
+    "A": "adapter_challenge",
+    "B": "base_challenge"
+  },
+  "F2-GHR-0000815-3": {
+    "A": "adapter_challenge",
+    "B": "base_challenge"
+  },
+  "F2-GHR-0000996-4": {
+    "A": "adapter_challenge",
+    "B": "base_challenge"
+  }
+}

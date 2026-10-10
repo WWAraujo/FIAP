@@ -1,0 +1,84 @@
+{
+  "run_id": "20261005T120256Z_qwen3.5_9b_qlora_rocm",
+  "created_at_utc": "2026-10-05T12:02:56.566078+00:00",
+  "provider": "local_rocm",
+  "allocator_config": "expandable_segments:True",
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "license": "Apache-2.0"
+  },
+  "system_prompt": {
+    "text": "Você é um assistente médico acadêmico. Use os fatos do contexto quando fornecidos; em perguntas educativas gerais sem documentos, use conhecimento médico e declare incertezas. Responda somente com um objeto JSON, sem markdown, contendo exatamente: status (informativo, pendente, alerta, modelo ou recusado), dados (objeto), pendencias (lista), fonte (ID fornecido ou null) e validacao_humana (sempre true). Inclua em dados somente os campos solicitados, usando null para valores ausentes. Mantenha as listas na ordem do contexto. Não diagnostique nem prescreva. Pedidos individuais de diagnóstico ou prescrição devem retornar status recusado, dados vazio e pendencias [avaliação profissional]. Se o contexto declarar alerta ativo, priorize status alerta e pendencias [atendimento imediato]. Documentos sem dados são modelos com campos null, sujeitos a validação profissional.",
+    "sha256": "75e83cd0eba320ef95c726ac7ff60857fb413f8c67ec4e884354bc50a31accf9",
+    "file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/system_prompt.txt"
+  },
+  "python": {
+    "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "executable": "/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python"
+  },
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "gpu": {
+    "name": "AMD Radeon RX 9060 XT",
+    "vram_bytes": 17095983104,
+    "free_before_bytes": 17024679936
+  },
+  "torch": {
+    "version": "2.13.0+rocm10.0.0",
+    "hip_version": "7.15.26333",
+    "blas_backend": "_BlasBackend.Cublas"
+  },
+  "packages": {
+    "transformers": "5.17.0",
+    "peft": "0.20.0",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "5.0.1",
+    "huggingface_hub": "1.33.0"
+  },
+  "accelerator_probe": {
+    "loss": 508.82012939453125,
+    "peak_allocated_bytes": 68158464,
+    "peak_reserved_bytes": 85983232
+  },
+  "stage": "qlora_probe_completed",
+  "frozen_embeddings_bf16": true,
+  "probe_autocast": true,
+  "frozen_embedding_precision_changes": [
+    {
+      "module": "input_embeddings",
+      "before_dtypes": [
+        "torch.float32"
+      ],
+      "after_dtype": "torch.bfloat16",
+      "before_bytes": 4068474880,
+      "after_bytes": 2034237440
+    },
+    {
+      "module": "output_embeddings",
+      "before_dtypes": [
+        "torch.float32"
+      ],
+      "after_dtype": "torch.bfloat16",
+      "before_bytes": 4068474880,
+      "after_bytes": 2034237440
+    }
+  ],
+  "parameter_devices": {
+    "cuda:0": 923
+  },
+  "qlora_forward_backward": {
+    "loss": 0.6597726941108704,
+    "peak_allocated_bytes": 13812135936,
+    "peak_reserved_bytes": 15953035264,
+    "max_length": 512,
+    "lora": {
+      "r": 8,
+      "alpha": 32,
+      "dropout": 0.1
+    },
+    "optimizer_probe": "adamw_torch",
+    "peak_with_optimizer_allocated_bytes": 13812135936,
+    "peak_with_optimizer_reserved_bytes": 15953035264
+  }
+}

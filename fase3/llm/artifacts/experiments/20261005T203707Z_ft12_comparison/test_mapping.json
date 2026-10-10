@@ -1,0 +1,194 @@
+{
+  "F2-GHR-0000461-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000315-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000727-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000779-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000452-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000257-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GARD-0001928-1": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000525-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000837-4": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000684-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000394-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000848-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GARD-0000888-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000402-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GARD-0005492-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000552-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GARD-0003404-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000627-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000267-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000044-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000092-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000452-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GARD-0000968-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000849-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000695-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000463-1": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000816-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000853-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GARD-0006402-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000645-4": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000532-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GARD-0004775-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000837-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000124-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000075-1": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000616-1": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0001003-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000525-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000233-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000436-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000109-3": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000853-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000713-4": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GHR-0000875-3": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000835-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000498-4": {
+    "A": "control",
+    "B": "candidate"
+  },
+  "F2-GHR-0000123-4": {
+    "A": "candidate",
+    "B": "control"
+  },
+  "F2-GARD-0003239-1": {
+    "A": "candidate",
+    "B": "control"
+  }
+}

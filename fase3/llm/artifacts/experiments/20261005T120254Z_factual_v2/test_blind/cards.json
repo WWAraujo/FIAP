@@ -1,0 +1,818 @@
+[
+  {
+    "id": "F2-GARD-0000888-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A nefropatia C1q? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A nefropatia C1q é uma doença renal na qual uma grande quantidade de proteína é perdida na urina."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/12136/c1q-nephropathy",
+      "primary_sentence": "C1q nephropathy is a kidney disease in which a large amount of protein is lost in the urine.",
+      "primary_answer": "C1q nephropathy is a kidney disease in which a large amount of protein is lost in the urine. It is one of the many diseases that can cause the nephrotic syndrome. C1q is a normal protein in the immune system, and can be found floating in the circulation of most healthy people. In C1q nephropathy, however, this protein can also be found deposited throughout the kidneys. It has been thought to be a subgroup of primary focal segmental glomerulosclerosis or to be a combination of several disease groups rather than a single disease. As a disease, it is very similar to minimal change disease (MCD) and focal segmental glomerulosclerosis (FSGS). Criteria diagnosis includes C1q deposits on the kidney and no evidence of systemic lupus erythematosus. Both children and adult patients may have no symptoms, except for the presence of blood or protein in the urine, or  present with swelling of the feet and legs, high blood pressure and kidney insufficiency. The treatment of C1q nephropathy is the same as for MCD or FSGS and includes corticosteroids and other immunosuppressive agents. Further research is needed to establish C1q nephropathy as a recognized distinct clinical entity.",
+      "curated_sentence": "A nefropatia C1q é uma doença renal na qual uma grande quantidade de proteína é perdida na urina."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A nefropatia C1q é uma doença rara que afeta os rins.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A nefropatia C1q é uma doença renal rara caracterizada pela deposição de imunoglobulina C1q nos glomérulos renais, levando à lesão glomerular e insuficiência renal.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0000968-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A deficiência de translocase de carnitina-acilcarnitina? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de translocase de carnitina-acilcarnitina é uma condição que impede o corpo de converter certas gorduras chamadas ácidos graxos de cadeia longa em energia, especialmente durante períodos sem comida (jejum)."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/1123/carnitine-acylcarnitine-translocase-deficiency",
+      "primary_sentence": "Carnitine-acylcarnitine translocase deficiency is a condition that prevents the body from converting certain fats called long-chain fatty acids into energy, particularly during periods without food (fasting).",
+      "primary_answer": "Carnitine-acylcarnitine translocase deficiency is a condition that prevents the body from converting certain fats called long-chain fatty acids into energy, particularly during periods without food (fasting). Carnitine, a natural substance acquired mostly through the diet, is used by cells to process fats and produce energy. People with this disorder have a faulty transporter that disrupts carnitine's role in processing long-chain fatty acids. Carnitine-acylcarnitine translocase deficiency is a type of fatty acid oxidation disorder. There are two forms of carnitine-acylcarnitine translocase deficiency. The most common type happens in newborns. A milder, less common type happens in older infants and children.",
+      "curated_sentence": "A deficiência de translocase de carnitina-acilcarnitina é uma condição que impede o corpo de converter certas gorduras chamadas ácidos graxos de cadeia longa em energia, especialmente durante períodos sem comida (jejum)."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de translocase de carnitina-acilcarnitina é uma doença genética rara que afeta o metabolismo de ácidos graxos de cadeia longa, impedindo sua entrada nas mitocôndrias para produção de energia.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de translocase de carnitina-acilcarnitina é uma condição que afeta o metabolismo de gorduras.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0001928-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A síndrome de Duane tipo 1? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Duane tipo 1 é o tipo mais comum da síndrome de Duane, um distúrbio do movimento dos olhos que está presente desde o nascimento."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/10763/duane-syndrome-type-1",
+      "primary_sentence": "Duane syndrome type 1 is the most common type of Duane syndrome, an eye movement disorder that is present at birth.",
+      "primary_answer": "Duane syndrome type 1 is the most common type of Duane syndrome, an eye movement disorder that is present at birth. People with Duane syndrome have restricted ability to move the affected eye(s) outward toward the ear (abduction) and/or inward toward the nose (adduction). The different types are distinguished by the eye movements that are most restricted. Duane syndrome type 1 is characterized by absent to very restricted abduction and normal to mildly restricted adduction. The eye opening (palpebral fissure) narrows and the eyeball retracts into the orbit with adduction. With abduction, the reverse occurs. One or both eyes may be affected. The majority of cases are sporadic (not inherited), while about 10% are familial. 70% of affected people do not have any other abnormalities at birth (isolated Duane syndrome).",
+      "curated_sentence": "A síndrome de Duane tipo 1 é o tipo mais comum da síndrome de Duane, um distúrbio do movimento dos olhos que está presente desde o nascimento."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Duane tipo 1 é um distúrbio que afeta os olhos e o rosto.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Duane tipo 1 é uma condição congênita caracterizada por uma restrição na movimentação do olho afetado para fora (abdução) e uma movimentação anormal para dentro (adução), resultante de um desenvolvimento anormal do nervo ocular externo.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0003239-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é O colangiocarcinoma intra-hepático? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O colangiocarcinoma intra-hepático é um câncer que se desenvolve nas células dos ductos biliares, tanto dentro quanto fora do fígado."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/6042/intrahepatic-cholangiocarcinoma",
+      "primary_sentence": "Intrahepatic cholangiocarcinoma is a cancer that develops in the cells within the bile ducts; both inside and outside the liver.",
+      "primary_answer": "Intrahepatic cholangiocarcinoma is a cancer that develops in the cells within the bile ducts; both inside and outside the liver. The terms cholangiocarinoma and bile duct cancer are often used to refer to the same condition. This condition occurs slightly more often in males than females and usually affects people who are between 50-70 years old. Signs and symptoms of intrahepatic cholangiocarcinoma include jaundice, abdominal pain, fever, weight loss, weakness and itching. Treatment options may include surgery to remove the bile duct and parts of the liver, chemotherapy and radiation.",
+      "curated_sentence": "O colangiocarcinoma intra-hepático é um câncer que se desenvolve nas células dos ductos biliares, tanto dentro quanto fora do fígado."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O colangiocarcinoma intra-hepático é um tipo de câncer que se origina nos ductos biliares dentro do fígado.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O colangiocarcinoma intra-hepático é um tipo de câncer que se desenvolve nos ductos biliares dentro do fígado.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0003404-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A paralisia de Klumpke? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A paralisia de Klumpke é um tipo de paralisia braquial em recém-nascidos."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/3123/klumpke-paralysis",
+      "primary_sentence": "Klumpke paralysis is a type of brachial palsy in newborns.",
+      "primary_answer": "Klumpke paralysis is a type of brachial palsy in newborns. Signs and symptoms include weakness and loss of movement of the arm and hand.  Some babies experience drooping of the eyelid on the opposite side of the face as well. This symptom may also be referred to as Horner syndrome. Klumpke paralysis is caused by an injury to the nerves of the brachial plexus which may result from a difficult delivery. This injury can cause a stretching (neuropraxia,), tearing (called avulsion when the tear is at the spine, and rupture when it is not), or scarring (neuroma) of the brachial plexus nerves. Most infants with Klumpke paralysis have the more mild form of injury (neuropraxia) and often recover within 6 months.",
+      "curated_sentence": "A paralisia de Klumpke é um tipo de paralisia braquial em recém-nascidos."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A paralisia de Klumpke é uma condição que afeta os nervos que controlam os músculos do braço e da mão.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A paralisia de Klumpke é uma lesão do plexo braquial que afeta as raízes nervosas C8 e T1, resultando em fraqueza ou paralisia dos músculos da mão e antebraço.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0004775-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A síndrome de Pearson? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Pearson é um distúrbio mitocondrial caracterizado por anemia sideroblástica dependente de transfusão e disfunção pancreática resultando em má absorção e diarreia crônica."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/7343/pearson-syndrome",
+      "primary_sentence": "Pearson syndrome is a mitochondrial disorder characterized by transfusion-dependent sideroblastic anemia and pancreatic dysfunction resulting in in malabsorption and chronic diarrhea.",
+      "primary_answer": "Pearson syndrome is a mitochondrial disorder characterized by transfusion-dependent sideroblastic anemia and pancreatic dysfunction resulting in in malabsorption and chronic diarrhea. The features of this progressive disorder may change over time. Individuals who survive beyond infancy often develop the symptoms of Kearns-Sayre syndrome or Leigh syndrome. Pearson syndrome is caused by deletions in mitochondrial DNA. Inheritance is usually sporadic.",
+      "curated_sentence": "A síndrome de Pearson é um distúrbio mitocondrial caracterizado por anemia sideroblástica dependente de transfusão e disfunção pancreática resultando em má absorção e diarreia crônica."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Pearson é uma condição rara que afeta o crescimento e o desenvolvimento.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Pearson é uma doença genética rara caracterizada por defeitos na formação de hemácias (anemia) e falência de múltiplos órgãos devido a mutações no gene PIG-A que afetam a produção de ceramidas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0005492-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A doença de Schindler? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A doença de Schindler é uma condição hereditária que causa principalmente problemas neurológicos."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/116/schindler-disease-type-1",
+      "primary_sentence": "Schindler disease is an inherited condition that primarily causes neurological problems.",
+      "primary_answer": "Schindler disease is an inherited condition that primarily causes neurological problems. There are three types of Schindler disease. Schindler disease type 1, also called the infantile type, is the most severe form. Babies with this condition appear healthy a birth, but by the age of 8 to 15 months they stop developing new skills and begin losing skills they had already acquired. As the condition progresses, affected individuals develop blindness and seizures, and eventually lose awareness of their surroundings and become unresponsive. People with this form of the condition usually don't survive past early childhood. Schindler disease type 1 is caused by mutations in the NAGA gene. The condition follows an autosomal recessive pattern of inheritance.",
+      "curated_sentence": "A doença de Schindler é uma condição hereditária que causa principalmente problemas neurológicos."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Schindler é uma doença genética rara e hereditária que afeta o metabolismo dos lipídios, caracterizada pela acumulação de esfingolipídios nos tecidos do corpo, levando a danos progressivos no sistema nervoso central e em outros órgãos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Schindler é um distúrbio genético que afeta o sistema nervoso central e o sistema nervoso periférico.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0006402-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é O tumor de Warthin? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O tumor de Warthin é um tumor benigno da glândula salivar."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/8569/warthin-tumor",
+      "primary_sentence": "Warthin tumor is a benign tumor of the salivary gland.",
+      "primary_answer": "Warthin tumor is a benign tumor of the salivary gland. The first symptom is usually a painless, slow-growing bump in front of the ear, on the bottom of the mouth, or under the chin. Warthin tumors may increase in size over time, but few become cancerous. Though the cause is currently unknown, smoking is believed to increase the chance of developing Warthin tumor. Treatment may consist of surgery to remove the tumor or careful observation to watch for changes in the tumor over time.",
+      "curated_sentence": "O tumor de Warthin é um tumor benigno da glândula salivar."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O tumor de Warthin é um tipo de tumor benigno que se desenvolve nas glândulas salivares.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O tumor de Warthin é um tumor benigno das glândulas salivares, mais comumente encontrado na glândula parótida, caracterizado por ser frequentemente bilateral e associado ao tabagismo.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000044-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A síndrome de Alport? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações nos genes COL4A3, COL4A4 e COL4A5 causam a síndrome de Alport."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/alport-syndrome",
+      "primary_sentence": "Mutations in the COL4A3, COL4A4, and COL4A5 genes cause Alport syndrome.",
+      "primary_answer": "Mutations in the COL4A3, COL4A4, and COL4A5 genes cause Alport syndrome. These genes each provide instructions for making one component of a protein called type IV collagen. This protein plays an important role in the kidneys, specifically in structures called glomeruli. Glomeruli are clusters of specialized blood vessels that remove water and waste products from blood and create urine. Mutations in these genes result in abnormalities of the type IV collagen in glomeruli, which prevents the kidneys from properly filtering the blood and allows blood and protein to pass into the urine. Gradual scarring of the kidneys occurs, eventually leading to kidney failure in many people with Alport syndrome.  Type IV collagen is also an important component of inner ear structures, particularly the organ of Corti, that transform sound waves into nerve impulses for the brain. Alterations in type IV collagen often result in abnormal inner ear function, which can lead to hearing loss. In the eye, this protein is important for maintaining the shape of the lens and the normal color of the retina. Mutations that disrupt type IV collagen can result in misshapen lenses and an abnormally colored retina.",
+      "curated_sentence": "Mutações nos genes COL4A3, COL4A4 e COL4A5 causam a síndrome de Alport."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Alport é causada por mutações nos genes COL4A3, COL4A4 ou COL4A5.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Alport é causada por mutações nos genes COL4A3, COL4A4 ou COL4A5, que codificam as subunidades do colágeno tipo IV, levando a defeitos na membrana basal dos rins, ouvidos e olhos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000075-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A síndrome de Asperger? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Asperger é um transtorno do espectro autista, que é um grupo de condições caracterizadas por comunicação e interação social prejudicadas."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/asperger-syndrome",
+      "primary_sentence": "Asperger syndrome is a disorder on the autism spectrum, which is a group of conditions characterized by impaired communication and social interaction.",
+      "primary_answer": "Asperger syndrome is a disorder on the autism spectrum, which is a group of conditions characterized by impaired communication and social interaction. Asperger syndrome is on the mild, or \"high-functioning,\" end of the autism spectrum. Many affected individuals learn to compensate for their differences and live independent and successful lives. However, the behavioral challenges associated with this condition often lead to social isolation and difficulties at school, at work, and in personal relationships.  People with Asperger syndrome have average or above-average intelligence. In contrast to people with other disorders on the autism spectrum, they are not delayed in their language development. However, their ability to carry on a conversation is often impaired by a tendency to take idioms or humorous statements literally and an inability to read non-verbal cues such as body language to understand what others are feeling. They may speak in a monotone voice, have unusual mannerisms, or choose unusual topics of conversation.  Individuals with Asperger syndrome tend to develop an intense interest in a particular subject. This interest may be a traditional hobby or academic discipline, and many people with Asperger syndrome develop advanced abilities in fields such as music, science, mathematics, or computer programming. However, they might also focus on an unusual interest such as bus routes or a particular type of household appliance. Often they are able to remember enormous amounts of detail on their subject of interest. They may want to share this large amount of information with others and may resist diversion to other topics.  People with Asperger syndrome tend to be rigid about their established routines and may strongly resist disruptions such as changes in schedule. They may also have difficulty tolerating sensory stimuli such as noise or lights.  Other features of Asperger syndrome may include mild impairment of motor skills. For example, basic skills such as crawling and walking may be somewhat delayed. Affected individuals may also have coordination problems that impair their ability to engage in such activities as playing ball games or riding a bicycle. This physical clumsiness may lead to further social isolation of children with Asperger syndrome.  Signs and symptoms of Asperger syndrome may become apparent by the age of 3, when most children begin to develop social skills such as learning to play with others. Some affected children may come to medical attention due to delayed motor skills. In most cases, children with Asperger syndrome are diagnosed during the elementary school years, as their social behavior continues to diverge from the typical developmental path. Difficulties with social skills generally continue into adulthood, and affected individuals are at increased risk of other behavioral or psychiatric disorders such as attention deficit-hyperactivity disorder (ADHD), depression, anxiety, and obsessive-compulsive disorder.",
+      "curated_sentence": "A síndrome de Asperger é um transtorno do espectro autista, que é um grupo de condições caracterizadas por comunicação e interação social prejudicadas."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Asperger é um distúrbio do neurodesenvolvimento caracterizado por dificuldades em interações sociais e comunicação.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Asperger é um transtorno do espectro autista caracterizado por dificuldades em interações sociais e comunicação, sem atrasos significativos no desenvolvimento da linguagem ou habilidades cognitivas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000092-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A hipocalcemia autossômica dominante? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A hipocalcemia autossômica dominante é causada principalmente por mutações no gene CASR; esses casos são conhecidos como tipo 1."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/autosomal-dominant-hypocalcemia",
+      "primary_sentence": "Autosomal dominant hypocalcemia is primarily caused by mutations in the CASR gene; these cases are known as type 1.",
+      "primary_answer": "Autosomal dominant hypocalcemia is primarily caused by mutations in the CASR gene; these cases are known as type 1. A small percentage of cases, known as type 2, are caused by mutations in the GNA11 gene. The proteins produced from these genes work together to regulate the amount of calcium in the blood.  The CASR gene provides instructions for making a protein called the calcium-sensing receptor (CaSR). Calcium molecules attach (bind) to the CaSR protein, which allows this protein to monitor and regulate the amount of calcium in the blood. G11, which is produced from the GNA11 gene, is one component of a signaling protein that works in conjunction with CaSR. When a certain concentration of calcium is reached, CaSR stimulates G11 to send signals to block processes that increase the amount of calcium in the blood.  Mutations in the CASR or GNA11 gene lead to overactivity of the respective protein. The altered CaSR protein is more sensitive to calcium, meaning even low levels of calcium can trigger it to stimulate G11 signaling. Similarly, the altered G11 protein continues to send signals to prevent calcium increases, even when levels in the blood are very low. As a result, calcium levels in the blood remain low, causing hypocalcemia. Calcium plays an important role in the control of muscle movement, and a shortage of this molecule can lead to cramping or twitching of the muscles. Impairment of the processes that increase calcium can also disrupt the normal regulation of other molecules, such as phosphate and magnesium, leading to other signs of autosomal dominant hypocalcemia. Studies show that the lower the amount of calcium in the blood, the more severe the symptoms of the condition are.",
+      "curated_sentence": "A hipocalcemia autossômica dominante é causada principalmente por mutações no gene CASR; esses casos são conhecidos como tipo 1."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hipocalcemia autossômica dominante é causada por mutações no gene GNA11, que codifica a subunidade alfa da proteína Gs, levando a uma ativação constitutiva da adenilil ciclase e aumento da secreção de PTH.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hipocalcemia autossômica dominante é causada por mutações no gene CASR.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000109-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A síndrome de Bart-Pumphrey? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Bart-Pumphrey é causada por mutações no gene GJB2."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/bart-pumphrey-syndrome",
+      "primary_sentence": "Bart-Pumphrey syndrome is caused by mutations in the GJB2 gene.",
+      "primary_answer": "Bart-Pumphrey syndrome is caused by mutations in the GJB2 gene. This gene provides instructions for making a protein called gap junction beta 2, more commonly known as connexin 26. Connexin 26 is a member of the connexin protein family. Connexin proteins form channels called gap junctions that permit the transport of nutrients, charged atoms (ions), and signaling molecules between neighboring cells that are in contact with each other. Gap junctions made with connexin 26 transport potassium ions and certain small molecules.  Connexin 26 is found in cells throughout the body, including the inner ear and the skin. In the inner ear, channels made from connexin 26 are found in a snail-shaped structure called the cochlea. These channels may help to maintain the proper level of potassium ions required for the conversion of sound waves to electrical nerve impulses. This conversion is essential for normal hearing. In addition, connexin 26 may be involved in the maturation of certain cells in the cochlea. Connexin 26 also plays a role in the growth, maturation, and stability of the outermost layer of skin (the epidermis).  The GJB2 gene mutations that cause Bart-Pumphrey syndrome change single protein building blocks (amino acids) in the connexin 26 protein. The altered protein probably disrupts the function of normal connexin 26 in cells, and may interfere with the function of other connexin proteins. This disruption could affect skin growth and also impair hearing by disturbing the conversion of sound waves to nerve impulses.",
+      "curated_sentence": "A síndrome de Bart-Pumphrey é causada por mutações no gene GJB2."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Bart-Pumphrey é causada por mutações no gene KMT2D.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Bart-Pumphrey é causada por mutações no gene GNA13, que codifica uma subunidade da proteína Gs, levando a uma ativação constitutiva da via de sinalização cAMP.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000123-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A distrofia cristalina de Bietti? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/bietti-crystalline-dystrophy",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A distrofia cristalina de Bietti é uma condição hereditária autossômica recessiva, o que significa que a doença só se manifesta quando uma pessoa herda um gene defeituoso de ambos os pais.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000124-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A doença da ganglia basal responsiva à biotina-tiamina? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A doença da ganglia basal responsiva à biotina-tiamina é causada por mutações no gene SLC19A3."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/biotin-thiamine-responsive-basal-ganglia-disease",
+      "primary_sentence": "Biotin-thiamine-responsive basal ganglia disease is caused by mutations in the SLC19A3 gene.",
+      "primary_answer": "Biotin-thiamine-responsive basal ganglia disease is caused by mutations in the SLC19A3 gene. This gene provides instructions for making a protein called a thiamine transporter, which moves thiamine into cells. Thiamine, also known as vitamin B1, is obtained from the diet and is necessary for proper functioning of the nervous system.  Mutations in the SLC19A3 gene likely result in a protein with impaired ability to transport thiamine into cells, resulting in decreased absorption of the vitamin and leading to neurological dysfunction. In this disorder, abnormalities affect several parts of the brain. Using medical imaging, generalized swelling as well as specific areas of damage (lesions) in the brain can often be seen, including in the basal ganglia. The relationship between these specific brain abnormalities and the abnormal thiamine transporter is unknown.  It is unclear how biotin is related to this disorder. Some researchers suggest that the excess biotin given along with thiamine as treatment for the disorder may increase the amount of thiamine transporter that is produced, partially compensating for the impaired efficiency of the abnormal protein. Others propose that biotin transporter proteins may interact with thiamine transporters in such a way that biotin levels influence the course of the disease.",
+      "curated_sentence": "A doença da ganglia basal responsiva à biotina-tiamina é causada por mutações no gene SLC19A3."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Mutações no gene BTK causam a doença da ganglia basal responsiva à biotina-tiamina.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença da ganglia basal responsiva à biotina-tiamina é causada por mutações no gene SLCO5A1, que codifica a proteína transportadora de biotina-tiamina (THTR1), levando a uma deficiência na captação de biotina e tiamina no cérebro.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000233-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A deficiência congênita de leptina? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência congênita de leptina é causada por mutações no gene LEP."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/congenital-leptin-deficiency",
+      "primary_sentence": "Congenital leptin deficiency is caused by mutations in the LEP gene.",
+      "primary_answer": "Congenital leptin deficiency is caused by mutations in the LEP gene. This gene provides instructions for making a hormone called leptin, which is involved in the regulation of body weight. Normally, the body's fat cells release leptin in proportion to their size. As fat accumulates in cells, more leptin is produced. This rise in leptin indicates that fat stores are increasing.  Leptin attaches (binds) to and activates a protein called the leptin receptor, fitting into the receptor like a key into a lock. The leptin receptor protein is found on the surface of cells in many organs and tissues of the body including a part of the brain called the hypothalamus. The hypothalamus controls hunger and thirst as well as other functions such as sleep, moods, and body temperature. It also regulates the release of many hormones that have functions throughout the body. In the hypothalamus, the binding of leptin to its receptor triggers a series of chemical signals that affect hunger and help produce a feeling of fullness (satiety).  LEP gene mutations that cause congenital leptin deficiency lead to an absence of leptin. As a result, the signaling that triggers feelings of satiety does not occur, leading to the excessive hunger and weight gain associated with this disorder. Because hypogonadotropic hypogonadism occurs in congenital leptin deficiency, researchers suggest that leptin signaling is also involved in regulating the hormones that control sexual development. However, the specifics of this involvement and how it may be altered in congenital leptin deficiency are unknown.  Congenital leptin deficiency is a rare cause of obesity. Researchers are studying the factors involved in more common forms of obesity.",
+      "curated_sentence": "A deficiência congênita de leptina é causada por mutações no gene LEP."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência congênita de leptina é causada por mutações no gene da leptina (LEP) ou no gene do receptor de leptina (LEPR), resultando em resistência à leptina ou ausência da hormona.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência congênita de leptina é causada por mutações no gene LEP.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000257-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A cirrose criptogênica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A cirrose criptogênica é uma condição que prejudica a função do fígado."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/cryptogenic-cirrhosis",
+      "primary_sentence": "Cryptogenic cirrhosis is a condition that impairs liver function.",
+      "primary_answer": "Cryptogenic cirrhosis is a condition that impairs liver function. People with this condition develop irreversible liver disease caused by scarring of the liver (cirrhosis), typically in mid- to late adulthood.  The liver is a part of the digestive system that helps break down food, store energy, and remove waste products, including toxins. Minor damage to the liver can be repaired by the body. However, severe or long-term damage can lead to the replacement of normal liver tissue with scar tissue.  In the early stages of cryptogenic cirrhosis, people often have no symptoms because the liver has enough normal tissue to function. Signs and symptoms become apparent as more of the liver is replaced by scar tissue. Affected individuals can experience fatigue, weakness, loss of appetite, weight loss, nausea, swelling (edema), enlarged blood vessels, and yellowing of the skin and whites of the eyes (jaundice).  People with cryptogenic cirrhosis may develop high blood pressure in the vein that supplies blood to the liver (portal hypertension). Cryptogenic cirrhosis can lead to type 2 diabetes, although the mechanism is unclear. Some people with cryptogenic cirrhosis develop cancer of the liver (hepatocellular cancer).",
+      "curated_sentence": "A cirrose criptogênica é uma condição que prejudica a função do fígado."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A cirrose criptogênica é uma condição hepática caracterizada pela formação de tecido cicatricial no fígado sem uma causa identificável, sendo frequentemente diagnosticada após a exclusão de etiologias comuns como hepatite viral, álcool ou doenças metabólicas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A cirrose criptogênica é um termo usado para descrever cirrose de causa desconhecida.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000267-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A leucemia mieloide aguda citogeneticamente normal (CN-AML)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A LMA-CN é classificada como \"citogeneticamente normal\" com base no tipo de alterações genéticas envolvidas no seu desenvolvimento."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/cytogenetically-normal-acute-myeloid-leukemia",
+      "primary_sentence": "CN-AML is classified as \"cytogenetically normal\" based on the type of genetic changes involved in its development.",
+      "primary_answer": "CN-AML is classified as \"cytogenetically normal\" based on the type of genetic changes involved in its development. Cytogenetically normal refers to the fact that this form of acute myeloid leukemia is not associated with large chromosomal abnormalities. About half of people with acute myeloid leukemia have this form of the condition; the other half have genetic changes that alter large regions of certain chromosomes. These changes can be identified by a test known as cytogenetic analysis. CN-AML is associated with smaller genetic changes that cannot be seen by cytogenetic analysis.  Mutations in a large number of genes have been found in people with CN-AML; the most commonly affected genes are NPM1, FLT3, DNMT3A, CEBPA, IDH1, and IDH2. The proteins produced from these genes have different functions in the cell. Most are involved in regulating processes such as the growth and division (proliferation), maturation (differentiation), or survival of cells. For example, the protein produced from the FLT3 gene stimulates the proliferation and survival of cells. The proteins produced from the CEBPA and DNMT3A genes regulate gene activity and help to control when cells divide and how they mature. The NPM1 gene provides instructions for a protein that is likely involved in the regulation of cell growth and division. Mutations in any of these genes can disrupt one or more of these processes in hematopoietic stem cells and lead to overproduction of abnormal, immature white blood cells, which is characteristic of CN-AML. Although the proteins produced from two other genes involved in CN-AML, IDH1 and IDH2, are not normally involved in proliferation, differentiation, or survival of cells, mutations in these genes lead to the production of proteins with a new function. These changes result in impaired differentiation of hematopoietic stem cells, which leads to CN-AML.  CN-AML is a complex condition influenced by several genetic and environmental factors. Typically, mutations in more than one gene are involved. For example, people with an NPM1 gene mutation frequently also have a mutation in the FLT3 gene, both of which are likely involved in the cancer's development. In addition, environmental factors such as smoking or exposure to radiation increase an individual's risk of developing acute myeloid leukemia.",
+      "curated_sentence": "A LMA-CN é classificada como \"citogeneticamente normal\" com base no tipo de alterações genéticas envolvidas no seu desenvolvimento."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A leucemia mieloide aguda citogeneticamente normal (CN-AML) é caracterizada pela ausência de alterações cromossômicas clonais visíveis na análise citogenética convencional, sendo frequentemente associada a mutações somáticas em genes como NPM1, FLT3, IDH1, IDH2, RUNX1, WT1 ou CEBPA, que não resultam em alterações estruturais detectáveis por citogenética padrão.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A leucemia mieloide aguda citogeneticamente normal (CN-AML) é causada por mutações em genes específicos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000315-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A síndrome de Emanuel? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Emanuel é um distúrbio cromossômico que afeta o desenvolvimento normal e afeta muitas partes do corpo."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/emanuel-syndrome",
+      "primary_sentence": "Emanuel syndrome is a chromosomal disorder that disrupts normal development and affects many parts of the body.",
+      "primary_answer": "Emanuel syndrome is a chromosomal disorder that disrupts normal development and affects many parts of the body. Infants with Emanuel syndrome have weak muscle tone (hypotonia) and fail to gain weight and grow at the expected rate (failure to thrive). Their development is significantly delayed, and most affected individuals have severe to profound intellectual disability.  Other features of Emanuel syndrome include an unusually small head (microcephaly), distinctive facial features, and a small lower jaw (micrognathia). Ear abnormalities are common, including small holes in the skin just in front of the ears (preauricular pits or sinuses). About half of all affected infants are born with an opening in the roof of the mouth (cleft palate) or a high arched palate. Males with Emanuel syndrome often have genital abnormalities. Additional signs of this condition can include heart defects and absent or unusually small (hypoplastic) kidneys; these problems can be life-threatening in infancy or childhood.",
+      "curated_sentence": "A síndrome de Emanuel é um distúrbio cromossômico que afeta o desenvolvimento normal e afeta muitas partes do corpo."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Emanuel é uma condição genética rara causada por uma translocação equilibrada entre os cromossomos 12 e 18, resultando em uma dose triplo de genes do cromossomo 18q.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Emanuel é uma condição genética caracterizada por um defeito no desenvolvimento de várias partes do corpo.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000394-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A fucosidose? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/fucosidosis",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A fucosidose ocorre por herança autossômica recessiva, exigindo que o indivíduo herde uma cópia mutada do gene FUCo de cada um dos pais.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A fucosidose é uma condição herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000402-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A calcificação arterial generalizada da infância (GACI)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/generalized-arterial-calcification-of-infancy",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A calcificação arterial generalizada da infância (GACI) ocorre por herança autossômica recessiva, geralmente associada a mutações no gene ABCC6 que afetam a função de transporte de fosfato.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000436-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A doença de Graves? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O padrão de herança da doença de Graves é incerto porque muitos fatores genéticos e ambientais parecem estar envolvidos."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/graves-disease",
+      "primary_sentence": "The inheritance pattern of Graves disease is unclear because many genetic and environmental factors appear to be involved.",
+      "primary_answer": "The inheritance pattern of Graves disease is unclear because many genetic and environmental factors appear to be involved. However, the condition can cluster in families, and having a close relative with Graves disease or another autoimmune disorder likely increases a person's risk of developing the condition.",
+      "curated_sentence": "O padrão de herança da doença de Graves é incerto porque muitos fatores genéticos e ambientais parecem estar envolvidos."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Graves não segue um padrão de herança mendeliana simples, sendo considerada uma doença autoimune multifatorial influenciada por predisposição genética e fatores ambientais.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Graves é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000452-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A deficiência de lipase hepática? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de lipase hepática é causada por mutações no gene LIPC."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hepatic-lipase-deficiency",
+      "primary_sentence": "Hepatic lipase deficiency is caused by mutations in the LIPC gene.",
+      "primary_answer": "Hepatic lipase deficiency is caused by mutations in the LIPC gene. This gene provides instructions for making an enzyme called hepatic lipase. This enzyme is produced by liver cells and released into the bloodstream where it helps convert very low-density lipoproteins (VLDLs) and intermediate-density lipoproteins (IDLs) to LDLs. The enzyme also assists in transporting HDLs that carry cholesterol and triglycerides from the blood to the liver, where the HDLs deposit these fats so they can be redistributed to other tissues or removed from the body.  LIPC gene mutations prevent the release of hepatic lipase from the liver or decrease the enzyme's activity in the bloodstream. As a result, VLDLs and IDLs are not efficiently converted into LDLs, and HDLs carrying cholesterol and triglycerides remain in the bloodstream. It is unclear what effect this change in lipid levels has on people with hepatic lipase deficiency.",
+      "curated_sentence": "A deficiência de lipase hepática é causada por mutações no gene LIPC."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de lipase hepática é causada por mutações no gene LPL.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de lipase hepática é uma condição rara causada por mutações no gene LPL, que codifica a enzima lipoproteína lipase, resultando na incapacidade de hidrolisar triglicerídeos de quilomícrons e VLDL.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000452-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A deficiência de lipase hepática? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hepatic-lipase-deficiency",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de lipase hepática não é uma condição hereditária, pois a lipase hepática é uma enzima produzida pelo fígado e não por um gene específico herdado de forma padrão como as lipases pancreáticas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000461-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A hemocromatose hereditária? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações nos genes HAMP, HFE, HFE2, SLC40A1 e TFR2 causam hemocromatose hereditária."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hereditary-hemochromatosis",
+      "primary_sentence": "Mutations in the HAMP, HFE, HFE2, SLC40A1, and TFR2 genes cause hereditary hemochromatosis.",
+      "primary_answer": "Mutations in the HAMP, HFE, HFE2, SLC40A1, and TFR2 genes cause hereditary hemochromatosis. Type 1 hemochromatosis results from mutations in the HFE gene, and type 2 hemochromatosis results from mutations in either the HFE2 or HAMP gene. Mutations in the TFR2 gene cause type 3 hemochromatosis, and mutations in the SLC40A1 gene cause type 4 hemochromatosis.  The proteins produced from these genes play important roles in regulating the absorption, transport, and storage of iron. Mutations in any of these genes impair the control of iron absorption during digestion and alter the distribution of iron to other parts of the body. As a result, iron accumulates in tissues and organs, which can disrupt their normal functions.",
+      "curated_sentence": "Mutações nos genes HAMP, HFE, HFE2, SLC40A1 e TFR2 causam hemocromatose hereditária."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hemocromatose hereditária é causada principalmente por mutações no gene HFE, sendo a combinação C282Y homozigota a causa mais comum, embora mutações em outros genes como HJV, HAMP, TF e ferroportina também possam estar envolvidas em formas não clássicas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hemocromatose hereditária é causada por mutações no gene HFE.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000463-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A hiperekplexia hereditária? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A hiperekplexia hereditária é uma condição em que os bebês afetados têm aumento do tônus muscular (hipertonia) e uma reação exagerada ao susto a estímulos inesperados, especialmente ruídos altos."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hereditary-hyperekplexia",
+      "primary_sentence": "Hereditary hyperekplexia is a condition in which affected infants have increased muscle tone (hypertonia) and an exaggerated startle reaction to unexpected stimuli, especially loud noises.",
+      "primary_answer": "Hereditary hyperekplexia is a condition in which affected infants have increased muscle tone (hypertonia) and an exaggerated startle reaction to unexpected stimuli, especially loud noises. Following the startle reaction, infants experience a brief period in which they are very rigid and unable to move. During these rigid periods, some infants stop breathing, which, if prolonged, can be fatal. This condition may explain some cases of sudden infant death syndrome (SIDS), which is a major cause of unexplained death in babies younger than 1 year. Infants with hereditary hyperekplexia have hypertonia at all times, except when they are sleeping.  Other signs and symptoms of hereditary hyperekplexia can include muscle twitches when falling asleep (hypnagogic myoclonus) and movements of the arms or legs while asleep. Some infants, when tapped on the nose, extend their head forward and have spasms of the limb and neck muscles. Rarely, infants with hereditary hyperekplexia experience recurrent seizures (epilepsy).  The signs and symptoms of hereditary hyperekplexia typically fade by age 1. However, older individuals with hereditary hyperekplexia may still startle easily and have periods of rigidity, which can cause them to fall down. Some individuals with this condition have a low tolerance for crowded places and loud noises. Some affected people have persistent limb movements during sleep. Affected individuals who have epilepsy have the disorder throughout their lives.",
+      "curated_sentence": "A hiperekplexia hereditária é uma condição em que os bebês afetados têm aumento do tônus muscular (hipertonia) e uma reação exagerada ao susto a estímulos inesperados, especialmente ruídos altos."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hiperekplexia hereditária é um distúrbio neurológico genético caracterizado por hiperreflexia espástica generalizada, resultante de defeitos nos receptores de glicina ou glutamato no sistema nervoso central.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hiperekplexia hereditária é um distúrbio neurológico caracterizado por rigidez muscular e espasticidade.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000498-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de hiperparatireoidismo-tumor de mandíbula? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hyperparathyroidism-jaw-tumor-syndrome",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de hiperparatireoidismo-tumor de mandíbula (síndrome de Cowden) segue um padrão de herança autossômica dominante, onde um único alelo mutado no gene PTEN é suficiente para transmitir o risco à descendência com probabilidade de 50%.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000525-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A colestase intra-hepática da gravidez? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Alterações genéticas no gene ABCB11 ou no gene ABCB4 podem aumentar a probabilidade de uma mulher desenvolver colestase intra-hepática da gravidez."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/intrahepatic-cholestasis-of-pregnancy",
+      "primary_sentence": "Genetic changes in the ABCB11 or the ABCB4 gene can increase a woman's likelihood of developing intrahepatic cholestasis of pregnancy.",
+      "primary_answer": "Genetic changes in the ABCB11 or the ABCB4 gene can increase a woman's likelihood of developing intrahepatic cholestasis of pregnancy.  The ABCB11 gene provides instructions for making a protein called the bile salt export pump (BSEP). This protein is found in the liver, and its main role is to move bile salts (a component of bile) out of liver cells, which is important for the normal release of bile. Changes in the ABCB11 gene associated with intrahepatic cholestasis of pregnancy reduce the amount or function of the BSEP protein, although enough function remains for sufficient bile secretion under most circumstances. Studies show that the hormones estrogen and progesterone (and products formed during their breakdown), which are elevated during pregnancy, further reduce the function of BSEP, resulting in impaired bile secretion and the features of intrahepatic cholestasis of pregnancy.  The ABCB4 gene provides instructions for making a protein that helps move certain fats called phospholipids across cell membranes and release them into bile. Phospholipids attach (bind) to bile acids (another component of bile). Large amounts of bile acids can be toxic when they are not bound to phospholipids. A mutation in one copy of the ABCB4 gene mildly reduces the production of ABCB4 protein. Under most circumstances, though, enough protein is available to move an adequate amount of phospholipids out of liver cells to bind to bile acids. Although the mechanism is unclear, the function of the remaining ABCB4 protein appears to be impaired during pregnancy, which may further reduce the movement of phospholipids into bile. The lack of phospholipids available to bind to bile acids leads to a buildup of toxic bile acids that can impair liver function, including the regulation of bile flow.  Most women with intrahepatic cholestasis of pregnancy do not have a genetic change in the ABCB11 or ABCB4 gene. Other genetic and environmental factors likely play a role in increasing susceptibility to this condition.",
+      "curated_sentence": "Alterações genéticas no gene ABCB11 ou no gene ABCB4 podem aumentar a probabilidade de uma mulher desenvolver colestase intra-hepática da gravidez."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A colestase intra-hepática da gravidez é causada por mutações no gene NCOA2.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A colestase intra-hepática da gravidez é uma condição de causa desconhecida, mas que envolve alterações na síntese de ácidos biliares e pode estar associada a polimorfismos genéticos no gene ABCB4 (MDR3) em casos familiares.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000525-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A colestase intra-hepática da gravidez? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A suscetibilidade à colestase intra-hepática da gravidez é herdada em um padrão autossômico dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para aumentar o risco de desenvolver o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/intrahepatic-cholestasis-of-pregnancy",
+      "primary_sentence": "Susceptibility to intrahepatic cholestasis of pregnancy is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to increase the risk of developing the disorder.",
+      "primary_answer": "Susceptibility to intrahepatic cholestasis of pregnancy is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to increase the risk of developing the disorder. Some women with an altered gene do not develop intrahepatic cholestasis of pregnancy. Many other factors likely contribute to the risk of developing this complex disorder.",
+      "curated_sentence": "A suscetibilidade à colestase intra-hepática da gravidez é herdada em um padrão autossômico dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para aumentar o risco de desenvolver o distúrbio."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A colestase intra-hepática da gravidez é herdada de forma autossômica dominante.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A colestase intra-hepática da gravidez é uma condição de origem multifatorial que envolve a interação entre mutações genéticas (como variantes no gene MDR3) e hormônios placentários (especialmente estrogênio), resultando em uma redução da secreção biliar e elevação dos ácidos biliares séricos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000532-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A síndrome de retração de Duane isolada? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Na maioria das pessoas com síndrome de retração de Duane isolada, a causa da condição é desconhecida."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/isolated-duane-retraction-syndrome",
+      "primary_sentence": "In most people with isolated Duane retraction syndrome, the cause of the condition is unknown.",
+      "primary_answer": "In most people with isolated Duane retraction syndrome, the cause of the condition is unknown. However, researchers have identified mutations in one gene, CHN1, that cause the disorder in a small number of families. The CHN1 gene provides instructions for making a protein that is involved in the early development of the nervous system. Specifically, the protein appears to be critical for the formation of nerves that control several of the muscles surrounding the eyes (extraocular muscles). Mutations in the CHN1 gene disrupt the normal development of these nerves and the extraocular muscles needed for side-to-side eye movement. Abnormal function of these muscles leads to restricted eye movement and related problems with vision.",
+      "curated_sentence": "Na maioria das pessoas com síndrome de retração de Duane isolada, a causa da condição é desconhecida."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de retração de Duane isolada é causada por mutações no gene DUX4.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de retração de Duane isolada é causada por mutações no gene DUX4, que leva à expressão ectópica do fator de transcrição DUX4 durante o desenvolvimento embrionário, resultando em anomalias oculomotores.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000552-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A osteoporose primária juvenil? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A osteoporose primária juvenil é um distúrbio esquelético caracterizado pelo afinamento dos ossos (osteoporose) que começa na infância."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/juvenile-primary-osteoporosis",
+      "primary_sentence": "Juvenile primary osteoporosis is a skeletal disorder characterized by thinning of the bones (osteoporosis) that begins in childhood.",
+      "primary_answer": "Juvenile primary osteoporosis is a skeletal disorder characterized by thinning of the bones (osteoporosis) that begins in childhood. Osteoporosis is caused by a shortage of calcium and other minerals in bones (decreased bone mineral density), which makes the bones brittle and prone to fracture. Affected individuals often have multiple fractures in the long bones of the arms and legs, especially in the regions where new bone forms (metaphyses). They also have fractures in the bones that form the spine (vertebrae), which can cause collapse of the affected vertebrae (compressed vertebrae). Multiple fractures can cause bone pain and lead to movement problems.",
+      "curated_sentence": "A osteoporose primária juvenil é um distúrbio esquelético caracterizado pelo afinamento dos ossos (osteoporose) que começa na infância."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A osteoporose primária juvenil é uma condição rara que afeta os ossos e o crescimento.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A osteoporose primária juvenil é uma condição rara caracterizada por uma densidade óssea reduzida que não está associada a outras doenças ou medicamentos, afetando predominantemente crianças e adolescentes.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000616-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A síndrome de Mainzer-Saldino? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Mainzer-Saldino é uma doença caracterizada por doença renal, problemas oculares e anomalias esqueléticas."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/mainzer-saldino-syndrome",
+      "primary_sentence": "Mainzer-Saldino syndrome is a disorder characterized by kidney disease, eye problems, and skeletal abnormalities.",
+      "primary_answer": "Mainzer-Saldino syndrome is a disorder characterized by kidney disease, eye problems, and skeletal abnormalities.  People with Mainzer-Saldino syndrome have chronic kidney disease that begins in childhood and gets worse over time. The rate at which the kidney disease worsens is variable, but the condition eventually leads to kidney failure in most affected individuals.  Degeneration of the light-sensitive tissue at the back of the eye (the retina) almost always occurs in this disorder, but the age at which this feature develops varies. Some affected individuals are blind or have severe vision impairment beginning in infancy, with the pattern of vision loss resembling a condition called Leber congenital amaurosis. In other people with Mainzer-Saldino syndrome, the retinal degeneration begins in childhood, but some vision is retained into early adulthood. The vision loss in these affected individuals resembles a category of retinal disorders called rod-cone dystrophies. The most common rod-cone dystrophy is called retinitis pigmentosa, and the vision problems in Mainzer-Saldino syndrome are sometimes referred to as such. However, the abnormal deposits of pigment in the retina from which retinitis pigmentosa gets its name are often not found in Mainzer-Saldino syndrome. As a result, some researchers use terms such as \"atypical retinitis pigmentosa without pigment\" to describe the retinal degeneration that occurs in Mainzer-Saldino syndrome.  The skeletal abnormality most characteristic of Mainzer-Saldino syndrome consists of cone-shaped ends of the bones (epiphyses) in the fingers (phalanges) that can be seen on x-ray images after the first year of life. Affected individuals may also have abnormalities of the thigh bones that occur in the epiphyses and adjacent areas where bone growth occurs (the metaphyses). Occasionally, other skeletal abnormalities occur, including short stature and premature fusion of certain skull bones (craniosynostosis) that affects the shape of the head and face. Affected individuals may also have a small rib cage, which sometimes causes breathing problems in infancy, but the breathing problems are usually mild.  A small number of individuals with this disorder have additional problems affecting other organs. These can include liver disease resulting in a buildup of scar tissue in the liver (hepatic fibrosis); cerebellar ataxia, which is difficulty with coordination and balance arising from problems with a part of the brain called the cerebellum; and mild intellectual disability.",
+      "curated_sentence": "A síndrome de Mainzer-Saldino é uma doença caracterizada por doença renal, problemas oculares e anomalias esqueléticas."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Mainzer-Saldino é uma doença genética rara caracterizada por uma forma grave de osteopetrosis (aumento da densidade óssea) e esplenomegalia, resultando em uma condição de alta mortalidade na infância devido a complicações como infecções respiratórias e insuficiência renal.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Mainzer-Saldino é uma condição rara que afeta o desenvolvimento dos ossos e dos dentes.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000627-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de Marfan? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/marfan-syndrome",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.  At least 25 percent of Marfan syndrome cases result from a new mutation in the FBN1 gene. These cases occur in people with no history of the disorder in their family.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Marfan é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Marfan é herdada de forma autossômica dominante, o que significa que uma cópia do gene mutado herdada de um dos pais é suficiente para causar a condição.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000645-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de Melnick-Needles? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada em um padrão dominante ligado ao cromossomo X."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/melnick-needles-syndrome",
+      "primary_sentence": "This condition is inherited in an X-linked dominant pattern.",
+      "primary_answer": "This condition is inherited in an X-linked dominant pattern. The gene associated with this condition is located on the X chromosome, which is one of the two sex chromosomes. In females (who have two X chromosomes), a mutation in one of the two copies of the gene in each cell is sufficient to cause the disorder. In males (who have only one X chromosome), a mutation in the only copy of the gene in each cell causes the disorder. In most cases, males experience more severe symptoms of the disorder than females. A characteristic of X-linked inheritance is that fathers cannot pass X-linked traits to their sons.",
+      "curated_sentence": "Esta condição é herdada em um padrão dominante ligado ao cromossomo X."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Melnick-Needles é herdada de forma autossômica dominante, o que significa que uma cópia do gene mutado em um dos dois cromossomos herdados dos pais é suficiente para causar a condição.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000684-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de Muenke? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/muenke-syndrome",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Muenke ocorre por uma mutação de ganho de função no gene FGFR3, que é herdada de forma autossômica dominante.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000695-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A deficiência de múltiplas sulfatases? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência múltipla de sulfatase é causada por mutações no gene SUMF1."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/multiple-sulfatase-deficiency",
+      "primary_sentence": "Multiple sulfatase deficiency is caused by mutations in the SUMF1 gene.",
+      "primary_answer": "Multiple sulfatase deficiency is caused by mutations in the SUMF1 gene. This gene provides instructions for making an enzyme called formylglycine-generating enzyme (FGE). This enzyme is found in a cell structure called the endoplasmic reticulum, which is involved in protein processing and transport. The FGE enzyme modifies other enzymes called sulfatases, which aid in breaking down substances that contain chemical groups known as sulfates. These substances include a variety of sugars, fats, and hormones.  Most SUMF1 gene mutations severely reduce the function of the FGE enzyme or lead to the production of an unstable enzyme that is quickly broken down. The activity of multiple sulfatases is impaired because the FGE enzyme modifies all known sulfatase enzymes. Sulfate-containing molecules that are not broken down build up in cells, often resulting in cell death. The death of cells in particular tissues, specifically the brain, skeleton, and skin, cause many of the signs and symptoms of multiple sulfatase deficiency.  Research indicates that mutations that lead to reduced FGE enzyme function are associated with the less severe cases of the condition, whereas mutations that lead to the production of an unstable FGE enzyme tend to be associated with the more severe cases of multiple sulfatase deficiency.",
+      "curated_sentence": "A deficiência múltipla de sulfatase é causada por mutações no gene SUMF1."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de múltiplas sulfatases é causada por mutações no gene ARSB.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de múltiplas sulfatases é causada por mutações no gene ARSA, que leva à deficiência da enzima arilsulfatase A e resulta em acúmulo de sulfatídeos nos tecidos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000713-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de Nager? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A maioria dos casos de síndrome de Nager são esporádicos, o que significa que ocorrem em pessoas sem histórico da doença em sua família."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/nager-syndrome",
+      "primary_sentence": "Most cases of Nager syndrome are sporadic, which means that they occur in people with no history of the disorder in their family.",
+      "primary_answer": "Most cases of Nager syndrome are sporadic, which means that they occur in people with no history of the disorder in their family. Less commonly, this condition has been found to run in families. When the disorder is familial, it can have an autosomal dominant or an autosomal recessive pattern of inheritance.  Autosomal dominant inheritance means one copy of an altered gene in each cell is sufficient to cause the disorder, although no genes have been associated with Nager syndrome. In autosomal dominant Nager syndrome, an affected person usually inherits the condition from one affected parent.  Autosomal recessive inheritance means both copies of a gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of a mutated gene, but they typically do not show signs and symptoms of the condition. Nager syndrome is thought to have an autosomal recessive inheritance pattern when unaffected parents have more than one affected child.  The underlying genetic cause may differ among unrelated individuals with Nager syndrome, even among those with the same pattern of inheritance.",
+      "curated_sentence": "A maioria dos casos de síndrome de Nager são esporádicos, o que significa que ocorrem em pessoas sem histórico da doença em sua família."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Nager é herdada de forma autossômica dominante, o que significa que uma cópia do gene mutado em um dos dois cromossomos 4p16.3 é suficiente para causar a condição.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000727-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A neuromielite óptica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A neuromielite óptica é um distúrbio autoimune que afeta os nervos dos olhos e do sistema nervoso central, que inclui o cérebro e a medula espinhal."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/neuromyelitis-optica",
+      "primary_sentence": "Neuromyelitis optica is an autoimmune disorder that affects the nerves of the eyes and the central nervous system, which includes the brain and spinal cord.",
+      "primary_answer": "Neuromyelitis optica is an autoimmune disorder that affects the nerves of the eyes and the central nervous system, which includes the brain and spinal cord. Autoimmune disorders occur when the immune system malfunctions and attacks the body's own tissues and organs. In neuromyelitis optica, the autoimmune attack causes inflammation of the nerves, and the resulting damage leads to the signs and symptoms of the condition.  Neuromyelitis optica is characterized by optic neuritis, which is inflammation of the nerve that carries information from the eye to the brain (optic nerve). Optic neuritis causes eye pain and vision loss, which can occur in one or both eyes.  Neuromyelitis optica is also characterized by transverse myelitis, which is inflammation of the spinal cord. The inflammation associated with transverse myelitis damages the spinal cord, causing a lesion that often extends the length of three or more bones of the spine (vertebrae). In addition, myelin, which is the covering that protects nerves and promotes the efficient transmission of nerve impulses, can be damaged. Transverse myelitis causes weakness, numbness, and paralysis of the arms and legs. Other effects of spinal cord damage can include disturbances in sensations, loss of bladder and bowel control, uncontrollable hiccupping, and nausea. In addition, muscle weakness may make breathing difficult and can cause life-threatening respiratory failure in people with neuromyelitis optica.  There are two forms of neuromyelitis optica, the relapsing form and the monophasic form. The relapsing form is most common. This form is characterized by recurrent episodes of optic neuritis and transverse myelitis. These episodes can be months or years apart, and there is usually partial recovery between episodes. However, most affected individuals eventually develop permanent muscle weakness and vision impairment that persist even between episodes. For unknown reasons, approximately nine times more women than men have the relapsing form. The monophasic form, which is less common, causes a single episode of neuromyelitis optica that can last several months. People with this form of the condition can also have lasting muscle weakness or paralysis and vision loss. This form affects men and women equally. The onset of either form of neuromyelitis optica can occur anytime from childhood to adulthood, although the condition most frequently begins in a person's forties.  Approximately one-quarter of individuals with neuromyelitis optica have signs or symptoms of another autoimmune disorder such as myasthenia gravis, systemic lupus erythematosus, or Sjgren syndrome. Some scientists believe that a condition described in Japanese patients as optic-spinal multiple sclerosis (or opticospinal multiple sclerosis) that affects the nerves of the eyes and central nervous system is the same as neuromyelitis optica.",
+      "curated_sentence": "A neuromielite óptica é um distúrbio autoimune que afeta os nervos dos olhos e do sistema nervoso central, que inclui o cérebro e a medula espinhal."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A neuromielite óptica é uma doença autoimune rara que ataca simultaneamente a bainha de mielina dos nervos ópticos e a medula espinhal.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A neuromielite óptica é uma doença que afeta o sistema nervoso central, causando inflamação nos nervos ópticos e na medula espinhal.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000779-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A síndrome de medula-pâncreas de Pearson? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de medula-pâncreas de Pearson geralmente não é herdada, mas surge de novas mutações (de novo) que provavelmente ocorrem no desenvolvimento embrionário inicial."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pearson-marrow-pancreas-syndrome",
+      "primary_sentence": "Pearson marrow-pancreas syndrome is generally not inherited but arises from new (de novo) mutations that likely occur in early embryonic development.",
+      "primary_answer": "Pearson marrow-pancreas syndrome is generally not inherited but arises from new (de novo) mutations that likely occur in early embryonic development.",
+      "curated_sentence": "A síndrome de medula-pâncreas de Pearson geralmente não é herdada, mas surge de novas mutações (de novo) que provavelmente ocorrem no desenvolvimento embrionário inicial."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de medula-pâncreas de Pearson ocorre devido a mutações no gene DDX3X, que são herdadas de forma autossômica recessiva, exigindo que o indivíduo herde duas cópias defeituosas do gene (uma de cada pai) para manifestar a condição.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000816-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A pré-eclâmpsia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "As causas específicas da pré-eclâmpsia não são bem compreendidas."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/preeclampsia",
+      "primary_sentence": "The specific causes of preeclampsia are not well understood.",
+      "primary_answer": "The specific causes of preeclampsia are not well understood. In pregnancy, blood volume normally increases to support the fetus, and the mother's body must adjust to handle this extra fluid. In some women the body does not react normally to the fluid changes of pregnancy, leading to the problems with high blood pressure and urine production in the kidneys that occur in preeclampsia.  The reasons for these abnormal reactions to the changes of pregnancy vary in different women and may differ depending on the stage of the pregnancy at which the condition develops. Studies suggest that preeclampsia is related to a problem with the placenta, the link between the mother's blood supply and the fetus. If there is an insufficient connection between the placenta and the arteries of the uterus, the placenta does not get enough blood. It responds by releasing a variety of substances, including molecules that affect the lining of blood vessels (the vascular endothelium). By mechanisms that are unclear, the reaction of the vascular endothelium appears to increase factors that cause the blood vessels to narrow (constrict), and decrease factors that would cause them to widen (dilate). As a result, the blood vessels constrict abnormally, causing hypertension. These blood vessel abnormalities also affect the kidneys, causing some proteins that are normally absorbed into the blood to be released in the urine instead.  Researchers are studying whether variations in genes involved in fluid balance, the functioning of the vascular endothelium, or placental development affect the risk of developing preeclampsia. Many other factors likely also contribute to the risk of developing this complex disorder. These risk factors include a first pregnancy; a pregnancy with twins or higher multiples; obesity; being older than 35 or younger than 20; a history of diabetes, hypertension, or kidney disease; and preeclampsia in a previous pregnancy. Socioeconomic status and ethnicity have also been associated with preeclampsia risk. The incidence of preeclampsia in the United States has increased by 30 percent in recent years, which has been attributed in part to an increase in older mothers and multiple births resulting from the use of assisted reproductive technologies.",
+      "curated_sentence": "As causas específicas da pré-eclâmpsia não são bem compreendidas."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A pré-eclâmpsia é uma condição multifatorial associada a defeitos na invasão trofoblástica, disfunção endotelial e fatores genéticos como polimorfismos em genes relacionados à via do fator de crescimento placentário (PLGF) e à via do complemento.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A pré-eclâmpsia é causada por uma combinação de fatores genéticos e ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000835-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A acidemia propiônica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/propionic-acidemia",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A acidemia propiônica é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A acidemia propiônica é uma doença autossômica recessiva causada por defeitos nos genes que codificam as enzimas da via de síntese da metionina, especificamente a propionil-CoA carboxilase, a mutação no gene PCCA ou no gene PCCB.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000837-1",
+    "instruction": "Qual informação geral responde a esta pergunta: O que é A deficiência de proteína C? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de proteína C é um distúrbio que aumenta o risco de desenvolver coágulos sanguíneos anormais; a condição pode ser leve ou grave."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/protein-c-deficiency",
+      "primary_sentence": "Protein C deficiency is a disorder that increases the risk of developing abnormal blood clots; the condition can be mild or severe.",
+      "primary_answer": "Protein C deficiency is a disorder that increases the risk of developing abnormal blood clots; the condition can be mild or severe.  Individuals with mild protein C deficiency are at risk of a type of blood clot known as a deep vein thrombosis (DVT). These clots occur in the deep veins of the arms or legs, away from the surface of the skin. A DVT can travel through the bloodstream and lodge in the lungs, causing a life-threatening blockage of blood flow known as a pulmonary embolism (PE). While most people with mild protein C deficiency never develop abnormal blood clots, certain factors can add to the risk of their development. These factors include increased age, surgery, inactivity, or pregnancy. Having another inherited disorder of blood clotting in addition to protein C deficiency can also influence the risk of abnormal blood clotting.  In severe cases of protein C deficiency, infants develop a life-threatening blood clotting disorder called purpura fulminans soon after birth. Purpura fulminans is characterized by the formation of blood clots in the small blood vessels throughout the body. These blood clots block normal blood flow and can lead to localized death of body tissue (necrosis). Widespread blood clotting uses up all available blood clotting proteins. As a result, abnormal bleeding occurs in various parts of the body, which can cause large, purple patches on the skin. Individuals who survive the newborn period may experience recurrent episodes of purpura fulminans.",
+      "curated_sentence": "A deficiência de proteína C é um distúrbio que aumenta o risco de desenvolver coágulos sanguíneos anormais; a condição pode ser leve ou grave."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de proteína C é uma condição na qual o corpo não produz proteína C suficiente ou não produz proteína C funcional.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de proteína C é uma condição hereditária ou adquirida na qual o corpo não produz ou não usa adequadamente a proteína C, um anticoagulante natural que ajuda a prevenir a formação de coágulos de sangue.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000837-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A deficiência de proteína C? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de proteína C é herdada de forma autossômica dominante, o que significa que uma cópia alterada do gene PROC em cada célula é suficiente para causar uma deficiência leve de proteína C."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/protein-c-deficiency",
+      "primary_sentence": "Protein C deficiency is inherited in an autosomal dominant pattern, which means one altered copy of the PROC gene in each cell is sufficient to cause mild protein C deficiency.",
+      "primary_answer": "Protein C deficiency is inherited in an autosomal dominant pattern, which means one altered copy of the PROC gene in each cell is sufficient to cause mild protein C deficiency. Individuals who inherit two altered copies of this gene in each cell have severe protein C deficiency.",
+      "curated_sentence": "A deficiência de proteína C é herdada de forma autossômica dominante, o que significa que uma cópia alterada do gene PROC em cada célula é suficiente para causar uma deficiência leve de proteína C."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de proteína C é uma condição hereditária que segue um padrão de herança autossômica recessiva, ocorrendo quando um indivíduo herda mutações em ambos os alelos do gene da proteína C, um de cada pai.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000848-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A microlitíase alveolar pulmonar? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A microlitíase alveolar pulmonar é causada por mutações no gene SLC34A2."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pulmonary-alveolar-microlithiasis",
+      "primary_sentence": "Pulmonary alveolar microlithiasis is caused by mutations in the SLC34A2 gene.",
+      "primary_answer": "Pulmonary alveolar microlithiasis is caused by mutations in the SLC34A2 gene. This gene provides instructions for making a protein called the type IIb sodium-phosphate cotransporter, which plays a role in the regulation of phosphate levels (phosphate homeostasis). Although this protein can be found in several organs and tissues in the body, it is located mainly in the lungs, specifically in cells in the alveoli called alveolar type II cells. These cells produce and recycle surfactant, which is a mixture of certain phosphate-containing fats (called phospholipids) and proteins that lines the lung tissue and makes breathing easy.  The recycling of surfactant releases phosphate into the alveoli. Research suggests that the type IIb sodium-phosphate cotransporter normally helps clear this phosphate. SLC34A2 gene mutations are thought to impair the activity of the type IIb sodium-phosphate cotransporter, resulting in the accumulation of phosphate in the alveoli. The accumulated phosphate forms the microliths that cause the signs and symptoms of pulmonary alveolar microlithiasis.",
+      "curated_sentence": "A microlitíase alveolar pulmonar é causada por mutações no gene SLC34A2."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A microlitíase alveolar pulmonar é causada por mutações no gene SERPINA1.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A microlitíase alveolar pulmonar é uma condição rara caracterizada pela presença de múltiplos nódulos microscópicos nos alvéolos pulmonares, frequentemente associada a doenças granulomatosas, pneumoconioses ou processos inflamatórios crônicos, embora as causas exatas variem conforme o subtipo e a etiologia subjacente.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000849-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de A hipertensão arterial pulmonar? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A hipertensão arterial pulmonar é geralmente esporádica, o que significa que ocorre em indivíduos sem histórico familiar conhecido da doença."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pulmonary-arterial-hypertension",
+      "primary_sentence": "Pulmonary arterial hypertension is usually sporadic, which means it occurs in individuals with no known family history of the disorder.",
+      "primary_answer": "Pulmonary arterial hypertension is usually sporadic, which means it occurs in individuals with no known family history of the disorder. These non-familial cases are described as idiopathic pulmonary arterial hypertension. About 20 percent of these cases are caused by mutations in one of the genes known to be associated with the disease, but most of the time a causative gene mutation has not been identified.  Inherited cases of this disorder are known as familial pulmonary arterial hypertension. When the condition is inherited, it most often has an autosomal dominant pattern of inheritance, which means one copy of an altered gene in each cell is sufficient to cause the disorder. However, many people with an altered gene never develop pulmonary arterial hypertension; this phenomenon is called reduced penetrance.",
+      "curated_sentence": "A hipertensão arterial pulmonar é geralmente esporádica, o que significa que ocorre em indivíduos sem histórico familiar conhecido da doença."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hipertensão arterial pulmonar não segue um padrão de herança mendeliana simples, sendo geralmente uma condição multifatorial ou idiopática, embora formas familiares possam ser associadas a mutações em genes como BMPR2, SMAD9 ou KCNK3, transmitidas predominantemente por via autossômica dominante com penetração variável.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hipertensão arterial pulmonar é herdada em algumas famílias.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000853-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para pyridoxine-dependent epilepsy? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene ALDH7A1 causam epilepsia dependente de piridoxina."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pyridoxine-dependent-epilepsy",
+      "primary_sentence": "Mutations in the ALDH7A1 gene cause pyridoxine-dependent epilepsy.",
+      "primary_answer": "Mutations in the ALDH7A1 gene cause pyridoxine-dependent epilepsy. The ALDH7A1 gene provides instructions for making an enzyme called -aminoadipic semialdehyde (-AASA) dehydrogenase, also known as antiquitin. This enzyme is involved in the breakdown of the protein building block (amino acid) lysine in the brain.  When antiquitin is deficient, a molecule that interferes with vitamin B6 function builds up in various tissues. Pyridoxine plays a role in many processes in the body, such as the breakdown of amino acids and the productions of chemicals that transmit signals in the brain (neurotransmitters). It is unclear how a lack of pyridoxine causes the seizures that are characteristic of this condition.  Some individuals with pyridoxine-dependent epilepsy do not have identified mutations in the ALDH7A1 gene. In these cases, the cause of the condition is unknown.",
+      "curated_sentence": "Mutações no gene ALDH7A1 causam epilepsia dependente de piridoxina."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Mutações no gene ALDH7A1 causam epilepsia dependente de piridoxina.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A epilepsia dependente de piridoxina é causada por mutações no gene ALDH7A1, que levam à deficiência de ácido lipoico e à acumulação de ácido 3-mercaptopiridina no cérebro.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000853-4",
+    "instruction": "Qual informação geral responde a esta pergunta: Como ocorre a herança de pyridoxine-dependent epilepsy? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pyridoxine-dependent-epilepsy",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A epilepsia dependente de piridoxina ocorre devido a mutações nos genes ALDH7A1, ALDH7A2 ou ALDH7A3, que levam à deficiência de piridoxal-5-fosfato (PLP), o cofator essencial para a enzima ALDH7A1, resultando no acúmulo de neurotoxinas como o ácido 3-metil-cromano (3-MCCG) e a deficiência de PLP, causando crises epilépticas em recém-nascidos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000875-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A artrite reumatoide? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A artrite reumatoide provavelmente resulta de uma combinação de fatores genéticos e ambientais, muitos dos quais são desconhecidos."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/rheumatoid-arthritis",
+      "primary_sentence": "Rheumatoid arthritis probably results from a combination of genetic and environmental factors, many of which are unknown.",
+      "primary_answer": "Rheumatoid arthritis probably results from a combination of genetic and environmental factors, many of which are unknown.  Rheumatoid arthritis is classified as an autoimmune disorder, one of a large group of conditions that occur when the immune system attacks the body's own tissues and organs. In people with rheumatoid arthritis, the immune system triggers abnormal inflammation in the membrane that lines the joints (the synovium). When the synovium is inflamed, it causes pain, swelling, and stiffness of the joint. In severe cases, the inflammation also affects the bone, cartilage, and other tissues within the joint, causing more serious damage. Abnormal immune reactions also underlie the features of rheumatoid arthritis affecting other parts of the body.  Variations in dozens of genes have been studied as risk factors for rheumatoid arthritis. Most of these genes are known or suspected to be involved in immune system function. The most significant genetic risk factors for rheumatoid arthritis are variations in human leukocyte antigen (HLA) genes, especially the HLA-DRB1 gene. The proteins produced from HLA genes help the immune system distinguish the body's own proteins from proteins made by foreign invaders (such as viruses and bacteria). Changes in other genes appear to have a smaller impact on a person's overall risk of developing the condition.  Other, nongenetic factors are also believed to play a role in rheumatoid arthritis. These factors may trigger the condition in people who are at risk, although the mechanism is unclear. Potential triggers include changes in sex hormones (particularly in women), occupational exposure to certain kinds of dust or fibers, and viral or bacterial infections. Long-term smoking is a well-established risk factor for developing rheumatoid arthritis; it is also associated with more severe signs and symptoms in people who have the disease.",
+      "curated_sentence": "A artrite reumatoide provavelmente resulta de uma combinação de fatores genéticos e ambientais, muitos dos quais são desconhecidos."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A artrite reumatoide é causada por uma combinação de fatores genéticos e ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A artrite reumatoide é uma doença autoimune multifatorial associada a variantes genéticas como HLA-DRB1 e fatores ambientais como tabagismo e infecções.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001003-3",
+    "instruction": "Qual informação geral responde a esta pergunta: Quais alterações genéticas ou causas são conhecidas para A diabetes tipo 1? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "As causas do diabetes tipo 1 são desconhecidas, embora vários fatores de risco tenham sido identificados."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/type-1-diabetes",
+      "primary_sentence": "The causes of type 1 diabetes are unknown, although several risk factors have been identified.",
+      "primary_answer": "The causes of type 1 diabetes are unknown, although several risk factors have been identified. The risk of developing type 1 diabetes is increased by certain variants of the HLA-DQA1, HLA-DQB1, and HLA-DRB1 genes. These genes provide instructions for making proteins that play a critical role in the immune system. The HLA-DQA1, HLA-DQB1, and HLA-DRB1 genes belong to a family of genes called the human leukocyte antigen (HLA) complex. The HLA complex helps the immune system distinguish the body's own proteins from proteins made by foreign invaders such as viruses and bacteria.  Type 1 diabetes is generally considered to be an autoimmune disorder. Autoimmune disorders occur when the immune system attacks the body's own tissues and organs. For unknown reasons, in people with type 1 diabetes the immune system damages the insulin-producing beta cells in the pancreas. Damage to these cells impairs insulin production and leads to the signs and symptoms of type 1 diabetes.  HLA genes, including HLA-DQA1, HLA-DQB1, and HLA-DRB1, have many variations, and individuals have a certain combination of these variations, called a haplotype. Certain HLA haplotypes are associated with a higher risk of developing type 1 diabetes, with particular combinations of HLA-DQA1, HLA-DQB1, and HLA-DRB1 gene variations resulting in the highest risk. These haplotypes seem to increase the risk of an inappropriate immune response to beta cells. However, these variants are also found in the general population, and only about 5 percent of individuals with the gene variants develop type 1 diabetes. HLA variations account for approximately 40 percent of the genetic risk for the condition. Other HLA variations appear to be protective against the disease. Additional contributors, such as environmental factors and variations in other genes, are also thought to influence the development of this complex disorder.",
+      "curated_sentence": "As causas do diabetes tipo 1 são desconhecidas, embora vários fatores de risco tenham sido identificados."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A diabetes tipo 1 é uma doença complexa que envolve fatores genéticos e ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A diabetes tipo 1 é uma doença autoimune multifatorial causada por uma combinação de predisposição genética (envolvendo genes do complexo principal de histocompatibilidade e outros loci não-HLA) e fatores ambientais, como infecções virais, que levam à destruição das células beta pancreáticas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  }
+]

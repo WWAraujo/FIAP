@@ -1,0 +1,90 @@
+{
+  "task": "FT-12",
+  "started_at": "2026-10-05T16:58:56.562589+00:00",
+  "stage": "completed_comparison_keep_FT11",
+  "model": "Qwen/Qwen3.5-9B",
+  "initial_adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter",
+  "initial_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+  "datasets": {
+    "train": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/train.jsonl",
+      "count": 1408,
+      "sha256": "3f83d6a7506037780b3516aec69fae214e08ccd41f34b658588be25dc3335123",
+      "used_for_training": true
+    },
+    "validation": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/validation.jsonl",
+      "count": 160,
+      "sha256": "85dbe577fc128231f5319058de1b1b986485c6c4090ee1775378409bc421c4ab",
+      "used_for_training": false
+    },
+    "test": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/test.jsonl",
+      "count": 160,
+      "sha256": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f",
+      "used_for_training": false
+    }
+  },
+  "epochs": 1,
+  "max_steps": -1,
+  "expected_optimizer_steps": 176,
+  "learning_rate": 1e-05,
+  "max_length": 512,
+  "python": "/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python",
+  "command_file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T165650Z_ft12_full_train/run.sh",
+  "log": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T165650Z_ft12_full_train/training.log",
+  "best_model_sha256_before_launch": "4edb92d1afd48d93bc6209a82350b1dac260a60e18b0c7978e61cec37753fb1e",
+  "monitoring_scope": "Initial-only monitoring requested originally; user subsequently authorized comparison with the best model.",
+  "post_training_comparison_requested_now": true,
+  "clinical_validation": false,
+  "supervisor_pid": 10671,
+  "initial_validated_at": "2026-10-05T17:05:27.993606+00:00",
+  "training_pid": 10672,
+  "run_id": "20261005T165900Z_qwen3.5_9b_qlora_rocm",
+  "output_directory": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T165900Z_qwen3.5_9b_qlora_rocm",
+  "initial_probe": {
+    "loss": 0.10657297819852829,
+    "peak_allocated_bytes": 13819475968,
+    "peak_reserved_bytes": 16127098880,
+    "max_length": 512,
+    "lora": {
+      "r": 8,
+      "alpha": 32,
+      "dropout": 0.1
+    }
+  },
+  "first_logged_training_metrics": {
+    "loss": "0.2367",
+    "grad_norm": "0.8669",
+    "learning_rate": "4.444e-06",
+    "epoch": "0.02841"
+  },
+  "optimizer_steps_verified_at_least": 5,
+  "status_file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T165650Z_ft12_full_train/status.txt",
+  "exit_code_file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T165650Z_ft12_full_train/exit_code.txt",
+  "best_model_unchanged": true,
+  "finished_at": "2026-10-05T18:04:04Z",
+  "training_exit_code": 0,
+  "completed_training_metrics": {
+    "train": {
+      "train_runtime": 3507.9673,
+      "train_samples_per_second": 0.401,
+      "train_steps_per_second": 0.05,
+      "total_flos": 3.442274238411571e+16,
+      "train_loss": 0.2045343927192417,
+      "epoch": 1.0
+    },
+    "validation": {
+      "eval_loss": 0.09003861248493195,
+      "eval_runtime": 118.7864,
+      "eval_samples_per_second": 1.347,
+      "eval_steps_per_second": 1.347,
+      "epoch": 1.0
+    }
+  },
+  "comparison_directory": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison",
+  "completed_optimizer_steps": 176,
+  "comparison_completed_at": "2026-10-05T21:31:38.479973+00:00",
+  "comparison_decision": "keep_FT11",
+  "comparison_report": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/review.md"
+}

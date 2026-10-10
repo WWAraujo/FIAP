@@ -1,0 +1,206 @@
+[
+  {
+    "id": "F2-GARD-0001456-1",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: O que é A síndrome da dor regional complexa (SDRC)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome da dor regional complexa (SDRC) é uma condição de dor crônica que afeta principalmente os braços, pernas, mãos e pés, mas pode envolver todo o corpo."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/4647/complex-regional-pain-syndrome",
+      "primary_sentence": "Complex regional pain syndrome (CRPS) is a chronic pain condition that mainly affects the arms, legs, hands, and feet, but may involve the entire body.",
+      "primary_answer": "Complex regional pain syndrome (CRPS) is a chronic pain condition that mainly affects the arms, legs, hands, and feet, but may involve the entire body. CRPS symptoms often begin after an injury. The main feature of CRPS is continuous, intense pain that is out of proportion to the severity of the injury. The pain gets worse over time and often spreads throughout the entire affected area. Other symptoms may include color and temperature changes of the skin over the affected area; skin sensitivity; sweating; and swelling. The underlying cause of CRPS is often not known. Two classifications of CRPS have been recognized based on causalgia. Type I (also known as reflex sympathetic dystrophy), in which there is no evidence of peripheral nerve injury and Type II, in which peripheral nerve injury is present. Treatment aims to relieve pain and often includes different interventions such as topical or oral medications; physical therapy; and/or a sympathetic nerve block.",
+      "curated_sentence": "A síndrome da dor regional complexa (SDRC) é uma condição de dor crônica que afeta principalmente os braços, pernas, mãos e pés, mas pode envolver todo o corpo."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome da dor regional complexa (SDRC) é uma condição dolorosa crônica que afeta um membro ou área do corpo após uma lesão ou imobilização, caracterizada por dor desproporcional ao evento inicial e alterações autonômicas, vasomotoras, sudoríparas, tróficas e motoras.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome da dor regional complexa (SDRC) é uma condição dolorosa que afeta um membro ou parte do corpo.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0004425-1",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: O que é A Nocardiose? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A Nocardiose é um distúrbio raro que afeta o cérebro, pele e/ou pulmões."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/7210/nocardiosis",
+      "primary_sentence": "Nocardiosis is a rare disorder that affects the brain, skin, and/or lungs.",
+      "primary_answer": "Nocardiosis is a rare disorder that affects the brain, skin, and/or lungs. It occurs mainly in people with a weakened immune system. This condition usually starts in the lungs and can spread to other body organs. Affected individuals usually experience problems with their lungs (chest pain, coughing up blood, fevers), brain (headaches and seizures), and skin (skin infections, ulcers, and abscesses). The nocardia bacteria are found in soil around the world. People contract this disease by either inhaling contaminated dust or if soil containing nocardia bacteria get into an open wound. While anyone can contract this condition, people with a weakened immune system or chronic lung disease are at greatest risk of this condition.",
+      "curated_sentence": "A Nocardiose é um distúrbio raro que afeta o cérebro, pele e/ou pulmões."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A nocardiose é uma infecção bacteriana causada por bactérias do gênero Nocardia, que geralmente afetam os pulmões, o cérebro ou a pele, sendo mais comum em pessoas com sistema imunológico enfraquecido.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A nocardiose é uma infecção causada por bactérias do gênero Nocardia.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000228-4",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Como ocorre a herança de A fibrose hepática congênita? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "As várias síndromes das quais a fibrose hepática congênita é frequentemente uma característica podem ter diferentes padrões de herança."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/congenital-hepatic-fibrosis",
+      "primary_sentence": "The various syndromes of which congenital hepatic fibrosis is often a feature can have different inheritance patterns.",
+      "primary_answer": "The various syndromes of which congenital hepatic fibrosis is often a feature can have different inheritance patterns. Most of these disorders are inherited in an autosomal recessive pattern, which means both copies of the associated gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition. Rare syndromes involving congenital hepatic fibrosis may be inherited in an X-linked recessive pattern, in which the gene associated with the syndrome is located on the X chromosome, which is one of the two sex chromosomes.  In isolated congenital hepatic fibrosis, the inheritance pattern is unknown.",
+      "curated_sentence": "As várias síndromes das quais a fibrose hepática congênita é frequentemente uma característica podem ter diferentes padrões de herança."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A fibrose hepática congênita é uma condição rara que resulta de mutações genéticas herdadas dos pais, que levam ao defeito na formação de colágeno no fígado, causando cicatrizes no tecido hepático desde o nascimento.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A fibrose hepática congênita é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000489-3",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Quais alterações genéticas ou causas são conhecidas para A doença de Huntington? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene HTT causam a doença de Huntington."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/huntington-disease",
+      "primary_sentence": "Mutations in the HTT gene cause Huntington disease.",
+      "primary_answer": "Mutations in the HTT gene cause Huntington disease. The HTT gene provides instructions for making a protein called huntingtin. Although the function of this protein is unknown, it appears to play an important role in nerve cells (neurons) in the brain.  The HTT mutation that causes Huntington disease involves a DNA segment known as a CAG trinucleotide repeat. This segment is made up of a series of three DNA building blocks (cytosine, adenine, and guanine) that appear multiple times in a row. Normally, the CAG segment is repeated 10 to 35 times within the gene. In people with Huntington disease, the CAG segment is repeated 36 to more than 120 times. People with 36 to 39 CAG repeats may or may not develop the signs and symptoms of Huntington disease, while people with 40 or more repeats almost always develop the disorder.  An increase in the size of the CAG segment leads to the production of an abnormally long version of the huntingtin protein. The elongated protein is cut into smaller, toxic fragments that bind together and accumulate in neurons, disrupting the normal functions of these cells. The dysfunction and eventual death of neurons in certain areas of the brain underlie the signs and symptoms of Huntington disease.",
+      "curated_sentence": "Mutações no gene HTT causam a doença de Huntington."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Huntington é causada por uma expansão anormal do trinucleotídeo CAG no gene huntingtina (HTT), localizada no cromossomo 4, resultando em uma proteína com repetições de glutamina anormalmente longas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Huntington é causada por uma mutação no gene HTT.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000506-1",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: O que é A hipomagnesemia com hipocalcemia secundária? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A hipomagnesemia com hipocalcemia secundária é uma condição hereditária causada pela incapacidade do corpo de absorver e reter magnésio proveniente da dieta."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hypomagnesemia-with-secondary-hypocalcemia",
+      "primary_sentence": "Hypomagnesemia with secondary hypocalcemia is an inherited condition caused by the body's inability to absorb and retain magnesium that is taken in through the diet.",
+      "primary_answer": "Hypomagnesemia with secondary hypocalcemia is an inherited condition caused by the body's inability to absorb and retain magnesium that is taken in through the diet. As a result, magnesium levels in the blood are severely low (hypomagnesemia).  Hypomagnesemia impairs the function of the parathyroid glands, which are small hormone-producing glands located in the neck. Normally, the parathyroid glands release a hormone that increases blood calcium levels when they are low. Magnesium is required for the production and release of parathyroid hormone, so when magnesium is too low, insufficient parathyroid hormone is produced and blood calcium levels are also reduced (hypocalcemia). The hypocalcemia is described as \"secondary\" because it occurs as a consequence of hypomagnesemia.  Shortages of magnesium and calcium can cause neurological problems that begin in infancy, including painful muscle spasms (tetany) and seizures. If left untreated, hypomagnesemia with secondary hypocalcemia can lead to developmental delay, intellectual disability, a failure to gain weight and grow at the expected rate (failure to thrive), and heart failure.",
+      "curated_sentence": "A hipomagnesemia com hipocalcemia secundária é uma condição hereditária causada pela incapacidade do corpo de absorver e reter magnésio proveniente da dieta."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hipomagnesemia com hipocalcemia secundária é uma condição caracterizada por níveis baixos de magnésio no sangue, que podem levar a níveis baixos de cálcio no sangue.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hipomagnesemia com hipocalcemia secundária é uma condição clínica na qual os níveis de magnésio no sangue estão baixos, levando diretamente a uma redução nos níveis de cálcio devido à deficiência de magnésio, que é necessária para a função adequada da paratireoide e da vitamina D.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000510-4",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Como ocorre a herança de A ictiose com confete? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A ictiose com confete é considerada ter um padrão de herança autossômico dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/ichthyosis-with-confetti",
+      "primary_sentence": "Ichthyosis with confetti is considered to have an autosomal dominant pattern of inheritance, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "Ichthyosis with confetti is considered to have an autosomal dominant pattern of inheritance, which means one copy of the altered gene in each cell is sufficient to cause the disorder. Usually, the condition is caused by a new mutation that occurs very early in embryonic development (called a de novo mutation). In these cases, the affected individuals have no history of the disorder in their family. In some cases, an affected person inherits the mutation from one affected parent.",
+      "curated_sentence": "A ictiose com confete é considerada ter um padrão de herança autossômico dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A ictiose com confete é uma condição genética autossômica recessiva, o que significa que um indivíduo precisa herdar uma cópia do gene mutado de ambos os pais para manifestar a doença.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A ictiose com confete é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000518-3",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Quais alterações genéticas ou causas são conhecidas para A distrofia neuroaxonal infantil? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Foram identificadas mutações no gene PLA2G6 na maioria dos indivíduos com distrofia neuroaxonal infantil."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/infantile-neuroaxonal-dystrophy",
+      "primary_sentence": "Mutations in the PLA2G6 gene have been identified in most individuals with infantile neuroaxonal dystrophy.",
+      "primary_answer": "Mutations in the PLA2G6 gene have been identified in most individuals with infantile neuroaxonal dystrophy. The PLA2G6 gene provides instructions for making a type of enzyme called an A2 phospholipase. This type of enzyme is involved in breaking down (metabolizing) fats called phospholipids. Phospholipid metabolism is important for many body processes, including helping to keep the cell membrane intact and functioning properly. Specifically, the A2 phospholipase produced from the PLA2G6 gene, sometimes called PLA2 group VI, helps to regulate the levels of a compound called phosphatidylcholine, which is abundant in the cell membrane.  Mutations in the PLA2G6 gene impair the function of the PLA2 group VI enzyme, which may disrupt cell membrane maintenance and contribute to the development of spheroid bodies in the nerve axons. Although it is unknown how changes in this enzyme's function lead to the signs and symptoms of infantile neuroaxonal dystrophy, phospholipid metabolism problems have been seen in both this disorder and a similar disorder called pantothenate kinase-associated neurodegeneration. These disorders, as well as the more common Alzheimer disease and Parkinson disease, also are associated with changes in brain iron metabolism. Researchers are studying the links between phospholipid defects, brain iron, and damage to nerve cells, but have not determined how the iron accumulation that occurs in some individuals with infantile neuroaxonal dystrophy may contribute to the features of this disorder.  A few individuals with infantile neuroaxonal dystrophy have not been found to have mutations in the PLA2G6 gene. The genetic cause of the condition in these cases is unknown; there is evidence that at least one other unidentified gene may be involved.",
+      "curated_sentence": "Foram identificadas mutações no gene PLA2G6 na maioria dos indivíduos com distrofia neuroaxonal infantil."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A distrofia neuroaxonal infantil é uma condição genética rara causada por mutações em genes específicos, como o gene PANK2, que afetam o metabolismo do ferro e lipídios no sistema nervoso central.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A distrofia neuroaxonal infantil é causada por mutações no gene ALADIN.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000560-1",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: O que é A síndrome de Kleefstra? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Kleefstra é um distúrbio que afeta várias partes do corpo."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/kleefstra-syndrome",
+      "primary_sentence": "Kleefstra syndrome is a disorder that involves many parts of the body.",
+      "primary_answer": "Kleefstra syndrome is a disorder that involves many parts of the body. Characteristic features of Kleefstra syndrome include developmental delay and intellectual disability, severely limited or absent speech, and weak muscle tone (hypotonia). Affected individuals also have an unusually small head size (microcephaly) and a wide, short skull (brachycephaly). Distinctive facial features include eyebrows that grow together in the middle (synophrys), widely spaced eyes (hypertelorism), a sunken appearance of the middle of the face (midface hypoplasia), nostrils that open to the front rather than downward (anteverted nares), a protruding jaw (prognathism), rolled out (everted) lips, and a large tongue (macroglossia). Affected individuals may have a high birth weight and childhood obesity.  People with Kleefstra syndrome may also have structural brain abnormalities, congenital heart defects, genitourinary abnormalities, seizures, and a tendency to develop severe respiratory infections. During childhood they may exhibit features of autism or related developmental disorders affecting communication and social interaction. In adolescence, they may develop a general loss of interest and enthusiasm (apathy) or unresponsiveness (catatonia).",
+      "curated_sentence": "A síndrome de Kleefstra é um distúrbio que afeta várias partes do corpo."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Kleefstra é uma condição genética rara caracterizada por um pequeno apagamento no cromossomo 9, que resulta em uma série de sintomas que afetam o desenvolvimento, incluindo atraso no desenvolvimento, problemas de fala, características faciais distintivas e distúrbios do sono.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Kleefstra é uma condição genética caracterizada por atraso no desenvolvimento, problemas de comportamento e características físicas específicas.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000613-4",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Como ocorre a herança de A síndrome de Mabry? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/mabry-syndrome",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Mabry é uma condição genética autossômica dominante, o que significa que uma cópia do gene mutado herdada de um dos pais é suficiente para causar a doença.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000620-3",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Quais alterações genéticas ou causas são conhecidas para As crises parciais migratórias malignas da infância (CPMMI)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A causa genética das CPMMI não é totalmente conhecida."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/malignant-migrating-partial-seizures-of-infancy",
+      "primary_sentence": "The genetic cause of MMPSI is not fully known.",
+      "primary_answer": "The genetic cause of MMPSI is not fully known. Mutations in the KCNT1 gene have been found in several individuals with this condition and are the most common known cause of MMPSI. Mutations in other genes are also thought to be involved in the condition.  The KCNT1 gene provides instructions for making a protein that forms potassium channels. Potassium channels, which transport positively charged atoms (ions) of potassium into and out of cells, play a key role in a cell's ability to generate and transmit electrical signals. Channels made with the KCNT1 protein are active in nerve cells (neurons) in the brain, where they transport potassium ions out of cells. This flow of ions is involved in generating currents to activate (excite) neurons and send signals in the brain.  KCNT1 gene mutations alter the KCNT1 protein. Electrical currents generated by potassium channels made with the altered KCNT1 protein are abnormally increased, which allows unregulated excitation of neurons in the brain. Seizures develop when neurons in the brain are abnormally excited. It is unclear why seizure activity can migrate in MMPSI. Repeated seizures in affected individuals contribute to the developmental delay that is characteristic of this condition.",
+      "curated_sentence": "A causa genética das CPMMI não é totalmente conhecida."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"As crises parciais migratórias malignas da infância (CPMMI) são causadas por mutações no gene SCN1A.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"As crises parciais migratórias malignas da infância (CPMMI) são causadas por mutações somáticas no gene SCN1A, que codifica a subunidade alfa do canal de sódio neuronal, levando a uma redução na inibição gábia no sistema nervoso central.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000815-3",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Quais alterações genéticas ou causas são conhecidas para A síndrome de Prader-Willi? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Prader-Willi é causada pela perda da função de genes em uma região específica do cromossomo 15."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/prader-willi-syndrome",
+      "primary_sentence": "Prader-Willi syndrome is caused by the loss of function of genes in a particular region of chromosome 15.",
+      "primary_answer": "Prader-Willi syndrome is caused by the loss of function of genes in a particular region of chromosome 15. People normally inherit one copy of this chromosome from each parent. Some genes are turned on (active) only on the copy that is inherited from a person's father (the paternal copy). This parent-specific gene activation is caused by a phenomenon called genomic imprinting.  Most cases of Prader-Willi syndrome (about 70 percent) occur when a segment of the paternal chromosome 15 is deleted in each cell. People with this chromosomal change are missing certain critical genes in this region because the genes on the paternal copy have been deleted, and the genes on the maternal copy are turned off (inactive). In another 25 percent of cases, a person with Prader-Willi syndrome has two copies of chromosome 15 inherited from his or her mother (maternal copies) instead of one copy from each parent. This phenomenon is called maternal uniparental disomy. Rarely, Prader-Willi syndrome can also be caused by a chromosomal rearrangement called a translocation, or by a mutation or other defect that abnormally turns off (inactivates) genes on the paternal chromosome 15.  It appears likely that the characteristic features of Prader-Willi syndrome result from the loss of function of several genes on chromosome 15. Among these are genes that provide instructions for making molecules called small nucleolar RNAs (snoRNAs). These molecules have a variety of functions, including helping to regulate other types of RNA molecules. (RNA molecules play essential roles in producing proteins and in other cell activities.) Studies suggest that the loss of a particular group of snoRNA genes, known as the SNORD116 cluster, may play a major role in causing the signs and symptoms of Prader-Willi syndrome. However, it is unknown how a missing SNORD116 cluster could contribute to intellectual disability, behavioral problems, and the physical features of the disorder.  In some people with Prader-Willi syndrome, the loss of a gene called OCA2 is associated with unusually fair skin and light-colored hair. The OCA2 gene is located on the segment of chromosome 15 that is often deleted in people with this disorder. However, loss of the OCA2 gene does not cause the other signs and symptoms of Prader-Willi syndrome. The protein produced from this gene helps determine the coloring (pigmentation) of the skin, hair, and eyes.  Researchers are studying other genes on chromosome 15 that may also be related to the major signs and symptoms of this condition.",
+      "curated_sentence": "A síndrome de Prader-Willi é causada pela perda da função de genes em uma região específica do cromossomo 15."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Prader-Willi é causada por uma alteração no cromossomo 15.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Prader-Willi é causada por uma perda de função no cromossomo 15 paterno, resultante de deleção, defeito de imprinting ou disomia uniparental paterna na região 15q11-q13.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000996-4",
+    "instruction": "Como você esclareceria, em uma explicação educativa, a seguinte dúvida: Como ocorre a herança de A trissomia 13, também chamada de síndrome de Patau,? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A maioria dos casos de trissomia 13 não é herdada e resulta de eventos aleatórios durante a formação de óvulos e espermatozoides em pais saudáveis."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/trisomy-13",
+      "primary_sentence": "Most cases of trisomy 13 are not inherited and result from random events during the formation of eggs and sperm in healthy parents.",
+      "primary_answer": "Most cases of trisomy 13 are not inherited and result from random events during the formation of eggs and sperm in healthy parents. An error in cell division called nondisjunction results in a reproductive cell with an abnormal number of chromosomes. For example, an egg or sperm cell may gain an extra copy of chromosome 13. If one of these atypical reproductive cells contributes to the genetic makeup of a child, the child will have an extra chromosome 13 in each cell of the body.  Translocation trisomy 13 can be inherited. An unaffected person can carry a rearrangement of genetic material between chromosome 13 and another chromosome. These rearrangements are called balanced translocations because there is no extra material from chromosome 13. A person with a balanced translocation involving chromosome 13 has an increased chance of passing extra material from chromosome 13 to their children.",
+      "curated_sentence": "A maioria dos casos de trissomia 13 não é herdada e resulta de eventos aleatórios durante a formação de óvulos e espermatozoides em pais saudáveis."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A trissomia 13 pode ser herdada de um dos pais ou pode ocorrer espontaneamente.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A trissomia 13 (síndrome de Patau) ocorre quando há três cópias do cromossomo 13 em vez de duas, sendo a causa mais comum a não disjunção cromossômica durante a meiose, embora possa resultar de translocação ou mosaicismos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  }
+]

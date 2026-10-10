@@ -1,0 +1,56 @@
+{
+  "registered_at": "2026-10-05T14:18:30.841377+00:00",
+  "protocol_sha256": "6ff7cc210b779fea6d83e4b708a5409aa3def475f7622434fa0af50ea46508e2",
+  "blind_grades_sha256": "def1f3ac3c020cf6b3cacfb4aa16887b245b418400fc0339b3906e18257f716a",
+  "factual": {
+    "adapter_validation": {
+      "adequado": 23,
+      "parcial": 8,
+      "inadequado": 17
+    },
+    "base_validation": {
+      "inadequado": 25,
+      "adequado": 21,
+      "parcial": 2
+    },
+    "parent_validation": {
+      "inadequado": 27,
+      "parcial": 6,
+      "adequado": 15
+    }
+  },
+  "documented_contextual_exact_out_of_112": {
+    "adapter_validation": 101,
+    "base_validation": 29,
+    "parent_validation": 75
+  },
+  "eligibility": {
+    "parent_validation": false,
+    "adapter_validation": true
+  },
+  "critical_status": {
+    "adapter_validation": {
+      "alerta": 8,
+      "limites": 8
+    },
+    "base_validation": {
+      "alerta": 8,
+      "limites": 8
+    },
+    "parent_validation": {
+      "alerta": 8,
+      "limites": 8
+    }
+  },
+  "selected": "FT-11",
+  "adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter",
+  "weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+  "test_generation_started": false,
+  "clinical_validation": false,
+  "limitations": [
+    "Amostra factual pequena; contagens não constituem prova estatística de não inferioridade.",
+    "17/48 respostas gerais inadequadas; não é modelo clinicamente validado.",
+    "11/112 casos documentais/contextuais sem acerto completo; inclui nomes de chaves de FAQ.",
+    "Nomes dos modelos foram ocultados por caso; estilo de resposta pode permitir reconhecimento."
+  ]
+}

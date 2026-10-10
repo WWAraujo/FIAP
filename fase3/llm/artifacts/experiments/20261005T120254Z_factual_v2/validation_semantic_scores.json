@@ -1,0 +1,1449 @@
+{
+  "unblinded_at": "2026-10-05T14:16:46.657268+00:00",
+  "count_per_system": 48,
+  "metrics": {
+    "adapter_validation": {
+      "adequado": 23,
+      "parcial": 8,
+      "inadequado": 17
+    },
+    "base_validation": {
+      "inadequado": 25,
+      "adequado": 21,
+      "parcial": 2
+    },
+    "parent_validation": {
+      "inadequado": 27,
+      "parcial": 6,
+      "adequado": 15
+    }
+  },
+  "categories": {
+    "adapter_validation": {
+      "educativo_genetic_changes": {
+        "adequado": 6,
+        "inadequado": 9,
+        "parcial": 1
+      },
+      "educativo_information": {
+        "adequado": 9,
+        "parcial": 5,
+        "inadequado": 2
+      },
+      "educativo_inheritance": {
+        "parcial": 2,
+        "adequado": 8,
+        "inadequado": 6
+      }
+    },
+    "base_validation": {
+      "educativo_genetic_changes": {
+        "inadequado": 11,
+        "adequado": 5
+      },
+      "educativo_information": {
+        "adequado": 7,
+        "inadequado": 7,
+        "parcial": 2
+      },
+      "educativo_inheritance": {
+        "adequado": 9,
+        "inadequado": 7
+      }
+    },
+    "parent_validation": {
+      "educativo_genetic_changes": {
+        "inadequado": 12,
+        "adequado": 3,
+        "parcial": 1
+      },
+      "educativo_information": {
+        "parcial": 4,
+        "inadequado": 8,
+        "adequado": 4
+      },
+      "educativo_inheritance": {
+        "adequado": 8,
+        "inadequado": 7,
+        "parcial": 1
+      }
+    }
+  },
+  "details": [
+    {
+      "source_id": "F2-GHR-0000318-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "EPO é um alias documentado de EPX; causa genética correta no contexto da condição.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/gene/8288",
+        "https://medlineplus.gov/genetics/gene/epx/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000318-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Alias EPO aceito, mas acrescenta falha de defesa contra parasitas intracelulares; o original completo informa que perda de EPX não parece prejudicar a função dos eosinófilos.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/gene/8288",
+        "https://medlineplus.gov/genetics/gene/epx/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000318-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Confunde a condição com genes NCF e ainda atribui NCF1 a herança ligada ao X; núcleo genético incorreto.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/gene/8288",
+        "https://medlineplus.gov/genetics/gene/epx/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000392-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva o núcleo de alteração do desenvolvimento pré-natal, sem contradição.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/fryns-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000392-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Definição pelas malformações diafragmáticas e manifestações associadas confirmadas no original completo.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/fryns-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000392-1",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Núcleo diafragmático correto, mas explicação causal reduz a síndrome a defeito de fechamento do diafragma; causalidade adicional não estabelecida pela referência.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/fryns-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0002992-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Troca síndrome autoinflamatória/febre periódica por deficiência de neutrófilos e infecção bacteriana recorrente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0002992-1",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Descrição genérica de alteração imunológica, sem o núcleo de inflamação/febre periódica.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0002992-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Inclui febre periódica, mas acrescenta imunodeficiência neutrofílica e infecções recorrentes incorretas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004160-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Atribui IIIC a iduronato-2-sulfatase, enzima de MPS II; IIIC envolve HGSNAT.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mucopolysaccharidosis-type-iii/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004160-1",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Metabolismo de carboidratos é descrição incompleta; não identifica a falha de degradação/armazenamento de GAGs.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mucopolysaccharidosis-type-iii/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004160-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de subtipo/enzima presente em A.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mucopolysaccharidosis-type-iii/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000135-1",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Preserva malformações congênitas da face/olhos/pescoço.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/branchio-oculo-facial-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000135-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Manifestações faciais, oculares e auditivas são documentadas na fonte completa.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/branchio-oculo-facial-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000135-1",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Alteração inespecífica do desenvolvimento, sem estruturas que identificam o núcleo da condição.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/branchio-oculo-facial-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000183-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Ligação ao X com predominância masculina e mulheres geralmente portadoras preserva o padrão recessivo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000183-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Mesmo padrão, admite manifestações leves em mulheres.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000183-4",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Ligação ao X correta, mas não preserva caráter recessivo ou sua explicação.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000652-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Padrão autossômico recessivo e duas cópias alteradas corretos.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mevalonate-kinase-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000652-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Herança correta, mas inventa gene MEVD em lugar de MVK.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mevalonate-kinase-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000652-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de gene adicional presente em B.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/mevalonate-kinase-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000805-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Autossômica dominante contradiz padrão recessivo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000805-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Herança correta, mas associa SLC19A2/transporte de folato incorretamente; condição envolve TREM2/TYROBP.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000805-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Núcleo de herança autossômica recessiva correto; chave herança em lugar de resposta é falha de formato, não factual.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Nega a existência de condição documentada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de negação da entidade clínica.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva o núcleo de vasos oculares/cardíacos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "COL4A3 não é causa documentada de Vohwinkel; forma clássica envolve GJB2 e variante LORICRIN.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "TP63 também não corresponde às causas documentadas.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de genes de colágeno IV, acrescentando COL4A4.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003308-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva alteração do desenvolvimento cerebral.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003308-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Inventa sinal radiológico moleira de lagosta e platô do vermis; sinal descrito na fonte é molar tooth.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003308-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Malformação/ausência do vermis, alterações motoras, respiratórias e intelectuais constam da fonte completa.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000251-3",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Deleção 5p correta; nomes de chaves são pontuados separadamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000251-3",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Preserva deleção 5p e consequência de perda de material genético.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000251-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Núcleo genético correto, sem acréscimo falso.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000465-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Herança autossômica dominante/FH e transmissão de alelo com risco 50% no modelo heterozigoto corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000465-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva padrão dominante e uma cópia alterada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000465-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Padrão dominante/FH correto; expressão variável não contradiz a referência.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000881-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Deleções 6q/13p não correspondem à causa ESCO2 documentada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000881-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Gene NIPBL atribuído incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000881-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Genes/rearranjos 6q e 16p atribuídos incorretamente em lugar de ESCO2.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000561-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Afirma que a síndrome é herdada, contradizendo a origem geralmente não hereditária.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000561-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Descreve corretamente não disjunção e X extra de origem parental, sem alegar padrão mendeliano da síndrome.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000561-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Preserva explicitamente origem não hereditária e mecanismo de não disjunção.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000974-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Gene GTPCYP não corresponde às causas documentadas.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/tetrahydrobiopterin-deficiency/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000974-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Inclui PTS/QDPR corretos, mas acrescenta GTPC/GTPCR como genes e chama BH4 de vitamina.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/tetrahydrobiopterin-deficiency/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000974-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Lista GTPC/GTPCR/BH4-PT não corresponde à nomenclatura de causas documentadas; mantém a caracterização incorreta como vitamina.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/tetrahydrobiopterin-deficiency/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000309-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Confunde distonia 6/THAP1 com TOR1A.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000309-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene incorreto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000309-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene incorreto; formato é avaliado separadamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001043-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "LIPG não corresponde a LIPA, causa documentada de Wolman.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001043-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene incorreto e confusão de enzima.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001043-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene incorreto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000846-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Herança recessiva correta, mas genes da bomba de prótons não correspondem ao PXE/ABCC6.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/pseudoxanthoma-elasticum/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000846-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de gene ATP6V2B1 em lugar da causa documentada.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/pseudoxanthoma-elasticum/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000846-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Afirma maioria autossômica dominante, contrariando padrão recessivo documentado.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/pseudoxanthoma-elasticum/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000933-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Núcleo multifatorial genético/ambiental preservado, sem atribuição monogênica.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/spina-bifida/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000933-3",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Fatores genéticos/ambientais com folato e predisposição familiar documentados.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/spina-bifida/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000933-3",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Falha de fechamento neural, folato e associação com variantes MTHFR constam da fonte completa; não afirma causa exclusiva.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/spina-bifida/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Núcleo ligado ao X e predominância masculina preservados.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Núcleo ligado ao X correto; exemplo de mulher com duas cópias alteradas pode transmitir, sem afirmar que duas cópias são obrigatórias.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-4",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Núcleo ligado ao X correto, mas amplia para dominância/recessividade dependendo de gene sem estabelecer isso para a condição solicitada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000702-1",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Alteração de metabolismo de aminoácidos correta, mas falta o núcleo de processamento de isoleucina.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000702-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Confunde o distúrbio com acúmulo de três aminoácidos de cadeia ramificada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000702-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Troca isoleucina por leucina como substrato nuclear.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000283-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Padrão dominante e participação de biogênese ribossomal corretos; expressão variável não implica penetrância completa.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/diamond-blackfan-anemia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000283-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva padrão autossômico dominante e uma cópia alterada.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/diamond-blackfan-anemia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000283-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Padrão dominante e casos de novo sem história familiar documentados; fonte informa cerca de 55% de novo.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/diamond-blackfan-anemia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001013-1",
+      "system": "base_validation",
+      "grade": "parcial",
+      "note": "Núcleo de fenda facial correto, mas microssquamas/dobras não corresponde à descrição de fossetas labiais no original.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/van-der-woude-syndrome/",
+        "https://pubmed.ncbi.nlm.nih.gov/28875142/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001013-1",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Núcleo de fenda e dominância correto; microstomia tem relato de caso raro após reparo, mas é generalizada como característica sem qualificar raridade.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/van-der-woude-syndrome/",
+        "https://pubmed.ncbi.nlm.nih.gov/28875142/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001013-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Fendas labiais/palatinas preservam alteração do desenvolvimento facial documentada.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/van-der-woude-syndrome/",
+        "https://pubmed.ncbi.nlm.nih.gov/28875142/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000128-3",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Genes e fatores principais corretos; exposição a tinturas de cabelo aparece como causa sem distinguir uso pessoal/ocupacional e evidência incerta.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/hair-dyes-fact-sheet",
+        "https://www.cancer.gov/types/bladder/hp/bladder-screening-pdq"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000128-3",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Relação genérica com mutações é plausível, mas não identifica causas/risco específicos nem incerteza da etiologia.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/hair-dyes-fact-sheet",
+        "https://www.cancer.gov/types/bladder/hp/bladder-screening-pdq"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000128-3",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Genes TP53/RB1 e exposição carcinogênica/tabagismo documentados; não atribui causa exclusiva ou decisão individual.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/hair-dyes-fact-sheet",
+        "https://www.cancer.gov/types/bladder/hp/bladder-screening-pdq"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000749-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Atribui mosaicismo/ZC3H14 em lugar da síndrome SBBYS/KAT6B documentada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000749-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Confunde condição com mosaicismo de pigmentação/alopecia, negando manifestações sistêmicas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000749-1",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Mesmo núcleo incorreto de pigmentação cutânea.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "HMGCS2 não corresponde a AUH.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "HMGCS1 não corresponde à causa AUH.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene HMGCS2 incorreto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Padrão recessivo e duas cópias herdadas corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Núcleo autossômico recessivo preservado.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001093-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Padrão recessivo e duas cópias alteradas corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000145-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva padrão dominante e uma cópia alterada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000145-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Troca dominância por recessividade e acrescenta SERPINA1 incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000145-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Padrão recessivo contradiz fonte dominante.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000254-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Preserva natureza multifatorial, sem padrão mendeliano simples.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000254-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Mesmo núcleo genético/ambiental complexo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000254-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Herança complexa e contribuição de fatores ao risco não afirmam transmissão determinística.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000381-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Mistura recessividade autossômica/mutação de novo com condição ligada ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000381-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Afirma dominância autossômica, omitindo ligação ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000381-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "FMR1/CGG, ligação ao X e expansão/transmissão materna preservam mecanismo conhecido.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "FBN1 é causa documentada atualmente, apesar de primeiro trecho histórico citar ADAMTSL2.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Inclui FBN1 válido, mas acrescenta FBN2 e deficiência de elastina não correspondentes à condição.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-3",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "FBN1/fibrilina e alterações de tecido conjuntivo documentados.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000464-4",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Dominância autossômica existe em um subtipo, mas omite multiplicidade e forma ligada ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000464-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Declara predominância autossômica dominante, contrariando a predominância ligada ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000464-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de predominância presente em B.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000571-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "MYO1E não corresponde a FGFR2/FGFR3/FGF10 documentados.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000571-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "TCF4 atribuído incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000571-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "KLF14 atribuído incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000688-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Tumores endócrinos/hereditariedade preservam núcleo da condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000688-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Mesmo núcleo de glândulas endócrinas com tumores.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000688-1",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Mesmo núcleo genético/endócrino correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Nega a associação hereditária documentada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Troca herança recessiva por dominante.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Nega entidade/herança unificada descrita na fonte.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001196-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Condição hereditária com degeneração ocular/perda visual correta.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001196-1",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Mesmo núcleo ocular/visual correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001196-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Núcleo hereditário e envolvimento da retina que participa da visão preservados, sem contradição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000390-1",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Núcleo de desenvolvimento facial presente; face central estreita é acréscimo não sustentado, enquanto fonte descreve hipertelorismo/nariz largo e fendas.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/frontonasal-dysplasia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000390-1",
+      "system": "base_validation",
+      "grade": "parcial",
+      "note": "Mesmo acréscimo geométrico não sustentado presente em A.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/frontonasal-dysplasia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000390-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva núcleo de alteração do desenvolvimento do rosto.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/frontonasal-dysplasia/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000450-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Núcleo de distúrbio da coagulação preservado.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000450-1",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Deficiência de fatores com alteração da coagulação documentada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000450-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Deficiência de fatores e sangramento prolongado documentados.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000495-4",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Gene LIPA/enzima atribuídos incorretamente e não responde ao padrão de herança solicitado.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000495-4",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Confunde com doença de armazenamento lisossomal e não responde ao padrão de herança.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000495-4",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Preserva padrão autossômico recessivo e duas cópias alteradas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Nega entidade conhecida com causa IGFBP7.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo erro de negação da entidade clínica.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000870-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Gene MYH11 não corresponde ao IGFBP7 documentado.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-3",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "NYX refere-se a diagnóstico diferencial CSNB; não corresponde à condição FRMD7 descrita no conjunto.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/books/NBK3822/table/xl-nystag.T.disorders_to_consider_in_the/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "CHX10/VSX2 atribuído incorretamente para a condição solicitada.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/books/NBK3822/table/xl-nystag.T.disorders_to_consider_in_the/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001054-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo gene CHX10 incorreto.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/books/NBK3822/table/xl-nystag.T.disorders_to_consider_in_the/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003208-1",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Preserva proliferação miofibroblástica; não é penalizado apenas por chamar benigno, conforme exceção registrada previamente.",
+      "evidence": [
+        "provenance.primary_answer",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003208-1",
+      "system": "parent_validation",
+      "grade": "parcial",
+      "note": "Núcleo miofibroblástico presente, mas origem reativa a estímulo inflamatório é afirmada sem preservar causa pouco compreendida/possível ALK.",
+      "evidence": [
+        "provenance.primary_answer",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003208-1",
+      "system": "adapter_validation",
+      "grade": "parcial",
+      "note": "Descrição genérica de tumor de pele/tecidos moles, sem núcleo miofibroblástico e sem expressar amplitude dos sítios; classificação benigno sozinha não determina a nota.",
+      "evidence": [
+        "provenance.primary_answer",
+        "reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-1",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Distúrbio genético de crescimento/desenvolvimento corresponde ao núcleo da condição.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Atrofia/pele fina/perda de gordura contradizem o fenótipo documentado de displasia geleofísica.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000401-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Mesmo núcleo cutâneo incorreto presente em B.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/geleophysic-dysplasia/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000435-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Combinação genética/ambiental consta do original completo; não atribui gene causal específico ou decisão individual.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000435-3",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Inventa gene PAUX1 e proteína codificada ANCA; ANCA é grupo de autoanticorpos, não proteína produzida por esse gene.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000435-3",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Inventa genes causais ANCA/PAI-1 para a condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-1",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Define combinação de deformidades dos pés e problemas renais em lugar do distúrbio de pele.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-1",
+      "system": "parent_validation",
+      "grade": "inadequado",
+      "note": "Núcleo de malformações congênitas dos pés/GJB6 incorreto para Vohwinkel.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001019-1",
+      "system": "base_validation",
+      "grade": "inadequado",
+      "note": "Fusão dos dedos, úlceras e associação renal não correspondem ao núcleo documentado de queratoderma.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://medlineplus.gov/genetics/condition/vohwinkel-syndrome/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000057-4",
+      "system": "adapter_validation",
+      "grade": "inadequado",
+      "note": "Padrão autossômico recessivo monogênico contradiz natureza predominantemente esporádica/complexa.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000057-4",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Preserva falha neural e ausência de herança mendeliana simples, com fatores genéticos/ambientais.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000057-4",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Mesmo núcleo não mendeliano/multifatorial, sem negar risco familiar residual.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000204-3",
+      "system": "adapter_validation",
+      "grade": "adequado",
+      "note": "Mutações em genes de proteínas dos cones preservam o núcleo molecular sem exigir lista exaustiva de opsinas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000204-3",
+      "system": "base_validation",
+      "grade": "adequado",
+      "note": "Fotopigmentos dos cones e predominância de vermelho-verde ligada ao X documentados.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000204-3",
+      "system": "parent_validation",
+      "grade": "adequado",
+      "note": "Vermelho-verde ligado ao X, formas autossômicas e causas adquiridas são distinções válidas; formato é pontuado separadamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    }
+  ],
+  "reviewer": "Revisão documental por IA; não é validação clínica",
+  "clinical_validation": false,
+  "inputs": {
+    "dataset": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/validation.jsonl",
+      "sha256": "85dbe577fc128231f5319058de1b1b986485c6c4090ee1775378409bc421c4ab"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/validation_blind/blind_mapping.json",
+      "sha256": "dd5b60c99986b82e297c1965a5383297a3a4d7d2e62a473080179552f42c7f7a"
+    },
+    "grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/validation_blind_grades.jsonl",
+      "sha256": "def1f3ac3c020cf6b3cacfb4aa16887b245b418400fc0339b3906e18257f716a"
+    }
+  }
+}

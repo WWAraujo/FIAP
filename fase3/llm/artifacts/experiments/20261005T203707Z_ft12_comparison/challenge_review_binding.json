@@ -1,0 +1,31 @@
+{
+  "count": 12,
+  "historical_control_grade_policy": "Fixed; a newly differing provisional control grade never changes FT-11's comparison score.",
+  "semantic_equivalence_policy": "When reviewed factual propositions and qualifiers are equivalent, transfer the historical grade to both sides to avoid reviewer drift.",
+  "semantic_equivalence_transfer_count": 0,
+  "identical_JSON_reuse_count": 6,
+  "provisional_control_grade_disagreements": [],
+  "inputs": {
+    "pair_grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/challenge_pair_grades.jsonl",
+      "sha256": "6017cae608f701bc5e4e53660db8ccff32122d4723f1ed23e2b43e9b548d4114"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/challenge_mapping.json",
+      "sha256": "502fc21ebab3b133c029721ddc594d60ac26bf914e33b6c1c1412e7f5217a257"
+    },
+    "historical_scores": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/challenge_semantic_scores.json",
+      "sha256": "ff46c06870204f8d594268d391391882935906f0b4e773d1d1ecd898d178fbce"
+    },
+    "control_responses": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/adapter_challenge/20261005T150333Z_eval03/adapter.jsonl",
+      "sha256": "32c644d0d8ef8bcb88e6cc54cd44face4c954cf3046d8b99990b86987c19f6ab"
+    },
+    "candidate_responses": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/candidate_challenge/20261005T212514Z_eval03/adapter.jsonl",
+      "sha256": "0e8d3182fe326563f851f44f3fda33df4799ec46a90979cc7a5ad0fb1a3df06e"
+    }
+  },
+  "clinical_validation": false
+}

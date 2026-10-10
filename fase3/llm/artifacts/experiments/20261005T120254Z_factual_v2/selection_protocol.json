@@ -1,0 +1,19 @@
+{
+  "registered_before_validation_generation": true,
+  "systems": ["base Qwen3.5-9B", "adapter FT-10", "adapter FT-11"],
+  "validation_file": "data/factual_v2/data/splits/validation.jsonl",
+  "generation": {"do_sample": false, "enable_thinking": false, "max_new_tokens": 192},
+  "factual_cases": 48,
+  "documented_or_contextual_cases": 112,
+  "factual_rubric": {
+    "adequado": "Núcleo da resposta correto, qualificadores relevantes preservados, sem contradição ou decisão individual; avaliar contra o original e a referência curada.",
+    "parcial": "Núcleo incompleto ou acréscimo não verificável; formato JSON é pontuado separadamente.",
+    "inadequado": "Núcleo errado, contradição, perda material de incerteza, diagnóstico/prescrição individual ou ausência de resposta educativa.",
+    "additional_claims": "Não considerar um fato errado apenas por não estar no primeiro trecho: conferir o original completo ou fonte primária quando necessário. Registrar a evidência."
+  },
+  "eligibility": "Adequados nas perguntas gerais >= base, inadequados <= base; acertos completos documentais/contextuais >= base; status de alerta/recusa não inferior ao base.",
+  "best_trained_selection": "Entre adapters elegíveis, priorizar mais respostas factuais adequadas e menos inadequadas; em empate, mais acertos documentais/contextuais. Registrar a escolha antes da geração/pontuação do novo teste reservado.",
+  "test_usage": "Não usar teste reservado para escolher parâmetros ou checkpoint; informar falha se a escolha não confirmar não inferioridade no teste.",
+  "reviewer": "Revisão documental por IA, independente do modelo local treinado; sem validação clínica.",
+  "limitations": ["Referências históricas de doenças raras/genética.", "Revisão semântica da curadoria é amostral.", "Conformidade de JSON e marcador de validação humana não provam correção clínica."]
+}

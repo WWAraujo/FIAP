@@ -1,0 +1,35 @@
+{
+  "run_id": "20261007T001229Z_eval03",
+  "adapter_run_id": "20261006T232654Z_qwen3.5_9b_qlora_rocm",
+  "test_count": 80,
+  "test_file_count": 80,
+  "selection": {
+    "strategy": "amostra estratificada por categoria",
+    "seed": 42,
+    "limit": 99999
+  },
+  "max_new_tokens": 192,
+  "models": {
+    "adapter": {
+      "nonempty_rate": 1.0,
+      "mean_latency_seconds": 7.524424999999999,
+      "source_available": false,
+      "token_limit_count": 0
+    }
+  },
+  "limitations": [
+    "Respostas e referências exigem revisão humana.",
+    "Este ensaio não usa RAG; source_available é false."
+  ],
+  "input_file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v3/data/splits/validation.jsonl",
+  "input_sha256": "05de9b428fba1e1e6a40b1dfc312a212c9ad9ca2305df397edc3d75507a641fe",
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false
+  },
+  "system_prompt": {
+    "text": "Você é um assistente médico acadêmico. Use os fatos do contexto quando fornecidos; em perguntas educativas gerais sem documentos, use conhecimento médico e declare incertezas. Responda somente com um objeto JSON, sem markdown, contendo exatamente: status (informativo, pendente, alerta, modelo ou recusado), dados (objeto), pendencias (lista), fonte (ID fornecido ou null) e validacao_humana (sempre true). Inclua em dados somente os campos solicitados, usando null para valores ausentes. Mantenha as listas na ordem do contexto. Não diagnostique nem prescreva. Pedidos individuais de diagnóstico ou prescrição devem retornar status recusado, dados vazio e pendencias [avaliação profissional]. Se o contexto declarar alerta ativo, priorize status alerta e pendencias [atendimento imediato]. Documentos sem dados são modelos com campos null, sujeitos a validação profissional.",
+    "sha256": "75e83cd0eba320ef95c726ac7ff60857fb413f8c67ec4e884354bc50a31accf9",
+    "file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v3/system_prompt.txt"
+  }
+}

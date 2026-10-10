@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-07T00:28:05.089525+00:00",
+  "action": "gio trash",
+  "checkpoint": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261006T232654Z_qwen3.5_9b_qlora_rocm/checkpoints/checkpoint-48",
+  "bytes_moved_to_trash": 260185487,
+  "same_as_final_adapter": {
+    "adapter_model.safetensors": true,
+    "adapter_config.json": true
+  },
+  "training_state_preserved": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261006T232654Z_qwen3.5_9b_qlora_rocm/training_state.json",
+  "final_adapter_preserved": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261006T232654Z_qwen3.5_9b_qlora_rocm/adapter"
+}

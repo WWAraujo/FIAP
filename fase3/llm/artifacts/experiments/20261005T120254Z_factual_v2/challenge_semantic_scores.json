@@ -1,0 +1,287 @@
+{
+  "unblinded_at": "2026-10-05T15:10:49.035472+00:00",
+  "count_per_system": 12,
+  "metrics": {
+    "base_challenge": {
+      "adequado": 6,
+      "inadequado": 5,
+      "parcial": 1
+    },
+    "adapter_challenge": {
+      "adequado": 5,
+      "parcial": 4,
+      "inadequado": 3
+    }
+  },
+  "categories": {
+    "base_challenge": {
+      "educativo_information": {
+        "adequado": 4
+      },
+      "educativo_inheritance": {
+        "inadequado": 3,
+        "adequado": 1
+      },
+      "educativo_genetic_changes": {
+        "inadequado": 2,
+        "adequado": 1,
+        "parcial": 1
+      }
+    },
+    "adapter_challenge": {
+      "educativo_information": {
+        "adequado": 3,
+        "parcial": 1
+      },
+      "educativo_inheritance": {
+        "parcial": 2,
+        "inadequado": 2
+      },
+      "educativo_genetic_changes": {
+        "parcial": 1,
+        "adequado": 2,
+        "inadequado": 1
+      }
+    }
+  },
+  "details": [
+    {
+      "source_id": "F2-GARD-0004425-1",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "Infecção Nocardia, sítios e imunossupressão corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004425-1",
+      "system": "adapter_challenge",
+      "grade": "adequado",
+      "note": "Definição por agente infeccioso correta, sem exigir todos os sítios.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000560-1",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "Deleção no cromossomo 9 e manifestações do desenvolvimento corretas; não exige lista de todas as variantes.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000560-1",
+      "system": "adapter_challenge",
+      "grade": "adequado",
+      "note": "Núcleo genético do desenvolvimento e manifestações preservados.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001456-1",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "Dor crônica desproporcional e alterações regionais corretas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001456-1",
+      "system": "adapter_challenge",
+      "grade": "parcial",
+      "note": "Dor regional é correto mas genérico, sem cronicidade ou desproporção.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000228-4",
+      "system": "base_challenge",
+      "grade": "inadequado",
+      "note": "Defeito na formação de colágeno não explica malformação dos ductos/placa ductal e não responde à diversidade de heranças.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000228-4",
+      "system": "adapter_challenge",
+      "grade": "parcial",
+      "note": "Recessividade existe em síndromes associadas, mas generaliza um modo para condição com padrões distintos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000510-4",
+      "system": "base_challenge",
+      "grade": "inadequado",
+      "note": "Recessividade contradiz padrão dominante.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000510-4",
+      "system": "adapter_challenge",
+      "grade": "inadequado",
+      "note": "Recessividade contradiz padrão dominante.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000815-3",
+      "system": "adapter_challenge",
+      "grade": "parcial",
+      "note": "Cromossomo 15 correto, porém falta perda de função/expressão da região paterna.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000815-3",
+      "system": "base_challenge",
+      "grade": "inadequado",
+      "note": "Perda paterna correta, mas disomia uniparental paterna contradiz a causa materna em Prader-Willi.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000489-3",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "HTT/CAG/poliglutamina corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000489-3",
+      "system": "adapter_challenge",
+      "grade": "adequado",
+      "note": "HTT correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000518-3",
+      "system": "base_challenge",
+      "grade": "inadequado",
+      "note": "PANK2 confunde outra neurodegeneração com PLA2G6.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000518-3",
+      "system": "adapter_challenge",
+      "grade": "inadequado",
+      "note": "ALADIN não é PLA2G6.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000506-1",
+      "system": "adapter_challenge",
+      "grade": "adequado",
+      "note": "Preserva baixa de magnésio levando à baixa secundária de cálcio; definição funcional suficiente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000506-1",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "Preserva efeito secundário no cálcio e funcionamento da paratireoide, sem decisão individual.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000613-4",
+      "system": "adapter_challenge",
+      "grade": "inadequado",
+      "note": "Dominância contradiz modo recessivo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000613-4",
+      "system": "base_challenge",
+      "grade": "inadequado",
+      "note": "Dominância contradiz modo recessivo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000620-3",
+      "system": "adapter_challenge",
+      "grade": "adequado",
+      "note": "SCN1A é causa confirmada em relatos primários, embora KCNT1 seja a causa conhecida mais comum; lista não precisa ser exaustiva.",
+      "evidence": [
+        "https://pubmed.ncbi.nlm.nih.gov/21753172/",
+        "https://pubmed.ncbi.nlm.nih.gov/21555645/",
+        "https://pubmed.ncbi.nlm.nih.gov/27784474/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000620-3",
+      "system": "base_challenge",
+      "grade": "parcial",
+      "note": "Gene e canal de sódio plausíveis, mas atribui mutações somáticas sem sustentação nas referências primárias de variantes de novo.",
+      "evidence": [
+        "https://pubmed.ncbi.nlm.nih.gov/21753172/",
+        "https://pubmed.ncbi.nlm.nih.gov/21555645/",
+        "https://pubmed.ncbi.nlm.nih.gov/27784474/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000996-4",
+      "system": "adapter_challenge",
+      "grade": "parcial",
+      "note": "Translocação familiar e ocorrência espontânea são possíveis, mas omite predomínio não herdado/mecanismo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000996-4",
+      "system": "base_challenge",
+      "grade": "adequado",
+      "note": "Explica não disjunção meiótica predominante e alternativas cromossômicas corretas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    }
+  ],
+  "reviewer": "Revisão documental por IA; não é validação clínica",
+  "clinical_validation": false,
+  "inputs": {
+    "dataset": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/challenge.jsonl",
+      "sha256": "0a9e02eedbd7ae5ded30b3433cd84fe41cafa2a287f206c3bf47c6cbccd97b2d"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/challenge_blind/blind_mapping.json",
+      "sha256": "b9111c139aa9331c25592d901c60874da2a831f43e733fbb4f5031306eff3867"
+    },
+    "grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/challenge_blind_grades.jsonl",
+      "sha256": "03ce8261592daccc2a9e8904010ca245b1e7afbec4ec0eefeaccd7f56dfe117e"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "count": 48,
+  "historical_control_grade_policy": "Fixed; a newly differing provisional control grade never changes FT-11's comparison score.",
+  "semantic_equivalence_policy": "When reviewed factual propositions and qualifiers are equivalent, transfer the historical grade to both sides to avoid reviewer drift.",
+  "semantic_equivalence_transfer_count": 12,
+  "identical_JSON_reuse_count": 17,
+  "provisional_control_grade_disagreements": [
+    {
+      "id": "F2-GHR-0000315-1",
+      "historical": "adequado",
+      "pair_reviewer": "parcial",
+      "historical_grade_preserved": true
+    },
+    {
+      "id": "F2-GARD-0001928-1",
+      "historical": "parcial",
+      "pair_reviewer": "inadequado",
+      "historical_grade_preserved": true
+    }
+  ],
+  "inputs": {
+    "pair_grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/test_pair_grades.jsonl",
+      "sha256": "efc75b315698a6ea3670fc7d5d5dda43e7aebdfece5a76f51d9fba67e30acddc"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/test_mapping.json",
+      "sha256": "ecdaba1e4524356db2ac22d7235d0a732adc9e7c330c740dab42f1bbdc69ae71"
+    },
+    "historical_scores": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/test_semantic_scores.json",
+      "sha256": "302e674e8fd36cf7b347ac3deb7430c2098b09724c1c517f5c9b64579cfa3df6"
+    },
+    "control_responses": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/adapter_test/20261005T143623Z_eval03/adapter.jsonl",
+      "sha256": "2ff77190eb54649d7540daea71450433442e515811b698a6bc8d9e9ace649419"
+    },
+    "candidate_responses": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T203707Z_ft12_comparison/candidate_test/20261005T210428Z_eval03/adapter.jsonl",
+      "sha256": "943b51d718330d860263ce3f438cc70026287561feecb7ef14ab1a07086ffdfa"
+    }
+  },
+  "clinical_validation": false
+}

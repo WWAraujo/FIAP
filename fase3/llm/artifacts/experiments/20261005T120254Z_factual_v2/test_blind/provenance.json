@@ -1,0 +1,9 @@
+{
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/test.jsonl",
+  "sha256": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f",
+  "systems": [
+    "base_test:base",
+    "adapter_test:adapter"
+  ],
+  "rubric": "selection_protocol.json; revisão documental por IA, sem validação clínica"
+}

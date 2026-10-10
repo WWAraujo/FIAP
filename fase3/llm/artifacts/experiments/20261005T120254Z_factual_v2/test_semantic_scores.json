@@ -1,0 +1,949 @@
+{
+  "unblinded_at": "2026-10-05T14:59:07.675962+00:00",
+  "count_per_system": 48,
+  "metrics": {
+    "base_test": {
+      "inadequado": 21,
+      "parcial": 7,
+      "adequado": 20
+    },
+    "adapter_test": {
+      "adequado": 22,
+      "parcial": 15,
+      "inadequado": 11
+    }
+  },
+  "categories": {
+    "base_test": {
+      "educativo_information": {
+        "inadequado": 5,
+        "adequado": 10,
+        "parcial": 1
+      },
+      "educativo_genetic_changes": {
+        "parcial": 2,
+        "adequado": 5,
+        "inadequado": 9
+      },
+      "educativo_inheritance": {
+        "inadequado": 7,
+        "parcial": 4,
+        "adequado": 5
+      }
+    },
+    "adapter_test": {
+      "educativo_information": {
+        "adequado": 8,
+        "parcial": 8
+      },
+      "educativo_genetic_changes": {
+        "adequado": 5,
+        "parcial": 4,
+        "inadequado": 7
+      },
+      "educativo_inheritance": {
+        "adequado": 9,
+        "parcial": 3,
+        "inadequado": 4
+      }
+    }
+  },
+  "details": [
+    {
+      "source_id": "F2-GHR-0000315-1",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Translocação equilibrada 12/18 e dose 18q não correspondem à síndrome de Emanuel/derivado 22 com material 11/22.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000315-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Preserva alteração genética do desenvolvimento de várias partes do corpo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000461-3",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "HFE/C282Y, HJV/HAMP e ferroportina corretos; TF tem papel modificador e causa outra forma de sobrecarga de ferro, não estabelecendo gene causal de forma não clássica de HH como sugerido. Acréscimo de papel causal não preserva a distinção.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/gene/7018/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3149125/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000461-3",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "HFE é causa confirmada; pergunta curta não exige lista exaustiva e não afirma exclusividade.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/gene/7018/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3149125/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000727-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Núcleo autoimune de acometimento óptico/medular preservado; simultaneamente descreve ambos os sítios sem afirmar que todo episódio sempre exige ataque coincidente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000727-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Núcleo inflamatório óptico/medular do sistema nervoso central correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001928-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Menciona olhos mas omite a alteração congênita do movimento ocular e acrescenta rosto sem explicar.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0001928-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Preserva alteração congênita da motilidade, com limitação de abdução.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000257-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Cirrose/fibrose de causa desconhecida preservada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000257-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Definição nuclear correta.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000394-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Padrão recessivo correto, mas atribui a gene FUCo, diferente do gene causal FUCA1.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/fucosidosis/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000394-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Duas cópias alteradas e padrão recessivo corretos.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/fucosidosis/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000452-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Padrão recessivo correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000452-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Nega hereditariedade e causa genética, contradizendo a condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000525-4",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Modo dominante informado, mas omite que se herda suscetibilidade, não necessariamente doença.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000525-4",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Reconhece interação genética/hormonal e MDR3, mas não responde ao padrão de transmissão da suscetibilidade.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000684-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Padrão dominante correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000684-4",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Padrão dominante e FGFR3 corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000779-4",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Atribui padrão dominante à síndrome geralmente decorrente de deleção mitocondrial de novo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000779-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Atribui DDX3X e herança recessiva, incompatíveis com a síndrome de Pearson.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000837-4",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Duas cópias alteradas são compatíveis com forma grave, mas generaliza recessividade sem distinguir a forma leve dominante.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/protein-c-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000837-4",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Descreve forma bialélica possível, mas omite forma leve dominante e distinção de gravidade.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/protein-c-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000888-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Doença renal genérica, sem proteinúria ou depósito glomerular definidor.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/mesh/68015922",
+        "https://pubmed.ncbi.nlm.nih.gov/3875286/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000888-1",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Chama C1q de imunoglobulina, quando é componente do complemento; erro na explicação definidora.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://www.ncbi.nlm.nih.gov/mesh/68015922",
+        "https://pubmed.ncbi.nlm.nih.gov/3875286/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000968-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Preserva metabolismo mitocondrial de ácidos graxos de cadeia longa e energia.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0000968-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Metabolismo de gorduras é correto mas omite função energética/ácidos graxos de cadeia longa.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003404-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Preserva comprometimento nervoso de braço/mão; definição breve sem exigir recém-nascido.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://pubmed.ncbi.nlm.nih.gov/41474925/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003404-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Plexo braquial inferior C8/T1 correto; pode ocorrer em adultos.",
+      "evidence": [
+        "provenance.primary_answer",
+        "https://pubmed.ncbi.nlm.nih.gov/41474925/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0005492-1",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Núcleo hereditário neurológico correto; armazenamento reduzido a esfingolipídios não descreve adequadamente o defeito de glicoproteínas/glicolipídios.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/alpha-n-acetylgalactosaminidase-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0005492-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Condição genética com acometimento nervoso preservada.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/alpha-n-acetylgalactosaminidase-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000044-3",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Genes COL4A3/4/5 corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000044-3",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Genes e colágeno IV corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000092-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "GNA11 causa tipo 2, mas mecanismo Gs/adenilil ciclase e aumento de PTH contradizem G11 e supressão de PTH.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/gene/gna11/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000092-3",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "CASR é causa principal confirmada.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/gene/gna11/",
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000267-3",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Distingue cariótipo convencional normal de mutações moleculares somáticas e informa causas confirmadas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000267-3",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Mutações em genes específicos é resposta vaga sem mecanismo ou exemplo causal.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000402-4",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Herança recessiva e possibilidade ABCC6 corretas, mas geralmente ABCC6 e transporte de fosfato não preservam causa majoritária ENPP1/mecanismo conhecido.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/generalized-arterial-calcification-of-infancy/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000402-4",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Modo dominante incorreto.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/generalized-arterial-calcification-of-infancy/"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0006402-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Tumor benigno salivar correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0006402-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Núcleo benigno/parotídeo e associação tabagismo corretos; bilateralidade possível sem afirmar obrigatoriedade.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000452-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Confunde LIPC com LPL.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000452-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Descreve deficiência de lipoproteína lipase/LPL em vez de lipase hepática/LIPC.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000463-1",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Troca reação exagerada ao susto por hiperreflexia espástica e acrescenta receptores de glutamato como causa sem suporte.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000463-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Rigidez preservada, mas omite resposta exagerada ao susto e usa espasticidade genericamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000532-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Atribui DUX4 incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000532-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Atribui DUX4 e mecanismo de outra condição incorretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000552-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Ossos/crescimento genéricos sem redução de massa óssea ou início infantil.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000552-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Redução de densidade óssea na infância e natureza primária preservadas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000627-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Herança dominante correta.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000627-4",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Herança dominante correta; pergunta sobre transmissão não exige de novo.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000645-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Diz autossômica em vez de ligada ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000645-4",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Diz autossômica em vez de ligada ao X.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000695-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "ARSB não substitui causa SUMF1.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000695-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "ARSA descreve outra deficiência e não SUMF1.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004775-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Crescimento/desenvolvimento vagos, sem anemia, pâncreas ou defeito mitocondrial.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0004775-1",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "PIG-A/ceramidas não correspondem à síndrome mitocondrial de Pearson.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000816-3",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Mecanismos multifatoriais plausíveis, mas relação específica PLGF/complemento não estabelecida na referência e não ressalva causas incompletamente compreendidas.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000816-3",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Natureza multifatorial correta, porém omite incerteza causal importante.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000837-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Falta de quantidade/função correta, mas omite função anticoagulante ou risco definidor de trombose.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/protein-c-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000837-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Deficiência do anticoagulante e função de prevenir coágulos preservadas.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/protein-c-deficiency/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000848-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "SERPINA1 não é causa SLC34A2 da condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000848-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Não responde à causa genética, atribuindo outras doenças inflamatórias/minerais indevidamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000849-4",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Distingue formas geralmente esporádicas de familiares dominantes com penetrância variável.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000849-4",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Algumas famílias é correto, mas sem modo de transmissão ou predomínio esporádico.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000853-3",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "ALDH7A1 correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000853-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Gene correto mas mecanismo inventado de ácido lipoico/3-mercaptopiridina, diferente do metabolismo da lisina descrito na referência completa.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000075-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Núcleo neurodesenvolvimento/social/comunicação correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000075-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Descrição histórica de Asperger no espectro autista preservada.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000124-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "BTK não é SLC19A3.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000124-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "SLCO5A1/THTR1 não correspondem ao SLC19A3/THTR2 da condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000525-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "NCOA2 não é causa estabelecida na referência.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000525-3",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "ABCB4/MDR3 é susceptibilidade confirmada; preserva incerteza geral e possibilidade de associação.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000616-1",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Osteopetrose/esplenomegalia e alta mortalidade não correspondem ao núcleo renal/ocular/esquelético.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000616-1",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Apenas ossos/desenvolvimento, sem comprometimento renal/ocular definidor e acréscimo dental sem apoio na referência.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001003-3",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Fatores genéticos/ambientais vagos, sem autoimunidade, mecanismo ou fator identificado.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0001003-3",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Preserva predisposição HLA e perda autoimune de células beta; fatores ambientais/virais citados como exemplos, sem afirmar gatilho viral obrigatório.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000233-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Confunde deficiência de leptina LEP com deficiência/resistência do receptor LEPR, condições diferentes.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000233-3",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Gene LEP correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000109-3",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "KMT2D não é GJB2.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000109-3",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "GNA13/mecanismo cAMP incorretos para a condição.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000436-4",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Preserva herança complexa/multifatorial sem modo mendeliano simples.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000436-4",
+      "system": "adapter_test",
+      "grade": "inadequado",
+      "note": "Impõe herança dominante simples à condição multifatorial.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000713-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Dominância é forma confirmada, mas atribuição 4p16.3 está incorreta para SF3B4 no cromossomo 1.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/nager-syndrome/",
+        "https://www.ncbi.nlm.nih.gov/gene/10262/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000713-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Padrão dominante é confirmado para SF3B4; não exigir negação de herança apenas por casos majoritariamente de novo.",
+      "evidence": [
+        "https://medlineplus.gov/genetics/condition/nager-syndrome/",
+        "https://www.ncbi.nlm.nih.gov/gene/10262/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000853-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Não responde à transmissão e inventa genes ALDH7A2/3 e metabólito causal.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000853-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Modo recessivo e duas cópias corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000875-3",
+      "system": "adapter_test",
+      "grade": "parcial",
+      "note": "Etiologia multifatorial genérica sem fator conhecido ou ressalva das lacunas causais.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000875-3",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Autoimunidade, associação HLA-DRB1 e tabagismo corretos; não afirma causa monogênica ou infecção obrigatória.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000498-4",
+      "system": "base_test",
+      "grade": "inadequado",
+      "note": "Confunde condição CDC73 com Cowden/PTEN, apesar do modo dominante correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000498-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Modo dominante correto sem confusão causal.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000835-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Modo recessivo e duas cópias corretos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000835-4",
+      "system": "base_test",
+      "grade": "parcial",
+      "note": "Modo recessivo, enzima e genes PCCA/PCCB corretos, porém os coloca em síntese da metionina em vez de catabolismo de aminoácidos/ácidos graxos.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000123-4",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Padrão recessivo correto.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000123-4",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Herança de variantes de ambos os pais descreve recessividade corretamente.",
+      "evidence": [
+        "provenance.primary_answer"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003239-1",
+      "system": "base_test",
+      "grade": "adequado",
+      "note": "Localiza corretamente câncer dos ductos dentro do fígado, corrigindo referência histórica imprecisa.",
+      "evidence": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/liver-and-bile-duct-cancer",
+        "test_reference_audit.json"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003239-1",
+      "system": "adapter_test",
+      "grade": "adequado",
+      "note": "Localiza corretamente câncer dos ductos dentro do fígado, corrigindo referência histórica imprecisa.",
+      "evidence": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/liver-and-bile-duct-cancer",
+        "test_reference_audit.json"
+      ]
+    }
+  ],
+  "reviewer": "Revisão documental por IA; não é validação clínica",
+  "clinical_validation": false,
+  "inputs": {
+    "dataset": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/data/splits/test.jsonl",
+      "sha256": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/test_blind/blind_mapping.json",
+      "sha256": "3431363828289e3c9b797024bf2aa1954b8beabf07675b6e2cefb496c87b6940"
+    },
+    "grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/test_blind_grades.jsonl",
+      "sha256": "1a4a68eae81f1f8f0a14265e0c526f0b71266e931adac6edac32f61d8ccf0d30"
+    }
+  }
+}

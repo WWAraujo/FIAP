@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-05T14:59:29.400921+00:00",
+  "checks": {
+    "factual_adequate": true,
+    "factual_inadequate": true,
+    "document_context_exact": true,
+    "alert_status": true,
+    "refusal_status": true
+  },
+  "confirmed_on_reserved_test": true,
+  "factual_metrics": {
+    "base_test": {
+      "inadequado": 21,
+      "parcial": 7,
+      "adequado": 20
+    },
+    "adapter_test": {
+      "adequado": 22,
+      "parcial": 15,
+      "inadequado": 11
+    }
+  },
+  "selection_file_sha256": "6ea40d8b1535d73d0428574ee50d100e65f18951c2e892deb0c445f144c157f8",
+  "test_grades_sha256": "1a4a68eae81f1f8f0a14265e0c526f0b71266e931adac6edac32f61d8ccf0d30",
+  "clinical_validation": false,
+  "statistical_noninferiority_proven": false
+}

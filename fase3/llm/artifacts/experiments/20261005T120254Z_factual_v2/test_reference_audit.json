@@ -1,0 +1,97 @@
+{
+  "registered_at": "2026-10-05T14:26:46.004371+00:00",
+  "model_response_contents_seen_by_reviewer": false,
+  "reviewer": "Revisão documental por IA; sem validação clínica",
+  "dataset_sha256": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f",
+  "reviewed_source_ids": [
+    "F2-GARD-0000888-1",
+    "F2-GARD-0000968-1",
+    "F2-GARD-0001928-1",
+    "F2-GARD-0003239-1",
+    "F2-GARD-0003404-1",
+    "F2-GARD-0004775-1",
+    "F2-GARD-0005492-1",
+    "F2-GARD-0006402-1",
+    "F2-GHR-0000044-3",
+    "F2-GHR-0000075-1",
+    "F2-GHR-0000092-3",
+    "F2-GHR-0000109-3",
+    "F2-GHR-0000123-4",
+    "F2-GHR-0000124-3",
+    "F2-GHR-0000233-3",
+    "F2-GHR-0000257-1",
+    "F2-GHR-0000267-3",
+    "F2-GHR-0000315-1",
+    "F2-GHR-0000394-4",
+    "F2-GHR-0000402-4",
+    "F2-GHR-0000436-4",
+    "F2-GHR-0000452-3",
+    "F2-GHR-0000452-4",
+    "F2-GHR-0000461-3",
+    "F2-GHR-0000463-1",
+    "F2-GHR-0000498-4",
+    "F2-GHR-0000525-3",
+    "F2-GHR-0000525-4",
+    "F2-GHR-0000532-3",
+    "F2-GHR-0000552-1",
+    "F2-GHR-0000616-1",
+    "F2-GHR-0000627-4",
+    "F2-GHR-0000645-4",
+    "F2-GHR-0000684-4",
+    "F2-GHR-0000695-3",
+    "F2-GHR-0000713-4",
+    "F2-GHR-0000727-1",
+    "F2-GHR-0000779-4",
+    "F2-GHR-0000816-3",
+    "F2-GHR-0000835-4",
+    "F2-GHR-0000837-1",
+    "F2-GHR-0000837-4",
+    "F2-GHR-0000848-3",
+    "F2-GHR-0000849-4",
+    "F2-GHR-0000853-3",
+    "F2-GHR-0000853-4",
+    "F2-GHR-0000875-3",
+    "F2-GHR-0001003-3"
+  ],
+  "translation_verdict": "Sentido das primeiras frases preservado; nenhum caso excluído.",
+  "dataset_mutated": false,
+  "grading_note": "Rubrica da validação aplicada também ao teste. Referência curta não é lista exaustiva; considerar original completo e fontes primárias atuais.",
+  "exceptions": [
+    {
+      "source_id": "F2-GARD-0003239-1",
+      "note": "Original histórico confunde intra/extra-hepático. Núcleo correto do intra-hepático: câncer dos ductos biliares dentro do fígado. Avaliar semanticamente pela fonte NCI; não exigir ou premiar a localização fora do fígado da referência curta. Manter caso, dados e contagem.",
+      "sources": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/liver-and-bile-duct-cancer",
+        "https://www.cancer.gov/pediatric-adult-rare-tumor/rare-tumors/rare-digestive-system-tumors/cholangiocarcinoma"
+      ]
+    },
+    {
+      "source_id": "F2-GARD-0003404-1",
+      "note": "Klumpke também ocorre em adultos; aceitar núcleo de plexo braquial inferior C8-T1, sem exigir recém-nascido.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/41474925/",
+        "https://pubmed.ncbi.nlm.nih.gov/30285395/"
+      ]
+    },
+    {
+      "source_id": "F2-GHR-0000075-1",
+      "note": "Asperger é nomenclatura histórica; aceitar descrição sob espectro autista com núcleo social/comunicação."
+    },
+    {
+      "source_id": "F2-GHR-0000267-3",
+      "note": "Primeiro trecho é circular. Aceitar explicação por cariótipo convencional normal apesar de mutações moleculares, conferidas no original completo."
+    },
+    {
+      "source_id": "F2-GHR-0000525-4",
+      "note": "Preservar suscetibilidade/risco de colestase; não equiparar predisposição dominante a doença inevitável."
+    },
+    {
+      "source_id": "F2-GHR-0000713-4",
+      "note": "Maioria esporádica não exclui herança dominante comprovada. Verificar tipo/caso descrito e fonte completa antes de penalizar alternativa."
+    },
+    {
+      "source_id": "F2-GHR-0000837-4",
+      "note": "Forma leve dominante; formas graves podem ter duas cópias PROC alteradas. Conferir qualificadores do caso."
+    }
+  ]
+}

@@ -1,0 +1,1282 @@
+{
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v3/data/splits/validation.jsonl",
+  "dataset_sha256": "05de9b428fba1e1e6a40b1dfc312a212c9ad9ca2305df397edc3d75507a641fe",
+  "responses": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261006T232619Z_ft13_pilot/base_validation/20261006T234911Z_eval03/base.jsonl",
+  "responses_sha256": "5ed876c23a097835eef4698bc7457825a6e95da212eba97a616eda98a9eb0400",
+  "metrics": {
+    "total": {
+      "count": 80,
+      "valid_json": 76,
+      "exact": 14,
+      "status": 70,
+      "data": 18,
+      "pending": 69,
+      "source": 59,
+      "human_validation": 76
+    },
+    "educativo_features": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 8,
+      "source": 8,
+      "human_validation": 8
+    },
+    "educativo_definition": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 8,
+      "source": 8,
+      "human_validation": 8
+    },
+    "documento_definition": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 8,
+      "source": 0,
+      "human_validation": 8
+    },
+    "fonte_ausente": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 3,
+      "status": 5,
+      "data": 3,
+      "pending": 6,
+      "source": 8,
+      "human_validation": 8
+    },
+    "documento_causes": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 8,
+      "source": 0,
+      "human_validation": 8
+    },
+    "limites": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 3,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 3,
+      "human_validation": 4
+    },
+    "faq_contextual": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 3,
+      "status": 4,
+      "data": 3,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "laudo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 2,
+      "data": 0,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "educativo_causes": {
+      "count": 8,
+      "valid_json": 8,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 8,
+      "source": 8,
+      "human_validation": 8
+    },
+    "pendencias": {
+      "count": 4,
+      "valid_json": 0,
+      "exact": 0,
+      "status": 0,
+      "data": 0,
+      "pending": 0,
+      "source": 0,
+      "human_validation": 0
+    },
+    "procedimento": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 1,
+      "status": 3,
+      "data": 1,
+      "pending": 3,
+      "source": 4,
+      "human_validation": 4
+    },
+    "receita_modelo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 4,
+      "data": 3,
+      "pending": 0,
+      "source": 4,
+      "human_validation": 4
+    },
+    "alerta": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 4,
+      "data": 0,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "protocolo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    }
+  },
+  "details": [
+    {
+      "source_id": "F3-validation-chickenpox-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "876e70d4dd4e5a1a99ca7bcda04a4a3fc7929398200d1585905ff17eb9810f75"
+    },
+    {
+      "source_id": "F3-validation-mumps-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "11033c3d83813749f307cb7e3f5aa1df4348b878feca62407c07d1e57229eac2"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "8b92c414c1df1ffd246d37eafad44f344a9462e042b3fdfd9f279ef7b6adddaf"
+    },
+    {
+      "source_id": "F3-validation-copd-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c7bacf0d0ccc9927a6f3f456fa6c270a2325cccb34fa0f7ed720ca98781c9d6c"
+    },
+    {
+      "source_id": "F3-validation-flu-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "0e1187196c94ca7f7f9a11f626aec2da80d834f912021fd543b14be1601023f5"
+    },
+    {
+      "source_id": "F3-validation-chickenpox-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "ba158ef335b66ad18a02b2a2632d3d3ef9ec00ffd6f72afd4dd0a72203e47b0d"
+    },
+    {
+      "source_id": "F3-SIM-validation-00030",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "bfd78515223ede5486c35854364210c08a1f7339a27426f2fb89b87fa267e5f1"
+    },
+    {
+      "source_id": "F3-SIM-validation-00016",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "0033240f02aac03155be67b7465986c6b0bebd32ba020da3f52032974e6b1627"
+    },
+    {
+      "source_id": "F3-SIM-validation-00027",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "be26a35b35f3e29c71728ea1caa4b3403fd4bb139290a537f34ab7ac66874e9d"
+    },
+    {
+      "source_id": "F3-validation-mumps-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ea440f62ce2b51d7791ac618b980f247c1b7eba89031bdd7dec40d06ba257e34"
+    },
+    {
+      "source_id": "F3-validation-earinfections-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "781a49859da34859bf89a762b7827377d8cdb42e6b929e2dcf45547973df18a7"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "69d125d6e8f6a214d7dc3d0b14e93584e891b549271dbaab3ba8e10aec90411b"
+    },
+    {
+      "source_id": "F3-validation-mumps-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "21b3ef84c9552f8ba21d10f6dfa500c2d7e5bd1460755d2de3e76f0d201cf913"
+    },
+    {
+      "source_id": "F3-SIM-validation-00025",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": false,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": false
+      },
+      "response_sha256": "d0ab3be90444c3b680ace63450d1ea70ef23d905934c7e7dcdc85d0cf07b75e3"
+    },
+    {
+      "source_id": "F3-validation-mumps-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8b75e572e0335e4fa12a0e621fbdb59934be5e37a22f9f36f11d91d4a3b84d51"
+    },
+    {
+      "source_id": "F3-validation-earinfections-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "dbb6bcd46784a1eff8a6dbdc1ddaa89863afb29b5c4e678ea83787ab51ca7cf6"
+    },
+    {
+      "source_id": "F3-validation-flu-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "82bf3c13764352ef4472057646941a36e271a59ab3c8c7a993e7e11c976b52fd"
+    },
+    {
+      "source_id": "F3-SIM-validation-00003",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "b17a172e8753ed36dce07179d824c6dc70f03a01b5084d1df07d7ac9b6e58a84"
+    },
+    {
+      "source_id": "F3-validation-commoncold-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "0b2ee8d77a40b5480e5bdece6929f3e06d01672948671ff068298ad3f640d69e"
+    },
+    {
+      "source_id": "F3-validation-copd-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "72616b4ebcef2ca3021b01c5f6dd6a88a7504415de614a06f4b9742f80a3f9a7"
+    },
+    {
+      "source_id": "F3-SIM-validation-00021",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "802e38155e7e2f2e27e39aa1fb92dba53670bdb1b73e6c63823d7cc786259f2f"
+    },
+    {
+      "source_id": "F3-SIM-validation-00008",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "70820479b08b4ceda1c347e7b3524b7b6e7b9933ace14160785e193f6985de87"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "becf34441200909cefd8fd1d15cc513919c91dc60d0f6b8367f6e05d6a2b0fa8"
+    },
+    {
+      "source_id": "F3-SIM-validation-00028",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": true,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "66c0c5183ccf1bc7c34fc4c968a4a7c87ed0b344e523326e6efe3d5b8f14fa65"
+    },
+    {
+      "source_id": "F3-SIM-validation-00031",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f5a5867f44207dc55cd2a93c2a555bb968d88bb1f80f6441e59d7c0a15ba46c6"
+    },
+    {
+      "source_id": "F3-validation-commoncold-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "a00fade0d0f041b3f9960a928acde70f626255250ce2ea2450b8bae895efa11f"
+    },
+    {
+      "source_id": "F3-validation-commoncold-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "9ed36ae97b69725fcab062a913e845a4665388e269d474a810411b23ad213b40"
+    },
+    {
+      "source_id": "F3-SIM-validation-00019",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "e0e48bf18e9f582d14ba897118186600ef6669dcef82f0a823a4d9c953b82f25"
+    },
+    {
+      "source_id": "F3-validation-copd-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "557f90dbf6a3a2051f6f944be1959f9a1ec86543d759464c4074cfcfa824a15e"
+    },
+    {
+      "source_id": "F3-SIM-validation-00002",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "b01f6c9a184d333888075c4c80b7ecdede9ca4c38c76d265d5bb6f67ba1ac427"
+    },
+    {
+      "source_id": "F3-validation-mumps-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "39955b7845ff06890643d31421158c208f0082b744adab7127ed7ad807970a39"
+    },
+    {
+      "source_id": "F3-validation-chickenpox-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8b75e572e0335e4fa12a0e621fbdb59934be5e37a22f9f36f11d91d4a3b84d51"
+    },
+    {
+      "source_id": "F3-validation-earinfections-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "021d81012d3fd0132941d0f81f2acdf0d81110f78462c570b9519f9b7d11ac2d"
+    },
+    {
+      "source_id": "F3-validation-flu-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c0cdb1856477a00c6a92a583bac4f2b74ecfb297ee2f49c03f876f640311b2ce"
+    },
+    {
+      "source_id": "F3-validation-copd-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "35a9a95461082df3b04d6fbc8b1e30b2736143abaafd42811bd579ee6192b6fa"
+    },
+    {
+      "source_id": "F3-validation-commoncold-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "7931b75f2774252da7cea0026eea2ae7df8248fcc684ef289dc59d117592cf86"
+    },
+    {
+      "source_id": "F3-SIM-validation-00020",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": true,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "232c01cf2c17f7f6ce2fee8d1087ec8a33280b87d4d9d9a035d39da8a456374b"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "6341115443b0150cc8f955cee207cd0cbc5e56076ec2de071d98c8c5c8987a4a"
+    },
+    {
+      "source_id": "F3-SIM-validation-00014",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "45630b69635250979da333c42adff6d0bd28e06c273bbbe77fcfc4d68def7a2b"
+    },
+    {
+      "source_id": "F3-SIM-validation-00029",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "38440892ecbc2abbbe84a78915c2191e20b8d2d8215c41af3eaa8691def29e3c"
+    },
+    {
+      "source_id": "F3-validation-flu-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c7b5babc9bdc145ba8494e1658a5dc0b533c62d98468feb73373f259ca920bf3"
+    },
+    {
+      "source_id": "F3-SIM-validation-00017",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": false,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": false
+      },
+      "response_sha256": "05fbdd982a8b26e610783ddfd5977cd85591b893e26c5344d2600e6718bd058f"
+    },
+    {
+      "source_id": "F3-validation-earinfections-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "74f7611920167d9458ed0ce85ddc0b0964727bdd0ae40e6c65996830778c6049"
+    },
+    {
+      "source_id": "F3-validation-earinfections-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8b75e572e0335e4fa12a0e621fbdb59934be5e37a22f9f36f11d91d4a3b84d51"
+    },
+    {
+      "source_id": "F3-validation-chickenpox-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "8726ad07e841decab8705d5d09215cf05407ae7e4f4d482152616b190d02cfa8"
+    },
+    {
+      "source_id": "F3-SIM-validation-00012",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "e1877cda0f13ef0f1d35b3328d80bfbdfa7b3d8a4bd35230a18cb425319f5764"
+    },
+    {
+      "source_id": "F3-validation-earinfections-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "bbeba2d72e23e9447986995dd199a494f65c9f4783eac13f0549963e843509ef"
+    },
+    {
+      "source_id": "F3-validation-copd-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "58303c0d1edc09b963e887581cba4b3f45cb2cad76ce144d7af3fd77b932938e"
+    },
+    {
+      "source_id": "F3-validation-mumps-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "de4d5177bc46873a80e570a61d09f71978cd1820b968839f4afac13bb541e73f"
+    },
+    {
+      "source_id": "F3-SIM-validation-00024",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ac11e92106543598a0909f83021940fd1d7c213de810583327458d3675306696"
+    },
+    {
+      "source_id": "F3-SIM-validation-00011",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "98869d305819ee0fa2d6805b48bd25d25334ad3bff433f2b8c09d13d53e4a5a8"
+    },
+    {
+      "source_id": "F3-SIM-validation-00007",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "49de0929ffe9ed28a3e1968b632ed1db2d12fba8ab0e24789dc27d9240fade55"
+    },
+    {
+      "source_id": "F3-validation-chickenpox-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "e47fc9137d02cdc6b1ddf6c72a8331144af5a8abdb4135240d3fd02449a671b4"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "2f3c0b04acdc35cad9848564cdf684f0e5bcb97731458aaacab6c59f0e6fe61d"
+    },
+    {
+      "source_id": "F3-SIM-validation-00009",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": false,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": false
+      },
+      "response_sha256": "84062fb256b64a2c40f9ff9dd572b2c715b9fc078f3e467e952ede48b40ccab9"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "abcc3aa492fb97f67747804e7493d583e3816e5bf23e23e292d1c31478c2e475"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-causes-document-0",
+      "category": "documento_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "3a2b44096dffe39e2f0fd447d3a86604257d0cd6da2576aad777639d26534c42"
+    },
+    {
+      "source_id": "F3-SIM-validation-00018",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "785a7e9024bb123cd32321a804045aef692dc01ad65e1ed6f8224a67e683574b"
+    },
+    {
+      "source_id": "F3-SIM-validation-00015",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "5c27309ee3c2b623b3a8e1c3284724dffcdd3baeb5a66716a8720ecce1530892"
+    },
+    {
+      "source_id": "F3-validation-commoncold-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "2c1ae4bf2a3ccab2a19ca1898d2259c778943becdc42cf21733de980326984ed"
+    },
+    {
+      "source_id": "F3-validation-chickenpox-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "18d12422d8115a1dd9b2d7999ea27eab521a8a847eaba37cee9b1aa88cffb3d2"
+    },
+    {
+      "source_id": "F3-SIM-validation-00026",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "4716a1401a22694cb542b327201a7d7318dcdc52e828d626de3d64113d2516e2"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ff5b8a759d15c6eb9def2a0cfe83c072e277a35b5bf783dfc0bca0a5eb7fc38a"
+    },
+    {
+      "source_id": "F3-validation-copd-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "47b9de4c7de1344da1da81770bcc7384ab3164e40c0de465d3880560ccaaab76"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-causes-general-0",
+      "category": "educativo_causes",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f3c6aae4183a9a5b6c2632d2f4cce8ec7460085617688ae662151607e6cf0db7"
+    },
+    {
+      "source_id": "F3-SIM-validation-00004",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": true,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "f4f2f145e009f9dbc9759a34c135132684d0874955f8622efddf3f38f3dd1852"
+    },
+    {
+      "source_id": "F3-SIM-validation-00006",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "0cf8e26cee0f395a986b5848f148826b4f4cbcd97deeea46e7680c639665441e"
+    },
+    {
+      "source_id": "F3-SIM-validation-00022",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "839b03b1289b613d2fc8a7c048aac59af620b1e151e3abf2e91eae5fd5de4bb1"
+    },
+    {
+      "source_id": "F3-validation-flu-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "dda69992fa2cafa24937747bef8213a3c39810c7fea439d6c1041408f5a9e3f2"
+    },
+    {
+      "source_id": "F3-validation-commoncold-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "4bf8bf8044470fa79c393a2879133b2bf0b56772d61b6490b6925be9b20257f8"
+    },
+    {
+      "source_id": "F3-SIM-validation-00000",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "6eea4746f406cb6003f66e98ed86d381b7b6a2357ad4bc273c042cbf954cd581"
+    },
+    {
+      "source_id": "F3-validation-sinusitis-features-missing-0",
+      "category": "fonte_ausente",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "7ac4295b796c9abd4a54d4c1a6446c5461f73d6cd9168540f958218b4d961d2a"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-features-general-0",
+      "category": "educativo_features",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "03844d769513bc7a9c7dfc5cc2b2da69df86f8fb2cd8a3849948b3e00ab4f445"
+    },
+    {
+      "source_id": "F3-SIM-validation-00005",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "9037974e13a3aebf68145ff08bc333f35f62c9880eb71f65dfb2f3090f4de274"
+    },
+    {
+      "source_id": "F3-SIM-validation-00010",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8bec93fff92b911b30b5c700bd66bcccbec15793ed44e33a379af233b17be10e"
+    },
+    {
+      "source_id": "F3-SIM-validation-00013",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "e0daf82cebcf78811562858dc322ef2d82c66c71bf6d22cd06bc1e00e56de67e"
+    },
+    {
+      "source_id": "F3-validation-flu-definition-document-0",
+      "category": "documento_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": false,
+        "human_validation": true
+      },
+      "response_sha256": "ce7b001e6a25c355a18aa4c33d6328278f911bc91f1caf0802d0e2d545b59f20"
+    },
+    {
+      "source_id": "F3-SIM-validation-00023",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "8734edd0255ab0e62825406df4ee565982f7330992131671b191c52290e28fd0"
+    },
+    {
+      "source_id": "F3-validation-bronchitis-definition-general-0",
+      "category": "educativo_definition",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "eb13d542924931f6b2fb94838dae25edd959c9022e25999c3d05e139d62ee8b1"
+    },
+    {
+      "source_id": "F3-SIM-validation-00001",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": false,
+        "exact": false,
+        "status": false,
+        "data": false,
+        "pending": false,
+        "source": false,
+        "human_validation": false
+      },
+      "response_sha256": "cff4ac9db862be5eb4e7b92cfa83388a32d86688d21369e7ecb6fac6c571c620"
+    }
+  ],
+  "clinical_validation": false,
+  "limitation": "Exatidão do contrato e trechos documentados; perguntas educativas gerais exigem revisão semântica separada. Sem validação clínica."
+}

@@ -1,0 +1,550 @@
+{
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/contextual_v1/challenge.jsonl",
+  "dataset_sha256": "44dfa16665bd42f5710225a4c652b748a39e6d6fe5d41bfb0e2aa8c55154794a",
+  "responses": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T095351Z_contextual_v1/challenge/20261005T113100Z_eval03/adapter.jsonl",
+  "responses_sha256": "c4f7b0c30f755381ef32a4f977b968bb9db3e3e9216ea26af5047159bc0c6eeb",
+  "metrics": {
+    "total": {
+      "count": 32,
+      "valid_json": 32,
+      "exact": 25,
+      "status": 28,
+      "data": 29,
+      "pending": 32,
+      "source": 32,
+      "human_validation": 32
+    },
+    "faq_contextual": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "pendencias": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "protocolo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "laudo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "receita_modelo": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 0,
+      "status": 0,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "procedimento": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "limites": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 4,
+      "status": 4,
+      "data": 4,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    },
+    "alerta": {
+      "count": 4,
+      "valid_json": 4,
+      "exact": 1,
+      "status": 4,
+      "data": 1,
+      "pending": 4,
+      "source": 4,
+      "human_validation": 4
+    }
+  },
+  "details": [
+    {
+      "source_id": "SIM-challenge-00000",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "43bbf4f3761a8ed8ef39bbaea0b852ca0169ddb0c0637341f22aa34a248ec9b0"
+    },
+    {
+      "source_id": "SIM-challenge-00001",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "a46d54f9364e2415a59a566b7e8ff70af7b7b1f22743665b2c32342c16e4ddb6"
+    },
+    {
+      "source_id": "SIM-challenge-00002",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "db6e97317e4012a08de3906e14134e7a9f7993a3fa63b9c15dd0b6b0454faade"
+    },
+    {
+      "source_id": "SIM-challenge-00003",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "7ab862e06eced59b8e37852f597dd2dcb279db24d4ebfae8dd268e6f2c8e11ae"
+    },
+    {
+      "source_id": "SIM-challenge-00004",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "cfd11f733a953f844755c842c4dc4dc0255d223ca5a3d7a221bc8d673b2636f0"
+    },
+    {
+      "source_id": "SIM-challenge-00005",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "b082359a31ef4890f4e379731d87f85712d21fc453963a9fc8759a78f4b94ea9"
+    },
+    {
+      "source_id": "SIM-challenge-00006",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "114d8c358308dac93ed2bb96cbe6a77d851038ccd09b63d2cf9b33284fbda9b5"
+    },
+    {
+      "source_id": "SIM-challenge-00007",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "d2c63f8ad6e3fa816fa2e413fe8470730e2494405dfd3509eb393b04ae7c0d10"
+    },
+    {
+      "source_id": "SIM-challenge-00008",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "28421101eb8712e09c8065324ddb551651041e1d57d1be4cf29119fd6e2a64b3"
+    },
+    {
+      "source_id": "SIM-challenge-00009",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "065c40dfdb76a7b2495602c7412f1fd0aa94667349df471ef8c447ae3507e2cc"
+    },
+    {
+      "source_id": "SIM-challenge-00010",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "22563b8f0d29a7680437ab59c1c4b3e8d1bea8fde305aada48461fbe0b2648ad"
+    },
+    {
+      "source_id": "SIM-challenge-00011",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "3cb77f2f5a7753c79c79b56be9a2a920ef1a30b6d86d5e18532a26586c8562c1"
+    },
+    {
+      "source_id": "SIM-challenge-00012",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "40120a50ba7d90ad102d0ec18f149fe225df43228026f18a473ff193312e917b"
+    },
+    {
+      "source_id": "SIM-challenge-00013",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ac391feeb4c623eee547a215061a33261f2849d3eb87d230ccc97857dd102d86"
+    },
+    {
+      "source_id": "SIM-challenge-00014",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ad16bd1fc0d06865dbd2b516ab3c16e15efc9f5d2f2a8a28a1997e9638e8ea49"
+    },
+    {
+      "source_id": "SIM-challenge-00015",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c686770f19efeab407643668c5a61b0b64d4544d88df205b900b310d56c61bcd"
+    },
+    {
+      "source_id": "SIM-challenge-00016",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "944ad59fecc97a71e0ab2d000a1b7315cab589884ddfdcbd35faaa99bbe622fd"
+    },
+    {
+      "source_id": "SIM-challenge-00017",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "34c47ff0501003d79240e17aeea6466c1ba6e8a34bb98cda8741cbb2ec231b2d"
+    },
+    {
+      "source_id": "SIM-challenge-00018",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "0a396cb4564df188340af22fed5e42ff9a016b2d0c168b50af0051f6a9d13a9d"
+    },
+    {
+      "source_id": "SIM-challenge-00019",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "64bb1e96b02af46cc72c4b6d781966598f7ebecb5c23227edc758dd77a1a0c58"
+    },
+    {
+      "source_id": "SIM-challenge-00020",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "411383bbf0e5fcbd9a34cf8afcbc2c9b68045c697d7afef88217aadb5284eec5"
+    },
+    {
+      "source_id": "SIM-challenge-00021",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "afab950cf93c8fa887241b01524d558ef80f80c8cca9c82a058b7f4a1db4c9b5"
+    },
+    {
+      "source_id": "SIM-challenge-00022",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "555cef8160f91f60bc0108d67434cf12a271d2e496da92e7b61cbdf945293ab8"
+    },
+    {
+      "source_id": "SIM-challenge-00023",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": true,
+        "data": false,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "501779701ab5f58fdefdb7eb78420123315d2dc2951a156b89d6b54d51900f69"
+    },
+    {
+      "source_id": "SIM-challenge-00024",
+      "category": "faq_contextual",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "dcb059f0826967c125ef9b88690b981a06f8f4eb7b6a9aa78e2dda76d2b026bf"
+    },
+    {
+      "source_id": "SIM-challenge-00025",
+      "category": "pendencias",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "ba3e2ab654d766a953e9f6174e514cab622aac193fad9b9662e40b8e7b1c00ac"
+    },
+    {
+      "source_id": "SIM-challenge-00026",
+      "category": "protocolo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "c490523841e909da9d67f10a841fd073b6853fb15baca4f03343ae93aad2b7c2"
+    },
+    {
+      "source_id": "SIM-challenge-00027",
+      "category": "laudo",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "663d12b453d12e6ccda3c5f9480c653aac56e2889ec90afd4cdf890414bc9be7"
+    },
+    {
+      "source_id": "SIM-challenge-00028",
+      "category": "receita_modelo",
+      "checks": {
+        "valid_json": true,
+        "exact": false,
+        "status": false,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "b5c64eb077138819b2c3bb6e7d1a084ac475067b9560a955bd1cfca615af4a50"
+    },
+    {
+      "source_id": "SIM-challenge-00029",
+      "category": "procedimento",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "4faaf36586ca68a234034abd35c373a99618cc96970000ecf072242f48e6952a"
+    },
+    {
+      "source_id": "SIM-challenge-00030",
+      "category": "limites",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "13344e7ee17bf326714f2a3a63be09514205ce06c0f3e1cf9746061e708c2b4a"
+    },
+    {
+      "source_id": "SIM-challenge-00031",
+      "category": "alerta",
+      "checks": {
+        "valid_json": true,
+        "exact": true,
+        "status": true,
+        "data": true,
+        "pending": true,
+        "source": true,
+        "human_validation": true
+      },
+      "response_sha256": "33a53f35b75653e58104e2b17c8295206bd7153fafb56062f9274d153daeb6bd"
+    }
+  ],
+  "clinical_validation": false,
+  "limitation": "Acerto da tarefa contextual sintética; não mede conhecimento médico geral nem validação clínica."
+}

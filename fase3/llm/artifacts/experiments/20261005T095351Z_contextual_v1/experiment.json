@@ -1,0 +1,579 @@
+{
+  "run_id": "20261005T095351Z_contextual_v1",
+  "stage": "completed",
+  "python": "/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python",
+  "created_at": "2026-10-05T09:53:51.851066+00:00",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "parameters": {
+    "epochs": 1,
+    "learning_rate": 2e-05,
+    "max_length": 384
+  },
+  "clinical_validation": false,
+  "base_validation": {
+    "total": {
+      "count": 120,
+      "valid_json": 117,
+      "exact": 47,
+      "status": 83,
+      "data": 56,
+      "pending": 93,
+      "source": 116,
+      "human_validation": 117
+    },
+    "pendencias": {
+      "count": 15,
+      "valid_json": 12,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 10,
+      "source": 11,
+      "human_validation": 12
+    },
+    "laudo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 0,
+      "status": 0,
+      "data": 7,
+      "pending": 3,
+      "source": 15,
+      "human_validation": 15
+    },
+    "procedimento": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 2,
+      "status": 8,
+      "data": 2,
+      "pending": 14,
+      "source": 15,
+      "human_validation": 15
+    },
+    "faq_contextual": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 14,
+      "status": 15,
+      "data": 14,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "alerta": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 0,
+      "status": 7,
+      "data": 0,
+      "pending": 13,
+      "source": 15,
+      "human_validation": 15
+    },
+    "receita_modelo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 2,
+      "status": 15,
+      "data": 4,
+      "pending": 8,
+      "source": 15,
+      "human_validation": 15
+    },
+    "protocolo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 14,
+      "status": 15,
+      "data": 14,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "limites": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    }
+  },
+  "adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/adapter",
+  "adapter_manifest_sha256": "16ba7a0a9421aad936d86c8123dff64786312aeb0c40883d05d4d04e5b796ba9",
+  "adapter_validation": {
+    "total": {
+      "count": 120,
+      "valid_json": 120,
+      "exact": 120,
+      "status": 120,
+      "data": 120,
+      "pending": 120,
+      "source": 120,
+      "human_validation": 120
+    },
+    "pendencias": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "laudo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "procedimento": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "faq_contextual": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "alerta": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "receita_modelo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "protocolo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "limites": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    }
+  },
+  "validation_noninferior": true,
+  "base_test": {
+    "total": {
+      "count": 120,
+      "valid_json": 117,
+      "exact": 46,
+      "status": 87,
+      "data": 58,
+      "pending": 91,
+      "source": 117,
+      "human_validation": 117
+    },
+    "receita_modelo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 1,
+      "status": 15,
+      "data": 5,
+      "pending": 6,
+      "source": 15,
+      "human_validation": 15
+    },
+    "faq_contextual": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 14,
+      "status": 15,
+      "data": 14,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "procedimento": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 0,
+      "status": 12,
+      "data": 0,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "laudo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 0,
+      "status": 0,
+      "data": 8,
+      "pending": 1,
+      "source": 15,
+      "human_validation": 15
+    },
+    "protocolo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "limites": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "pendencias": {
+      "count": 15,
+      "valid_json": 12,
+      "exact": 1,
+      "status": 7,
+      "data": 1,
+      "pending": 9,
+      "source": 12,
+      "human_validation": 12
+    },
+    "alerta": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 0,
+      "status": 8,
+      "data": 0,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    }
+  },
+  "adapter_test": {
+    "total": {
+      "count": 120,
+      "valid_json": 120,
+      "exact": 120,
+      "status": 120,
+      "data": 120,
+      "pending": 120,
+      "source": 120,
+      "human_validation": 120
+    },
+    "receita_modelo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "faq_contextual": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "procedimento": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "laudo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "protocolo": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "limites": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "pendencias": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    },
+    "alerta": {
+      "count": 15,
+      "valid_json": 15,
+      "exact": 15,
+      "status": 15,
+      "data": 15,
+      "pending": 15,
+      "source": 15,
+      "human_validation": 15
+    }
+  },
+  "test_noninferior": true,
+  "selected_for_contextual_task": true,
+  "completed_at": "2026-10-05T11:30:42.096003+00:00",
+  "challenge": {
+    "base": {
+      "total": {
+        "count": 32,
+        "valid_json": 30,
+        "exact": 15,
+        "status": 21,
+        "data": 19,
+        "pending": 26,
+        "source": 30,
+        "human_validation": 30
+      },
+      "faq_contextual": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "pendencias": {
+        "count": 4,
+        "valid_json": 2,
+        "exact": 0,
+        "status": 0,
+        "data": 0,
+        "pending": 2,
+        "source": 2,
+        "human_validation": 2
+      },
+      "protocolo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "laudo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 0,
+        "data": 4,
+        "pending": 0,
+        "source": 4,
+        "human_validation": 4
+      },
+      "receita_modelo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 2,
+        "status": 4,
+        "data": 2,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "procedimento": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 1,
+        "status": 4,
+        "data": 1,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "limites": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "alerta": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 1,
+        "data": 0,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      }
+    },
+    "adapter": {
+      "total": {
+        "count": 32,
+        "valid_json": 32,
+        "exact": 25,
+        "status": 28,
+        "data": 29,
+        "pending": 32,
+        "source": 32,
+        "human_validation": 32
+      },
+      "faq_contextual": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "pendencias": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "protocolo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "laudo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "receita_modelo": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 0,
+        "status": 0,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "procedimento": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "limites": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 4,
+        "status": 4,
+        "data": 4,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      },
+      "alerta": {
+        "count": 4,
+        "valid_json": 4,
+        "exact": 1,
+        "status": 4,
+        "data": 1,
+        "pending": 4,
+        "source": 4,
+        "human_validation": 4
+      }
+    }
+  },
+  "adapter_weights_sha256": "cd7f016e2e48c09c564327adef9e1be5674ac0c352d9feda147b15e7f3fead1c",
+  "generalization_limitations": [
+    "Quatro formulários vazios recebem status informativo em vez de modelo.",
+    "Três alertas inativos omitem o campo alerta_ativo."
+  ]
+}

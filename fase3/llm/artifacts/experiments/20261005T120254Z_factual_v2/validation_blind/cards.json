@@ -1,0 +1,866 @@
+[
+  {
+    "id": "F2-GARD-0000702-1",
+    "instruction": "Esclareça esta questão educativa: O que é A deficiência de beta-cetotiolase? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de beta-cetotiolase é uma doença hereditária na qual o corpo não consegue processar efetivamente um bloco de construção de proteínas (aminoácido) chamado isoleucina."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/872/beta-ketothiolase-deficiency",
+      "primary_sentence": "Beta-ketothiolase deficiency is an inherited disorder in which the body cannot effectively process a protein building block (amino acid) called isoleucine.",
+      "primary_answer": "Beta-ketothiolase deficiency is an inherited disorder in which the body cannot effectively process a protein building block (amino acid) called isoleucine. This condition also impairs the body's ability to process ketones, which are molecules produced during the breakdown of fats. Signs and symptoms typically appear between the ages of 6 months and 24 months. Affected children experience episodes of vomiting, dehydration, difficulty breathing, extreme tiredness (lethargy), and occasionally seizures. These episodes, which are called ketoacidotic attacks, sometimes lead to coma. Ketoacidotic attacks are frequently triggered by infections, periods without food (fasting), or increased intake of protein-rich foods. This condition is inherited in an autosomal recessive fashion and is caused by mutations in the ACAT1 gene.",
+      "curated_sentence": "A deficiência de beta-cetotiolase é uma doença hereditária na qual o corpo não consegue processar efetivamente um bloco de construção de proteínas (aminoácido) chamado isoleucina."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de beta-cetotiolase é uma condição que afeta o metabolismo de aminoácidos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de beta-cetotiolase é uma desordem metabólica rara que afeta o metabolismo de aminoácidos de cadeia ramificada, resultando no acúmulo de leucina, isoleucina e valina no sangue e na urina.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de beta-cetotiolase é uma desordem metabólica rara que afeta o metabolismo dos aminoácidos de cadeia ramificada, resultando na incapacidade de degradar a cadeia lateral do leucina, o que pode levar ao acúmulo de metabólitos tóxicos e a sintomas neurológicos graves.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0001196-1",
+    "instruction": "Esclareça esta questão educativa: O que é A Choroideremia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A Choroideremia é uma condição genética que causa perda de visão."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/6061/choroideremia",
+      "primary_sentence": "Choroideremia is a genetic condition that causes vision loss.",
+      "primary_answer": "Choroideremia is a genetic condition that causes vision loss. This disorder typically affects males. The first symptom is usually impairment of night vision (night blindness), which can occur in childhood. People with this disorder also experience narrowing of the field of vision (tunnel vision) and decrease in the ability to see details (visual acuity). The vision problems are due to loss of cells in the retina (light sensitive part of the eye) and choroid (blood vessels in the eye). The vision issues tend to get worse over time and usually lead to blindness in late adulthood. The rate and degree of vision loss differs for each person. Choroideremia is caused by spelling mistakes (mutations) in the CHM gene and is inherited in an X-linked recessive pattern.",
+      "curated_sentence": "A Choroideremia é uma condição genética que causa perda de visão."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A choroideremia é uma doença genética hereditária rara que afeta a coróide, levando à degeneração progressiva da retina e à perda da visão.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A choroideremia é uma doença hereditária rara que afeta a coróide, levando à degeneração progressiva da retina e à perda da visão.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A Choroideremia é uma condição hereditária que afeta a retina, a parte do olho que detecta a luz.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0002992-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome de hiper-IgD? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de hiper-IgD é uma doença genética inflamatória caracterizada por episódios periódicos de febre associados a sintomas adicionais, incluindo dor nas articulações, erupção cutânea e dor abdominal."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/2788/hyper-igd-syndrome",
+      "primary_sentence": "Hyper IgD syndrome is an inflammatory genetic disorder characterized by periodic episodes of fever associated with additional symptoms including joint pain, skin rash and abdominal pain.",
+      "primary_answer": "Hyper IgD syndrome is an inflammatory genetic disorder characterized by periodic episodes of fever associated with additional symptoms including joint pain, skin rash and abdominal pain. Most episodes last several days and occur periodically throughout life. The frequency of episodes and their severity vary greatly from case to case.  Hyper IgD syndrome is caused by mutations in the gene encoding mevalonate kinase (MVK). It is inherited in an autosomal recessive manner.",
+      "curated_sentence": "A síndrome de hiper-IgD é uma doença genética inflamatória caracterizada por episódios periódicos de febre associados a sintomas adicionais, incluindo dor nas articulações, erupção cutânea e dor abdominal."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de hiper-IgD é uma doença rara do sistema imunológico caracterizada por níveis elevados de imunoglobulina D, deficiências na função dos neutrófilos e episódios recorrentes de infecções bacterianas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de hiper-IgD é uma condição rara que afeta o sistema imunológico.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de hiper-IgD é uma doença rara do sistema imunológico caracterizada por níveis elevados de imunoglobulina D e deficiências na função dos neutrófilos, levando a infecções recorrentes e febre periódica.\",\"fonte\":null},\"pendencias\":[],\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0003208-1",
+    "instruction": "Esclareça esta questão educativa: O que é Um tumor miofibroblástico inflamatório (IMT)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Um tumor miofibroblástico inflamatório (IMT) é um tumor incomum, presumivelmente benigno (não canceroso), composto por células chamadas células fusiformes miofibroblásticas."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/7146/inflammatory-myofibroblastic-tumor",
+      "primary_sentence": "An inflammatory myofibroblastic tumor (IMT) is an uncommon, presumably benign (non-cancerous) tumor made up of cells called myofibroblastic spindle cells.",
+      "primary_answer": "An inflammatory myofibroblastic tumor (IMT) is an uncommon, presumably benign (non-cancerous) tumor made up of cells called myofibroblastic spindle cells. It usually develops in children or young adults, but can affect people of any age. An IMT can occur in almost any part of the body but is most commonly found in the lung, orbit (eye socket), peritoneum (lining of the abdominal cavity and internal organs), and mesentery. Signs and symptoms vary depending on the site of the tumor. Some people with an IMT are asymptomatic, while others may have nonspecific respiratory symptoms, fever, or pain. IMTs may recur, and occasionally become locally invasive and/or spread (metastasize) to other parts of the body. The underlying cause of IMTs is poorly understood. Some cases have been linked to translocations involving the ALK gene. Treatment involves surgical removal when possible, although there are reports of treatment with oral steroids and radiation therapy.",
+      "curated_sentence": "Um tumor miofibroblástico inflamatório (IMT) é um tumor incomum, presumivelmente benigno (não canceroso), composto por células chamadas células fusiformes miofibroblásticas."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"Um tumor miofibroblástico inflamatório (IMT) é uma lesão benigna caracterizada por uma proliferação de células miofibroblásticas que se assemelha ao processo de cicatrização, mas ocorre em tecidos não cicatrizantes.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Um tumor miofibroblástico inflamatório (IMT) é uma lesão benigna caracterizada por uma proliferação de células miofibroblásticas em resposta a um estímulo inflamatório\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Um tumor miofibroblástico inflamatório (IMT) é um tumor benigno que se desenvolve na pele e nos tecidos moles, como músculos, gordura e tendões.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GARD-0003308-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome de Joubert? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Joubert é um distúrbio do desenvolvimento anormal do cérebro que pode afetar muitas partes do corpo."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/6802/joubert-syndrome",
+      "primary_sentence": "Joubert syndrome is disorder of abnormal brain development that may affect many parts of the body.",
+      "primary_answer": "Joubert syndrome is disorder of abnormal brain development that may affect many parts of the body. It is characterized by the absence or underdevelopment of the cerebellar vermis (a part of the brain that controls balance and coordination) and a malformed brain stem (connection between the brain and spinal cord). This gives a characteristic appearance of a molar tooth sign on MRI. Signs and symptoms can vary but commonly include weak muscle tone (hypotonia); abnormal breathing patterns; abnormal eye movements; ataxia; distinctive facial features; and intellectual disability. Various other abnormalities may also be present. Joubert syndrome may be caused by mutations in any of many genes and is predominantly inherited in an autosomal recessive manner. Rarely it may be inherited in an X-linked recessive manner. Treatment is supportive and depends on the symptoms in each person.",
+      "curated_sentence": "A síndrome de Joubert é um distúrbio do desenvolvimento anormal do cérebro que pode afetar muitas partes do corpo."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Joubert é um distúrbio que afeta o desenvolvimento do cérebro e do sistema nervoso.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Joubert é uma condição genética rara caracterizada por malformações cerebelares, especificamente a ausência do platô do vermis cerebelar, resultando em um padrão de 'moleira de lagosta' na imagem de ressonância magnética.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Joubert é uma condição genética rara caracterizada por malformações cerebelares, especificamente a ausência do verme cerebelar, resultando em problemas de coordenação motora, respiração anormal e, em alguns casos, deficiência intelectual.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GARD-0004160-1",
+    "instruction": "Esclareça esta questão educativa: O que é A Mucopolissacaridose tipo IIIC (MPS IIIC)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A Mucopolissacaridose tipo IIIC (MPS IIIC) é um distúrbio genético que impede o corpo de quebrar grandes moléculas de açúcar chamadas glicosaminoglicanos (GAGs, anteriormente chamados de mucopolissacarídeos)."
+    },
+    "provenance": {
+      "url": "https://rarediseases.info.nih.gov/gard/7073/mucopolysaccharidosis-type-iiic",
+      "primary_sentence": "Mucopolysaccharidosis type IIIC (MPS IIIC) is an genetic disorder that makes the body unable to break down large sugar molecules called glycosaminoglycans (GAGs, formerly called mucopolysaccharides).",
+      "primary_answer": "Mucopolysaccharidosis type IIIC (MPS IIIC) is an genetic disorder that makes the body unable to break down large sugar molecules called glycosaminoglycans (GAGs, formerly called mucopolysaccharides). Specifically, people with this condition are unable to break down a GAG called heparan sulfate. Affected individuals can have severe neurological symptoms, including progressive dementia, aggressive behavior, hyperactivity, seizures, deafness, loss of vision, and an inability to sleep for more than a few hours at a time. MPS IIIC results from the missing or altered enzyme acetyl-CoAlpha-glucosaminide acetyltransferase. This condition is inherited in an autosomal recessive manner. There is no specific treatment. Most people with MPS IIIC live into their teenage years; some live longer.",
+      "curated_sentence": "A Mucopolissacaridose tipo IIIC (MPS IIIC) é um distúrbio genético que impede o corpo de quebrar grandes moléculas de açúcar chamadas glicosaminoglicanos (GAGs, anteriormente chamados de mucopolissacarídeos)."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A Mucopolissacaridose tipo IIIC (MPS IIIC) é uma doença de armazenamento lisossomal rara causada por defeitos na enzima iduronato-2-sulfatase, levando ao acúmulo de glicosaminoglicanos nos tecidos do corpo.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A Mucopolissacaridose tipo IIIC (MPS IIIC) é um distúrbio que afeta o metabolismo dos carboidratos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A Mucopolissacaridose tipo IIIC é uma doença de armazenamento lisossomal hereditária causada por defeitos na enzima iduronato-2-sulfatase, levando ao acúmulo de mucopolissacarídeos nos tecidos do corpo.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000057-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A anencefalia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A maioria dos casos de anencefalia são esporádicos, o que significa que ocorrem em pessoas sem histórico da doença em sua família."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/anencephaly",
+      "primary_sentence": "Most cases of anencephaly are sporadic, which means they occur in people with no history of the disorder in their family.",
+      "primary_answer": "Most cases of anencephaly are sporadic, which means they occur in people with no history of the disorder in their family. A small percentage of cases have been reported to run in families; however, the condition does not have a clear pattern of inheritance. For parents who have had a child with anencephaly, the risk of having another affected child is increased compared with the risk in the general population.",
+      "curated_sentence": "A maioria dos casos de anencefalia são esporádicos, o que significa que ocorrem em pessoas sem histórico da doença em sua família."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A anencefalia é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A anencefalia é uma condição que ocorre devido a defeitos no fechamento do tubo neural durante o desenvolvimento embrionário, sendo frequentemente associada a fatores genéticos complexos e ambientais, mas não segue um padrão de herança mendeliana simples como autossômico dominante ou recessivo.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A anencefalia é uma condição que não segue padrões de herança mendeliana simples, sendo geralmente resultado de falhas no fechamento do tubo neural durante o desenvolvimento embrionário, com fatores genéticos e ambientais interagindo, e não é herdada diretamente de pais para filhos como em doenças monogênicas.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000128-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para O câncer de bexiga? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Assim como na maioria dos cânceres, as causas exatas do câncer de bexiga não são conhecidas; no entanto, muitos fatores de risco estão associados a essa doença."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/bladder-cancer",
+      "primary_sentence": "As with most cancers, the exact causes of bladder cancer are not known; however, many risk factors are associated with this disease.",
+      "primary_answer": "As with most cancers, the exact causes of bladder cancer are not known; however, many risk factors are associated with this disease. Many of the major risk factors are environmental, such as smoking and exposure to certain industrial chemicals. Studies suggest that chronic bladder inflammation, a parasitic infection called schistosomiasis, and some medications used to treat cancer are other environmental risk factors associated with bladder cancer.  Genetic factors are also likely to play an important role in determining bladder cancer risk. Researchers have studied the effects of mutations in several genes, including FGFR3, RB1, HRAS, TP53, and TSC1, on the formation and growth of bladder tumors. Each of these genes plays a critical role in regulating cell division by preventing cells from dividing too rapidly or in an uncontrolled way. Alterations in these genes may help explain why some bladder cancers grow and spread more rapidly than others.  Deletions of part or all of chromosome 9 are common events in bladder tumors. Researchers believe that several genes that control cell growth and division are probably located on chromosome 9. They are working to determine whether a loss of these genes plays a role in the development and progression of bladder cancer.  Most of the genetic changes associated with bladder cancer develop in bladder tissue during a person's lifetime, rather than being inherited from a parent. Some people, however, appear to inherit a reduced ability to break down certain chemicals, which makes them more sensitive to the cancer-causing effects of tobacco smoke and industrial chemicals.",
+      "curated_sentence": "Assim como na maioria dos cânceres, as causas exatas do câncer de bexiga não são conhecidas; no entanto, muitos fatores de risco estão associados a essa doença."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":[\"mutacoes no gene TP53\",\"mutacoes no gene RB1\",\"mutacoes no gene FGFR3\"],\"causas\":[\"exposicao a carcinogenos ocupacionais\",\"tabagismo\",\"exposicao a tinturas de cabelo\",\"infecoes cronicas da bexiga\"]},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Mutações em vários genes podem causar câncer de bexiga.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"As causas conhecidas do câncer de bexiga incluem exposição prolongada a substâncias carcinogênicas (como aminas aromáticas e hidrocarbonetos policíclicos), tabagismo, exposição ocupacional a tintas, couros, borrachas e produtos químicos industriais, além de fatores genéticos como mutações nos genes TP53, RB1 e alterações epigenéticas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000135-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome branquio-oculo-facial? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome branquio-oculo-facial é uma condição que afeta o desenvolvimento antes do nascimento, especialmente das estruturas do rosto e pescoço."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/branchio-oculo-facial-syndrome",
+      "primary_sentence": "Branchio-oculo-facial syndrome is a condition that affects development before birth, particularly of structures in the face and neck.",
+      "primary_answer": "Branchio-oculo-facial syndrome is a condition that affects development before birth, particularly of structures in the face and neck. Its characteristic features include skin anomalies on the neck, malformations of the eyes and ears, and distinctive facial features.  \"Branchio-\" refers to the branchial arches, which are structures in the developing embryo that give rise to tissues in the face and neck. In people with branchio-oculo-facial syndrome, the first and second branchial arches do not develop properly, leading to abnormal patches of skin, typically on the neck or near the ears. These patches can be unusually thin, hairy, or red and densely packed with blood vessels (hemangiomatous). In a small number of individuals, tissue from a gland called the thymus is abnormally located on the skin of the neck (dermal thymus). Problems with branchial arch development underlie many of the other features of branchio-oculo-facial syndrome.  \"Oculo-\" refers to the eyes. Many people with branchio-oculo-facial syndrome have malformations of the eyes that can lead to vision impairment. These abnormalities include unusually small eyeballs (microphthalmia), no eyeballs (anophthalmia), a gap or split in structures that make up the eyes (coloboma), or blockage of the tear ducts (nasolacrimal duct stenosis).  Problems with development of the face lead to distinctive facial features in people with branchio-oculo-facial syndrome. Many affected individuals have a split in the upper lip (cleft lip) or a pointed upper lip that resembles a poorly repaired cleft lip (often called a pseudocleft lip) with or without an opening in the roof of the mouth (cleft palate). Other facial characteristics include widely spaced eyes (hypertelorism), an increased distance between the inner corners of the eyes (telecanthus), outside corners of the eyes that point upward (upslanting palpebral fissures), a broad nose with a flattened tip, and weakness of the muscles in the lower face. The ears are also commonly affected, resulting in malformed or prominent ears. Abnormalities of the inner ear or of the tiny bones in the ears (ossicles) can cause hearing loss in people with this condition.  Branchio-oculo-facial syndrome can affect other structures and tissues as well. Some affected individuals have kidney abnormalities, such as malformed kidneys or multiple kidney cysts. Nail and teeth abnormalities also occur, and some people with this condition have prematurely graying hair.",
+      "curated_sentence": "A síndrome branquio-oculo-facial é uma condição que afeta o desenvolvimento antes do nascimento, especialmente das estruturas do rosto e pescoço."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome branquio-oculo-facial é uma condição genética rara caracterizada por malformações congênitas que afetam o rosto, os olhos e o pescoço.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome branquio-oculo-facial é uma condição genética rara caracterizada por uma combinação de anomalias faciais, oculares e auditivas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome branquio-oculo-facial é um distúrbio que afeta o desenvolvimento de várias partes do corpo.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000145-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A doença de Camurati-Engelmann? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/camurati-engelmann-disease",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Camurati-Engelmann é uma condição autossômica recessiva, herdada quando um indivíduo recebe mutações em ambos os alelos de um dos genes envolvidos, geralmente o gene SERPINA1.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Camurati-Engelmann é uma condição autossômica recessiva, o que significa que a herança ocorre quando um indivíduo herda uma cópia mutada do gene em cada um dos dois cromossomos correspondentes.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000183-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A choroideremia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A choroideremia é herdada de forma recessiva ligada ao cromossomo X."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/choroideremia",
+      "primary_sentence": "Choroideremia is inherited in an X-linked recessive pattern.",
+      "primary_answer": "Choroideremia is inherited in an X-linked recessive pattern. The CHM gene is located on the X chromosome, which is one of the two sex chromosomes. In males (who have only one X chromosome), one altered copy of the gene in each cell is sufficient to cause the condition. In females (who have two X chromosomes), a mutation must be present in both copies of the gene to cause the disorder. Males are affected by X-linked recessive disorders much more frequently than females. A characteristic of X-linked inheritance is that fathers cannot pass X-linked traits to their sons.  In X-linked recessive inheritance, a female with one mutated copy of the gene in each cell is called a carrier. She can pass on the altered gene, but usually does not experience signs and symptoms of the disorder. Females who carry a CHM mutation may show small areas of cell loss within the retina that can be observed during a thorough eye examination. These changes can impair vision later in life.",
+      "curated_sentence": "A choroideremia é herdada de forma recessiva ligada ao cromossomo X."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A choroideremia é uma condição hereditária ligada ao X, o que significa que o gene defeituoso está localizado no cromossomo X e afeta predominantemente os homens, enquanto as mulheres são geralmente portadoras assintomáticas.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A choroideremia é uma condição hereditária ligada ao X, que afeta predominantemente homens, enquanto mulheres são portadoras assintomáticas ou apresentam sintomas leves.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A choroideremia é herdada de forma ligada ao X, o que significa que o gene mutado está localizado no cromossomo X.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000204-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para color vision deficiency? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações nos genes OPN1LW, OPN1MW e OPN1SW causam as formas de deficiência de visão de cores descritas acima."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/color-vision-deficiency",
+      "primary_sentence": "Mutations in the OPN1LW, OPN1MW, and OPN1SW genes cause the forms of color vision deficiency described above.",
+      "primary_answer": "Mutations in the OPN1LW, OPN1MW, and OPN1SW genes cause the forms of color vision deficiency described above. The proteins produced from these genes play essential roles in color vision. They are found in the retina, which is the light-sensitive tissue at the back of the eye. The retina contains two types of light receptor cells, called rods and cones, that transmit visual signals from the eye to the brain. Rods provide vision in low light. Cones provide vision in bright light, including color vision. There are three types of cones, each containing a specific pigment (a photopigment called an opsin) that is most sensitive to particular wavelengths of light. The brain combines input from all three types of cones to produce normal color vision.  The OPN1LW, OPN1MW, and OPN1SW genes provide instructions for making the three opsin pigments in cones. The opsin made from the OPN1LW gene is more sensitive to light in the yellow/orange part of the visible spectrum (long-wavelength light), and cones with this pigment are called long-wavelength-sensitive or L cones. The opsin made from the OPN1MW gene is more sensitive to light in the middle of the visible spectrum (yellow/green light), and cones with this pigment are called middle-wavelength-sensitive or M cones. The opsin made from the OPN1SW gene is more sensitive to light in the blue/violet part of the visible spectrum (short-wavelength light), and cones with this pigment are called short-wavelength-sensitive or S cones.  Genetic changes involving the OPN1LW or OPN1MW gene cause red-green color vision defects. These changes lead to an absence of L or M cones or to the production of abnormal opsin pigments in these cones that affect red-green color vision. Blue-yellow color vision defects result from mutations in the OPN1SW gene. These mutations lead to the premature destruction of S cones or the production of defective S cones. Impaired S cone function alters perception of the color blue, making it difficult or impossible to detect differences between shades of blue and green and causing problems with distinguishing dark blue from black.  Blue cone monochromacy occurs when genetic changes affecting the OPN1LW and OPN1MW genes prevent both L and M cones from functioning normally. In people with this condition, only S cones are functional, which leads to reduced visual acuity and poor color vision. The loss of L and M cone function also underlies the other vision problems in people with blue cone monochromacy.  Some problems with color vision are not caused by gene mutations. These nonhereditary conditions are described as acquired color vision deficiencies. They can be caused by other eye disorders, such as diseases involving the retina, the nerve that carries visual information from the eye to the brain (the optic nerve), or areas of the brain involved in processing visual information. Acquired color vision deficiencies can also be side effects of certain drugs, such as chloroquine (which is used to treat malaria), or result from exposure to particular chemicals, such as organic solvents.",
+      "curated_sentence": "Mutações nos genes OPN1LW, OPN1MW e OPN1SW causam as formas de deficiência de visão de cores descritas acima."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de visão de cores é causada por mutações nos genes que codificam as proteínas dos cones.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de visão de cores é causada principalmente por mutações hereditárias nos genes que codificam as proteínas dos cones (fotopigmentos) na retina, sendo a forma mais comum a herança ligada ao cromossomo X que afeta a distinção entre vermelho e verde.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"A maioria das deficiências de visão das cores é causada por mutações no cromossomo X que afetam os genes para as proteínas dos fotorreceptores (cones) sensíveis ao vermelho e ao verde.\",\"causas\":\"As causas incluem herança ligada ao X (como em daltonismo vermelho-verde), herança autossômica (como em tritanopia) e, raramente, causas adquiridas como doenças sistêmicas, uso de medicamentos ou lesões oculares\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000251-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A síndrome do miado do gato, também conhecida como síndrome 5p- (5p menos),? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome do miado do gato é causada por uma deleção do final do braço curto (p) do cromossomo 5."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/cri-du-chat-syndrome",
+      "primary_sentence": "Cri-du-chat syndrome is caused by a deletion of the end of the short (p) arm of chromosome 5.",
+      "primary_answer": "Cri-du-chat syndrome is caused by a deletion of the end of the short (p) arm of chromosome 5. This chromosomal change is written as 5p-. The size of the deletion varies among affected individuals; studies suggest that larger deletions tend to result in more severe intellectual disability and developmental delay than smaller deletions.  The signs and symptoms of cri-du-chat syndrome are probably related to the loss of multiple genes on the short arm of chromosome 5. Researchers believe that the loss of a specific gene, CTNND2, is associated with severe intellectual disability in some people with this condition. They are working to determine how the loss of other genes in this region contributes to the characteristic features of cri-du-chat syndrome.",
+      "curated_sentence": "A síndrome do miado do gato é causada por uma deleção do final do braço curto (p) do cromossomo 5."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"Deleção parcial ou total do braço curto do cromossomo 5 (5p-)\",\"causas\":\"Deleção cromossômica\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome do miado do gato (síndrome 5p-) é causada pela deleção parcial ou total do braço curto do cromossomo 5, resultando em aneuploidia estrutural que afeta genes específicos dessa região.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome do miado do gato é causada por uma deleção no braço curto do cromossomo 5.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000254-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A doença de Crohn? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O padrão de herança da doença de Crohn não está claro porque muitos fatores genéticos e ambientais provavelmente estão envolvidos."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/crohn-disease",
+      "primary_sentence": "The inheritance pattern of Crohn disease is unclear because many genetic and environmental factors are likely to be involved.",
+      "primary_answer": "The inheritance pattern of Crohn disease is unclear because many genetic and environmental factors are likely to be involved. This condition tends to cluster in families, however, and having an affected family member is a significant risk factor for the disease.",
+      "curated_sentence": "O padrão de herança da doença de Crohn não está claro porque muitos fatores genéticos e ambientais provavelmente estão envolvidos."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Crohn não segue um padrão de herança mendeliana simples, sendo considerada uma condição multifatorial com forte componente genético e ambiental.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Crohn não segue um padrão de herança mendeliana simples, sendo considerada uma doença multifatorial com predisposição genética complexa envolvendo múltiplos genes e fatores ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Crohn é herdada de forma complexa, com múltiplos genes e fatores ambientais contribuindo para o risco de desenvolver a doença.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000283-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A anemia de Diamond-Blackfan? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.  In approximately 45 percent of cases, an affected person inherits the mutation from one affected parent. The remaining cases result from new mutations in the gene and occur in people with no history of the disorder in their family.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A anemia de Diamond-Blackfan é uma condição genética autossômica dominante com alta penetração variável, resultante de mutações em genes envolvidos na regulação da síntese de ribossomos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A anemia de Diamond-Blackfan é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A anemia de Diamond-Blackfan é uma condição genética autossômica dominante, embora a maioria dos casos surja de novo (de novo) sem histórico familiar, devido a mutações em genes envolvidos na regulação da síntese de RNA ribossomal.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000309-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A distonia 6? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A distonia 6 é causada por mutações no gene THAP1."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/dystonia-6",
+      "primary_sentence": "Dystonia 6 is caused by mutations in the THAP1 gene.",
+      "primary_answer": "Dystonia 6 is caused by mutations in the THAP1 gene. This gene provides instructions for making a protein that is a transcription factor, which means that it attaches (binds) to specific regions of DNA and regulates the activity of other genes. Through this function, it is thought to help control several processes in the body, including the growth and division (proliferation) of endothelial cells, which line the inside surface of blood vessels and other circulatory system structures called lymphatic vessels. The THAP1 protein also plays a role in the self-destruction of cells that are no longer needed (apoptosis).  Studies indicate that most of the THAP1 gene mutations that cause dystonia 6 affect the stability of the THAP1 protein, reducing the amount of functional THAP1 protein available for DNA binding. Other mutations may impair the protein's ability to bind with the correct regions of DNA. Problems with DNA binding likely disrupt the proper regulation of gene activity, leading to the signs and symptoms of dystonia 6.  A particular THAP1 gene mutation is specific to a Mennonite population in the Midwestern United States in which dystonia 6 was first described. This mutation changes the DNA sequence in a region of the gene known as exon 2. Some researchers use the term DYT6 dystonia to refer to dystonia caused by this particular mutation, and the broader term THAP1 dystonia to refer to dystonia caused by any THAP1 gene mutation. In general, mutations affecting the region of the THAP1 protein that binds to DNA, including the mutation found in the Mennonite population, tend to result in more severe signs and symptoms than mutations affecting other regions of the protein.",
+      "curated_sentence": "A distonia 6 é causada por mutações no gene THAP1."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A distonia 6 é causada por mutações no gene TOR1A, que codifica a proteína torsina, levando a uma distonia hereditária caracterizada por movimentos involuntários e torção.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A distonia 6 é causada por mutações no gene TOR1A.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"mutação no gene TOR1A no cromossomo 9\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000318-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A deficiência de peroxidase eosinofílica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene EPX causam deficiência de peroxidase eosinofílica."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/eosinophil-peroxidase-deficiency",
+      "primary_sentence": "Mutations in the EPX gene cause eosinophil peroxidase deficiency.",
+      "primary_answer": "Mutations in the EPX gene cause eosinophil peroxidase deficiency. The EPX gene provides instructions for making the eosinophil peroxidase protein. During an immune response, activated eosinophils release eosinophil peroxidase at the site of injury. This protein helps form molecules that are highly toxic to bacteria and parasites. These toxic molecules also play a role in regulating inflammation by fighting microbial invaders.  EPX gene mutations reduce or prevent eosinophil peroxidase production or result in a protein that is unstable and nonfunctional. As a result, eosinophils have severely reduced amounts of eosinophil peroxidase or none at all. Other proteins within affected eosinophils are normal, and while the cells lacking eosinophil peroxidase are smaller and may have structural changes, the loss of eosinophil peroxidase does not appear to impair the function of eosinophils.",
+      "curated_sentence": "Mutações no gene EPX causam deficiência de peroxidase eosinofílica."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de peroxidase eosinofílica é causada por mutações no gene EPO.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de peroxidase eosinofílica é causada por mutações no gene EPO que levam à ausência ou deficiência da enzima peroxidase eosinofílica, resultando em uma falha no mecanismo de defesa contra parasitas intracelulares.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"causas\":[\"mutação no gene NCF1\",\"mutação no gene NCF2\",\"mutação no gene NCF4\",\"mutação no gene NCF1 (forma recessiva ligada ao X)\"]},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000381-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A síndrome do X frágil? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome do X frágil é herdada em um padrão dominante ligado ao X."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/fragile-x-syndrome",
+      "primary_sentence": "Fragile X syndrome is inherited in an X-linked dominant pattern.",
+      "primary_answer": "Fragile X syndrome is inherited in an X-linked dominant pattern. A condition is considered X-linked if the mutated gene that causes the disorder is located on the X chromosome, one of the two sex chromosomes. (The Y chromosome is the other sex chromosome.) The inheritance is dominant if one copy of the altered gene in each cell is sufficient to cause the condition. X-linked dominant means that in females (who have two X chromosomes), a mutation in one of the two copies of a gene in each cell is sufficient to cause the disorder. In males (who have only one X chromosome), a mutation in the only copy of a gene in each cell causes the disorder. In most cases, males experience more severe symptoms of the disorder than females.  In women, the FMR1 gene premutation on the X chromosome can expand to more than 200 CGG repeats in cells that develop into eggs. This means that women with the premutation have an increased risk of having a child with fragile X syndrome. By contrast, the premutation in men does not expand to more than 200 repeats as it is passed to the next generation. Men pass the premutation only to their daughters. Their sons receive a Y chromosome, which does not include the FMR1 gene.",
+      "curated_sentence": "A síndrome do X frágil é herdada em um padrão dominante ligado ao X."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome do X frágil ocorre por herança ligada ao X, podendo ser transmitida por herança autossômica recessiva (mutação de novo) ou herança ligada ao X (mãe portadora para filho afetado ou filha portadora).\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome do X frágil é herdada de forma autossômica dominante, o que significa que uma cópia do gene mutado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome do X frágil ocorre por herança ligada ao X, geralmente através de mutações no gene FMR1 que levam à expansão de repetições de trinucleotídeos (CGG), sendo a transmissão mais comum de mães portadoras para seus filhos, com risco de expansão intergeracional.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000390-1",
+    "instruction": "Esclareça esta questão educativa: O que é A displasia frontonasal? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A displasia frontonasal é uma condição que resulta do desenvolvimento anormal da cabeça e do rosto antes do nascimento."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/frontonasal-dysplasia",
+      "primary_sentence": "Frontonasal dysplasia is a condition that results from abnormal development of the head and face before birth.",
+      "primary_answer": "Frontonasal dysplasia is a condition that results from abnormal development of the head and face before birth. People with frontonasal dysplasia have at least two of the following features: widely spaced eyes (ocular hypertelorism); a broad nose; a slit (cleft) in one or both sides of the nose; no nasal tip; a central cleft involving the nose, upper lip, or roof of the mouth (palate); incomplete formation of the front of the skull with skin covering the head where bone should be (anterior cranium bifidum occultum); or a widow's peak hairline.  Other features of frontonasal dysplasia can include additional facial malformations, absence or malformation of the tissue that connects the left and right halves of the brain (the corpus callosum), and intellectual disability.  There are at least three types of frontonasal dysplasia that are distinguished by their genetic causes and their signs and symptoms. In addition to the features previously described, each type of frontonasal dysplasia is associated with other distinctive features. Individuals with frontonasal dysplasia type 1 typically have abnormalities of the nose, a long area between the nose and upper lip (philtrum), and droopy upper eyelids (ptosis). Individuals with frontonasal dysplasia type 2 can have hair loss (alopecia) and an enlarged opening in the two bones that make up much of the top and sides of the skull (enlarged parietal foramina). Males with this form of the condition often have genital abnormalities. Features of frontonasal dysplasia type 3 include eyes that are missing (anophthalmia) or very small (microphthalmia) and low-set ears that are rotated backward. Frontonasal dysplasia type 3 is typically associated with the most severe facial abnormalities, but the severity of the condition varies widely, even among individuals with the same type.  Life expectancy of affected individuals depends on the severity of the malformations and whether or not surgical intervention can improve associated health problems, such as breathing and feeding problems caused by the facial clefts.",
+      "curated_sentence": "A displasia frontonasal é uma condição que resulta do desenvolvimento anormal da cabeça e do rosto antes do nascimento."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A displasia frontonasal é uma condição rara de desenvolvimento que afeta o crescimento do osso frontal e do nariz, resultando em uma face central estreita e assimétrica.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A displasia frontonasal é uma condição rara de desenvolvimento que afeta o crescimento do osso frontal e do nariz, resultando em uma face central estreita e assimétrica.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A displasia frontonasal é um distúrbio do desenvolvimento que afeta o crescimento do rosto.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000392-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome de Fryns? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Fryns é uma condição que afeta o desenvolvimento de várias partes do corpo."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/fryns-syndrome",
+      "primary_sentence": "Fryns syndrome is a condition that affects the development of many parts of the body.",
+      "primary_answer": "Fryns syndrome is a condition that affects the development of many parts of the body. The features of this disorder vary widely among affected individuals and overlap with the signs and symptoms of several other disorders. These factors can make Fryns syndrome difficult to diagnose.  Most people with Fryns syndrome have a defect in the muscle that separates the abdomen from the chest cavity (the diaphragm). The most common defect is a congenital diaphragmatic hernia, which is a hole in the diaphragm that develops before birth. This hole allows the stomach and intestines to move into the chest and crowd the heart and lungs. As a result, the lungs often do not develop properly (pulmonary hypoplasia), which can cause life-threatening breathing difficulties in affected infants.  Other major signs of Fryns syndrome include abnormalities of the fingers and toes and distinctive facial features. The tips of the fingers and toes tend to be underdeveloped, resulting in a short and stubby appearance with small or absent nails. Most affected individuals have several unusual facial features, including widely spaced eyes (hypertelorism), a broad and flat nasal bridge, a thick nasal tip, a wide space between the nose and upper lip (a long philtrum), a large mouth (macrostomia), and a small chin (micrognathia). Many also have low-set and abnormally shaped ears.  Several additional features have been reported in people with Fryns syndrome. These include small eyes (microphthalmia), clouding of the clear outer covering of the eye (the cornea), and an opening in the roof of the mouth (cleft palate) with or without a split in the lip (cleft lip). Fryns syndrome can also affect the development of the brain, cardiovascular system, gastrointestinal system, kidneys, and genitalia.  Most people with Fryns syndrome die before birth or in early infancy from pulmonary hypoplasia caused by a congenital diaphragmatic hernia. However, a few affected individuals have lived into childhood. Many of these children have had severe developmental delay and intellectual disability.",
+      "curated_sentence": "A síndrome de Fryns é uma condição que afeta o desenvolvimento de várias partes do corpo."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Fryns é um distúrbio que afeta o desenvolvimento de um bebê antes do nascimento.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Fryns é uma condição genética rara caracterizada por malformações diafragmáticas congênitas, frequentemente associadas a defeitos pulmonares, cardíacos e neurológicos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Fryns é uma condição genética rara caracterizada por malformações diafragmáticas congênitas e anomalias associadas, resultante de defeitos no fechamento do diafragma durante o desenvolvimento fetal.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000401-1",
+    "instruction": "Esclareça esta questão educativa: O que é A displasia geleofísica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A displasia geleofísica é uma condição hereditária que afeta várias partes do corpo."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/geleophysic-dysplasia",
+      "primary_sentence": "Geleophysic dysplasia is an inherited condition that affects many parts of the body.",
+      "primary_answer": "Geleophysic dysplasia is an inherited condition that affects many parts of the body. It is characterized by abnormalities involving the bones, joints, heart, and skin.  People with geleophysic dysplasia have short stature with very short hands and feet. Most also develop thickened skin and joint deformities called contractures, both of which significantly limit mobility. Affected individuals usually have a limited range of motion in their fingers, toes, wrists, and elbows. Additionally, contractures in the legs and hips cause many affected people to walk on their toes.  The name of this condition, which comes from the Greek words for happy (\"gelios\") and nature (\"physis\"), is derived from the good-natured facial appearance seen in most affected individuals. The distinctive facial features associated with this condition include a round face with full cheeks, a small nose with upturned nostrils, a broad nasal bridge, a thin upper lip, upturned corners of the mouth, and a flat area between the upper lip and the nose (philtrum).  Geleophysic dysplasia is also characterized by heart (cardiac) problems, particularly abnormalities of the cardiac valves. These valves normally control the flow of blood through the heart. In people with geleophysic dysplasia, the cardiac valves thicken, which impedes blood flow and increases blood pressure in the heart. Other heart problems have also been reported in people with geleophysic dysplasia; these include a narrowing of the artery from the heart to the lungs (pulmonary stenosis) and a hole between the two upper chambers of the heart (atrial septal defect).  Other features of geleophysic dysplasia can include an enlarged liver (hepatomegaly) and recurrent respiratory and ear infections. In severe cases, a narrowing of the windpipe (tracheal stenosis) can cause serious breathing problems. As a result of heart and respiratory abnormalities, geleophysic dysplasia is often life-threatening in childhood. However, some affected people have lived into adulthood.",
+      "curated_sentence": "A displasia geleofísica é uma condição hereditária que afeta várias partes do corpo."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A displasia geleofísica é um distúrbio genético que afeta o crescimento e desenvolvimento de uma criança.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A displasia geleofísica é uma condição rara caracterizada por atrofia cutânea generalizada, pele fina e translúcida, e perda de gordura subcutânea, resultando em um aspecto de pele de veludo ou de papel de seda.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A displasia geleofísica é uma condição rara caracterizada por atrofia cutânea generalizada, onde a pele torna-se fina, translúcida e sem gordura subcutânea, resultando em um aspecto de 'papel de seda' ou 'papel de arroz'.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000401-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A displasia geleofísica? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A displasia geleofísica resulta de mutações no gene ADAMTSL2."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/geleophysic-dysplasia",
+      "primary_sentence": "Geleophysic dysplasia results from mutations in the ADAMTSL2 gene.",
+      "primary_answer": "Geleophysic dysplasia results from mutations in the ADAMTSL2 gene. This gene provides instructions for making a protein whose function is unclear. The protein is found in the extracellular matrix, which is the intricate lattice of proteins and other molecules that forms in the spaces between cells. Studies suggest that the ADAMTSL2 protein may play a role in the microfibrillar network, which is an organized clustering of thread-like filaments (called microfibrils) in the extracellular matrix. This network provides strength and flexibility to tissues throughout the body.  Mutations in the ADAMTSL2 protein likely change the protein's 3-dimensional structure. Through a process that is poorly understood, ADAMTSL2 gene mutations alter the microfibrillar network in many different tissues. Impairment of this essential network disrupts the normal functions of cells, which likely contributes to the varied signs and symptoms of geleophysic dysplasia. Researchers are working to determine how mutations in the ADAMTSL2 gene lead to short stature, heart disease, and the other features of this condition.",
+      "curated_sentence": "A displasia geleofísica resulta de mutações no gene ADAMTSL2."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A displasia geleofísica é causada por mutações no gene FBN1.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":[\"mutação no gene FBN1\",\"mutação no gene FBN2\"],\"causas\":[\"deficiência de elastina\"],\"etologia\":[\"herança autossômica dominante\"]},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A displasia geleofísica é causada por mutações no gene FBN1, que codifica a fibrilina-1, levando à formação de tecido conjuntivo anormal.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000435-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A granulomatose com poliangiite (GPA)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A base genética da GPA não é bem compreendida."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/granulomatosis-with-polyangiitis",
+      "primary_sentence": "The genetic basis of GPA is not well understood.",
+      "primary_answer": "The genetic basis of GPA is not well understood. Having a particular version of the HLA-DPB1 gene is the strongest genetic risk factor for developing this condition, although several other genes, some of which have not been identified, may be involved. It is likely that a combination of genetic and environmental factors lead to GPA.  GPA is an autoimmune disorder. Such disorders occur when the immune system malfunctions and attacks the body's own tissues and organs. Approximately 90 percent of people with GPA have an abnormal immune protein called an anti-neutrophil cytoplasmic antibody (ANCA) in their blood. Antibodies normally bind to specific foreign particles and germs, marking them for destruction, but ANCAs attack normal human proteins. Most people with GPA have an ANCA that attacks the human protein proteinase 3 (PR3). A few affected individuals have an ANCA that attacks a protein called myeloperoxidase (MPO). When these antibodies attach to the protein they recognize, they trigger inflammation, which contributes to the signs and symptoms of GPA.  The HLA-DPB1 gene belongs to a family of genes called the human leukocyte antigen (HLA) complex. The HLA complex helps the immune system distinguish the body's own proteins from proteins made by foreign invaders (such as viruses and bacteria). Each HLA gene has many different normal variations, allowing each person's immune system to react to a wide range of foreign proteins. A particular variant of the HLA-DPB1 gene called HLA-DPB1*0401 has been found more frequently in people with GPA, especially those with ANCAs, than in people without the condition.  Because the HLA-DPB1 gene is involved in the immune system, changes in it might be related to the autoimmune response and inflammation in the respiratory tract and kidneys characteristic of GPA. However, it is unclear what specific role the HLA-DPB1*0401 gene variant plays in development of this condition.",
+      "curated_sentence": "A base genética da GPA não é bem compreendida."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A granulomatose com poliangiite (GPA) é causada por uma combinação de fatores genéticos e ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A granulomatose com poliangiite (GPA) é uma doença autoimune sistêmica que pode ser causada por mutações somáticas no gene PAUX1, que codifica a proteína ANCA, ou por fatores ambientais que desencadeiam a produção de anticorpos antiperoxidase de mieloperoxidase (MPO) ou antiproteinase 3 (PR3).\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"causas\":[\"mutação no gene PAI-1\",\"mutação no gene ANCA\",\"infecções respiratórias\",\"exposição a antígenos ambientais\"]},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000450-1",
+    "instruction": "Esclareça esta questão educativa: O que é A hemofilia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A hemofilia é um distúrbio de sangramento que retarda o processo de coagulação do sangue."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hemophilia",
+      "primary_sentence": "Hemophilia is a bleeding disorder that slows the blood clotting process.",
+      "primary_answer": "Hemophilia is a bleeding disorder that slows the blood clotting process. People with this condition experience prolonged bleeding or oozing following an injury, surgery, or having a tooth pulled. In severe cases of hemophilia, continuous bleeding occurs after minor trauma or even in the absence of injury (spontaneous bleeding). Serious complications can result from bleeding into the joints, muscles, brain, or other internal organs. Milder forms of hemophilia do not necessarily involve spontaneous bleeding, and the condition may not become apparent until abnormal bleeding occurs following surgery or a serious injury.  The major types of this condition are hemophilia A (also known as classic hemophilia or factor VIII deficiency) and hemophilia B (also known as Christmas disease or factor IX deficiency). Although the two types have very similar signs and symptoms, they are caused by mutations in different genes. People with an unusual form of hemophilia B, known as hemophilia B Leyden, experience episodes of excessive bleeding in childhood but have few bleeding problems after puberty.",
+      "curated_sentence": "A hemofilia é um distúrbio de sangramento que retarda o processo de coagulação do sangue."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hemofilia é um distúrbio de coagulação hereditário.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hemofilia é um distúrbio genético hereditário que afeta a coagulação do sangue, caracterizado pela deficiência de fatores de coagulação específicos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hemofilia é um distúrbio genético hereditário caracterizado pela deficiência na produção de fatores de coagulação do sangue, resultando em sangramentos prolongados após lesões.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000464-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de O raquitismo hipofosfatêmico hereditário? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O raquitismo hipofosfatêmico hereditário pode ter vários padrões de herança."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hereditary-hypophosphatemic-rickets",
+      "primary_sentence": "Hereditary hypophosphatemic rickets can have several patterns of inheritance.",
+      "primary_answer": "Hereditary hypophosphatemic rickets can have several patterns of inheritance. When the condition results from mutations in the PHEX gene, it is inherited in an X-linked dominant pattern. The PHEX gene is located on the X chromosome, which is one of the two sex chromosomes. In females (who have two X chromosomes), a mutation in one of the two copies of the gene in each cell is sufficient to cause the disorder. In males (who have only one X chromosome), a mutation in the only copy of the gene in each cell causes the disorder. A characteristic of X-linked inheritance is that fathers cannot pass X-linked traits to their sons.  Less commonly, hereditary hypophosphatemic rickets can have an X-linked recessive pattern of inheritance. This form of the condition is often called Dent disease. Like the PHEX gene, the gene associated with Dent disease is located on the X chromosome. In males, one altered copy of the gene in each cell is sufficient to cause the condition. In females, a mutation would have to occur in both copies of the gene to cause the disorder. Because it is unlikely that females will have two altered copies of this gene, males are affected by X-linked recessive disorders much more frequently than females.  In a few families, hereditary hypophosphatemic rickets has had an autosomal dominant inheritance pattern, which means one copy of an altered gene in each cell is sufficient to cause the disorder. The rare condition HHRH has an autosomal recessive pattern of inheritance, which means both copies of a gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition. However, some parents of children with HHRH have experienced hypercalcuria and kidney stones.",
+      "curated_sentence": "O raquitismo hipofosfatêmico hereditário pode ter vários padrões de herança."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O raquitismo hipofosfatêmico hereditário é herdado de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O raquitismo hipofosfatêmico hereditário ocorre predominantemente por herança autossômica dominante, embora existam formas raras de herança autossômica recessiva.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O raquitismo hipofosfatêmico hereditário ocorre predominantemente por herança autossômica dominante, embora existam formas raras de herança autossômica recessiva.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000465-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A leiomiomatose hereditária e câncer de células renais (HLRCC)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hereditary-leiomyomatosis-and-renal-cell-cancer",
+      "primary_sentence": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "primary_answer": "This condition is inherited in an autosomal dominant pattern, which means one copy of the altered gene in each cell is sufficient to cause the disorder.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A leiomiomatose hereditária e câncer de células renais (HLRCC) ocorre através de herança autossômica dominante, geralmente causada por mutações no gene FH, onde a presença de apenas um alelo mutado é suficiente para transmitir a condição aos descendentes com probabilidade de 50%.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A leiomiomatose hereditária e câncer de células renais (HLRCC) é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A leiomiomatose hereditária e câncer de células renais (HLRCC) ocorre por herança autossômica dominante, geralmente causada por mutações no gene FH, onde a transmissão de um alelo mutado é suficiente para causar a doença, embora a penetrância seja incompleta e variável.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000495-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A hiperlisinemia? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/hyperlysinemia",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hiperlisinemia ocorre por mutações no gene LIPA que afetam a lisina-alfa-4-hidroxilase, impedindo a degradação de lisina e levando ao seu acúmulo.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A hiperlisinemia ocorre devido a defeitos nos genes que codificam as enzimas lisossomais, resultando no acúmulo de substratos não degradados dentro dos lisossomos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A hiperlisinemia é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000561-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A síndrome de Klinefelter? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Klinefelter e suas variantes não são herdadas; essas alterações cromossômicas geralmente ocorrem como eventos aleatórios durante a formação das células reprodutivas (óvulos e espermatozoides) de um dos pais."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/klinefelter-syndrome",
+      "primary_sentence": "Klinefelter syndrome and its variants are not inherited; these chromosomal changes usually occur as random events during the formation of reproductive cells (eggs and sperm) in a parent.",
+      "primary_answer": "Klinefelter syndrome and its variants are not inherited; these chromosomal changes usually occur as random events during the formation of reproductive cells (eggs and sperm) in a parent. An error in cell division called nondisjunction results in a reproductive cell with an abnormal number of chromosomes. For example, an egg or sperm cell may gain one or more extra copies of the X chromosome as a result of nondisjunction. If one of these atypical reproductive cells contributes to the genetic makeup of a child, the child will have one or more extra X chromosomes in each of the body's cells.  Mosaic 46,XY/47,XXY is also not inherited. It occurs as a random event during cell division early in fetal development. As a result, some of the body's cells have one X chromosome and one Y chromosome (46,XY), and other cells have an extra copy of the X chromosome (47,XXY).",
+      "curated_sentence": "A síndrome de Klinefelter e suas variantes não são herdadas; essas alterações cromossômicas geralmente ocorrem como eventos aleatórios durante a formação das células reprodutivas (óvulos e espermatozoides) de um dos pais."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Klinefelter é herdada de forma aleatória, o que significa que pode ocorrer em qualquer gravidez.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Klinefelter ocorre devido à não-disjunção cromossômica, resultando em um cariótipo 47,XXY, onde o indivíduo possui um cromossomo X extra herdado da mãe ou do pai.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Klinefelter ocorre por meio de uma anomalia cromossômica não hereditária, resultante de uma não disjunção durante a meiose, que leva a um cariótipo 47,XXY.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000571-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A síndrome lacrimo-auriculo-dento-digital (LADD)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações nos genes FGFR2, FGFR3 ou FGF10 podem causar a síndrome LADD."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/lacrimo-auriculo-dento-digital-syndrome",
+      "primary_sentence": "Mutations in the FGFR2, FGFR3, or FGF10 gene can cause LADD syndrome.",
+      "primary_answer": "Mutations in the FGFR2, FGFR3, or FGF10 gene can cause LADD syndrome.  The FGFR2 and FGFR3 genes provide instructions for making proteins that are part of a family called fibroblast growth factor receptors. The FGF10 gene provides instructions for making a protein called a fibroblast growth factor, which is a family of proteins that attaches (binds) to fibroblast growth factor receptors. The receptors are located within the membranes of cells, where they receive signals that control growth and development from growth factors outside the cell. The signals triggered by the FGFR2, FGFR3, and FGF10 genes appear to stimulate cells to form the structures that make up the lacrimal glands, salivary glands, ears, skeleton, and many other organs.  Mutations in the FGFR2, FGFR3, or FGF10 gene alter the proteins produced from these genes and disrupt the signaling within cells. As a result, cell maturation and development is impaired and the formation of many tissues is affected, leading to the signs and symptoms of LADD syndrome.",
+      "curated_sentence": "Mutações nos genes FGFR2, FGFR3 ou FGF10 podem causar a síndrome LADD."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"causas\":\"A síndrome LADD é causada por mutações no gene MYO1E, que codifica a miosina Ie, uma proteína essencial para a função dos cílios e flagelos.\",\"resposta\":\"A síndrome LADD é causada por mutações no gene MYO1E, que codifica a miosina Ie, uma proteína essencial para a função dos cílios e flagelos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome lacrimo-auriculo-dento-digital (LADD) é causada por mutações no gene TCF4, localizado no cromossomo 18q21.1, que afetam o desenvolvimento de estruturas craniofaciais e dentárias.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome lacrimo-auriculo-dento-digital (LADD) é causada por mutações no gene KLF14.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000652-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A deficiência de quinase de mevalonato? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/mevalonate-kinase-deficiency",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de quinase de mevalonato é uma condição autossômica recessiva causada por mutações no gene MEVD, que resulta em defeito na enzima quinase de mevalonato e leva a uma deficiência de isoprenoides essenciais para a função de proteínas ancoradas por lipídios.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de quinase de mevalonato é uma condição autossômica recessiva causada por mutações no gene MEVD, que codifica a enzima quinase de mevalonato, resultando em uma deficiência de mevalonato quinase e níveis elevados de mevalonato no sangue.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000688-1",
+    "instruction": "Esclareça esta questão educativa: O que é A neoplasia endócrina múltipla? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A neoplasia endócrina múltipla é um grupo de distúrbios que afetam a rede de glândulas produtoras de hormônios do corpo (o sistema endócrino)."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/multiple-endocrine-neoplasia",
+      "primary_sentence": "Multiple endocrine neoplasia is a group of disorders that affect the body's network of hormone-producing glands (the endocrine system).",
+      "primary_answer": "Multiple endocrine neoplasia is a group of disorders that affect the body's network of hormone-producing glands (the endocrine system). Hormones are chemical messengers that travel through the bloodstream and regulate the function of cells and tissues throughout the body. Multiple endocrine neoplasia typically involves tumors (neoplasia) in at least two endocrine glands; tumors can also develop in other organs and tissues. These growths can be noncancerous (benign) or cancerous (malignant). If the tumors become cancerous, the condition can be life-threatening.  The major forms of multiple endocrine neoplasia are called type 1, type 2, and type 4. These types are distinguished by the genes involved, the types of hormones made, and the characteristic signs and symptoms.  Many different types of tumors are associated with multiple endocrine neoplasia. Type 1 frequently involves tumors of the parathyroid glands, the pituitary gland, and the pancreas. Tumors in these glands can lead to the overproduction of hormones. The most common sign of multiple endocrine neoplasia type 1 is overactivity of the parathyroid glands (hyperparathyroidism). Hyperparathyroidism disrupts the normal balance of calcium in the blood, which can lead to kidney stones, thinning of bones, nausea and vomiting, high blood pressure (hypertension), weakness, and fatigue.  The most common sign of multiple endocrine neoplasia type 2 is a form of thyroid cancer called medullary thyroid carcinoma. Some people with this disorder also develop a pheochromocytoma, which is an adrenal gland tumor that can cause dangerously high blood pressure. Multiple endocrine neoplasia type 2 is divided into three subtypes: type 2A, type 2B (formerly called type 3), and familial medullary thyroid carcinoma (FMTC). These subtypes differ in their characteristic signs and symptoms and risk of specific tumors; for example, hyperparathyroidism occurs only in type 2A, and medullary thyroid carcinoma is the only feature of FMTC. The signs and symptoms of multiple endocrine neoplasia type 2 are relatively consistent within any one family.  Multiple endocrine neoplasia type 4 appears to have signs and symptoms similar to those of type 1, although it is caused by mutations in a different gene. Hyperparathyroidism is the most common feature, followed by tumors of the pituitary gland, additional endocrine glands, and other organs.",
+      "curated_sentence": "A neoplasia endócrina múltipla é um grupo de distúrbios que afetam a rede de glândulas produtoras de hormônios do corpo (o sistema endócrino)."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A neoplasia endócrina múltipla é um grupo de transtornos genéticos hereditários caracterizados pelo desenvolvimento de tumores em múltiplos tecidos endócrinos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A neoplasia endócrina múltipla é um grupo de distúrbios hereditários caracterizados pelo desenvolvimento de tumores em glândulas endócrinas.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A neoplasia endócrina múltipla é um grupo de doenças genéticas caracterizadas pelo desenvolvimento de tumores em múltiplos tecidos endócrinos\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000749-1",
+    "instruction": "Esclareça esta questão educativa: O que é A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo é uma condição rara caracterizada por anormalidades genitais em homens, ausência ou subdesenvolvimento das patelas, deficiência intelectual, características faciais distintas e anormalidades que afetam outras partes do corpo."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/ohdo-syndrome-say-barber-biesecker-young-simpson-variant",
+      "primary_sentence": "The Say-Barber-Biesecker-Young-Simpson (SBBYS) variant of Ohdo syndrome is a rare condition characterized by genital abnormalities in males, missing or underdeveloped kneecaps (patellae), intellectual disability, distinctive facial features, and abnormalities affecting other parts of the body.",
+      "primary_answer": "The Say-Barber-Biesecker-Young-Simpson (SBBYS) variant of Ohdo syndrome is a rare condition characterized by genital abnormalities in males, missing or underdeveloped kneecaps (patellae), intellectual disability, distinctive facial features, and abnormalities affecting other parts of the body.  Males with the SBBYS variant of Ohdo syndrome typically have undescended testes (cryptorchidism). Females with this condition have normal genitalia.  Missing or underdeveloped patellae is the most common skeletal abnormality associated with the SBBYS variant of Ohdo syndrome. Affected individuals also have joint stiffness involving the hips, knees, and ankles that can impair movement. Although joints in the lower body are stiff, joints in the arms and upper body may be unusually loose (lax). Many people with this condition have long thumbs and first (big) toes.  The SBBYS variant of Ohdo syndrome is also associated with delayed development and intellectual disability, which are often severe. Many affected infants have weak muscle tone (hypotonia) that leads to breathing and feeding difficulties.  The SBBYS variant of Ohdo syndrome is characterized by a mask-like, non-expressive face. Additionally, affected individuals may have distinctive facial features such as prominent cheeks, a broad nasal bridge or a nose with a rounded tip, a narrowing of the eye opening (blepharophimosis), droopy eyelids (ptosis), and abnormalities of the tear (lacrimal) glands. About one-third of affected individuals are born with an opening in the roof of the mouth called a cleft palate. The SBBYS variant of Ohdo syndrome can also be associated with heart defects and dental problems.",
+      "curated_sentence": "A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo é uma condição rara caracterizada por anormalidades genitais em homens, ausência ou subdesenvolvimento das patelas, deficiência intelectual, características faciais distintas e anormalidades que afetam outras partes do corpo."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo é uma condição genética rara caracterizada por mosaicismos somáticos de mutações no gene ZC3H14, resultando em uma combinação de características clínicas que variam entre as síndromes de Ohdo e de Biesecker-Simpson, incluindo hipoplasia ou aplasia de dentes, anomalias faciais e defeitos congênitos.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo é uma forma específica de mosaicismo germinativo que resulta em uma distribuição segmentada de pigmentação cutânea e alopecia, caracterizada por áreas de hipopigmentação e hiperpigmentação em padrão de 'manchas de leopardo' e perda de cabelo em regiões específicas do corpo, sem envolvimento sistêmico grave.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A variante Say-Barber-Biesecker-Young-Simpson (SBBYS) da síndrome de Ohdo é uma condição caracterizada por manchas brancas na pele (hipopigmentação) e manchas marrons na pele (hiperpigmentação).\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000805-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A osteodisplasia lipomembranosa policística com leucoencefalopatia esclerosante, comumente conhecida como PLOSL,? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/polycystic-lipomembranous-osteodysplasia-with-sclerosing-leukoencephalopathy",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Essa condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A osteodisplasia lipomembranosa policística com leucoencefalopatia esclerosante (PLOSL) é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A osteodisplasia lipomembranosa policística com leucoencefalopatia esclerosante (PLOSL) é uma condição autossômica recessiva causada por mutações no gene SLC19A2, que resulta em deficiência de transportador de folato, levando a defeitos no desenvolvimento ósseo e cerebral.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"herança\":\"Autossômica recessiva\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000846-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de O pseudoxantoma elástico (PXE)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O PXE é herdado de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/pseudoxanthoma-elasticum",
+      "primary_sentence": "PXE is inherited in an autosomal recessive manner, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "PXE is inherited in an autosomal recessive manner, which means both copies of the gene in each cell have mutations. Most often, the parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but do not show signs and symptoms of the condition.  In a few cases, an affected individual has one affected parent and one parent without the signs and symptoms of the disorder. This situation resembles autosomal dominant inheritance, in which one copy of an altered gene in each cell is sufficient to cause a disorder and the mutation is typically inherited from one affected parent. In these cases of PXE, however, the parent without apparent symptoms has an ABCC6 gene mutation. The affected offspring inherits two altered genes, one from each parent. This appearance of autosomal dominant inheritance when the pattern is actually autosomal recessive is called pseudodominance.",
+      "curated_sentence": "O PXE é herdado de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O pseudoxantoma elástico (PXE) é uma condição autossômica recessiva, herdada através de mutações nos genes ATP6V1B1 ou ATP6V2A, que codificam subunidades da bomba de prótons do complexo de endossomos ácido-vacuolar.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O pseudoxantoma elástico (PXE) é uma condição autossômica recessiva, o que significa que a herança ocorre quando um indivíduo herda uma cópia mutada do gene ATP6V2B1 de cada um dos dois pais.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A maioria dos casos de pseudoxantoma elástico (PXE) é herdada de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000870-1",
+    "instruction": "Esclareça esta questão educativa: O que é O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é uma doença que afeta os vasos sanguíneos nos olhos e no coração."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/retinal-arterial-macroaneurysm-with-supravalvular-pulmonic-stenosis",
+      "primary_sentence": "Retinal arterial macroaneurysm with supravalvular pulmonic stenosis (RAMSVPS) is a disorder that affects blood vessels in the eyes and heart.",
+      "primary_answer": "Retinal arterial macroaneurysm with supravalvular pulmonic stenosis (RAMSVPS) is a disorder that affects blood vessels in the eyes and heart. The condition generally becomes apparent in infancy or childhood.  RAMSVPS damages the arteries in the light-sensitive tissue at the back of the eye (the retina). These arteries gradually develop multiple small bulges called beading. Eventually, larger bulges in the blood vessel walls (macroaneurysms) occur. These macroaneurysms can tear (rupture), leading to bleeding that can spread into other areas of the eye and cause vision loss.  People with RAMSVPS also have a heart condition called supravalvular pulmonic stenosis. Pulmonic stenosis is a narrowing that affects the pulmonic valve between the heart and the lungs. The term \"supravalvular\" means that the narrowing occurs just above the valve, in a blood vessel called the pulmonary artery. Supravalvular pulmonic stenosis impairs blood flow into the lungs, where blood normally picks up oxygen for distribution to cells and tissues throughout the body. As a result, less oxygen is carried through the bloodstream, leading to signs and symptoms that include shortness of breath; a rapid heartbeat; fatigue; and swelling in the face, feet, or abdomen.",
+      "curated_sentence": "O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é uma doença que afeta os vasos sanguíneos nos olhos e no coração."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é uma condição médica hipotética que combina anormalidades vasculares oculares e cardíacas, pois não existe na literatura médica como uma entidade clínica única.\"\n  },\n  \"pendencias\": [\n    \"verificação de terminologia\",\n    \"confirmação de existência clínica\"\n  ],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é uma condição médica hipotética que combina aneurismas retinianos e estenose pulmonar supravalvar, pois não existe tal entidade clínica reconhecida na literatura médica.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é uma condição rara que afeta os vasos sanguíneos do olho e do coração.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000870-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "RAMSVPS é causado por uma mutação no gene IGFBP7."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/retinal-arterial-macroaneurysm-with-supravalvular-pulmonic-stenosis",
+      "primary_sentence": "RAMSVPS is caused by a mutation in the IGFBP7 gene.",
+      "primary_answer": "RAMSVPS is caused by a mutation in the IGFBP7 gene. This gene provides instructions for making a protein called insulin-like growth factor-binding protein 7 (IGFBP7). The IGFBP7 protein is active in the lining of blood vessels (the vascular endothelium). It is thought to help stop a pathway called BRAF signaling, which is involved in directing cell growth.  The IGFBP7 gene mutation that causes RAMSVPS results in an abnormally short IGFBP7 protein that does not function properly. Without normally functioning IGFBP7 protein to control BRAF signaling, this signaling is increased. It is unknown how this increase is related to the specific blood vessel abnormalities that occur in RAMSVPS, or why these abnormalities are confined to the eyes and the pulmonary artery. Researchers suggest that differences in normal levels of IGFBP7 protein in various parts of the body or the presence of other proteins with a similar function in different tissues may account for the specific signs and symptoms of this disorder.",
+      "curated_sentence": "RAMSVPS é causado por uma mutação no gene IGFBP7."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"causas\":\"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) não é uma entidade clínica reconhecida; aneurismas retinianos são frequentemente associados a fatores como hipertensão, diabetes ou alterações genéticas como colágeno IV, enquanto a estenose pulmonar supravalvar é uma condição distinta geralmente associada à síndrome de Williams ou à síndrome de Turner, e a coexistência dessas duas condições específicas não tem uma causa genética ou etiológica estabelecida na literatura médica atual.\",\"status\":\"informativo\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) não é uma entidade clínica reconhecida; o termo parece ser uma combinação incorreta de condições distintas, como aneurismas arteriais retinianos (associados a fatores como hipertensão, diabetes ou síndromes genéticas como Ehlers-Danlos ou Marfan) e estenose pulmonar supravalvar (uma forma de estenose pulmonar congênita frequentemente associada à síndrome de Williams).\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é causado por mutações no gene MYH11.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000870-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS)? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/retinal-arterial-macroaneurysm-with-supravalvular-pulmonic-stenosis",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O macroaneurisma arterial retiniano e a estenose pulmonar supravalvar são condições distintas que não seguem um padrão de herança genética conjunta conhecido, sendo geralmente eventos independentes ou associados a síndromes raras não especificadas no contexto.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) é herdado de forma autossômica dominante, o que significa que uma cópia do gene alterado em cada célula é suficiente para causar o distúrbio.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O macroaneurisma arterial retiniano com estenose pulmonar supravalvar (RAMSVPS) não é uma condição hereditária clássica, mas sim uma associação de duas patologias distintas: o macroaneurisma retiniano está frequentemente ligado a fatores vasculares como hipertensão ou diabetes, enquanto a estenose pulmonar supravalvar é uma malformação congênita que pode ter causas genéticas (como síndromes de Williams ou Noonan) ou ser esporádica, não existindo uma herança direta unificada entre ambas sob o nome RAMSVPS.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000881-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A síndrome de Roberts? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene ESCO2 causam a síndrome de Roberts."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/roberts-syndrome",
+      "primary_sentence": "Mutations in the ESCO2 gene cause Roberts syndrome.",
+      "primary_answer": "Mutations in the ESCO2 gene cause Roberts syndrome. This gene provides instructions for making a protein that is important for proper chromosome separation during cell division. Before cells divide, they must copy all of their chromosomes. The copied DNA from each chromosome is arranged into two identical structures, called sister chromatids. The ESCO2 protein plays an important role in establishing the glue that holds the sister chromatids together until the chromosomes are ready to separate.  All identified mutations in the ESCO2 gene prevent the cell from producing any functional ESCO2 protein, which causes some of the glue between sister chromatids to be missing around the chromosome's constriction point (centromere). In Roberts syndrome, cells respond to abnormal sister chromatid attachment by delaying cell division. Delayed cell division can be a signal that the cell should undergo self-destruction. The signs and symptoms of Roberts syndrome may result from the loss of cells from various tissues during early development. Because both mildly and severely affected individuals lack any functional ESCO2 protein, the underlying cause of the variation in disease severity remains unknown. Researchers suspect that other genetic and environmental factors may be involved.",
+      "curated_sentence": "Mutações no gene ESCO2 causam a síndrome de Roberts."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"Deleção terminal do braço longo do cromossomo 6 e deleção terminal do braço curto do cromossomo 13\",\"causas\":\"Deleção terminal do braço longo do cromossomo 6 e deleção terminal do braço curto do cromossomo 13\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Roberts é causada por mutações no gene NIPBL.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Roberts é causada por uma deleção ou rearranjo cromossômico no braço longo do cromossomo 6 (6q), frequentemente envolvendo o gene RBBP8, ou por uma deleção no braço curto do cromossomo 16 (16p), geralmente envolvendo o gene NIPBL.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000933-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A espinha bífida? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A espinha bífida é uma condição complexa que provavelmente é causada pela interação de múltiplos fatores genéticos e ambientais."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/spina-bifida",
+      "primary_sentence": "Spina bifida is a complex condition that is likely caused by the interaction of multiple genetic and environmental factors.",
+      "primary_answer": "Spina bifida is a complex condition that is likely caused by the interaction of multiple genetic and environmental factors. Some of these factors have been identified, but many remain unknown.  Changes in dozens of genes in individuals with spina bifida and in their mothers may influence the risk of developing this type of neural tube defect. The best-studied of these genes is MTHFR, which provides instructions for making a protein that is involved in processing the vitamin folate (also called vitamin B9). A shortage (deficiency) of this vitamin is an established risk factor for neural tube defects. Changes in other genes related to folate processing and genes involved in the development of the neural tube have also been studied as potential risk factors for spina bifida. However, none of these genes appears to play a major role in causing the condition.  Researchers have also examined environmental factors that could contribute to the risk of spina bifida. As mentioned above, folate deficiency appears to play a significant role. Studies have shown that women who take supplements containing folic acid (the synthetic form of folate) before they get pregnant and very early in their pregnancy are significantly less likely to have a baby with spina bifida or a related neural tube defect. Other possible maternal risk factors for spina bifida include diabetes mellitus, obesity, exposure to high heat (such as a fever or use of a hot tub or sauna) in early pregnancy, and the use of certain anti-seizure medications during pregnancy. However, it is unclear how these factors may influence the risk of spina bifida.",
+      "curated_sentence": "A espinha bífida é uma condição complexa que provavelmente é causada pela interação de múltiplos fatores genéticos e ambientais."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A espinha bífida é causada por uma combinação de fatores genéticos e ambientais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A espinha bífida é causada por uma combinação de fatores genéticos e ambientais, incluindo deficiências na ingestão de ácido fólico durante a gravidez e predisposição familiar.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A espinha bífida é causada por falha no fechamento do tubo neural durante o desenvolvimento embrionário, frequentemente associada à deficiência de ácido fólico e fatores genéticos como mutações no gene MTHFR.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0000974-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A deficiência de tetra-hidrobiopterina? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A deficiência de tetra-hidrobiopterina pode ser causada por mutações em um dos vários genes, incluindo GCH1, PCBD1, PTS e QDPR."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/tetrahydrobiopterin-deficiency",
+      "primary_sentence": "Tetrahydrobiopterin deficiency can be caused by mutations in one of several genes, including GCH1, PCBD1, PTS, and QDPR.",
+      "primary_answer": "Tetrahydrobiopterin deficiency can be caused by mutations in one of several genes, including GCH1, PCBD1, PTS, and QDPR. These genes provide instructions for making enzymes that help produce and recycle tetrahydrobiopterin in the body. Tetrahydrobiopterin normally helps process several amino acids, including phenylalanine. It is also involved in the production of neurotransmitters.  If one of the enzymes fails to function correctly because of a gene mutation, little or no tetrahydrobiopterin is available to help process phenylalanine. As a result, phenylalanine can build up in the blood and other tissues. Because nerve cells in the brain are particularly sensitive to phenylalanine levels, excessive amounts of this substance can cause brain damage. Tetrahydrobiopterin deficiency can also alter the levels of certain neurotransmitters, which disrupts normal brain function. These abnormalities underlie the intellectual disability and other characteristic features of the condition.",
+      "curated_sentence": "A deficiência de tetra-hidrobiopterina pode ser causada por mutações em um dos vários genes, incluindo GCH1, PCBD1, PTS e QDPR."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de tetra-hidrobiopterina é causada por mutações no gene GTPCYP.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_causas\":\"A deficiência de tetra-hidrobiopterina é causada por mutações nos genes GTPC, GTPCR, PTS ou QDPR, que afetam a síntese ou reciclagem da vitamina.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de tetra-hidrobiopterina é causada por mutações nos genes GTPC, GTPCR, QDPR ou BH4-PT, que afetam a síntese ou reciclagem da vitamina.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001013-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome de van der Woude? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de van der Woude é uma condição que afeta o desenvolvimento do rosto."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/van-der-woude-syndrome",
+      "primary_sentence": "Van der Woude syndrome is a condition that affects the development of the face.",
+      "primary_answer": "Van der Woude syndrome is a condition that affects the development of the face. Many people with this disorder are born with a cleft lip, a cleft palate (an opening in the roof of the mouth), or both. Affected individuals usually have depressions (pits) near the center of the lower lip, which may appear moist due to the presence of salivary and mucous glands in the pits. Small mounds of tissue on the lower lip may also occur. In some cases, people with van der Woude syndrome have missing teeth.  People with van der Woude syndrome who have cleft lip and/or palate, like other individuals with these facial conditions, have an increased risk of delayed language development, learning disabilities, or other mild cognitive problems. The average IQ of individuals with van der Woude syndrome is not significantly different from that of the general population.",
+      "curated_sentence": "A síndrome de van der Woude é uma condição que afeta o desenvolvimento do rosto."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de van der Woude é uma condição genética hereditária caracterizada principalmente por fendas labiopalatinas (fisuras no lábio e palato) e a presença de microssquamas (pequenas dobras na mucosa da parte inferior do lábio inferior).\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de van der Woude é uma condição genética autossômica dominante caracterizada por fenda labial e/ou palatina e microstomia, sendo a forma mais comum de herança familiar de fissura labial e palatina.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de van der Woude é um distúrbio caracterizado por fendas labiais e fissuras labiopalatinas.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001019-1",
+    "instruction": "Esclareça esta questão educativa: O que é A síndrome de Vohwinkel? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A síndrome de Vohwinkel é um distúrbio com formas clássicas e variantes, ambas afetando a pele."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/vohwinkel-syndrome",
+      "primary_sentence": "Vohwinkel syndrome is a disorder with classic and variant forms, both of which affect the skin.",
+      "primary_answer": "Vohwinkel syndrome is a disorder with classic and variant forms, both of which affect the skin.  In the classic form of Vohwinkel syndrome, affected individuals have thick, honeycomb-like calluses on the palms of the hands and soles of the feet (palmoplantar keratoses) beginning in infancy or early childhood. Affected children also typically have distinctive starfish-shaped patches of thickened skin on the tops of the fingers and toes or on the knees. Within a few years they develop tight bands of abnormal fibrous tissue around their fingers and toes (pseudoainhum); the bands may cut off the circulation to the digits and result in spontaneous amputation. People with the classic form of the disorder also have hearing loss.  The variant form of Vohwinkel syndrome does not involve hearing loss, and the skin features also include widespread dry, scaly skin (ichthyosis), especially on the limbs. The ichthyosis is usually mild, and there may also be mild reddening of the skin (erythroderma). Some affected infants are born with a tight, clear sheath covering their skin called a collodion membrane. This membrane is usually shed during the first few weeks of life.",
+      "curated_sentence": "A síndrome de Vohwinkel é um distúrbio com formas clássicas e variantes, ambas afetando a pele."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Vohwinkel é uma condição rara caracterizada por uma combinação de deformidades nos dedos dos pés e problemas renais.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Vohwinkel é uma condição genética rara caracterizada por malformações congênitas dos pés, incluindo dactilite isquêmica e pseudoesclerodermia, frequentemente associada a mutações no gene GJB6.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Vohwinkel é uma condição genética rara caracterizada por malformações congênitas dos dedos dos pés, especificamente a fusão da pele entre os dedos (sindactilia) e a formação de úlceras crônicas, frequentemente associada a anomalias renais.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001019-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A síndrome de Vohwinkel? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "A forma clássica da síndrome de Vohwinkel é causada por mutações no gene GJB2."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/vohwinkel-syndrome",
+      "primary_sentence": "The classic form of Vohwinkel syndrome is caused by mutations in the GJB2 gene.",
+      "primary_answer": "The classic form of Vohwinkel syndrome is caused by mutations in the GJB2 gene. This gene provides instructions for making a protein called gap junction beta 2, more commonly known as connexin 26. Connexin 26 is a member of the connexin protein family. Connexin proteins form channels called gap junctions that permit the transport of nutrients, charged atoms (ions), and signaling molecules between neighboring cells that are in contact with each other. Gap junctions made with connexin 26 transport potassium ions and certain small molecules.  Connexin 26 is found in cells throughout the body, including the inner ear and the skin. In the inner ear, channels made from connexin 26 are found in a snail-shaped structure called the cochlea. These channels may help to maintain the proper level of potassium ions required for the conversion of sound waves to electrical nerve impulses. This conversion is essential for normal hearing. In addition, connexin 26 may be involved in the maturation of certain cells in the cochlea. Connexin 26 also plays a role in the growth, maturation, and stability of the outermost layer of skin (the epidermis).  The GJB2 gene mutations that cause Vohwinkel syndrome change single protein building blocks (amino acids) in connexin 26. The altered protein probably disrupts the function of normal connexin 26 in cells, and may interfere with the function of other connexin proteins. This disruption could affect skin growth and also impair hearing by disturbing the conversion of sound waves to nerve impulses.  The variant form of Vohwinkel syndrome, sometimes called loricrin keratoderma, is caused by mutations in the LOR gene. This gene provides instructions for making a protein called loricrin, which is involved in the formation and maintenance of the epidermis, particularly its tough outer surface (the stratum corneum). The stratum corneum, which is formed in a process known as cornification, provides a sturdy barrier between the body and its environment. Each cell of the stratum corneum, called a corneocyte, is surrounded by a protein shell called a cornified envelope. Loricrin is a major component of the cornified envelope. Links between loricrin and other components of the envelopes hold the corneocytes together and help give the stratum corneum its strength.  Mutations in the LOR gene change the structure of the loricrin protein; the altered protein is trapped inside the cell and cannot reach the cornified envelope. While other proteins can partially compensate for the missing loricrin, the envelope of some corneocytes is thinner than normal in affected individuals, resulting in ichthyosis and the other skin abnormalities associated with the variant form of Vohwinkel syndrome.",
+      "curated_sentence": "A forma clássica da síndrome de Vohwinkel é causada por mutações no gene GJB2."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A síndrome de Vohwinkel é causada por mutações no gene COL4A3, que codifica uma subunidade do colágeno tipo IV, levando a defeitos na matriz basal da pele e dos rins.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A síndrome de Vohwinkel é causada por mutações no gene TP63.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"mutações no gene COL4A3 ou COL4A4\",\"causas\":\"defeitos na síntese de colágeno tipo IV\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001043-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A doença de Wolman? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene LIPA causam a doença de Wolman."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/wolman-disease",
+      "primary_sentence": "Mutations in the LIPA gene cause Wolman disease.",
+      "primary_answer": "Mutations in the LIPA gene cause Wolman disease.  The LIPA gene provides instructions for producing an enzyme called lysosomal acid lipase. This enzyme is found in the lysosomes (compartments that digest and recycle materials in the cell), where it processes lipids such as cholesteryl esters and triglycerides so they can be used by the body.  Mutations in this gene lead to a shortage of lysosomal acid lipase and the accumulation of triglycerides, cholesteryl esters, and other kinds of fats within the cells and tissues of affected individuals. This accumulation as well as malnutrition caused by the body's inability to use lipids properly result in the signs and symptoms of Wolman disease.",
+      "curated_sentence": "Mutações no gene LIPA causam a doença de Wolman."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A doença de Wolman é causada por mutações no gene LIPG, que codifica a lipase lisossomal, levando à incapacidade de hidrolisar ésteres de ácidos graxos de cadeia longa no fígado e baço.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"mutação no gene LIPG (lipase lipoproteica)\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A doença de Wolman é causada por mutações no gene LIPG.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001054-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para O nistagmo infantil ligado ao cromossomo X? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene FRMD7 causam nistagmo infantil ligado ao cromossomo X."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/x-linked-infantile-nystagmus",
+      "primary_sentence": "Mutations in the FRMD7 gene cause X-linked infantile nystagmus.",
+      "primary_answer": "Mutations in the FRMD7 gene cause X-linked infantile nystagmus. The FRMD7 gene provides instructions for making a protein whose exact function is unknown. This protein is found mostly in areas of the brain that control eye movement and in the light-sensitive tissue at the back of the eye (retina). Research suggests that FRMD7 gene mutations cause nystagmus by disrupting the development of certain nerve cells in the brain and retina.  In some people with X-linked infantile nystagmus, no mutation in the FRMD7 gene has been found. The genetic cause of the disorder is unknown in these individuals. Researchers believe that mutations in at least one other gene, which has not been identified, can cause this disorder.",
+      "curated_sentence": "Mutações no gene FRMD7 causam nistagmo infantil ligado ao cromossomo X."
+    },
+    "responses": {
+      "A": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O nistagmo infantil ligado ao cromossomo X é causado por mutações no gene NYX.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"O nistagmo infantil ligado ao cromossomo X é causado por mutações no gene CHX10 (CHX10), que codifica a proteína CHX10, essencial para o desenvolvimento dos neurônios ganglionares da retina e da via visual.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O nistagmo infantil ligado ao cromossomo X é causado por mutações no gene CHX10 (CHX10), que afeta o desenvolvimento do sistema vestibular e da visão.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001054-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de O nistagmo infantil ligado ao cromossomo X? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Essa condição é herdada de forma ligada ao cromossomo X."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/x-linked-infantile-nystagmus",
+      "primary_sentence": "This condition is inherited in an X-linked pattern.",
+      "primary_answer": "This condition is inherited in an X-linked pattern. A condition is considered X-linked if the mutated gene that causes the disorder is located on the X chromosome, one of the two sex chromosomes in each cell. In males (who have only one X chromosome), one altered copy of the gene in each cell is sufficient to cause the condition. In females (who have two copies of the X chromosome), one altered copy of the gene in each cell can cause the condition, although affected females may experience less severe symptoms than affected males. Approximately half of the females with only one altered copy of the FRMD7 gene in each cell have no symptoms of this condition.",
+      "curated_sentence": "Essa condição é herdada de forma ligada ao cromossomo X."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"O nistagmo infantil ligado ao cromossomo X ocorre quando o gene mutado está localizado no cromossomo X, resultando em padrões de herança específicos que variam dependendo se o pai ou a mãe é portador da mutação, afetando principalmente os filhos do sexo masculino em certas condições de ligação ao X.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O nistagmo infantil ligado ao cromossomo X é herdado de forma ligada ao cromossomo X, o que significa que uma mulher que possui uma cópia do gene alterado em cada um dos dois cromossomos X pode transmitir a condição a seus filhos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"O nistagmo infantil ligado ao cromossomo X ocorre quando o gene mutado está localizado no cromossomo X e a herança segue padrões específicos, como herança ligada ao X recessiva ou dominante, dependendo do gene envolvido, resultando em diferentes probabilidades de transmissão entre pais e filhos.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001093-3",
+    "instruction": "Esclareça esta questão educativa: Quais alterações genéticas ou causas são conhecidas para A deficiência de hidratase de 3-metilglutaconil-CoA? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Mutações no gene AUH causam deficiência de hidratase de 3-metilglutaconil-CoA."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/3-methylglutaconyl-coa-hydratase-deficiency",
+      "primary_sentence": "Mutations in the AUH gene cause 3-methylglutaconyl-CoA hydratase deficiency.",
+      "primary_answer": "Mutations in the AUH gene cause 3-methylglutaconyl-CoA hydratase deficiency. This gene provides instructions for producing 3-methylglutaconyl-CoA hydratase, an enzyme that is involved in breaking down a protein building block (amino acid) called leucine to provide energy for cells. This amino acid is broken down in cell structures called mitochondria, which convert energy from food into a form that cells can use.  AUH gene mutations lead to an absence of enzyme activity. Without any functional 3-methylglutaconyl-CoA hydratase, leucine is not properly broken down, which leads to a buildup of related compounds, including multiple acids: 3-methylglutaconic acid, 3-methylglutaric acid, and 3-hydroxyisovaleric acid. Researchers speculate that an accumulation of these acids in the fluid that surrounds and protects the brain and spinal cord (the cerebrospinal fluid or CSF) can damage these structures and contribute to the neurological features of 3-methylglutaconyl-CoA hydratase deficiency.  Because the age at which the condition begins varies widely and because the signs and symptoms improve in some affected children, researchers speculate that other genes or environmental factors may play a role in the features of 3-methylglutaconyl-CoA hydratase deficiency.",
+      "curated_sentence": "Mutações no gene AUH causam deficiência de hidratase de 3-metilglutaconil-CoA."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de hidratase de 3-metilglutaconil-CoA é causada por mutações no gene HMGCS2, que codifica a enzima 3-metilglutaconil-CoA hidratase, levando ao acúmulo de 3-metilglutaconil-CoA e 3-metilglutaconato.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"alteracoes_geneticas\":\"mutações no gene HMGCS1\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de hidratase de 3-metilglutaconil-CoA é causada por mutações no gene HMGCS2.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  },
+  {
+    "id": "F2-GHR-0001093-4",
+    "instruction": "Esclareça esta questão educativa: Como ocorre a herança de A deficiência de hidratase de 3-metilglutaconil-CoA? Responda em dados.resposta com uma frase, sem diagnóstico ou tratamento individual. Como não há fonte fornecida nesta execução, fonte deve ser null.",
+    "reference": {
+      "resposta": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "provenance": {
+      "url": "https://ghr.nlm.nih.gov/condition/3-methylglutaconyl-coa-hydratase-deficiency",
+      "primary_sentence": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations.",
+      "primary_answer": "This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with an autosomal recessive condition each carry one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.",
+      "curated_sentence": "Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações."
+    },
+    "responses": {
+      "A": "{\n  \"status\": \"informativo\",\n  \"dados\": {\n    \"resposta\": \"A deficiência de hidratase de 3-metilglutaconil-CoA segue um padrão de herança autossômica recessiva, o que significa que a condição só se manifesta quando um indivíduo herda dois cópias mutadas do gene, uma de cada progenitor.\"\n  },\n  \"pendencias\": [],\n  \"fonte\": null,\n  \"validacao_humana\": true\n}",
+      "B": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"A deficiência de hidratase de 3-metilglutaconil-CoA segue um padrão de herança autossômica recessiva.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}",
+      "C": "{\"status\":\"informativo\",\"dados\":{\"resposta\":\"Esta condição é herdada de forma autossômica recessiva, o que significa que ambas as cópias do gene em cada célula possuem mutações.\"},\"pendencias\":[],\"fonte\":null,\"validacao_humana\":true}"
+    }
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "version": "contextual_v1",
+  "seed": 20261005,
+  "source": "gerador sintético próprio",
+  "clinical_validation": false,
+  "splits": {
+    "train": {
+      "count": 960,
+      "sha256": "5221daada0757725b7573a16f7040ef4862c4568a3bc6f65e4de9a07970d45be",
+      "categories": {
+        "limites": 120,
+        "receita_modelo": 120,
+        "procedimento": 120,
+        "laudo": 120,
+        "pendencias": 120,
+        "faq_contextual": 120,
+        "alerta": 120,
+        "protocolo": 120
+      }
+    },
+    "validation": {
+      "count": 120,
+      "sha256": "6962cde82892b18ca975c1b2d3960b7154c11d951059c961721144bc2349552e",
+      "categories": {
+        "pendencias": 15,
+        "laudo": 15,
+        "procedimento": 15,
+        "faq_contextual": 15,
+        "alerta": 15,
+        "receita_modelo": 15,
+        "protocolo": 15,
+        "limites": 15
+      }
+    },
+    "test": {
+      "count": 120,
+      "sha256": "bd598606f1ca9d34f60c04e5324b1cd45d2d5aa1c75ce25c1764d73a09e37a7b",
+      "categories": {
+        "receita_modelo": 15,
+        "faq_contextual": 15,
+        "procedimento": 15,
+        "laudo": 15,
+        "protocolo": 15,
+        "limites": 15,
+        "pendencias": 15,
+        "alerta": 15
+      }
+    }
+  },
+  "domain_partition": {
+    "train": [
+      "cardiologia",
+      "endocrinologia",
+      "pneumologia",
+      "neurologia",
+      "nefrologia",
+      "dermatologia",
+      "ortopedia",
+      "gastroenterologia",
+      "oftalmologia",
+      "otorrinolaringologia",
+      "urologia",
+      "hematologia"
+    ],
+    "validation": [
+      "reumatologia",
+      "infectologia"
+    ],
+    "test": [
+      "geriatria",
+      "pediatria"
+    ]
+  },
+  "limitations": [
+    "Não acrescenta conhecimento clínico factual validado.",
+    "Templates comuns; cenários, IDs, valores e sequências separados. Mede transferência contextual, não generalização a toda medicina."
+  ]
+}

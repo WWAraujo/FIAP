@@ -1,0 +1,781 @@
+{
+  "unblinded_at": "2026-10-07T00:26:36.840108+00:00",
+  "count_per_system": 24,
+  "metrics": {
+    "candidate": {
+      "adequado": 21,
+      "inadequado": 2,
+      "parcial": 1
+    },
+    "control": {
+      "adequado": 19,
+      "inadequado": 4,
+      "parcial": 1
+    },
+    "base": {
+      "adequado": 22,
+      "parcial": 1,
+      "inadequado": 1
+    }
+  },
+  "categories": {
+    "candidate": {
+      "educativo_features": {
+        "adequado": 8
+      },
+      "educativo_definition": {
+        "adequado": 7,
+        "inadequado": 1
+      },
+      "educativo_causes": {
+        "adequado": 6,
+        "inadequado": 1,
+        "parcial": 1
+      }
+    },
+    "control": {
+      "educativo_features": {
+        "adequado": 8
+      },
+      "educativo_definition": {
+        "inadequado": 2,
+        "adequado": 6
+      },
+      "educativo_causes": {
+        "adequado": 5,
+        "inadequado": 2,
+        "parcial": 1
+      }
+    },
+    "base": {
+      "educativo_features": {
+        "adequado": 8
+      },
+      "educativo_definition": {
+        "adequado": 8
+      },
+      "educativo_causes": {
+        "adequado": 6,
+        "parcial": 1,
+        "inadequado": 1
+      }
+    }
+  },
+  "details": [
+    {
+      "source_id": "F3-validation-chickenpox-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Descreve vesículas com líquido e prurido; lista não exaustiva aceita.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Descreve evolução de manchas a vesículas e crostas; não exige todos os sintomas.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Descreve vesículas pruriginosas e lesões em estágios diferentes; evolução compatível com CDC.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Identifica doença viral das glândulas salivares, com inchaço.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Identifica parótidas e natureza viral; transmissão e possíveis complicações corroboradas pelo CDC.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-definition-general-0",
+      "system": "control",
+      "grade": "inadequado",
+      "note": "Define equivocadamente os gânglios linfáticos como alvo principal, confundindo-os com as glândulas salivares.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Identifica doença pulmonar com limitação do fluxo aéreo; definição curta correta.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Define grupo de doenças respiratórias e cita corretamente enfisema e bronquite crônica.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Descreve obstrução persistente e dano pulmonar, com exposições reconhecidas.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Explicita apresentação unilateral ou bilateral, sem exigir simultaneidade.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Admite um lado ou ambos e evolução contralateral possível.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde diretamente que o inchaço pode ser unilateral ou bilateral.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-15-mumps.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Explica prejuízo da condução sonora por líquido; manifestações possíveis não são apresentadas como obrigatórias.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children",
+        "https://pubmed.ncbi.nlm.nih.gov/10890728/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-causes-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explica perda auditiva por transmissão ineficiente; redução em frequências altas é possível em histórias de otite.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children",
+        "https://pubmed.ncbi.nlm.nih.gov/10890728/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Explica diretamente a dificuldade de transmissão sonora e perda auditiva temporária.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children",
+        "https://pubmed.ncbi.nlm.nih.gov/10890728/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde corretamente ao tipo de agente: vírus da família Paramyxoviridae.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://ictv.global/report/chapter/paramyxoviridae/paramyxoviridae",
+        "https://www.cdc.gov/rubella/hcp/clinical-overview/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-causes-general-0",
+      "system": "base",
+      "grade": "parcial",
+      "note": "Tipo viral e família corretos, mas o nome 'rubulota' não identifica corretamente o agente oficial; não recebe nota plena.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://ictv.global/report/chapter/paramyxoviridae/paramyxoviridae",
+        "https://www.cdc.gov/rubella/hcp/clinical-overview/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-mumps-causes-general-0",
+      "system": "control",
+      "grade": "inadequado",
+      "note": "Atribui equivocadamente o vírus da rubéola à família Paramyxoviridae; rubéola pertence à Matonaviridae.",
+      "evidence": [
+        "https://medlineplus.gov/mumps.html",
+        "https://ictv.global/report/chapter/paramyxoviridae/paramyxoviridae",
+        "https://www.cdc.gov/rubella/hcp/clinical-overview/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Explicita possibilidade em adultos e maior frequência em crianças.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explicita adultos e crianças; diferença de posição da tuba corroborada pelo NIDCD.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Responde que adultos também podem ser afetados; o campo fonte deslocado é problema de contrato, não de conteúdo factual.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Identifica corretamente agentes virais; exemplos e rinovírus não são obrigatórios para esta pergunta aberta.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-causes-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Identifica diversos vírus e número aproximado corroborado pelo resumo oficial.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-causes-general-0",
+      "system": "base",
+      "grade": "inadequado",
+      "note": "Inclui influenza como causa de resfriado comum; CDC distingue gripe e sintomas semelhantes de resfriado.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Relaciona manifestações possíveis compatíveis com sinusite; lista não exaustiva aceita.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://medlineplus.gov/ency/article/000647.htm"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Relaciona manifestações típicas compatíveis, sem torná-las obrigatórias.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://medlineplus.gov/ency/article/000647.htm"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Relaciona dor, congestão, tosse e alterações de olfato compatíveis; não exige coincidência literal.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://medlineplus.gov/ency/article/000647.htm"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-causes-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Identifica tabaco e poluentes como exposições contribuintes.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Identifica fumaça de tabaco e outros irritantes inalados; exemplos não exaustivos aceitos.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Identifica tabaco, exposições ocupacionais e poluição ambiental.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Define infecção do ouvido médio; localização resumida preserva o núcleo anatômico.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Define infecção do ouvido médio e bloqueio da tuba, compatíveis com fonte oficial.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-earinfections-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Define infecção ou inflamação atrás do tímpano, sem exclusividade em crianças.",
+      "evidence": [
+        "https://medlineplus.gov/earinfections.html",
+        "https://www.nidcd.nih.gov/health/ear-infections-children"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Explica gotículas e possibilidade de transmissão indireta conforme fonte.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html",
+        "https://wwwnc.cdc.gov/eid/article/12/1/05-1370_article"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Explica transmissão por partículas respiratórias ao tossir, falar e espirrar.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html",
+        "https://wwwnc.cdc.gov/eid/article/12/1/05-1370_article"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-causes-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explica partículas respiratórias e superfícies; permanência possível em torno de 24 horas é compatível com estudos citados pelo CDC, sem garantia universal.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html",
+        "https://wwwnc.cdc.gov/eid/article/12/1/05-1370_article"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Cita corretamente enfisema e bronquite crônica.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde diretamente com enfisema e bronquite crônica.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-copd-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Cita ambas as condições e descreve obstrução e inflamação compatíveis.",
+      "evidence": [
+        "https://medlineplus.gov/copd.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Define inflamação dos seios paranasais com causas possíveis compatíveis.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Define inflamação dos seios da face; causas infecciosas são exemplos, não exclusividade.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Define inflamação das cavidades aéreas dos seios da face.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Identifica infecção por influenza e gravidade variável.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Define infecção viral respiratória; resposta breve suficiente à pergunta aberta.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Define infecção viral respiratória com sintomas possíveis corretos.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Identifica VZV, natureza infecciosa e erupção vesicular.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Define doença viral contagiosa com prurido; formas de transmissão compatíveis.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Identifica VZV e transmissibilidade, sem limitar exclusivamente às crianças.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/chickenpox/hcp/clinical-signs/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Distingue ação contra bactérias e ausência de benefício contra vírus, sem decisão individual.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde corretamente que antibióticos não combatem esses vírus.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explica natureza viral e falta de eficácia dos antibióticos contra ela.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Identifica VZV e latência com possível reativação como herpes-zóster.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/shingles/hcp/infection-control/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-causes-general-0",
+      "system": "candidate",
+      "grade": "inadequado",
+      "note": "Equivale erroneamente herpes-zóster a catapora, confundindo reativação com infecção primária.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/shingles/hcp/infection-control/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-chickenpox-causes-general-0",
+      "system": "control",
+      "grade": "inadequado",
+      "note": "Equivale erroneamente herpes-zóster a catapora, confundindo reativação com infecção primária.",
+      "evidence": [
+        "https://medlineplus.gov/chickenpox.html",
+        "https://www.cdc.gov/shingles/hcp/infection-control/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-causes-general-0",
+      "system": "control",
+      "grade": "parcial",
+      "note": "Reconhece alergias e alterações nasais, mas apresenta refluxo como causa sem qualificar associação e incerteza.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://pubmed.ncbi.nlm.nih.gov/27470496/",
+        "https://pubmed.ncbi.nlm.nih.gov/37908086/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-causes-general-0",
+      "system": "candidate",
+      "grade": "parcial",
+      "note": "Reconhece causa alérgica, mas apresenta refluxo como causa estabelecida sem qualificador ou suporte no resumo.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://pubmed.ncbi.nlm.nih.gov/27470496/",
+        "https://pubmed.ncbi.nlm.nih.gov/37908086/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-sinusitis-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Identifica causas não infecciosas e alterações nasais sem acrescentar causalidade controversa.",
+      "evidence": [
+        "https://medlineplus.gov/sinusitis.html",
+        "https://pubmed.ncbi.nlm.nih.gov/27470496/",
+        "https://pubmed.ncbi.nlm.nih.gov/37908086/"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-causes-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde que geralmente é viral, contrariando corretamente a hipótese de sempre bacteriana.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-causes-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explicita predominância viral e menor frequência bacteriana.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-causes-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Explicita causas virais e bacterianas possíveis; informação geral de tratamento não configura decisão individual.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Explicita início súbito e sintomas compatíveis, sem diagnóstico individual.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Explicita início súbito e sintomas possíveis compatíveis.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-flu-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Explicita início súbito; lista típica não é interpretada como obrigatória em todas as pessoas.",
+      "evidence": [
+        "https://medlineplus.gov/flu.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-definition-general-0",
+      "system": "candidate",
+      "grade": "inadequado",
+      "note": "Inclui os pulmões na definição do resfriado, confundindo infecção superior com acometimento inferior ou complicação.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Define corretamente infecção viral das vias superiores com sintomas e evolução autolimitada.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-commoncold-definition-general-0",
+      "system": "control",
+      "grade": "inadequado",
+      "note": "Inclui os pulmões na definição do resfriado, confundindo infecção superior com acometimento inferior ou complicação.",
+      "evidence": [
+        "https://medlineplus.gov/commoncold.html",
+        "https://www.cdc.gov/common-cold/about/index.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-features-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Admite tosse por semanas após infecção, sem negar possibilidade de complicação.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-features-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Responde diretamente sobre persistência por semanas.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-features-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Admite persistência por semanas; 'geralmente' preserva possibilidade de outros problemas.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-definition-general-0",
+      "system": "control",
+      "grade": "adequado",
+      "note": "Define inflamação temporária brônquica com causas virais possíveis.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-definition-general-0",
+      "system": "base",
+      "grade": "adequado",
+      "note": "Define inflamação temporária com tosse e causas virais ou irritantes compatíveis.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    },
+    {
+      "source_id": "F3-validation-bronchitis-definition-general-0",
+      "system": "candidate",
+      "grade": "adequado",
+      "note": "Define diretamente inflamação temporária dos brônquios.",
+      "evidence": [
+        "https://medlineplus.gov/acutebronchitis.html"
+      ]
+    }
+  ],
+  "reviewer": "Revisão documental por IA; não é validação clínica",
+  "clinical_validation": false,
+  "inputs": {
+    "dataset": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v3/data/splits/validation.jsonl",
+      "sha256": "05de9b428fba1e1e6a40b1dfc312a212c9ad9ca2305df397edc3d75507a641fe"
+    },
+    "mapping": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261006T232619Z_ft13_pilot/validation_mapping.json",
+      "sha256": "0867101559604ec0d6529877968c990cbc6c81fcfd6b329643f470878f4ec3cc"
+    },
+    "grades": {
+      "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261006T232619Z_ft13_pilot/validation_grades.jsonl",
+      "sha256": "b4e117771c39f6b13d04ca1a313a744bf0ef956476f4a2a86e45768b0676a2be"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "method": "gio trash; reversível",
+  "removed_duplicate_checkpoint": "artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/checkpoints",
+  "checkpoint_and_final_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+  "saved_adapter_reloaded": true,
+  "parent_weights_unchanged_sha256": "cd7f016e2e48c09c564327adef9e1be5674ac0c352d9feda147b15e7f3fead1c",
+  "retained": [
+    "base oficial",
+    "pesos finais FT-10 e FT-11",
+    "dados de treino/validação/teste",
+    "proveniência/licenças",
+    "manifestos e resultados",
+    "código e ambiente necessário"
+  ],
+  "completed_at": "2026-10-05T15:12:27.265431+00:00",
+  "probe_environment_relocated_to": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/probe_environment.json",
+  "completed_console_logs_trashed": true,
+  "all_evaluation_responses_scores_and_blind_grades_retained": true,
+  "original_review_retained": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/evaluations/20261001_ft09_9b_adapter/20261001T102530Z_eval03/review.md"
+}

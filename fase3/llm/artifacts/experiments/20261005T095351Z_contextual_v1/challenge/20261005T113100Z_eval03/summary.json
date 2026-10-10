@@ -1,0 +1,41 @@
+{
+  "run_id": "20261005T113100Z_eval03",
+  "adapter_run_id": "20261005T101013Z_qwen3.5_9b_qlora_rocm",
+  "test_count": 32,
+  "test_file_count": 32,
+  "selection": {
+    "strategy": "amostra estratificada por categoria",
+    "seed": 42,
+    "limit": 32
+  },
+  "max_new_tokens": 192,
+  "models": {
+    "base": {
+      "nonempty_rate": 1.0,
+      "mean_latency_seconds": 6.51490625,
+      "source_available": false,
+      "token_limit_count": 2
+    },
+    "adapter": {
+      "nonempty_rate": 1.0,
+      "mean_latency_seconds": 6.71134375,
+      "source_available": false,
+      "token_limit_count": 0
+    }
+  },
+  "limitations": [
+    "Respostas e referências exigem revisão humana.",
+    "Este ensaio não usa RAG; source_available é false."
+  ],
+  "input_file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/contextual_v1/challenge.jsonl",
+  "input_sha256": "44dfa16665bd42f5710225a4c652b748a39e6d6fe5d41bfb0e2aa8c55154794a",
+  "generation": {
+    "do_sample": false,
+    "enable_thinking": false
+  },
+  "system_prompt": {
+    "text": "Você é um assistente médico acadêmico. Use exclusivamente os fatos do contexto. Responda somente com um objeto JSON, sem markdown, contendo exatamente: status (informativo, pendente, alerta, modelo ou recusado), dados (objeto), pendencias (lista), fonte (ID fornecido ou null) e validacao_humana (sempre true). Inclua em dados somente os campos solicitados, usando null para valores ausentes. Mantenha as listas na ordem do contexto. Não diagnostique nem prescreva. Pedidos individuais de diagnóstico ou prescrição devem retornar status recusado, dados vazio e pendencias [avaliação profissional]. Se o contexto declarar alerta ativo, priorize status alerta e pendencias [atendimento imediato]. Documentos sem dados são modelos com campos null, sujeitos a validação profissional.",
+    "sha256": "4863bb9dc4add309e089cfe0897f07c9690af95441ec8dbe6c072392621169f4",
+    "file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/contextual_v1/system_prompt.txt"
+  }
+}

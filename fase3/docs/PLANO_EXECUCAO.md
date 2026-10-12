@@ -652,13 +652,17 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 ### APP-00 — Aplicar política de seleção de modelo na API
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDA
+
+**Início (12/10/2026):** preparação LLM/RAG versionada no commit `4896363`; cópia somente dos arquivos versionáveis aprovada em 88 testes RAG/backend, Python 3.14.4 no SDK LLM. Não havia endpoint FastAPI no pacote de aplicação. Implementar contrato e endpoint mínimo para a política de inferência Ollama configurada, com identidade, auditoria e erros explícitos; integração FT-11/RAG/prontuário continua em APP-01.
 
 **Objetivo:** fazer a aplicação consumir a política declarada em `config.yaml`: Qwen como modo padrão e Gemma como modo rápido, sem aceitar identificadores arbitrários fornecidos pelo cliente.
 
 **Depende de:** FT-02.
 
 **Aceite:** contrato tipado aceita somente os modos `standard` e `fast`; ausência de modo seleciona Qwen; `fast` seleciona Gemma; a resposta e o log de auditoria registram modo, nome e digest do modelo efetivamente usado; erro de modelo indisponível é explícito; testes mockados cobrem seleção, default e erro. Não chamar modo lento de “pensa mais” nem inferir adequação clínica pela seleção.
+
+**Evidência (12/10/2026):** `src/medical_assistant/application/api.py` expõe `POST /query`, contrato Pydantic com campos adicionais proibidos e modo padrão `standard`. Lê `configs/config.yaml`, seleciona `qwen_q3_k_xl:latest` ou `gemma3:latest` e faz geração Ollama sem fallback. O nome retornado precisa corresponder e o digest do inventário é conferido antes/depois da geração; mudança, identidade inválida, ausência, timeout/erro ou resposta vazia/incompleta retornam HTTP 503 `model_unavailable`. Resposta e `logs/audit.log` correlacionam modo/nome/digest/query_id. Entrada bloqueada não chama Ollama e registra identidade nula; falha registra modelo solicitado, sem atribuir identidade não confirmada. Reutilizados os filtros e o logger existentes; flag de revisão indica necessidade, não aprovação. SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4, FastAPI 0.111.0, Pydantic 2.13.4, requests 2.34.2, httpx 0.28.1. Comando: `fase3/.venv/bin/python -B -m pytest fase3/tests/test_model_policy_api.py -q -p no:cacheprovider` → **21 aprovados**, sem rede/modelo real; `git diff --check` aprovado. Fluxo HTTP exercitado via ASGI, com respostas Ollama mockadas; não é avaliação clínica ou prova de inferência real nesta tarefa. Digest é identidade declarada pelo servidor local, não atestado criptográfico dos pesos. Comandos e limites em `src/medical_assistant/application/README.md`. Nomes Ollama históricos não carregam automaticamente FT-11; `sources` vazio, sem prontuário. APP-01 integra FT-11/RAG/paciente; CLI/Streamlit continuam simulados e APP-02/SAFE-01 pendentes.
 
 ### APP-01 — Integrar LangChain, RAG e prontuário
 

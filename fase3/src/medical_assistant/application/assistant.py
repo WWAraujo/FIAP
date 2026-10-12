@@ -285,7 +285,8 @@ class AuditLogger:
         self._write_log(log_entry)
         return query_id
 
-    def log_response(self, query_id: str, response: str, sources: List[str], requires_validation: bool):
+    def log_response(self, query_id: str, response: str, sources: List[str], requires_validation: bool,
+                     *, model_usage: Optional[Dict[str, Any]] = None, error: Optional[str] = None):
         """Registra resposta para auditoria"""
         log_entry = {
             "timestamp": datetime.now().isoformat(),
@@ -295,6 +296,11 @@ class AuditLogger:
             "requires_validation": requires_validation,
             "type": "response"
         }
+
+        if model_usage is not None:
+            log_entry.update(model_usage)
+        if error is not None:
+            log_entry["error"] = error
 
         self._write_log(log_entry)
 

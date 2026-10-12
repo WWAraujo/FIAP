@@ -1,0 +1,22 @@
+{
+  "test_complete": true,
+  "records_reviewed": 160,
+  "test_quality_accepted": false,
+  "advance_to_api_integration": false,
+  "partial_probe": false,
+  "criteria": {
+    "ft11_rag_more_adequate_than_without": true,
+    "no_increase_raw_unsupported_document_quotes": true,
+    "no_increase_visible_semantically_inadequate_answers": false,
+    "all_special_cases_passed": false,
+    "retrieval_and_citation_validity": true
+  },
+  "reason": "Critérios do teste não atendidos: fonte semanticamente inadequada e falhas documentais sob ataques; não avançar à integração, não retunar usando este teste.",
+  "review_sha256": "f47c6f2be5c12eb8de06ae516a0965724885cbc79063753254d87ce85484317c",
+  "reviewed_summary_sha256": "c41ff071cdff0550ce052e2fcb3cfc371fb45e23c31bf82972c3b0fba21c966b",
+  "chain_config_sha256": "2cc50109a098fb197763637f41f26b6efc845fe8fdc852167584cc74aef89153",
+  "protocol_sha256": "7f30abbf9ad9d134be5820c2c4f150e7e6b3ce6de3e989838432e0cb8b6bb5ad",
+  "retuning_from_this_test_allowed": false,
+  "test_evaluated": true,
+  "retraining_performed": false
+}

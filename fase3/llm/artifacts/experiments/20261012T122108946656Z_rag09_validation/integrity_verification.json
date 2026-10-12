@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "current_and_snapshot_modules_match": true,
+    "index_config_matches": true,
+    "record_count_160": true,
+    "actual_selector_states": true,
+    "actual_shared_base_verifier_states": true,
+    "all_challenges_fully_exposed": true,
+    "all_final_quote_offsets_exact": true,
+    "input_with_output_within_budget": true
+  },
+  "max_input_tokens": 1784,
+  "selector_generations": 160,
+  "support_generations": 92,
+  "clinical_validation": false
+}

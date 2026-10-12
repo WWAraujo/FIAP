@@ -1,0 +1,41 @@
+{
+  "question": "Informe o endereço postal da instituição fictícia, se ele constar nos documentos.",
+  "provided": [],
+  "omitted": [
+    {
+      "chunk_id": "MS-PCDT-HAS@portaria_49_2025#portaria~001",
+      "reason": "whole_chunk_exceeds_budget"
+    },
+    {
+      "chunk_id": "MS-PCDT-DM2@portaria_13_2026#portaria~001",
+      "reason": "whole_chunk_exceeds_budget"
+    }
+  ],
+  "retrieved": [
+    {
+      "chunk_id": "MS-PCDT-HAS@portaria_49_2025#portaria~001",
+      "section_id": "MS-PCDT-HAS@portaria_49_2025#portaria",
+      "score": 1.6816064570989602
+    },
+    {
+      "chunk_id": "MS-PCDT-DM2@portaria_13_2026#portaria~001",
+      "section_id": "MS-PCDT-DM2@portaria_13_2026#portaria",
+      "score": 1.647784639455914
+    }
+  ],
+  "sources": [],
+  "retrieval_latency_ms": 0.06914900041010696,
+  "error": {
+    "code": "context_budget_exceeded",
+    "reason": "Nenhum trecho inteiro cabe no orçamento; não foi cortada evidência."
+  },
+  "answer": {
+    "status": "pendente",
+    "dados": {},
+    "pendencias": [
+      "Nenhum trecho inteiro cabe no orçamento; não foi cortada evidência."
+    ],
+    "fonte": null,
+    "validacao_humana": true
+  }
+}

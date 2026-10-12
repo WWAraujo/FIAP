@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "id": "SMOKE-FT11-01",
+      "prompt": "Copie codigo e unidade do contexto: codigo DEMO-001; unidade mmol/L; fonte SMOKE-FT11-01.",
+      "expected_data": {
+        "codigo": "DEMO-001",
+        "unidade": "mmol/L"
+      }
+    },
+    {
+      "id": "SMOKE-FT11-02",
+      "prompt": "Copie etiqueta do contexto: etiqueta TESTE-LOCAL-02; fonte SMOKE-FT11-02.",
+      "expected_data": {
+        "etiqueta": "TESTE-LOCAL-02"
+      }
+    }
+  ],
+  "max_new_tokens": 128,
+  "total_token_budget": 512,
+  "do_sample": false,
+  "rag_evaluation_used": false
+}

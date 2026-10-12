@@ -1,0 +1,3 @@
+# Sondagem RAG-09 — não aprovada
+
+40 consultas FT-11+RAG, sem controles completos e sem abrir o novo teste. Seções completas forneceram todos os 24 spans. Seleção de parágrafo isolada foi insuficiente: ementas não responderam a número/revogação; regras genéricas foram citadas para paciente/protocolo ausentes; os quatro ataques produziram abstenção indevida. Houve extração de campos em vez de ID no caso 19. O match literal do check offline é conservador e não equivale a julgamento semântico universal; não foi assinado como revisão documental. Decisão negativa preservada. Correção seguinte acrescenta conferência de suporte por parágrafo.

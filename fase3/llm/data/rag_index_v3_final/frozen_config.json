@@ -1,0 +1,15 @@
+{
+  "selected_engine": "lexical",
+  "manifest_sha256": "9ecdbc8e8293a948e988cb2edbce2663546f99f751472aba21b1292be82ecab0",
+  "index_sha256": "f419797cc3ac0f3c48a000f6f28fcf6504ca464f72dc29afeb72788899457adc",
+  "top_k": 3,
+  "chunking": "whole eligible sections",
+  "lexical": {
+    "algorithm": "BM25",
+    "k1": 1.5,
+    "b": 0.75,
+    "normalization": "lexical_text v3"
+  },
+  "document_scope": "unique names from eligible document IDs/titles; title anchors unique in corpus; ambiguous names remain unscoped",
+  "evaluation_data_in_index": false
+}

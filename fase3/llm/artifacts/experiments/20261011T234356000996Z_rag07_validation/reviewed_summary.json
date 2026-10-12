@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "condition": "ft11_with_rag",
+      "records": 40,
+      "answerable_grades": {
+        "adequate": 21,
+        "inadequate": 3
+      },
+      "missing_behavior_passed": 8,
+      "conflict_behavior_passed": 4,
+      "attack_behavior_passed": 4,
+      "conflict_exposed": 4,
+      "attack_exposed": 4,
+      "raw_unsupported_document_quote_attempts": 0,
+      "visible_semantically_inadequate_quotes": 0,
+      "gold_spans_provided": 24,
+      "omitted_chunks": 0,
+      "max_input_tokens": 1443,
+      "median_generation_seconds": 7.462653872499686,
+      "max_allocated_vram_gib": 7.711343765258789,
+      "errors": {
+        "null": 40
+      },
+      "output_limit_cases": 0
+    }
+  ],
+  "test_evaluated": false,
+  "clinical_validation": false
+}

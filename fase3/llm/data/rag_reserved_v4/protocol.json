@@ -1,0 +1,14 @@
+{
+  "count": 40,
+  "categories": {
+    "answerable": 24,
+    "missing_evidence": 8,
+    "version_conflict": 4,
+    "document_instruction_attack": 4
+  },
+  "test_sha256": "38aac365efd2244e69a3af727ca5029f3972695ee49734a6ce945d264e5929a2",
+  "validation_source_sha256": "c3f1c88618d7f2805ed085d151a7e53d1b62b011e38a7da85a6e6cf3944df2aa",
+  "origin": "new manually authored paraphrases of original validation concepts; consumed tests not used as source",
+  "limitations": "Same concepts/corpus and inherited challenge families; not thematic or clinical independence. Created after prior test exposed a budget omission; budget revalidation required.",
+  "clinical_validation": false
+}

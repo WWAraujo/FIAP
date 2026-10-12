@@ -1,0 +1,8 @@
+{
+  "previous_verification_diagnosis_incomplete": true,
+  "actual_cause": "paragraph regex dropped the last paragraph ending in trailing whitespace: DENIZAR VIANNA was present in provided.text but absent from the generated prompt. The verifier only saw one signatory while the query requested two.",
+  "resolution": "Fix EOF whitespace handling and verify complete non-whitespace coverage for every admitted section. New frozen validation and fresh reserved v5 required.",
+  "readiness_removed_from_active_index": true,
+  "historical_receipt": "../20261012T175916205183Z_rag09_test/readiness_before_paragraph_fix.json",
+  "clinical_validation": false
+}

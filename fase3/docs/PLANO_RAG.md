@@ -1,10 +1,12 @@
 # Planejamento do RAG — 07/10/2026
 
+**Progresso em 12/10/2026:** preparação documental RAG-09 concluída nos critérios do piloto. BM25 sobre 15 seções integrais, FT-11 selecionado, verificador comum na base sem adapter e contexto completo, incluindo última linha. Validação final: ambos com RAG 22/24 completas, duas parciais e todos os 16 casos especiais corretos. [Teste final](../llm/artifacts/experiments/20261012T184438077141Z_rag09_test/review.md): FT-11+RAG 19/24 completas, duas parciais e três abstenções indevidas; base+RAG 18/24, três parciais e mesmas abstenções. Ambos 8/8 ausências, 4/4 conflitos e 4/4 instruções hostis; 24/24 spans entregues e todos os caracteres úteis no prompt. Zero erros/omissões, orçamento 3.072/reserva 256, pico VRAM 7,92 GiB. 42 testes de software aprovados; [CLI recarregada em processo novo](../llm/artifacts/experiments/20261012T190305897293Z_rag_query_v3/review.md) retorna ambas as assinaturas com fonte/offsets corretos e sem consultar splits. Recibo ativo vincula módulos/índice/pacotes/pesos à decisão aceita. Resultados, falhas e recibo anterior revogado preservados. Holdouts de paráfrases/cobertura de regressão compartilham corpus/conceitos/famílias; sem independência temática ou clínica. A qualidade ainda é limitada; sem treino novo ou aprovação clínica. APP-00/API/prontuário continuam pendentes.
+
 ## Objetivo e ponto de partida
 
 Conectar perguntas a documentos identificáveis e entregar os trechos ao modelo selecionado, FT-11 (`Qwen/Qwen3.5-9B` + adaptador indicado em `llm/artifacts/best_model.json`). Seus ganhos são locais às avaliações: 100/112 tarefas documentais no teste anterior contra 29/112 da base; na nova validação factual_v3, a base teve 22/24 factuais adequadas e FT-11 19/24. O modelo continua sujeito a erros. O objetivo deste plano é verificar o ganho adicional da recuperação, sem pressupor superioridade universal ou validação clínica.
 
-Hoje `retrieval/ollama_adapter.py` busca coincidências de palavras e retorna categorias como fontes; `application/assistant.py` ainda gera respostas simuladas. O adaptador FT-11 é carregado pelo código ROCm/PEFT em `llm/`, sem conexão comprovada ao Ollama ou à API. Há dependências LangChain declaradas, mas a cadeia real precisa ser implementada e validada. Este planejamento não altera esse comportamento.
+`retrieval/ollama_adapter.py` e `application/assistant.py` ainda pertencem ao protótipo da API, que gera respostas simuladas. A cadeia documental LCEL real foi implementada e validada separadamente em `llm/src/rag/`, com ROCm/PEFT e o FT-11 selecionado. Sua preparação não comprova conexão à API, ao Ollama, ao prontuário ou ao LangGraph.
 
 ## Primeiro escopo
 
@@ -25,8 +27,8 @@ flowchart LR
     R --> E{Evidência pertinente?}
     E -->|Não| P[Registrar informação insuficiente]
     E -->|Sim| C[Trechos identificados no contexto]
-    C --> M[FT-11 real]
-    M --> V[Conferir resposta e fonte citada]
+    C --> M[FT-11 seleciona evidência]
+    M --> V[Base confere suporte e aplicação resolve fonte]
     V --> A[Resposta com fontes e auditoria]
     P --> A
 ```
@@ -45,8 +47,8 @@ Preservar inicialmente as cinco chaves treinadas: status, dados, pendencias, fon
 |---|---|
 | 1. Corpus e avaliação | Manifesto de documentos/trechos; conjunto próprio de perguntas com referências de evidência, incluindo ausência e conflito de versões. |
 | 2. Recuperação isolada | Comparação lexical/semântica, IDs rastreáveis, filtro de vigência e medição de recuperação antes de chamar a LLM. |
-| 3. Acesso ao FT-11 | Resolver APP-00 e comprovar backend que carrega base + pesos FT-11; registrar hashes e erro explícito de indisponibilidade. Reutilizar carregamento ROCm; não presumir que um nome Qwen no Ollama contenha o adaptador. |
-| 4. Cadeia documental | Parte inicial de APP-01: LangChain recebe pergunta e trechos, chama o modelo real, valida contrato e resolve fontes. API leve comunica-se com processo de inferência separado; não instala ferramentas de treino. |
+| 3. Acesso ao FT-11 | RAG-04 concluída: backend carrega base + pesos FT-11, com hashes/erro explícito e recarga ROCm comprovada. APP-00 trata separadamente a política de modos antes da integração à API. |
+| 4. Cadeia documental | RAG-05 concluída: LCEL recebe pergunta/trechos, chama FT-11 real, valida contrato/citação literal e resolve fontes. Modo inicial extrativo com orçamento/omissões explícitos. API/prontuário/processo de inferência permanecem na APP-01 completa. |
 | 5. Avaliação e integração | Comparar quatro condições: base e FT-11, cada um com/sem RAG. Depois concluir contexto de paciente em APP-01, grafo isolado em APP-02 e validação integrada SAFE-01. |
 
 Cada etapa será uma tarefa delimitada, executada e validada antes da seguinte. O planejamento não inicia downloads, índices, modelo ou mudanças na API.
@@ -61,4 +63,4 @@ Medir tempo de recuperação e geração, memória, erros e cortes. Registrar ex
 
 ## Próxima tarefa
 
-Preparar o inventário dos documentos do primeiro piloto e seu manifesto, delimitando os assuntos e os critérios da avaliação. A prioridade é a qualidade e a rastreabilidade do conteúdo; a cobertura poderá crescer depois da avaliação inicial.
+APP-00: aplicar a política de seleção de modelo na API; depois APP-01, conectar a cadeia documental real ao fluxo com contexto de paciente e contratos de fontes. Preparação local concluída não encerra essas tarefas nem SAFE-01. Novas rodadas de qualidade precisam de validação, configuração congelada e novo reservado; conjuntos consumidos não voltam a ser independentes. Anexos clínicos exigem revisão/admissão em outra versão. Comandos/limites atuais no [README RAG](../llm/src/rag/README.md).

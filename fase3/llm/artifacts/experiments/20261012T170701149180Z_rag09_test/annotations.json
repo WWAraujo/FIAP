@@ -1,0 +1,76 @@
+{
+  "ft11_with_rag": {
+    "RAG09-reserved-19": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica SECTICS/MS 49 de 23/07/2025; gabarito de página inteira não exige repetir toda a página."
+    },
+    "RAG09-reserved-20": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Ementa da portaria correta explicita SUS, semanticamente equivalente ao fato pedido sobre o artigo 1º."
+    },
+    "RAG09-reserved-21": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica SCTIE/MS 13 de 21/02/2026."
+    },
+    "RAG09-reserved-22": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 3º na citação da portaria de diabetes identifica revogação da SECTICS/MS 7 de 28/02/2024."
+    },
+    "RAG09-reserved-23": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica Portaria Conjunta 8 de 30/07/2019."
+    },
+    "RAG09-reserved-24": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 1º citado contém integralmente o título pedido do protocolo de dislipidemia."
+    },
+    "RAG09-reserved-14": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Trecho verdadeiro sobre formulário vazio, campos null e ausência de autorização para prescrever; falta identificação explícita como modelo documental sujeito a validação profissional."
+    }
+  },
+  "base_with_rag": {
+    "RAG09-reserved-19": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica SECTICS/MS 49 de 23/07/2025; gabarito de página inteira não exige repetir toda a página."
+    },
+    "RAG09-reserved-20": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Ementa da portaria correta explicita SUS, semanticamente equivalente ao fato pedido sobre o artigo 1º."
+    },
+    "RAG09-reserved-21": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica SCTIE/MS 13 de 21/02/2026."
+    },
+    "RAG09-reserved-22": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 3º na citação da portaria de diabetes identifica revogação da SECTICS/MS 7 de 28/02/2024."
+    },
+    "RAG09-reserved-23": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho correto identifica Portaria Conjunta 8 de 30/07/2019."
+    },
+    "RAG09-reserved-24": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 1º citado contém integralmente o título pedido do protocolo de dislipidemia."
+    },
+    "RAG09-reserved-14": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Trecho verdadeiro sobre formulário vazio, campos null e ausência de autorização para prescrever; falta identificação explícita como modelo documental sujeito a validação profissional."
+    }
+  }
+}

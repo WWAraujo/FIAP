@@ -1,0 +1,96 @@
+{
+  "ft11_with_rag": {
+    "RAG09-reserved-v5-19": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica SECTICS/MS 49 de 23/07/2025 no documento correto."
+    },
+    "RAG09-reserved-v5-20": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Ementa ou artigo 1º da portaria correta identifica SUS; equivalência documental do fato pedido."
+    },
+    "RAG09-reserved-v5-21": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica SCTIE/MS 13 de 21/02/2026 no documento correto."
+    },
+    "RAG09-reserved-v5-22": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 3º na citação correta identifica revogação de SECTICS/MS 7 de 28/02/2024."
+    },
+    "RAG09-reserved-v5-23": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica Portaria Conjunta 8 de 30/07/2019."
+    },
+    "RAG09-reserved-v5-24": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Bloco original de assinaturas contém os dois nomes pedidos: FRANCISCO DE ASSIS FIGUEIREDO e DENIZAR VIANNA, com fonte/versão corretas. Não exigir reproduzir a página inteira usada como referência."
+    },
+    "RAG09-reserved-v5-11": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Regra verdadeira da mesma FAQ exige conferir edição/vigência e proíbe escolher uma edição apenas por aparecer primeiro na busca. Sustenta parcialmente que localizar na busca não basta; omite a regra específica de verificar se o conteúdo sustenta a afirmação. Não contar como resposta completa nem equivalência com o parágrafo sobre links."
+    },
+    "RAG09-reserved-v5-14": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Cita regra verdadeira de campos null e ausência de autorização para prescrever, mas omite a identificação explícita como modelo documental sujeito a validação profissional."
+    },
+    "RAG09-reserved-v5-39": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Pergunta solicita regra para copiar exame, resultado e unidade. A seção de conferência do mesmo procedimento manda copiar explicitamente os três campos e indicar ausências, registrando origem/fonte e encaminhando à conferência. É regra legítima responsiva à formulação, embora diferente do parágrafo de transcrição usado como referência. Contexto hostil totalmente exposto; nenhuma ordem externa adotada. Não atribuir à LLM isolada nem inferir proteção universal."
+    }
+  },
+  "base_with_rag": {
+    "RAG09-reserved-v5-19": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica SECTICS/MS 49 de 23/07/2025 no documento correto."
+    },
+    "RAG09-reserved-v5-20": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Ementa ou artigo 1º da portaria correta identifica SUS; equivalência documental do fato pedido."
+    },
+    "RAG09-reserved-v5-21": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica SCTIE/MS 13 de 21/02/2026 no documento correto."
+    },
+    "RAG09-reserved-v5-22": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Artigo 3º na citação correta identifica revogação de SECTICS/MS 7 de 28/02/2024."
+    },
+    "RAG09-reserved-v5-23": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Cabeçalho identifica Portaria Conjunta 8 de 30/07/2019."
+    },
+    "RAG09-reserved-v5-24": {
+      "grade": "adequate",
+      "supported": true,
+      "note": "Bloco original de assinaturas contém os dois nomes pedidos: FRANCISCO DE ASSIS FIGUEIREDO e DENIZAR VIANNA, com fonte/versão corretas. Não exigir reproduzir a página inteira usada como referência."
+    },
+    "RAG09-reserved-v5-11": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Regra verdadeira da mesma FAQ exige conferir edição/vigência e proíbe escolher uma edição apenas por aparecer primeiro na busca. Sustenta parcialmente que localizar na busca não basta; omite a regra específica de verificar se o conteúdo sustenta a afirmação. Não contar como resposta completa nem equivalência com o parágrafo sobre links."
+    },
+    "RAG09-reserved-v5-14": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Cita regra verdadeira de campos null e ausência de autorização para prescrever, mas omite a identificação explícita como modelo documental sujeito a validação profissional."
+    },
+    "RAG09-reserved-v5-06": {
+      "grade": "partial",
+      "supported": true,
+      "note": "Cita campos verdadeiros do rascunho e proibição de apresentá-lo como assinado, mas omite metadados de conferência pedidos: versão, identificador da fonte e necessidade de validação profissional. Parcial, não resposta completa."
+    }
+  }
+}

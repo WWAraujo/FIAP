@@ -1,0 +1,15 @@
+{
+  "run_id": "20261011T215906287410Z_rag05",
+  "documented_quotes": 2,
+  "explicit_gaps_or_blocks": [
+    "context_budget_exceeded",
+    "no_evidence",
+    "blocked_request"
+  ],
+  "langchain_core": "1.4.0",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "peak_allocated_vram_bytes": 7967071744,
+  "clinical_validation": false,
+  "api_integrated": false,
+  "evaluation_splits_used": false
+}

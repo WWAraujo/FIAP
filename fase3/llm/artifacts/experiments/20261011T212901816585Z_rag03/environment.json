@@ -1,0 +1,26 @@
+{
+  "run_id": "20261011T212901816585Z_rag03",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "cpu": "",
+  "packages": {
+    "torch": "2.13.0+rocm10.0.0",
+    "transformers": "5.17.0",
+    "numpy": "2.4.6",
+    "huggingface_hub": "1.33.0"
+  },
+  "script_sha256": "f74997a86dec7025296bb24ab2f2c2c7a34a0eab9d724e14795d8e2357477686",
+  "model_files": {
+    "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b",
+    "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+    "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+    "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+    "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+    "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+    "README.md": "0038de97aee16258cecbad7ffda4b4febd6953e747a00e0ddbc8e6ed241e9c1c"
+  },
+  "index_chunks": 21,
+  "embeddings_sha256": "aae0735b27bf218f54f1d335650dd6a382986d30a00dfc1abf7d37970d2fd758",
+  "memory_scope": "Linux VmHWM de workers separados; inclui imports/modelo, exclui pico pré-exec do launcher; não é memória incremental",
+  "gpu_used": false
+}

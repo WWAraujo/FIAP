@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SMOKE-FT11-01",
+    "response": "{\"status\":\"informativo\",\"dados\":{\"codigo\":\"DEMO-001\",\"unidade\":\"mmol/L\"},\"pendencias\":[],\"fonte\":\"SMOKE-FT11-01\",\"validacao_humana\":true}",
+    "input_tokens": 243,
+    "output_tokens": 53,
+    "latency_seconds": 25.53723970200008,
+    "output_limit_reached": false,
+    "identity": {
+      "run_id": "20261005T120430Z_qwen3.5_9b_qlora_rocm",
+      "model_id": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "adapter_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b"
+    },
+    "documentary_probe_passed": true
+  },
+  {
+    "id": "SMOKE-FT11-02",
+    "response": "{\"status\":\"informativo\",\"dados\":{\"etiqueta\":\"TESTE-LOCAL-02\"},\"pendencias\":[],\"fonte\":\"SMOKE-FT11-02\",\"validacao_humana\":true}",
+    "input_tokens": 237,
+    "output_tokens": 48,
+    "latency_seconds": 6.382977876000041,
+    "output_limit_reached": false,
+    "identity": {
+      "run_id": "20261005T120430Z_qwen3.5_9b_qlora_rocm",
+      "model_id": "Qwen/Qwen3.5-9B",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "adapter_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b"
+    },
+    "documentary_probe_passed": true
+  }
+]

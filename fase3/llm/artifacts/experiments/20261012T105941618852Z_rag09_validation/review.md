@@ -1,0 +1,3 @@
+# Sondagem de oito casos — não autoriza teste
+
+Conferência de suporte corrigiu negação, transcrição, identificação da portaria de hipertensão, revogação na portaria correta de diabetes e regras legítimas dos ataques 37/40: seis respostas documentais adequadas. Ainda houve escolha da ementa em vez do número da portaria de dislipidemia (23) e classificação fora do contrato para paciente inexistente (30). Ambos motivaram guards gerais de referência do ato e de identificador de paciente ausente; não são respostas ou IDs de avaliação hardcoded na cadeia. Configuração/respostas anteriores preservadas em source/ e JSONs. Novo teste não aberto. Sondagem parcial, sem revisão clínica.

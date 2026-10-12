@@ -1,0 +1,11 @@
+{
+  "condition": "ft11_without_rag",
+  "count": 40,
+  "generations": 40,
+  "resolved_quotes": 0,
+  "errors": {
+    "invalid_source": 35,
+    "no_evidence": 5
+  },
+  "generation_seconds": 238.43533501999718
+}

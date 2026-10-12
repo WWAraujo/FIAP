@@ -1,0 +1,14 @@
+{
+  "validation_complete": false,
+  "records_reviewed": 40,
+  "advance_to_reserved_test": false,
+  "partial_probe": true,
+  "criteria": {},
+  "reason": "Sondagem ou critérios incompletos; teste não autorizado por esta decisão.",
+  "review_sha256": "11d36074c8ffe8df487b0128ead8e88a1dc9de0861848878b757c3f0a7d585f2",
+  "reviewed_summary_sha256": "3a62647d694861b997a0d58c511ebfb439952acbb6a976fc7d69a367508354d0",
+  "chain_config_sha256": "2cc50109a098fb197763637f41f26b6efc845fe8fdc852167584cc74aef89153",
+  "protocol_sha256": "d6384e9565769e7671e13b2f8b5e579728087f164a40d436a9fe19b4af393362",
+  "test_evaluated": false,
+  "retraining_performed": false
+}

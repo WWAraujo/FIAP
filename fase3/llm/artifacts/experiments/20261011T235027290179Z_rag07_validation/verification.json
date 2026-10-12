@@ -1,0 +1,13 @@
+{
+  "records_verified": 160,
+  "actual_generations": 160,
+  "same_prompts_context_across_model_controls": true,
+  "all_sources_match_supplied_text": true,
+  "frozen_modules_unchanged": true,
+  "actual_input_tokens_equal_budget_count": true,
+  "whole_chunks_no_omission": true,
+  "probe_ft11_raw_responses_match_full_run_count": 40,
+  "test_evaluated": false,
+  "weights_modified": false,
+  "clinical_validation": false
+}

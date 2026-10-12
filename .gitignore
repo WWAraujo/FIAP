@@ -48,6 +48,20 @@ fase3/llm/data/raw/*
 !fase3/llm/data/contextual_v1/**
 !fase3/llm/data/factual_v2/
 !fase3/llm/data/factual_v2/**
+!fase3/llm/data/rag_pilot_v1/
+!fase3/llm/data/rag_pilot_v1/**
+!fase3/llm/data/rag_pilot_v2/
+!fase3/llm/data/rag_pilot_v2/**
+!fase3/llm/data/rag_reserved_v3/
+!fase3/llm/data/rag_reserved_v3/**
+!fase3/llm/data/rag_reserved_v4/
+!fase3/llm/data/rag_reserved_v4/**
+!fase3/llm/data/rag_reserved_v5/
+!fase3/llm/data/rag_reserved_v5/**
+!fase3/llm/data/rag_index_v3_final/
+!fase3/llm/data/rag_index_v3_final/**
+fase3/llm/data/rag_pilot_v2/snapshots/
+fase3/llm/data/rag_pilot_v2/extracted/
 
 # O pacote Python de preparação de dados é código-fonte, não dado gerado.
 !fase3/llm/src/

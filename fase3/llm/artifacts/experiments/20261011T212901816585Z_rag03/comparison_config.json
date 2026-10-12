@@ -1,0 +1,34 @@
+{
+  "corpus_version": "rag_pilot_v2",
+  "manifest_sha256": "9ecdbc8e8293a948e988cb2edbce2663546f99f751472aba21b1292be82ecab0",
+  "index_sha256": "79d60c7d9dafbde372e29fd78d405954a6208068030df624c8da2b4ad20d7801",
+  "validation_sha256": "c3f1c88618d7f2805ed085d151a7e53d1b62b011e38a7da85a6e6cf3944df2aa",
+  "chunk_tokens": 192,
+  "overlap_tokens": 32,
+  "top_k": 3,
+  "search_input": "título + seção + texto original; sem QAs/gabaritos/fixtures",
+  "lexical": {
+    "algorithm": "BM25",
+    "k1": 1.5,
+    "b": 0.75,
+    "normalization": "minúsculas, sem acentos, palavras; stopwords PT fixas"
+  },
+  "semantic": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "license": "MIT",
+    "device": "cpu",
+    "threads": 4,
+    "pooling": "attention-masked mean; L2",
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "max_tokens": 512,
+    "truncation": false,
+    "dtype": "float32",
+    "batch_size": 8
+  },
+  "selection_rule": "maior hit@3 respondível; depois MRR@3; empate favorece lexical",
+  "abstention_threshold": null,
+  "test_evaluated": false,
+  "generation_performed": false
+}

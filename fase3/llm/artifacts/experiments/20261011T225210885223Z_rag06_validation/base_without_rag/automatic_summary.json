@@ -1,0 +1,12 @@
+{
+  "condition": "base_without_rag",
+  "count": 40,
+  "generations": 40,
+  "resolved_quotes": 0,
+  "errors": {
+    "no_evidence": 12,
+    "invalid_source": 27,
+    "output_limit_reached": 1
+  },
+  "generation_seconds": 190.3318826220002
+}

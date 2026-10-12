@@ -1,0 +1,104 @@
+{
+  "conditions": [
+    {
+      "condition": "base_without_rag",
+      "records": 40,
+      "answerable_grades": {
+        "inadequate": 24
+      },
+      "missing_behavior_passed": 8,
+      "conflict_behavior_passed": 0,
+      "attack_behavior_passed": 0,
+      "conflict_exposed": 0,
+      "attack_exposed": 0,
+      "raw_unsupported_document_quote_attempts": 1,
+      "visible_semantically_inadequate_quotes": 0,
+      "gold_spans_provided": 0,
+      "omitted_chunks": 0,
+      "max_input_tokens": 538,
+      "median_generation_seconds": 2.8704522284988343,
+      "max_allocated_vram_gib": 7.442080974578857,
+      "errors": {
+        "null": 37,
+        "invalid_source": 3
+      },
+      "output_limit_cases": 0
+    },
+    {
+      "condition": "ft11_without_rag",
+      "records": 40,
+      "answerable_grades": {
+        "inadequate": 24
+      },
+      "missing_behavior_passed": 8,
+      "conflict_behavior_passed": 0,
+      "attack_behavior_passed": 0,
+      "conflict_exposed": 0,
+      "attack_exposed": 0,
+      "raw_unsupported_document_quote_attempts": 1,
+      "visible_semantically_inadequate_quotes": 0,
+      "gold_spans_provided": 0,
+      "omitted_chunks": 0,
+      "max_input_tokens": 538,
+      "median_generation_seconds": 5.561609886999577,
+      "max_allocated_vram_gib": 7.442080974578857,
+      "errors": {
+        "null": 38,
+        "invalid_source": 2
+      },
+      "output_limit_cases": 0
+    },
+    {
+      "condition": "base_with_rag",
+      "records": 40,
+      "answerable_grades": {
+        "adequate": 20,
+        "inadequate": 3,
+        "partial": 1
+      },
+      "missing_behavior_passed": 8,
+      "conflict_behavior_passed": 1,
+      "attack_behavior_passed": 2,
+      "conflict_exposed": 4,
+      "attack_exposed": 4,
+      "raw_unsupported_document_quote_attempts": 0,
+      "visible_semantically_inadequate_quotes": 0,
+      "gold_spans_provided": 24,
+      "omitted_chunks": 0,
+      "max_input_tokens": 1443,
+      "median_generation_seconds": 4.049675752499752,
+      "max_allocated_vram_gib": 7.711343765258789,
+      "errors": {
+        "null": 37,
+        "invalid_contract": 3
+      },
+      "output_limit_cases": 0
+    },
+    {
+      "condition": "ft11_with_rag",
+      "records": 40,
+      "answerable_grades": {
+        "adequate": 21,
+        "inadequate": 3
+      },
+      "missing_behavior_passed": 8,
+      "conflict_behavior_passed": 4,
+      "attack_behavior_passed": 4,
+      "conflict_exposed": 4,
+      "attack_exposed": 4,
+      "raw_unsupported_document_quote_attempts": 0,
+      "visible_semantically_inadequate_quotes": 0,
+      "gold_spans_provided": 24,
+      "omitted_chunks": 0,
+      "max_input_tokens": 1443,
+      "median_generation_seconds": 7.082882754500133,
+      "max_allocated_vram_gib": 7.711343765258789,
+      "errors": {
+        "null": 40
+      },
+      "output_limit_cases": 0
+    }
+  ],
+  "test_evaluated": false,
+  "clinical_validation": false
+}

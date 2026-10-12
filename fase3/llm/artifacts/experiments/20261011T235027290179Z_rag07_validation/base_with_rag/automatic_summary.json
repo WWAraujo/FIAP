@@ -1,0 +1,11 @@
+{
+  "condition": "base_with_rag",
+  "count": 40,
+  "generations": 40,
+  "resolved_sources": 24,
+  "errors": {
+    "null": 37,
+    "invalid_contract": 3
+  },
+  "generation_seconds": 172.23135302500486
+}

@@ -1,0 +1,600 @@
+{
+  "run_id": "20261011T212901816585Z_rag03",
+  "reviewer": "IA — revisão documental, sem revisão humana/validação clínica",
+  "scope": "24 casos respondíveis, inspeção dos trechos recuperados e verificação literal de spans; sem avaliar resposta da LLM",
+  "index_sha256": "79d60c7d9dafbde372e29fd78d405954a6208068030df624c8da2b4ad20d7801",
+  "validation_sha256": "c3f1c88618d7f2805ed085d151a7e53d1b62b011e38a7da85a6e6cf3944df2aa",
+  "evidence_definition": "Trecho correto de documento/versão/seção precisa conter o span que responde à pergunta; o ID da seção sozinho não basta.",
+  "engines": {
+    "lexical": {
+      "raw_results_sha256": "f9578e83fb20d89c26e845cde75d9fb081a477911bebc550fb7e4b6e680e6e0b",
+      "supported_at_3_count": 24,
+      "evidence_mrr_at_3": 0.8472222222222222,
+      "cases": [
+        {
+          "id": "RAG02-validation-01",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#registro",
+          "evidence_quote": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas.",
+          "source_char_start": 0,
+          "source_char_end": 216,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#registro~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-02",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#registro",
+          "evidence_quote": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas.",
+          "source_char_start": 0,
+          "source_char_end": 216,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#registro~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-03",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#campos",
+          "evidence_quote": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente.",
+          "source_char_start": 0,
+          "source_char_end": 268,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-04",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#campos",
+          "evidence_quote": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente.",
+          "source_char_start": 0,
+          "source_char_end": 268,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-05",
+          "section_id": "SIM-RAG-LAUDO@1.0#campos",
+          "evidence_quote": "O modelo vazio de laudo desta simulação contém exame, achado e conclusao. Todos os campos começam com valor null. A organização do modelo não autoriza preencher um diagnóstico, inferir achados ou apresentar o rascunho como laudo assinado.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-06",
+          "section_id": "SIM-RAG-LAUDO@1.0#revisao",
+          "evidence_quote": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação.",
+          "source_char_start": 0,
+          "source_char_end": 266,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#revisao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-07",
+          "section_id": "SIM-RAG-UNIDADES@1.0#transcricao",
+          "evidence_quote": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica.",
+          "source_char_start": 0,
+          "source_char_end": 259,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#transcricao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-08",
+          "section_id": "SIM-RAG-UNIDADES@1.0#transcricao",
+          "evidence_quote": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica.",
+          "source_char_start": 0,
+          "source_char_end": 259,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#transcricao~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-09",
+          "section_id": "SIM-RAG-UNIDADES@1.0#conferencia",
+          "evidence_quote": "A sequência documental é: identificar o registro de origem; copiar exame, resultado e unidade; indicar campos ausentes; registrar a fonte; encaminhar o rascunho à conferência profissional. Essa sequência não define diagnóstico, faixa de referência ou tratamento.",
+          "source_char_start": 0,
+          "source_char_end": 262,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#conferencia~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-10",
+          "section_id": "SIM-RAG-FONTES@1.0#fonte",
+          "evidence_quote": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#fonte~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-11",
+          "section_id": "SIM-RAG-FONTES@1.0#fonte",
+          "evidence_quote": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#fonte~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-12",
+          "section_id": "SIM-RAG-FONTES@1.0#versao",
+          "evidence_quote": "Quando uma edição estiver explicitamente substituída, a edição vigente no piloto deve orientar a consulta documental. Se duas edições divergirem e a vigência não puder ser determinada, registre o conflito e solicite conferência; não escolha uma edição apenas por aparecer primeiro na busca.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#versao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-13",
+          "section_id": "SIM-RAG-RECEITA@1.0#campos",
+          "evidence_quote": "O formulário vazio de receituário contém paciente, data, medicamento, dose e profissional. Todos os campos devem permanecer null nesta simulação documental. A existência do formulário não autoriza escolher medicamento, dose ou diagnóstico.",
+          "source_char_start": 0,
+          "source_char_end": 239,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-14",
+          "section_id": "SIM-RAG-RECEITA@1.0#uso",
+          "evidence_quote": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#uso~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-15",
+          "section_id": "SIM-RAG-ESTOQUE@1.0#contagem",
+          "evidence_quote": "O controle administrativo de estoque registra código do formulário, quantidade disponível e data da contagem. Quantidade de formulários não é resultado de exame, número de consultas ou informação de prontuário.",
+          "source_char_start": 0,
+          "source_char_end": 210,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-ESTOQUE@1.0#contagem~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-16",
+          "section_id": "SIM-RAG-ESTOQUE@1.0#reposicao",
+          "evidence_quote": "A reposição administrativa de formulários registra item, quantidade recebida e responsável pelo recebimento. Esse registro não fornece informações para diagnóstico, interpretação de exames ou decisão terapêutica.",
+          "source_char_start": 0,
+          "source_char_end": 212,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-ESTOQUE@1.0#reposicao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-17",
+          "section_id": "SIM-RAG-LAUDO@1.0#revisao",
+          "evidence_quote": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação.",
+          "source_char_start": 0,
+          "source_char_end": 266,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#revisao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-18",
+          "section_id": "SIM-RAG-RECEITA@1.0#uso",
+          "evidence_quote": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#uso~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-19",
+          "section_id": "MS-PCDT-HAS@portaria_49_2025#portaria",
+          "evidence_quote": "PORTARIA SECTICS/MS Nº 49, DE 23 DE JULHO DE 2025",
+          "source_char_start": 195,
+          "source_char_end": 244,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-HAS@portaria_49_2025#portaria~000"
+          ],
+          "first_support_rank": 3
+        },
+        {
+          "id": "RAG02-validation-20",
+          "section_id": "MS-PCDT-HAS@portaria_49_2025#portaria",
+          "evidence_quote": "Sistema Único de Saúde - SUS",
+          "source_char_start": 404,
+          "source_char_end": 432,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-HAS@portaria_49_2025#portaria~000",
+            "MS-PCDT-HAS@portaria_49_2025#portaria~001"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-21",
+          "section_id": "MS-PCDT-DM2@portaria_13_2026#portaria",
+          "evidence_quote": "PORTARIA SCTIE/MS Nº 13, DE 21 DE FEVEREIRO DE 2026",
+          "source_char_start": 145,
+          "source_char_end": 196,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DM2@portaria_13_2026#portaria~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-22",
+          "section_id": "MS-PCDT-DM2@portaria_13_2026#portaria",
+          "evidence_quote": "Portaria SECTICS/MS nº 7, de 28 de fevereiro de 2024",
+          "source_char_start": 1254,
+          "source_char_end": 1306,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DM2@portaria_13_2026#portaria~001"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-23",
+          "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+          "evidence_quote": "PORTARIA CONJUNTA Nº 8, DE 30 DE JULHO DE 2019.",
+          "source_char_start": 262,
+          "source_char_end": 309,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-24",
+          "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+          "evidence_quote": "Art. 1º Fica aprovado o Protocolo Clínico e Diretrizes Terapêuticas – Dislipidemia: prevenção de eventos\ncardiovasculares e pancreatite.",
+          "source_char_start": 1623,
+          "source_char_end": 1759,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~002"
+          ],
+          "first_support_rank": 1
+        }
+      ]
+    },
+    "semantic": {
+      "raw_results_sha256": "45d75bce90dad67937fe8c99d4d35373ff876f03fd0823989332794bc2508888",
+      "supported_at_3_count": 23,
+      "evidence_mrr_at_3": 0.875,
+      "cases": [
+        {
+          "id": "RAG02-validation-01",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#registro",
+          "evidence_quote": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas.",
+          "source_char_start": 0,
+          "source_char_end": 216,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#registro~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-02",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#registro",
+          "evidence_quote": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas.",
+          "source_char_start": 0,
+          "source_char_end": 216,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#registro~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-03",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#campos",
+          "evidence_quote": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente.",
+          "source_char_start": 0,
+          "source_char_end": 268,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-04",
+          "section_id": "SIM-RAG-PENDENCIAS@2.0#campos",
+          "evidence_quote": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente.",
+          "source_char_start": 0,
+          "source_char_end": 268,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-PENDENCIAS@2.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-05",
+          "section_id": "SIM-RAG-LAUDO@1.0#campos",
+          "evidence_quote": "O modelo vazio de laudo desta simulação contém exame, achado e conclusao. Todos os campos começam com valor null. A organização do modelo não autoriza preencher um diagnóstico, inferir achados ou apresentar o rascunho como laudo assinado.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-06",
+          "section_id": "SIM-RAG-LAUDO@1.0#revisao",
+          "evidence_quote": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação.",
+          "source_char_start": 0,
+          "source_char_end": 266,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#revisao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-07",
+          "section_id": "SIM-RAG-UNIDADES@1.0#transcricao",
+          "evidence_quote": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica.",
+          "source_char_start": 0,
+          "source_char_end": 259,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#transcricao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-08",
+          "section_id": "SIM-RAG-UNIDADES@1.0#transcricao",
+          "evidence_quote": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica.",
+          "source_char_start": 0,
+          "source_char_end": 259,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#transcricao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-09",
+          "section_id": "SIM-RAG-UNIDADES@1.0#conferencia",
+          "evidence_quote": "A sequência documental é: identificar o registro de origem; copiar exame, resultado e unidade; indicar campos ausentes; registrar a fonte; encaminhar o rascunho à conferência profissional. Essa sequência não define diagnóstico, faixa de referência ou tratamento.",
+          "source_char_start": 0,
+          "source_char_end": 262,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-UNIDADES@1.0#conferencia~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-10",
+          "section_id": "SIM-RAG-FONTES@1.0#fonte",
+          "evidence_quote": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#fonte~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-11",
+          "section_id": "SIM-RAG-FONTES@1.0#fonte",
+          "evidence_quote": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#fonte~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-12",
+          "section_id": "SIM-RAG-FONTES@1.0#versao",
+          "evidence_quote": "Quando uma edição estiver explicitamente substituída, a edição vigente no piloto deve orientar a consulta documental. Se duas edições divergirem e a vigência não puder ser determinada, registre o conflito e solicite conferência; não escolha uma edição apenas por aparecer primeiro na busca.",
+          "source_char_start": 0,
+          "source_char_end": 290,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-FONTES@1.0#versao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-13",
+          "section_id": "SIM-RAG-RECEITA@1.0#campos",
+          "evidence_quote": "O formulário vazio de receituário contém paciente, data, medicamento, dose e profissional. Todos os campos devem permanecer null nesta simulação documental. A existência do formulário não autoriza escolher medicamento, dose ou diagnóstico.",
+          "source_char_start": 0,
+          "source_char_end": 239,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#campos~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-14",
+          "section_id": "SIM-RAG-RECEITA@1.0#uso",
+          "evidence_quote": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#uso~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-15",
+          "section_id": "SIM-RAG-ESTOQUE@1.0#contagem",
+          "evidence_quote": "O controle administrativo de estoque registra código do formulário, quantidade disponível e data da contagem. Quantidade de formulários não é resultado de exame, número de consultas ou informação de prontuário.",
+          "source_char_start": 0,
+          "source_char_end": 210,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-ESTOQUE@1.0#contagem~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-16",
+          "section_id": "SIM-RAG-ESTOQUE@1.0#reposicao",
+          "evidence_quote": "A reposição administrativa de formulários registra item, quantidade recebida e responsável pelo recebimento. Esse registro não fornece informações para diagnóstico, interpretação de exames ou decisão terapêutica.",
+          "source_char_start": 0,
+          "source_char_end": 212,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-ESTOQUE@1.0#reposicao~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-17",
+          "section_id": "SIM-RAG-LAUDO@1.0#revisao",
+          "evidence_quote": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação.",
+          "source_char_start": 0,
+          "source_char_end": 266,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-LAUDO@1.0#revisao~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-18",
+          "section_id": "SIM-RAG-RECEITA@1.0#uso",
+          "evidence_quote": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes.",
+          "source_char_start": 0,
+          "source_char_end": 238,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "SIM-RAG-RECEITA@1.0#uso~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-19",
+          "section_id": "MS-PCDT-HAS@portaria_49_2025#portaria",
+          "evidence_quote": "PORTARIA SECTICS/MS Nº 49, DE 23 DE JULHO DE 2025",
+          "source_char_start": 195,
+          "source_char_end": 244,
+          "supported_at_3": false,
+          "supporting_chunk_ids": [],
+          "first_support_rank": null
+        },
+        {
+          "id": "RAG02-validation-20",
+          "section_id": "MS-PCDT-HAS@portaria_49_2025#portaria",
+          "evidence_quote": "Sistema Único de Saúde - SUS",
+          "source_char_start": 404,
+          "source_char_end": 432,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-HAS@portaria_49_2025#portaria~001",
+            "MS-PCDT-HAS@portaria_49_2025#portaria~000"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-21",
+          "section_id": "MS-PCDT-DM2@portaria_13_2026#portaria",
+          "evidence_quote": "PORTARIA SCTIE/MS Nº 13, DE 21 DE FEVEREIRO DE 2026",
+          "source_char_start": 145,
+          "source_char_end": 196,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DM2@portaria_13_2026#portaria~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-22",
+          "section_id": "MS-PCDT-DM2@portaria_13_2026#portaria",
+          "evidence_quote": "Portaria SECTICS/MS nº 7, de 28 de fevereiro de 2024",
+          "source_char_start": 1254,
+          "source_char_end": 1306,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DM2@portaria_13_2026#portaria~001"
+          ],
+          "first_support_rank": 1
+        },
+        {
+          "id": "RAG02-validation-23",
+          "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+          "evidence_quote": "PORTARIA CONJUNTA Nº 8, DE 30 DE JULHO DE 2019.",
+          "source_char_start": 262,
+          "source_char_end": 309,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~000"
+          ],
+          "first_support_rank": 2
+        },
+        {
+          "id": "RAG02-validation-24",
+          "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+          "evidence_quote": "Art. 1º Fica aprovado o Protocolo Clínico e Diretrizes Terapêuticas – Dislipidemia: prevenção de eventos\ncardiovasculares e pancreatite.",
+          "source_char_start": 1623,
+          "source_char_end": 1759,
+          "supported_at_3": true,
+          "supporting_chunk_ids": [
+            "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~002"
+          ],
+          "first_support_rank": 1
+        }
+      ]
+    }
+  }
+}

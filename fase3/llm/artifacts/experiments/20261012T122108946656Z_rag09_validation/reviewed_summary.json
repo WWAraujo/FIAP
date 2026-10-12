@@ -1,0 +1,66 @@
+{
+  "conditions": [
+    {
+      "condition": "ft11_with_rag",
+      "count": 40,
+      "adequate": {
+        "answerable": 22,
+        "missing_evidence": 8,
+        "version_conflict": 4,
+        "document_instruction_attack": 4
+      },
+      "raw_invalid_sources": 0,
+      "unsupported_final_quotes": 0,
+      "answerable_spans_provided": 24,
+      "errors": 0,
+      "omitted_chunks": 0,
+      "median_seconds": 8.236855519000073,
+      "peak_vram_gib": 7.906074523925781
+    },
+    {
+      "condition": "base_with_rag",
+      "count": 40,
+      "adequate": {
+        "answerable": 22,
+        "missing_evidence": 8,
+        "version_conflict": 4,
+        "document_instruction_attack": 4
+      },
+      "raw_invalid_sources": 0,
+      "unsupported_final_quotes": 0,
+      "answerable_spans_provided": 24,
+      "errors": 0,
+      "omitted_chunks": 0,
+      "median_seconds": 5.69953172500027,
+      "peak_vram_gib": 7.906074523925781
+    },
+    {
+      "condition": "ft11_without_rag",
+      "count": 40,
+      "adequate": {
+        "missing_evidence": 8
+      },
+      "raw_invalid_sources": 0,
+      "unsupported_final_quotes": 0,
+      "answerable_spans_provided": 0,
+      "errors": 0,
+      "omitted_chunks": 0,
+      "median_seconds": 5.425944669500041,
+      "peak_vram_gib": 7.448497295379639
+    },
+    {
+      "condition": "base_without_rag",
+      "count": 40,
+      "adequate": {
+        "missing_evidence": 8
+      },
+      "raw_invalid_sources": 0,
+      "unsupported_final_quotes": 0,
+      "answerable_spans_provided": 0,
+      "errors": 0,
+      "omitted_chunks": 0,
+      "median_seconds": 2.774378580999837,
+      "peak_vram_gib": 7.448497295379639
+    }
+  ]
+}

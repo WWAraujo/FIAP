@@ -10,7 +10,7 @@ llm/
 │   │   ├── training/
 │   │   ├── evaluation/
 │   │   └── scripts/
-│   └── rag/                 # reservado; implementação ainda pendente
+│   └── rag/                 # corpus, BM25, cadeia documental e avaliações
 ├── data/                    # corpus atual e entradas de avaliações históricas
 ├── models/base/Qwen3.5-9B/  # base necessária para carregar os adapters
 ├── artifacts/               # pesos finais, manifestos e resultados comparativos
@@ -109,10 +109,18 @@ FT11_ADAPTER="artifacts/adapters/<run-id-do-seu-ft11>/adapter"
 
 Revise a validação e registre a seleção antes de avaliar o teste. `score_contextual_results.py` e `score_semantic_review.py` separam contrato/conteúdo contextual de adequação factual. Os conjuntos históricos já foram observados e não constituem uma nova prova independente de generalização.
 
-No Git ficam código, dependências, corpora atuais, manifestos/configurações FT-10/FT-11 e evidências finais JSON/JSONL/Markdown de `experiments/`. Pesos, ambientes, caches, logs operacionais, scripts históricos de execução, `data_audits/` e `evaluations/` ficam locais e ignorados.
+No Git ficam código, dependências, corpora atuais, manifestos/configurações FT-10/FT-11 e evidências JSON/JSONL/Markdown de `experiments/`, incluindo falhas necessárias ao histórico. Pesos, ambientes, caches, logs operacionais, scripts históricos de execução, `data_audits/` e `evaluations/` ficam locais e ignorados. A [organização dos artefatos](artifacts/README.md) identifica os resultados finais e o que permanece local.
 
 ## Resultado e próximo passo
 
 FT-11 teve 100/112 acertos documentais/contextuais no teste contra 29/112 da base; nas 48 perguntas factuais, 22 adequadas e 11 inadequadas contra 20 e 21. Na prova adicional, houve regressão de 6 para 5 adequadas em 12 perguntas factuais: generalização parcial, sem validação clínica. A [revisão FT-11](artifacts/experiments/20261005T120254Z_factual_v2/review.md) contém a decisão e as limitações; FT-12 e FT-13 não substituíram o modelo selecionado.
 
-O RAG permanece planejado em [PLANO_RAG.md](../docs/PLANO_RAG.md). `src/rag/` ainda não contém recuperação ou integração; o runtime da API continua separado em `../src/medical_assistant/retrieval/`.
+RAG-01/RAG-02 concluíram inventário e corpus `data/rag_pilot_v2/`, com 40 perguntas de validação/40 de teste e três portarias oficiais admitidas somente na primeira página dos PDFs. RAG-03 comparou BM25/E5-CPU na validação: suporte efetivo top-3 24/24 e 23/24; BM25 congelado para este piloto, 14 testes aprovados. Anexos clínicos fora do corpus; PDFs/extrações locais com hashes e download documentado. Comandos no [README RAG](src/rag/README.md); sequência no [PLANO_RAG.md](../docs/PLANO_RAG.md). `src/rag/` contém corpus, recuperação, backend FT-11 e cadeia documental local; o runtime da API continua separado em `../src/medical_assistant/retrieval/`.
+
+RAG-04 comprovou o backend FT-11 e RAG-05 a cadeia LCEL local. Após a falha da RAG-06, RAG-07 preservou a v1 e comparou `src/rag/document_chain_v2.py`: nos 160 registros de validação, base/FT-11 sem RAG 0/24 adequadas, base+RAG 20/24 e uma parcial, FT-11+RAG 21/24. Zero sem RAG é limitação do modo extrativo com fonte fornecida. FT-11+RAG acertou 8/8 ausências, 4/4 conflitos e 4/4 ataques; evidência entregue 24/24, nenhuma omissão/truncamento, pico VRAM 7,71 GiB. Três abstenções indevidas no FT-11 e falhas especiais no base preservadas. [Decisão da validação](artifacts/experiments/20261011T235027290179Z_rag07_validation/review.md) permitiu congelar essa configuração para teste.
+
+No histórico RAG-08, o [teste/decisão](artifacts/experiments/20261012T001057419178Z_rag08_test/review.md) reprovou: uma pergunta de diabetes citou dislipidemia e três ataques geraram abstenção indevida, apesar de regras disponíveis. O teste original consumido e os resultados negativos permanecem preservados.
+
+**RAG-09 concluída em 12/10/2026:** cadeia v3, BM25 sobre 15 seções integrais, seleção FT-11 e verificador comum na mesma base quantizada sem adapter. Escopo de fontes, JSON restrito, resolução literal/offsets e cobertura de todo texto útil, incluindo última linha. Validação final: ambos com RAG 22/24 completas, duas parciais e todos os 16 casos especiais corretos. [Teste final](artifacts/experiments/20261012T184438077141Z_rag09_test/review.md): FT-11+RAG 19/24 completas, duas parciais e três abstenções indevidas; base+RAG 18/24, três parciais e as mesmas abstenções. Ambos 8/8 ausências, 4/4 conflitos, 4/4 instruções hostis, 24/24 spans entregues; nenhum erro/omissão ou citação final sem suporte segundo revisão por IA. Orçamento 3.072/reserva 256, pico VRAM 7,92 GiB. 42 testes de software e [recarga pela CLI](artifacts/experiments/20261012T190305897293Z_rag_query_v3/review.md) aprovados, com ambos os signatários e fontes exatas sem consultar splits. `data/rag_index_v3_final/readiness.json` vincula módulos, índice, pacotes e pesos à decisão atual. [Comando de consulta e limites](src/rag/README.md).
+
+Preparação documental acadêmica aceita; o verificador ainda falha em algumas formulações. Holdouts são paráfrases/cobertura de regressão do mesmo corpus/conceitos/famílias, sem independência temática ou clínica. Resultados/recibos anteriores e falhas foram preservados, inclusive a revogação após detectar perda da última linha no prompt. Sem treino novo ou mudança de pesos/seleção. APP-00/API/prontuário e LangGraph continuam pendentes; `validacao_humana: true` indica necessidade de revisão, não aprovação efetiva.

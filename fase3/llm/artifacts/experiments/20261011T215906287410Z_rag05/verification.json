@@ -1,0 +1,43 @@
+{
+  "reviewer": "IA documental; sem revisão clínica/humana",
+  "cases": [
+    {
+      "case": 1,
+      "source_resolved_and_literal": true,
+      "expected_behavior_observed": true,
+      "result": "documented_quote",
+      "artifact_sha256": "6ba15391702417d992986a29511cb88cf64ab7e9f2e9360b121aa53c7e642e82"
+    },
+    {
+      "case": 2,
+      "source_resolved_and_literal": true,
+      "expected_behavior_observed": true,
+      "result": "documented_quote",
+      "artifact_sha256": "5a4165ceb8b0ebc29b702ed8fee770a23c037a8e707e14c9a04d79b0f5d9843f"
+    },
+    {
+      "case": 3,
+      "source_resolved_and_literal": false,
+      "expected_behavior_observed": true,
+      "result": "context_budget_exceeded",
+      "artifact_sha256": "b950f916ba8eba6c35b06c355636e0a0925215f36ecaf8ac52596eb8a0feee64"
+    },
+    {
+      "case": 4,
+      "source_resolved_and_literal": false,
+      "expected_behavior_observed": true,
+      "result": "no_evidence",
+      "artifact_sha256": "1484fb7c132a4d5971bf4266140730728a52e532538d8a97d1a4a8f92153cf4b"
+    },
+    {
+      "case": 5,
+      "source_resolved_and_literal": false,
+      "expected_behavior_observed": true,
+      "result": "blocked_request",
+      "artifact_sha256": "19ea2daeb4e58dc4577f2c7d56410e50b9e8a36ca3c1082cc363b966fc45ba13"
+    }
+  ],
+  "software_tests_passed": 28,
+  "test_evaluated": false,
+  "chain_config_sha256": "6ef570406a4bddd10b755bc53cad28e7aa34c91e66a7b8b05c10b6beb90c3af8"
+}

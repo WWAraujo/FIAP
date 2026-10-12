@@ -1,0 +1,38 @@
+{
+  "run_id": "20261011T212901816585Z_rag03",
+  "selected_engine": "semantic",
+  "minimum_required_hits": 22,
+  "selected_meets_section_hit_target": true,
+  "engines": [
+    {
+      "engine": "lexical",
+      "answerable_hits_at_3": 24,
+      "answerable_count": 24,
+      "mrr_at_3": 0.8958333333333334,
+      "median_latency_ms": 0.04014449999090175,
+      "p95_latency_ms": 0.05623500004503512,
+      "build_seconds": 0.001647096999988662,
+      "peak_process_rss_mib": 23.2265625,
+      "errors": 0,
+      "truncations": 0
+    },
+    {
+      "engine": "semantic",
+      "answerable_hits_at_3": 24,
+      "answerable_count": 24,
+      "mrr_at_3": 0.9583333333333334,
+      "median_latency_ms": 416.01128650000874,
+      "p95_latency_ms": 532.2697409999932,
+      "build_seconds": 7.7858897440000305,
+      "peak_process_rss_mib": 1646.19921875,
+      "errors": 0,
+      "truncations": 0
+    }
+  ],
+  "limitations": [
+    "Hit de seção não prova suporte do trecho nem adequação da resposta; revisar trechos.",
+    "Ausência, conflito e ataques não avaliam comportamento da LLM nesta tarefa.",
+    "Sem limiar de abstenção; similaridade não comprova evidência.",
+    "Corpus pequeno documental, sem anexos clínicos; teste reservado não executado."
+  ]
+}

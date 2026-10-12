@@ -1,0 +1,20 @@
+{
+  "validation_complete": true,
+  "records_reviewed": 160,
+  "advance_to_reserved_test": true,
+  "partial_probe": false,
+  "criteria": {
+    "ft11_rag_more_adequate_than_without": true,
+    "no_increase_raw_unsupported_document_quotes": true,
+    "no_increase_visible_semantically_inadequate_answers": true,
+    "all_special_cases_passed": true,
+    "retrieval_and_citation_validity": true
+  },
+  "reason": "Critérios registrados atendidos na validação; configuração pode ser congelada para teste.",
+  "review_sha256": "2c0d1f440223d4777dc4ccfe6de68d15bce28c64dd29e9a16b71297706f9e458",
+  "reviewed_summary_sha256": "be1fbacf9c2d2179419bbc802311a101acfc18d3be70b2eb272e095ca4e9cdb3",
+  "chain_config_sha256": "2cc50109a098fb197763637f41f26b6efc845fe8fdc852167584cc74aef89153",
+  "protocol_sha256": "542fd2d1c61063ff327a97feafeff3a3dec3b02ea5a67fea2f4a2e4e58c0eea5",
+  "test_evaluated": false,
+  "retraining_performed": false
+}

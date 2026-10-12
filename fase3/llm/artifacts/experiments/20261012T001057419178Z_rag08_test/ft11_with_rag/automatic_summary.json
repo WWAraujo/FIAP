@@ -1,0 +1,10 @@
+{
+  "condition": "ft11_with_rag",
+  "count": 40,
+  "generations": 40,
+  "resolved_sources": 27,
+  "errors": {
+    "null": 40
+  },
+  "generation_seconds": 293.4019076920049
+}

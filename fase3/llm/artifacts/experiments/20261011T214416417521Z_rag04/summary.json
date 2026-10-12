@@ -1,0 +1,16 @@
+{
+  "run_id": "20261011T214416417521Z_rag04",
+  "backend_loaded": true,
+  "adapter_active": [
+    "default"
+  ],
+  "load_seconds": 58.58311808799999,
+  "gpu": "AMD Radeon RX 9060 XT",
+  "peak_allocated_vram_bytes": 7949121024,
+  "peak_reserved_vram_bytes": 8000634880,
+  "passed": 2,
+  "count": 2,
+  "clinical_validation": false,
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "script_sha256": "233480fc58a0139b676690ce28f69d4a7dab47ee0ce807cc1775c5ce4888e2e7"
+}

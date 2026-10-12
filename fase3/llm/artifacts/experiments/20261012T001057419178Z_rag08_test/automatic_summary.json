@@ -1,0 +1,49 @@
+{
+  "conditions": [
+    {
+      "condition": "base_without_rag",
+      "count": 40,
+      "generations": 40,
+      "resolved_sources": 0,
+      "errors": {
+        "null": 37,
+        "invalid_source": 3
+      },
+      "generation_seconds": 139.1162279179989
+    },
+    {
+      "condition": "ft11_without_rag",
+      "count": 40,
+      "generations": 40,
+      "resolved_sources": 0,
+      "errors": {
+        "null": 38,
+        "invalid_source": 2
+      },
+      "generation_seconds": 223.52011939399563
+    },
+    {
+      "condition": "base_with_rag",
+      "count": 40,
+      "generations": 40,
+      "resolved_sources": 24,
+      "errors": {
+        "null": 39,
+        "invalid_contract": 1
+      },
+      "generation_seconds": 166.27058782799395
+    },
+    {
+      "condition": "ft11_with_rag",
+      "count": 40,
+      "generations": 40,
+      "resolved_sources": 27,
+      "errors": {
+        "null": 40
+      },
+      "generation_seconds": 293.4019076920049
+    }
+  ],
+  "semantic_review_pending": true,
+  "test_evaluated": true
+}

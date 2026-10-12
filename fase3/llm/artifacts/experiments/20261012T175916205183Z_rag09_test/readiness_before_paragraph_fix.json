@@ -1,0 +1,46 @@
+{
+  "test_decision_path": "artifacts/experiments/20261012T175916205183Z_rag09_test/decision.json",
+  "test_decision_sha256": "7a9ef5d363c42d411e1dd33aea732e2fdff3ef309a679392a4a43a8ec8b58849",
+  "validation_run_id": "20261012T174142028524Z_rag09_validation",
+  "test_run_id": "20261012T175916205183Z_rag09_test",
+  "chain_config_sha256": "ea26395288c7b85478478101f5bece87a79ae6ee817278ab96b3e187434e758b",
+  "index_config_sha256": "6127775b67bc09cf3cbfc0b06362be4449b67187abf219550dc8a7e349b7ba11",
+  "packages": {
+    "langchain-core": "1.4.0",
+    "langsmith": "0.14.7",
+    "pydantic": "2.13.5",
+    "transformers": "5.17.0",
+    "torch": "2.13.0+rocm10.0.0",
+    "peft": "0.20.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "model_identity": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "adapter_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+    "adapter_config_sha256": "3d2771df5e890dfe639c298a9c97b6658780fa64947f65470f64e9779a5aff8d",
+    "base_files_sha256": {
+      "model.safetensors-00001-of-00004.safetensors": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e",
+      "model.safetensors-00002-of-00004.safetensors": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330",
+      "model.safetensors-00003-of-00004.safetensors": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec",
+      "model.safetensors-00004-of-00004.safetensors": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6",
+      "model.safetensors.index.json": "26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5",
+      "config.json": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+    },
+    "system_prompt_sha256": "75e83cd0eba320ef95c726ac7ff60857fb413f8c67ec4e884354bc50a31accf9"
+  },
+  "runtime_script_hashes": {
+    "document_chain_v3.py": "819ea0c5a6cedb1f485d114010ca67d92d1d1508f284ef0d9270028ee5e9eb7d",
+    "document_chain_v2.py": "f3d74100c08b0c1f982100d8dfce5cbd7e97fe30f2b4b89ce2c0dac93a0ddf35",
+    "document_chain.py": "632e19aea75027b714cbfab4cd2ff9d92934eff136de1696027b45402d79cd30",
+    "ft11_backend.py": "233480fc58a0139b676690ce28f69d4a7dab47ee0ce807cc1775c5ce4888e2e7",
+    "compare_retrieval.py": "f74997a86dec7025296bb24ab2f2c2c7a34a0eab9d724e14795d8e2357477686",
+    "prepare_manifest.py": "7ed0fc7632010e9ee38fb182758c98c531e4a5be7f9952170a3f5a3d0f80137d",
+    "query_document.py": "24b4d612a38ea62d2db0a4adbd85fea199fc46fd66140147b88e96bf8f22dd8d",
+    "../finetuning/scripts/run_qwen3_adapter_rocm.py": "a8c9a9af3ff73ac03d9c608b06ac7b1a41c2143f43f8d26dec753ba851a877ae"
+  },
+  "scope": "documentary paraphrase holdout over same small corpus; shared base verifier; case 28 negative availability supported by null fields, with explicit semantic adjudication; no API/patient integration",
+  "clinical_validation": false
+}

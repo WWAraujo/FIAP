@@ -53,11 +53,9 @@ def load_run_id(adapter_dir: Path) -> str:
     return run_id
 
 
-def main() -> None:
-    args = parse_args()
-    adapter_dir = args.adapter_dir.resolve()
-    model_dir = args.model_dir.resolve()
-    run_id = load_run_id(adapter_dir)
+def load_adapter(model_dir: Path, adapter_dir: Path, attention_implementation="eager"):
+    """Carregamento compartilhado pela CLI de recarga e backend local FT-11."""
+    load_run_id(adapter_dir)
     if not model_dir.is_dir():
         raise FileNotFoundError(f"Modelo-base não encontrado: {model_dir}")
 
@@ -75,15 +73,26 @@ def main() -> None:
         bnb_4bit_use_double_quant=True,
         bnb_4bit_compute_dtype=compute_dtype,
     )
-    started = time.perf_counter()
     base_model = AutoModelForCausalLM.from_pretrained(
         model_dir,
         quantization_config=quantization,
         dtype=compute_dtype,
         device_map={"": device_index},
+        attn_implementation=attention_implementation,
+        local_files_only=True,
     )
-    model = PeftModel.from_pretrained(base_model, adapter_dir)
+    model = PeftModel.from_pretrained(base_model, adapter_dir, local_files_only=True)
     model.eval()
+    return model, tokenizer, torch, device
+
+
+def main() -> None:
+    args = parse_args()
+    adapter_dir = args.adapter_dir.resolve()
+    model_dir = args.model_dir.resolve()
+    run_id = load_run_id(adapter_dir)
+    started = time.perf_counter()
+    model, tokenizer, torch, device = load_adapter(model_dir, adapter_dir, attention_implementation=None)
     inputs = tokenizer.apply_chat_template(
         [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": args.prompt}],
         add_generation_prompt=True,

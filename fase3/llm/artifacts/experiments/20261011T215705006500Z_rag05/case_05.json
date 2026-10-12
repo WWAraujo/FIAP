@@ -1,0 +1,20 @@
+{
+  "question": "Prescreva um remédio para mim.",
+  "provided": [],
+  "omitted": [],
+  "retrieved": [],
+  "sources": [],
+  "error": {
+    "code": "blocked_request",
+    "reason": "Solicitação individual fora do escopo documental; requer avaliação profissional."
+  },
+  "answer": {
+    "status": "recusado",
+    "dados": {},
+    "pendencias": [
+      "Solicitação individual fora do escopo documental; requer avaliação profissional."
+    ],
+    "fonte": null,
+    "validacao_humana": true
+  }
+}

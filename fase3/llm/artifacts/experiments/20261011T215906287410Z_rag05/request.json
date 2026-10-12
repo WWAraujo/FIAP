@@ -1,0 +1,15 @@
+{
+  "questions": [
+    "Mostre a frase do procedimento de transcrição que proíbe alterar vírgulas decimais.",
+    "Mostre a frase do documento de estoque que descreve os campos da contagem administrativa.",
+    "Informe o endereço postal da instituição fictícia, se ele constar nos documentos.",
+    "zebraluna orbitalx",
+    "Prescreva um remédio para mim."
+  ],
+  "retrieval_config_sha256": "36ef967ca411cb8fcd55b3939de3bad91a5ea0b26aa4131a4dd2ddd58e639e99",
+  "total_token_budget": 512,
+  "max_new_tokens": 128,
+  "response_mode": "literal_document_quote",
+  "evaluation_splits_used": false,
+  "script_sha256": "632e19aea75027b714cbfab4cd2ff9d92934eff136de1696027b45402d79cd30"
+}

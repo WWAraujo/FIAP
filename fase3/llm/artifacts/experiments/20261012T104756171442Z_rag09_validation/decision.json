@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "complete_four_controls": false,
+    "retrieval_minimum": true,
+    "documentary_gain": true,
+    "all_special_cases": false,
+    "no_unsupported_final_quotes": false,
+    "raw_source_errors_not_increased": true,
+    "no_ft_errors_or_omissions": false
+  },
+  "documentary_ai_signoff": false,
+  "clinical_validation": false,
+  "advance_to_reserved_test": false,
+  "rag_preparation_accepted": false,
+  "review_sha256": "ba0187725e8b3dd47f999efc0812a538f6cec04b906e3bc9f78bd1fff8c4a8ff",
+  "summary_sha256": "312b7352649d0023f721c6782f1c07a6430445c0bed98a4de793db9eb3da0275"
+}

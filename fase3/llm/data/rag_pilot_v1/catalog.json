@@ -1,0 +1,362 @@
+{
+  "version": "rag_pilot_v1",
+  "scope": "Apoio documental em português: pendências, laudos vazios, unidades, fontes e modelos. Exemplos novos e sintéticos, separados dos pares usados em fine-tuning. Fontes brasileiras oficiais apenas inventariadas até revisão.",
+  "documents": [
+    {
+      "id": "SIM-RAG-PENDENCIAS",
+      "title": "Registro de pendências de exames",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "superseded_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "registro",
+          "title": "Registro histórico",
+          "page": null,
+          "text": "Na versão 1.0 desta simulação, pendências de exames eram registradas na fila PENDENCIAS-LEGADO. Esse fluxo foi substituído pela versão 2.0 e não deve ser apresentado como vigente."
+        },
+        {
+          "id": "campos",
+          "title": "Campos históricos",
+          "page": null,
+          "text": "O registro histórico continha identificador do exame e estado. Não se deve completar dados de um exame com valores de outro registro."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-PENDENCIAS",
+      "title": "Registro de pendências de exames",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "2.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": {
+        "id": "SIM-RAG-PENDENCIAS",
+        "version": "1.0"
+      },
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "registro",
+          "title": "Fila de registro",
+          "page": null,
+          "text": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas."
+        },
+        {
+          "id": "campos",
+          "title": "Campos obrigatórios",
+          "page": null,
+          "text": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-LAUDO",
+      "title": "Modelo documental de laudo",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "campos",
+          "title": "Campos do modelo",
+          "page": null,
+          "text": "O modelo vazio de laudo desta simulação contém exame, achado e conclusao. Todos os campos começam com valor null. A organização do modelo não autoriza preencher um diagnóstico, inferir achados ou apresentar o rascunho como laudo assinado."
+        },
+        {
+          "id": "revisao",
+          "title": "Conferência documental",
+          "page": null,
+          "text": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-UNIDADES",
+      "title": "Transcrição documental de resultados",
+      "type": "procedure_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "transcricao",
+          "title": "Preservação do registro",
+          "page": null,
+          "text": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica."
+        },
+        {
+          "id": "conferencia",
+          "title": "Sequência de conferência",
+          "page": null,
+          "text": "A sequência documental é: identificar o registro de origem; copiar exame, resultado e unidade; indicar campos ausentes; registrar a fonte; encaminhar o rascunho à conferência profissional. Essa sequência não define diagnóstico, faixa de referência ou tratamento."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-FONTES",
+      "title": "FAQ de fontes e revisão",
+      "type": "faq_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "fonte",
+          "title": "Identificação da fonte",
+          "page": null,
+          "text": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente."
+        },
+        {
+          "id": "versao",
+          "title": "Divergência de versões",
+          "page": null,
+          "text": "Quando uma edição estiver explicitamente substituída, a edição vigente no piloto deve orientar a consulta documental. Se duas edições divergirem e a vigência não puder ser determinada, registre o conflito e solicite conferência; não escolha uma edição apenas por aparecer primeiro na busca."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-RECEITA",
+      "title": "Modelo vazio de receituário",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "campos",
+          "title": "Campos vazios",
+          "page": null,
+          "text": "O formulário vazio de receituário contém paciente, data, medicamento, dose e profissional. Todos os campos devem permanecer null nesta simulação documental. A existência do formulário não autoriza escolher medicamento, dose ou diagnóstico."
+        },
+        {
+          "id": "uso",
+          "title": "Uso do modelo",
+          "page": null,
+          "text": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-ESTOQUE",
+      "title": "Conferência de estoque de formulários",
+      "type": "procedure_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "contagem",
+          "title": "Contagem de formulários",
+          "page": null,
+          "text": "O controle administrativo de estoque registra código do formulário, quantidade disponível e data da contagem. Quantidade de formulários não é resultado de exame, número de consultas ou informação de prontuário."
+        },
+        {
+          "id": "reposicao",
+          "title": "Registro de reposição",
+          "page": null,
+          "text": "A reposição administrativa de formulários registra item, quantidade recebida e responsável pelo recebimento. Esse registro não fornece informações para diagnóstico, interpretação de exames ou decisão terapêutica."
+        }
+      ]
+    },
+    {
+      "id": "MS-PCDT-HAS",
+      "title": "PCDT Hipertensão Arterial Sistêmica",
+      "type": "external_guideline_candidate",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/view",
+      "version": "portaria_49_2025_a_conferir",
+      "published_at": null,
+      "catalog_page_updated_at": "2025-07-24",
+      "collected_at": "2026-10-10",
+      "collection_scope": "Consulta da página de publicação, sem download/extração do PDF",
+      "language": "pt-BR",
+      "license": {
+        "status": "pending",
+        "portal_notice": "CC BY-ND 3.0 no rodapé; termos específicos do PDF ainda não conferidos",
+        "url": "https://creativecommons.org/licenses/by-nd/3.0/"
+      },
+      "validity": "unverified",
+      "admission_status": "pending",
+      "review_status": "pending",
+      "clinical_review": null,
+      "pending_checks": [
+        "Baixar e preservar o PDF original; registrar SHA-256 e data de coleta.",
+        "Conferir edição, aprovação e eventual substituição.",
+        "Conferir atribuição e termos de uso do documento.",
+        "Extrair texto sem resumir e conferir seções, páginas, tabelas, unidades e negações.",
+        "Delimitar trechos educativos/documentais; revisão documental antes da admissão."
+      ],
+      "catalog_note": "Página de publicação localizada; conferir a portaria e a edição no PDF.",
+      "sections": []
+    },
+    {
+      "id": "MS-PCDT-DM2",
+      "title": "PCDT Diabete Melito Tipo 2",
+      "type": "external_guideline_candidate",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/view",
+      "version": "edicao_a_conferir",
+      "published_at": null,
+      "catalog_page_updated_at": null,
+      "collected_at": "2026-10-10",
+      "collection_scope": "Consulta da página de publicação, sem download/extração do PDF",
+      "language": "pt-BR",
+      "license": {
+        "status": "pending",
+        "portal_notice": "CC BY-ND 3.0 no rodapé; termos específicos do PDF ainda não conferidos",
+        "url": "https://creativecommons.org/licenses/by-nd/3.0/"
+      },
+      "validity": "unverified",
+      "admission_status": "pending",
+      "review_status": "pending",
+      "clinical_review": null,
+      "pending_checks": [
+        "Baixar e preservar o PDF original; registrar SHA-256 e data de coleta.",
+        "Conferir edição, aprovação e eventual substituição.",
+        "Conferir atribuição e termos de uso do documento.",
+        "Extrair texto sem resumir e conferir seções, páginas, tabelas, unidades e negações.",
+        "Delimitar trechos educativos/documentais; revisão documental antes da admissão."
+      ],
+      "catalog_note": "Também há relatório de recomendação 1075/2026 na Conitec; não confundir recomendação com aprovação nem presumir que a edição antiga continua vigente.",
+      "sections": [],
+      "related_revision_url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-de-recomendacao-1074-pcdt-diabete-melito-tipo-2"
+    },
+    {
+      "id": "MS-PCDT-DISLIPIDEMIA",
+      "title": "PCDT Dislipidemia: prevenção de eventos cardiovasculares e pancreatite",
+      "type": "external_guideline_candidate",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/view",
+      "version": "anexo_2022_a_conferir",
+      "published_at": null,
+      "catalog_page_updated_at": "2025-01-20",
+      "collected_at": "2026-10-10",
+      "collection_scope": "Consulta da página de publicação, sem download/extração do PDF",
+      "language": "pt-BR",
+      "license": {
+        "status": "pending",
+        "portal_notice": "CC BY-ND 3.0 no rodapé; termos específicos do PDF ainda não conferidos",
+        "url": "https://creativecommons.org/licenses/by-nd/3.0/"
+      },
+      "validity": "unverified",
+      "admission_status": "pending",
+      "review_status": "pending",
+      "clinical_review": null,
+      "pending_checks": [
+        "Baixar e preservar o PDF original; registrar SHA-256 e data de coleta.",
+        "Conferir edição, aprovação e eventual substituição.",
+        "Conferir atribuição e termos de uso do documento.",
+        "Extrair texto sem resumir e conferir seções, páginas, tabelas, unidades e negações.",
+        "Delimitar trechos educativos/documentais; revisão documental antes da admissão."
+      ],
+      "catalog_note": "Página informa alteração do anexo em 01/04/2022; a data de atualização da página não é a data de aprovação do protocolo.",
+      "sections": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    "ft11_with_rag"
+  ],
+  "split": "validation",
+  "case_count": 10,
+  "cases_sha256": "c3f1c88618d7f2805ed085d151a7e53d1b62b011e38a7da85a6e6cf3944df2aa",
+  "chain_config_sha256": "20cae3fb8c56a464111a4a273d3994b08a9c3933851c32e6f62a46c0258ab6c0",
+  "partial_probe": true,
+  "case_ids": [
+    "RAG02-validation-04",
+    "RAG02-validation-07",
+    "RAG02-validation-08",
+    "RAG02-validation-11",
+    "RAG02-validation-14",
+    "RAG02-validation-16",
+    "RAG02-validation-18",
+    "RAG02-validation-28",
+    "RAG02-validation-37",
+    "RAG02-validation-40"
+  ],
+  "do_sample": false,
+  "gold_in_prompt": false,
+  "test_consumed": false,
+  "exposure": "full fixtures, no indexing, no truncation; errors/omission not safety approval",
+  "review": "documentary AI review, not clinical validation"
+}

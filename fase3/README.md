@@ -13,7 +13,7 @@ fase3/
 │   ├── artifacts/            # benchmarks, ambiente, checkpoints e adapters
 │   ├── models/               # pesos-base locais
 │   ├── src/finetuning/       # preparação, treino e avaliação
-│   ├── src/rag/              # reservado para o próximo plano
+│   ├── src/rag/              # corpus, busca, cadeia documental local e avaliação
 │   ├── tests/
 │   └── requirements.txt      # ambiente ROCm/LLM
 ├── src/medical_assistant/    # aplicação, API, interfaces, segurança e RAG em runtime
@@ -21,7 +21,7 @@ fase3/
 └── docs/PLANO_EXECUCAO.md    # tarefas, critérios e evidências
 ```
 
-O corpus do RAG ficará em `llm/data/`, e sua preparação em `llm/src/rag/`, ainda sem implementação. Quando a API consultar fontes em tempo de resposta, o código de recuperação permanece em `src/medical_assistant/retrieval/`; assim ela não depende das bibliotecas de treinamento.
+O corpus RAG atual está em `llm/data/rag_pilot_v2/`, preservando o inventário v1, com geração/validação do manifesto em `llm/src/rag/` e avaliação reservada em `evaluation/`. Quando a API consultar fontes em tempo de resposta, o código de recuperação permanece em `src/medical_assistant/retrieval/`; assim ela não depende das bibliotecas de treinamento.
 
 ## Ambiente da API
 
@@ -53,4 +53,4 @@ Em 06/10/2026, `llm/data/factual_v3/` foi preparada com 1.920 exemplos de treino
 
 Consulte o [plano de execução](docs/PLANO_EXECUCAO.md). A comparação local do adaptador não comprova integração à aplicação; essa integração e sua validação permanecem pendentes.
 
-O [planejamento do RAG](docs/PLANO_RAG.md), registrado em 07/10/2026, define corpus rastreável, recuperação, conexão ao FT-11 e comparação com/sem documentos. Está planejado; ingestão, indexação e cadeia real ainda não foram executadas.
+O [planejamento do RAG](docs/PLANO_RAG.md) registra BM25 vencedor e **preparação documental RAG-09 concluída em 12/10/2026**. A cadeia local LCEL usa FT-11 para selecionar evidência, verificador comum na base sem adapter, contexto completo e fontes/offsets verificáveis. Validação final: 22/24 completas, duas parciais e todos os 16 casos especiais corretos em ambas as condições com RAG. No [teste final de 160 registros](llm/artifacts/experiments/20261012T184438077141Z_rag09_test/review.md), FT-11+RAG teve 19/24 completas, duas parciais e três abstenções indevidas; base+RAG 18/24, três parciais e as mesmas abstenções. Ambos 8/8 ausências, 4/4 conflitos e 4/4 instruções hostis; 24/24 spans e todo o texto útil entregues ao prompt, zero erros/omissões. Orçamento 3.072/reserva 256, pico VRAM 7,92 GiB, 42 testes de software aprovados. [Recarga pela CLI](llm/artifacts/experiments/20261012T190305897293Z_rag_query_v3/review.md) retorna ambas as assinaturas com fonte correta, sem ler perguntas/gabaritos. Comandos e recibo de aceite no [README RAG](llm/src/rag/README.md). Falhas e versões anteriores preservadas; conjuntos reservados de paráfrases compartilham corpus/conceitos, sem independência temática ou clínica. A qualidade permanece limitada; sem treino novo ou alteração dos pesos selecionados. Próxima tarefa APP-00 e integração APP-01 com API/prontuário; LangGraph/revisão humana no fluxo real continuam pendentes.

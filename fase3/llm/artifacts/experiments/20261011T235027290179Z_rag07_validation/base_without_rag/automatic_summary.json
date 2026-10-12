@@ -1,0 +1,11 @@
+{
+  "condition": "base_without_rag",
+  "count": 40,
+  "generations": 40,
+  "resolved_sources": 0,
+  "errors": {
+    "null": 37,
+    "invalid_source": 3
+  },
+  "generation_seconds": 136.9555256270014
+}

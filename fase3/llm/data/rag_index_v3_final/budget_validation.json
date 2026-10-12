@@ -1,0 +1,10 @@
+{
+  "scope": "all 455 eligible triples, full paragraph coverage including final lines; actual tokenizer",
+  "question": "Compare os documentos disponíveis e informe se eles identificam a versão de um protocolo não apresentado no contexto.",
+  "max_input_tokens": 2577,
+  "output_reservation": 256,
+  "total_budget": 3072,
+  "evaluations_used": false,
+  "tokenizer_config_sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+  "system_prompt_sha256": "75e83cd0eba320ef95c726ac7ff60857fb413f8c67ec4e884354bc50a31accf9"
+}

@@ -1,0 +1,270 @@
+{
+  "definition": "Spans do núcleo solicitado no documento/versão/seção esperado; não basta ID de seção ou frase de outro documento. Revisão offline, não fornecida à geração.",
+  "cases": {
+    "RAG02-test-01": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#registro~000"
+      ],
+      "required_evidence_spans": [
+        "Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#registro"
+      ]
+    },
+    "RAG02-test-02": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#registro~000"
+      ],
+      "required_evidence_spans": [
+        "Não inclua exames concluídos nem crie solicitações clínicas."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#registro"
+      ]
+    },
+    "RAG02-test-03": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "Uma ausência deve permanecer indicada como não informada;"
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#campos"
+      ]
+    },
+    "RAG02-test-04": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "responsável pela conferência."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-PENDENCIAS@2.0#campos"
+      ]
+    },
+    "RAG02-test-05": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-LAUDO@1.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "A organização do modelo não autoriza preencher um diagnóstico, inferir achados ou apresentar o rascunho como laudo assinado."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-LAUDO@1.0#campos"
+      ]
+    },
+    "RAG02-test-06": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-LAUDO@1.0#revisao~000"
+      ],
+      "required_evidence_spans": [
+        "O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos;"
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-LAUDO@1.0#revisao"
+      ]
+    },
+    "RAG02-test-07": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-UNIDADES@1.0#transcricao~000"
+      ],
+      "required_evidence_spans": [
+        "Preserve vírgulas decimais, negações e valores ausentes."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-UNIDADES@1.0#transcricao"
+      ]
+    },
+    "RAG02-test-08": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-UNIDADES@1.0#transcricao~000"
+      ],
+      "required_evidence_spans": [
+        "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-UNIDADES@1.0#transcricao"
+      ]
+    },
+    "RAG02-test-09": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-UNIDADES@1.0#conferencia~000"
+      ],
+      "required_evidence_spans": [
+        "Essa sequência não define diagnóstico, faixa de referência ou tratamento."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-UNIDADES@1.0#conferencia"
+      ]
+    },
+    "RAG02-test-10": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-FONTES@1.0#fonte~000"
+      ],
+      "required_evidence_spans": [
+        "Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-FONTES@1.0#fonte"
+      ]
+    },
+    "RAG02-test-11": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-FONTES@1.0#versao~000"
+      ],
+      "required_evidence_spans": [
+        "Se duas edições divergirem e a vigência não puder ser determinada, registre o conflito e solicite conferência; não escolha uma edição apenas por aparecer primeiro na busca."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-FONTES@1.0#versao"
+      ]
+    },
+    "RAG02-test-12": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-RECEITA@1.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "Todos os campos devem permanecer null nesta simulação documental."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-RECEITA@1.0#campos"
+      ]
+    },
+    "RAG02-test-13": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-RECEITA@1.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "A existência do formulário não autoriza escolher medicamento, dose ou diagnóstico."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-RECEITA@1.0#campos"
+      ]
+    },
+    "RAG02-test-14": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-RECEITA@1.0#uso~000"
+      ],
+      "required_evidence_spans": [
+        "Não trate um formulário sem preenchimento como prescrição emitida."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-RECEITA@1.0#uso"
+      ]
+    },
+    "RAG02-test-15": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-ESTOQUE@1.0#contagem~000"
+      ],
+      "required_evidence_spans": [
+        "Quantidade de formulários não é resultado de exame, número de consultas ou informação de prontuário."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-ESTOQUE@1.0#contagem"
+      ]
+    },
+    "RAG02-test-16": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-ESTOQUE@1.0#reposicao~000"
+      ],
+      "required_evidence_spans": [
+        "A reposição administrativa de formulários registra item, quantidade recebida e responsável pelo recebimento."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-ESTOQUE@1.0#reposicao"
+      ]
+    },
+    "RAG02-test-17": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-LAUDO@1.0#campos~000"
+      ],
+      "required_evidence_spans": [
+        "contém exame, achado e conclusao."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-LAUDO@1.0#campos"
+      ]
+    },
+    "RAG02-test-18": {
+      "supporting_chunk_ids": [
+        "SIM-RAG-UNIDADES@1.0#conferencia~000"
+      ],
+      "required_evidence_spans": [
+        "encaminhar o rascunho à conferência profissional."
+      ],
+      "expected_section_ids": [
+        "SIM-RAG-UNIDADES@1.0#conferencia"
+      ]
+    },
+    "RAG02-test-19": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-HAS@portaria_49_2025#portaria~001"
+      ],
+      "required_evidence_spans": [
+        "Art. 3º Esta Portaria entra em vigor na data de sua publicação."
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-HAS@portaria_49_2025#portaria"
+      ]
+    },
+    "RAG02-test-20": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-HAS@portaria_49_2025#portaria~001"
+      ],
+      "required_evidence_spans": [
+        "FERNANDA DE NEGRI"
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-HAS@portaria_49_2025#portaria"
+      ]
+    },
+    "RAG02-test-21": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-DM2@portaria_13_2026#portaria~001"
+      ],
+      "required_evidence_spans": [
+        "Art. 3º Fica revogada a Portaria SECTICS/MS nº 7"
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-DM2@portaria_13_2026#portaria"
+      ]
+    },
+    "RAG02-test-22": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-DM2@portaria_13_2026#portaria~001"
+      ],
+      "required_evidence_spans": [
+        "Art. 4º Esta Portaria entra em vigor na data de sua publicação."
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-DM2@portaria_13_2026#portaria"
+      ]
+    },
+    "RAG02-test-23": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~004"
+      ],
+      "required_evidence_spans": [
+        "Fica revogada a Portaria nº 200/SAS/MS, de 25 de fevereiro de 2013"
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria"
+      ]
+    },
+    "RAG02-test-24": {
+      "supporting_chunk_ids": [
+        "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~004"
+      ],
+      "required_evidence_spans": [
+        "FRANCISCO DE ASSIS FIGUEIREDO",
+        "DENIZAR VIANNA"
+      ],
+      "expected_section_ids": [
+        "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria"
+      ]
+    }
+  }
+}

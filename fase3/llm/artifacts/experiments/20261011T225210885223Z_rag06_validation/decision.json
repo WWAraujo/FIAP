@@ -1,0 +1,18 @@
+{
+  "validation_complete": true,
+  "records_reviewed": 160,
+  "advance_to_reserved_test": false,
+  "reason": "Ganho respondível local não atende aos critérios completos: ausência/conflito/ataques falham e citações literais podem ser irrelevantes; corrigir pipeline antes do teste.",
+  "criteria": {
+    "ft11_rag_more_adequate_than_without": true,
+    "no_increase_raw_unsupported_document_quotes": true,
+    "no_increase_visible_semantically_inadequate_answers": false,
+    "all_special_cases_passed": false
+  },
+  "review_sha256": "ecfa8eae720a29e7888d6c00e8d65de7f1e8729bf2e5264b21f788d0ba27eaa8",
+  "reviewed_summary_sha256": "cc70e19225eb570fa33df5dc4e5c43d17ca45416001fe1cc9be2394bdfdafcd3",
+  "frozen_chain_config_sha256": "6ef570406a4bddd10b755bc53cad28e7aa34c91e66a7b8b05c10b6beb90c3af8",
+  "protocol_sha256": "e49499f895aba4c4f648532eeb6640445b36e9d979cbd1a1a0d358734477fba7",
+  "test_evaluated": false,
+  "retraining_performed": false
+}

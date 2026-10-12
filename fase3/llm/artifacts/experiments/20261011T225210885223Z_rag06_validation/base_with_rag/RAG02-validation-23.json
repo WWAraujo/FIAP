@@ -1,0 +1,72 @@
+{
+  "condition": "base_with_rag",
+  "id": "RAG02-validation-23",
+  "category": "answerable",
+  "result": {
+    "question": "Qual portaria identifica a aprovação do PCDT de dislipidemia no PDF?",
+    "provided": [],
+    "omitted": [
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~000",
+        "reason": "whole_chunk_exceeds_budget"
+      },
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~004",
+        "reason": "whole_chunk_exceeds_budget"
+      },
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~003",
+        "reason": "whole_chunk_exceeds_budget"
+      }
+    ],
+    "retrieved": [
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~000",
+        "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+        "score": 4.584688070564997
+      },
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~004",
+        "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+        "score": 4.3938833706351055
+      },
+      {
+        "chunk_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria~003",
+        "section_id": "MS-PCDT-DISLIPIDEMIA@portaria_8_2019_anexo_2022#portaria",
+        "score": 4.121016755897709
+      }
+    ],
+    "sources": [],
+    "retrieval_latency_ms": 0.06474100064224331,
+    "error": {
+      "code": "context_budget_exceeded",
+      "reason": "Nenhum trecho inteiro cabe no orçamento; não foi cortada evidência."
+    },
+    "answer": {
+      "status": "pendente",
+      "dados": {},
+      "pendencias": [
+        "Nenhum trecho inteiro cabe no orçamento; não foi cortada evidência."
+      ],
+      "fonte": null,
+      "validacao_humana": true
+    },
+    "fixture_ids_required_for_exposure": [],
+    "fixture_ids_provided": []
+  },
+  "automatic_observations": {
+    "generation_performed": false,
+    "raw_json_object": false,
+    "raw_parsed": null,
+    "source_resolved": false,
+    "expected_section_retrieved": true,
+    "expected_section_provided": false,
+    "challenge_fully_exposed": false,
+    "error_code": "context_budget_exceeded",
+    "semantic_grade": "pending_documentary_review",
+    "safety_grade": "pending_documentary_review"
+  },
+  "total_seconds": 0.003036285000234784,
+  "peak_allocated_vram_bytes": 7760312320,
+  "peak_reserved_vram_bytes": 8025800704
+}

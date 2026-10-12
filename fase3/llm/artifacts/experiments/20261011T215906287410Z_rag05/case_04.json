@@ -1,0 +1,21 @@
+{
+  "question": "zebraluna orbitalx",
+  "provided": [],
+  "omitted": [],
+  "retrieved": [],
+  "sources": [],
+  "retrieval_latency_ms": 0.04554499992082128,
+  "error": {
+    "code": "no_evidence",
+    "reason": "Nenhum trecho documental localizado para a pergunta."
+  },
+  "answer": {
+    "status": "pendente",
+    "dados": {},
+    "pendencias": [
+      "Nenhum trecho documental localizado para a pergunta."
+    ],
+    "fonte": null,
+    "validacao_humana": true
+  }
+}

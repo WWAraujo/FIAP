@@ -6,9 +6,12 @@ Integra LLM customizada com base de conhecimento e sistemas de segurança
 import json
 import logging
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from datetime import datetime
 from collections import deque
+
+from medical_assistant.safety.audit import AuditLogger
+from medical_assistant.safety.guardrails import SecuritySystem
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -209,105 +212,6 @@ DADOS DO PACIENTE:
     def get_conversation_history(self) -> List[Dict]:
         """Retorna histórico de conversação"""
         return self.memory.load_memory_variables({}).get("chat_history", [])
-
-
-class SecuritySystem:
-    """Sistema de segurança e validação"""
-
-    def __init__(self):
-        self.forbidden_patterns = [
-            "prescrever", "receitar", "diagnosticar definitivo",
-            "procedimento invasivo sem supervisão"
-        ]
-        self.requires_validation_patterns = [
-            "medicamento", "cirurgia", "diagnóstico", "tratamento"
-        ]
-
-    def check_query(self, query: str) -> Dict[str, Any]:
-        """Verifica se a query é permitida"""
-        query_lower = query.lower()
-
-        for pattern in self.forbidden_patterns:
-            if pattern in query_lower:
-                return {
-                    "allowed": False,
-                    "reason": f"Contém termo proibido: {pattern}",
-                    "message": f"Esta solicitação contém termos que requerem validação médica direta. Por favor, consulte um médico."
-                }
-
-        return {"allowed": True, "reason": "", "message": ""}
-
-    def check_response(self, response: str) -> Dict[str, Any]:
-        """Verifica se a resposta é segura"""
-        response_lower = response.lower()
-
-        for pattern in self.forbidden_patterns:
-            if pattern in response_lower:
-                return {
-                    "allowed": False,
-                    "reason": f"Resposta contém termo proibido: {pattern}",
-                    "message": "Esta resposta foi modificada por segurança. Consulte um médico para orientação específica."
-                }
-
-        return {"allowed": True, "reason": "", "message": ""}
-
-    def requires_human_validation(self, query: str, response: str) -> bool:
-        """Determina se a resposta requer validação humana"""
-        combined_text = (query + " " + response).lower()
-
-        for pattern in self.requires_validation_patterns:
-            if pattern in combined_text:
-                return True
-
-        return False
-
-
-class AuditLogger:
-    """Sistema de logging para auditoria"""
-
-    def __init__(self):
-        self.log_dir = Path(__file__).resolve().parents[3] / "logs"
-        self.log_dir.mkdir(parents=True, exist_ok=True)
-        self.audit_file = self.log_dir / "audit.log"
-
-    def log_query(self, query: str, patient_context: Dict = None) -> str:
-        """Registra query para auditoria"""
-        query_id = f"query_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}"
-
-        log_entry = {
-            "timestamp": datetime.now().isoformat(),
-            "query_id": query_id,
-            "query": query,
-            "patient_context": patient_context,
-            "type": "query"
-        }
-
-        self._write_log(log_entry)
-        return query_id
-
-    def log_response(self, query_id: str, response: str, sources: List[str], requires_validation: bool,
-                     *, model_usage: Optional[Dict[str, Any]] = None, error: Optional[str] = None):
-        """Registra resposta para auditoria"""
-        log_entry = {
-            "timestamp": datetime.now().isoformat(),
-            "query_id": query_id,
-            "response": response[:500],  # Limitar tamanho
-            "sources": sources,
-            "requires_validation": requires_validation,
-            "type": "response"
-        }
-
-        if model_usage is not None:
-            log_entry.update(model_usage)
-        if error is not None:
-            log_entry["error"] = error
-
-        self._write_log(log_entry)
-
-    def _write_log(self, log_entry: Dict):
-        """Escreve entrada no log de auditoria"""
-        with open(self.audit_file, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
 
 
 def main():

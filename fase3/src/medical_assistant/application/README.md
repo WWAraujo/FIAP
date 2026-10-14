@@ -1,5 +1,9 @@
 # Aplicação
 
+O chat Streamlit passa a pergunta original e o contexto do paciente separadamente para `process_query`. O histórico compõe o prompt/contexto auditado, mas não é concatenado à pergunta usada para selecionar a resposta simulada. Isso evita acionar a resposta de hipertensão apenas por essa condição constar no prontuário; não adiciona inferência real nem compreensão conversacional ao protótipo.
+
+Os controles compartilhados ficam em `medical_assistant.safety`: `guardrails.py` contém `SecuritySystem` e `audit.py` contém `AuditLogger`. Assistente e API importam essas classes; a extração preserva os filtros lexicais e o formato/destino da auditoria, sem implementar a validação integrada prevista em SAFE-01.
+
 `api.py` implementa APP-00: inferência Ollama com seleção controlada por `configs/config.yaml`. O cliente envia somente `query` e, opcionalmente, `mode` (`standard` ou `fast`); campos adicionais são rejeitados. `standard` usa `model.base_model` (Qwen configurado) e `fast` usa `model.alternative_model` (Gemma configurado). `OLLAMA_BASE_URL` pode substituir o endereço do servidor.
 
 Partindo da raiz, com o ambiente API instalado:

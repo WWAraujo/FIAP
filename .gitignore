@@ -72,6 +72,9 @@ fase3/llm/data/rag_pilot_v2/extracted/
 # Fase 3: ambientes, pesos e execução local nunca são artefatos de código.
 fase3/.venv-org03/
 fase3/llm/models/
+fase3/models/
+fase3/.venv-api/
+*.egg-info/
 fase3/logs/
 fase3/llm/artifacts/adapters/**
 !fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/

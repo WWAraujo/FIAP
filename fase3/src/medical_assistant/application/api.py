@@ -10,7 +10,8 @@ import yaml
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 
-from medical_assistant.application.assistant import AuditLogger, SecuritySystem
+from medical_assistant.safety.audit import AuditLogger
+from medical_assistant.safety.guardrails import SecuritySystem
 
 Mode = Literal["standard", "fast"]
 CONFIG_PATH = Path(__file__).resolve().parents[3] / "configs/config.yaml"

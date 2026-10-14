@@ -8,31 +8,25 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
-import sys
-
-PROJECT_DIR = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(PROJECT_DIR / "src"))
-
 from medical_assistant.application.assistant import MedicalAssistantLangChain
 from medical_assistant.clinical.patient_database import PatientDatabase, PatientContextBuilder
 from medical_assistant.application.workflow import MedicalWorkflowGraph
 
-# Configuração de logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+PROJECT_DIR = Path(__file__).resolve().parents[3]
 
-# Configuração da página Streamlit com tema claro/escuro
-st.set_page_config(
-    page_title="Assistente Médico - Fase 3 Tech Challenge",
-    page_icon="🏥",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': None,
-        'Report a bug': None,
-        'About': None
-    }
-)
+def configure_page():
+    st.set_page_config(
+        page_title="Assistente Médico - Fase 3 Tech Challenge",
+        page_icon="🏥",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get Help': None,
+            'Report a bug': None,
+            'About': None
+        }
+    )
+    st.markdown(PAGE_CSS, unsafe_allow_html=True)
 
 # Custom CSS reativo ao tema do Streamlit
 #
@@ -48,7 +42,7 @@ st.set_page_config(
 # CSS custom properties (--primary-color, --background-color,
 # --secondary-background-color, --text-color). Usar essas duas coisas
 # elimina a necessidade de manter dois blocos de CSS hardcoded em paralelo.
-st.markdown("""
+PAGE_CSS = """
 <style>
     /* Cards (métrica, expander, alert) usam a cor de fundo secundária que o
        Streamlit já calcula para o tema ativo — reage automaticamente. */
@@ -103,19 +97,13 @@ st.markdown("""
         }
     }
 </style>
-""", unsafe_allow_html=True)
+"""
 
-# Inicializar sessão
-if 'assistant' not in st.session_state:
-    st.session_state.assistant = None
-if 'db' not in st.session_state:
-    st.session_state.db = PatientDatabase()
-if 'workflow' not in st.session_state:
-    st.session_state.workflow = MedicalWorkflowGraph()
-if 'messages' not in st.session_state:
-    st.session_state.messages = []
-if 'selected_patient' not in st.session_state:
-    st.session_state.selected_patient = None
+def initialize_session():
+    st.session_state.setdefault('assistant', None)
+    st.session_state.setdefault('messages', [])
+    st.session_state.setdefault('selected_patient', None)
+
 
 def initialize_system():
     """Inicializa o sistema do assistente médico"""
@@ -128,28 +116,35 @@ def initialize_system():
         st.error(f"❌ Erro ao inicializar sistema: {e}")
         return False
 
-def get_patient_list():
+def get_patient_list(db):
     """Retorna lista de pacientes do banco de dados"""
     try:
-        patients = st.session_state.db.search_patients("")
+        patients = db.search_patients("")
         return patients
     except Exception as e:
         st.error(f"❌ Erro ao buscar pacientes: {e}")
         return []
 
-def get_patient_context(patient_id):
+def get_patient_context(db, patient_id):
     """Retorna contexto completo do paciente"""
     try:
-        context_builder = PatientContextBuilder(st.session_state.db)
+        patient = db.get_patient_info(patient_id)
+        if patient is None:
+            return None
+        context_builder = PatientContextBuilder(db)
         context = context_builder.build_context_for_assistant(patient_id)
-        return context
+        return {
+            "idade": patient["age"],
+            "genero": patient["gender"],
+            "historico": context,
+        }
     except Exception as e:
         st.error(f"❌ Erro ao buscar contexto do paciente: {e}")
         return None
 
-def display_patient_info(patient_id):
+def display_patient_info(db, patient_id):
     """Exibe informações do paciente selecionado"""
-    patient_info = st.session_state.db.get_patient_info(patient_id)
+    patient_info = db.get_patient_info(patient_id)
 
     if patient_info:
         col1, col2, col3 = st.columns(3)
@@ -168,7 +163,7 @@ def display_patient_info(patient_id):
 
         # Histórico médico - Cards responsivos
         st.subheader("📋 Histórico Médico")
-        medical_history = st.session_state.db.get_medical_history(patient_id)
+        medical_history = db.get_medical_history(patient_id)
         if medical_history:
             # Grid responsivo de cards
             cols = st.columns(min(len(medical_history), 3))
@@ -183,7 +178,7 @@ def display_patient_info(patient_id):
 
         # Sinais vitais recentes - Cards responsivos
         st.subheader("💓 Sinais Vitais Recentes")
-        vital_signs = st.session_state.db.get_vital_signs(patient_id, limit=3)
+        vital_signs = db.get_vital_signs(patient_id, limit=3)
         if vital_signs:
             # Grid responsivo de cards
             cols = st.columns(min(len(vital_signs), 3))
@@ -201,7 +196,7 @@ def display_patient_info(patient_id):
 
         # Medicamentos ativos - Cards responsivos
         st.subheader("💊 Medicamentos Ativos")
-        medications = st.session_state.db.get_medications(patient_id, active_only=True)
+        medications = db.get_medications(patient_id, active_only=True)
         if medications:
             # Grid responsivo de cards
             cols = st.columns(min(len(medications), 3))
@@ -214,7 +209,7 @@ def display_patient_info(patient_id):
 
         # Exames recentes - Cards responsivos
         st.subheader("🔬 Exames Recentes")
-        exams = st.session_state.db.get_exams(patient_id, limit=5)
+        exams = db.get_exams(patient_id, limit=5)
         if exams:
             # Grid responsivo de cards
             cols = st.columns(min(len(exams), 3))
@@ -231,7 +226,7 @@ def display_patient_info(patient_id):
 
         # Consultas recentes - Cards responsivos
         st.subheader("👨‍⚕️ Consultas Recentes")
-        consultations = st.session_state.db.get_consultations(patient_id, limit=3)
+        consultations = db.get_consultations(patient_id, limit=3)
         if consultations:
             # Grid responsivo de cards
             cols = st.columns(min(len(consultations), 3))
@@ -247,9 +242,13 @@ def display_patient_info(patient_id):
     else:
         st.error("Paciente não encontrado")
 
-def display_chat_interface():
+def display_chat_interface(db):
     """Exibe interface de chat do assistente médico"""
     st.subheader("💬 Chat com Assistente Médico")
+    st.caption("Protótipo com respostas simuladas; requer revisão profissional.")
+    if st.session_state.assistant is None:
+        st.info("Inicialize o sistema na barra lateral para usar o chat.")
+        return
 
     # Exibir histórico de mensagens
     for message in st.session_state.messages:
@@ -264,21 +263,18 @@ def display_chat_interface():
             st.markdown(prompt)
 
         # Adicionar contexto do paciente se selecionado
-        context = ""
+        context = None
         if st.session_state.selected_patient:
-            context = get_patient_context(st.session_state.selected_patient)
+            context = get_patient_context(db, st.session_state.selected_patient)
             if context:
-                prompt_with_context = f"{context}\n\nPERGUNTA DO MÉDICO:\n{prompt}"
-            else:
-                prompt_with_context = prompt
-        else:
-            prompt_with_context = prompt
+                context["queixa"] = prompt
 
         # Processar com o assistente
         with st.chat_message("assistant"):
             with st.spinner("Processando sua solicitação..."):
                 try:
-                    response = st.session_state.assistant.query(prompt_with_context)
+                    result = st.session_state.assistant.process_query(prompt, patient_context=context)
+                    response = result["response"]
                     st.markdown(response)
                     st.session_state.messages.append({"role": "assistant", "content": response})
 
@@ -300,7 +296,7 @@ def display_chat_interface():
                     st.error(error_msg)
                     st.session_state.messages.append({"role": "assistant", "content": error_msg})
 
-def display_workflow_interface():
+def display_workflow_interface(db):
     """Exibe interface do workflow automatizado"""
     st.subheader("🔄 Workflow Automatizado de Triagem")
 
@@ -319,13 +315,25 @@ def display_workflow_interface():
         if st.button("🚀 Executar Workflow", type="primary"):
             with st.spinner("Executando workflow automatizado..."):
                 try:
-                    context = get_patient_context(st.session_state.selected_patient)
-                    full_query = f"{context}\n\nCASO CLÍNICO:\n{query}" if context else query
-
-                    result = st.session_state.workflow.execute_workflow(
-                        st.session_state.selected_patient,
-                        full_query
-                    )
+                    summary = db.get_patient_summary(st.session_state.selected_patient)
+                    if "error" in summary:
+                        st.error(summary["error"])
+                        return
+                    vitals = summary["recent_vital_signs"]
+                    patient_data = {
+                        **summary["patient_info"],
+                        "medical_history": summary["medical_history"],
+                        "vital_signs": vitals[0] if vitals else {},
+                        "completed_exams": [
+                            exam["exam_type"]
+                            for exam in db.get_exams(st.session_state.selected_patient)
+                            if exam["result"] and exam["status"] in ("Normal", "Atenção", "Concluído")
+                        ],
+                    }
+                    result = MedicalWorkflowGraph().execute_full_workflow(patient_data, query)
+                    if not result["completed"]:
+                        st.error("Workflow incompleto; requer revisão profissional.")
+                        return
 
                     st.success("✅ Workflow executado com sucesso!")
 
@@ -334,11 +342,13 @@ def display_workflow_interface():
 
                     col1, col2, col3 = st.columns(3)
                     with col1:
-                        st.metric("Prioridade", result.get("priority", "N/A"))
+                        priority = next(d["priority"] for d in result["decisions"]
+                                        if d["step"] == "triage_classification")
+                        st.metric("Prioridade", priority)
                     with col2:
-                        st.metric("Alertas", result.get("alert_count", 0))
+                        st.metric("Alertas", len(result["alerts"]))
                     with col3:
-                        st.metric("Recomendações", result.get("recommendation_count", 0))
+                        st.metric("Recomendações", len(result["recommendations"]))
 
                     # Decisões tomadas
                     if result.get("decisions"):
@@ -398,34 +408,34 @@ def display_logs_interface():
     except Exception as e:
         st.error(f"❌ Erro ao ler logs: {e}")
 
-def render_home_page():
+def render_home_page(db):
     st.title("🏥 Painel do Assistente Médico")
     st.markdown("Bem-vindo ao Sistema de Assistência Médica da Fase 3 do Tech Challenge FIAP")
 
     if st.session_state.selected_patient:
         st.success(f"✅ Paciente ativo: {st.session_state.selected_patient}")
-        display_patient_info(st.session_state.selected_patient)
+        display_patient_info(db, st.session_state.selected_patient)
 
         st.markdown("---")
         st.info("💡 Use a navegação no topo para acessar Chat, Workflow ou Logs")
     else:
         st.warning("⚠️ Selecione um paciente no sidebar para começar")
 
-def render_chat_page():
+def render_chat_page(db):
     st.title("💬 Chat com Assistente Médico")
     if st.session_state.selected_patient:
-        display_patient_info(st.session_state.selected_patient)
+        display_patient_info(db, st.session_state.selected_patient)
         st.markdown("---")
-        display_chat_interface()
+        display_chat_interface(db)
     else:
         st.warning("⚠️ Selecione um paciente no sidebar para usar o chat")
 
-def render_workflow_page():
+def render_workflow_page(db):
     st.title("🔄 Workflow Automatizado de Triagem")
     if st.session_state.selected_patient:
-        display_patient_info(st.session_state.selected_patient)
+        display_patient_info(db, st.session_state.selected_patient)
         st.markdown("---")
-        display_workflow_interface()
+        display_workflow_interface(db)
     else:
         st.warning("⚠️ Selecione um paciente no sidebar para executar o workflow")
 
@@ -433,25 +443,25 @@ def render_logs_page():
     st.title("📋 Logs de Auditoria")
     display_logs_interface()
 
-def render_full_data_page():
+def render_full_data_page(db):
     st.title("📊 Dados Completos do Paciente")
     if st.session_state.selected_patient:
-        display_patient_info(st.session_state.selected_patient)
+        display_patient_info(db, st.session_state.selected_patient)
     else:
         st.warning("⚠️ Selecione um paciente no sidebar para ver dados completos")
 
-def main():
+def render_app(db):
     """Função principal da aplicação Streamlit"""
 
     # Navegação no topo da página (substitui o antigo st.radio no sidebar).
     # st.navigation(position="top") requer Streamlit >= 1.46 — confirme com
     # `pip show streamlit` antes de rodar.
     pages = [
-        st.Page(render_home_page, title="Início", icon="🏠", default=True),
-        st.Page(render_chat_page, title="Chat", icon="💬"),
-        st.Page(render_workflow_page, title="Workflow", icon="🔄"),
+        st.Page(lambda: render_home_page(db), url_path="home", title="Início", icon="🏠", default=True),
+        st.Page(lambda: render_chat_page(db), url_path="chat", title="Chat", icon="💬"),
+        st.Page(lambda: render_workflow_page(db), url_path="workflow", title="Workflow", icon="🔄"),
         st.Page(render_logs_page, title="Logs", icon="📋"),
-        st.Page(render_full_data_page, title="Dados Completos", icon="📊"),
+        st.Page(lambda: render_full_data_page(db), url_path="data", title="Dados Completos", icon="📊"),
     ]
     pg = st.navigation(pages, position="top")
 
@@ -469,7 +479,7 @@ def main():
         # Seleção de paciente
         st.subheader("👤 Selecionar Paciente")
 
-        patients = get_patient_list()
+        patients = get_patient_list(db)
         if patients:
             patient_options = {p['id']: f"{p['id']} - {p['name']}" for p in patients}
             selected = st.selectbox("Escolha um paciente:",
@@ -489,12 +499,19 @@ def main():
         st.subheader("ℹ️ Informações do Sistema")
         st.info("""
         **Sistema:** Assistente Médico Fase 3 Tech Challenge
-        **Modelo:** gemma3:latest (via Ollama)
-        **Abordagem:** RAG (Retrieval-Augmented Generation)
-        **Segurança:** Guardrails + Validação Humana
+        **Chat:** Respostas simuladas
+        **Workflow:** Regras sequenciais de demonstração
+        **Revisão profissional:** Necessária; não registrada como aprovação
         """)
 
     pg.run()
 
-if __name__ == "__main__":
-    main()
+def main():
+    logging.basicConfig(level=logging.INFO)
+    configure_page()
+    initialize_session()
+    db = PatientDatabase()
+    try:
+        render_app(db)
+    finally:
+        db.close()

@@ -1,57 +1,9 @@
-version: '3.8'
-
 services:
   medical-assistant:
     build: .
-    container_name: fiap_fase3_medical_assistant
     ports:
-      - "8501:8501"
+      - "127.0.0.1:8501:8501"
     volumes:
-      # Map data directory for SQLite database and synthetic data
       - ./data:/app/data
-      # Map models directory for fine-tuned models and GGUF files
-      - ./models:/app/models
-      # Map logs directory for audit logs
       - ./logs:/app/logs
-      # Map artifacts directory for benchmark results and future adapters
-      - ./artifacts:/app/artifacts
-      # Map configs directory
-      - ./configs:/app/configs
-    environment:
-      - PYTHONUNBUFFERED=1
-      # Ollama roda no host - contêiner se comunica via host.docker.internal
-      - OLLAMA_BASE_URL=http://host.docker.internal:11434
     restart: unless-stopped
-    networks:
-      - medical_network
-    # Dependência opcional do Ollama se estiver rodando dentro do Docker
-    # depends_on:
-    #   - ollama
-
-  # Serviço Ollama opcional - comente esta seção se Ollama rodar no host
-  # ollama:
-  #   image: ollama/ollama:latest
-  #   container_name: fiap_fase3_ollama
-  #   volumes:
-  #     - ollama_data:/root/.ollama
-  #   ports:
-  #     - "11434:11434"
-  #   restart: unless-stopped
-  #   networks:
-  #     - medical_network
-  #   # Para GPU support (Linux only)
-  #   # deploy:
-  #   #   resources:
-  #   #     reservations:
-  #   #       devices:
-  #   #         - driver: nvidia
-  #   #           count: 1
-  #   #           capabilities: [gpu]
-
-networks:
-  medical_network:
-    driver: bridge
-
-# Volume para persistir modelos Ollama se rodar dentro do Docker
-volumes:
-  ollama_data:

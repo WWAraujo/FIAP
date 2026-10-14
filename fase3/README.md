@@ -4,7 +4,7 @@ Projeto acadêmico da FIAP para treinar uma LLM com dados sintéticos/anonimizad
 
 ## Dois ambientes independentes
 
-`llm/` concentra tarefas que exigem GPU, muitos dados ou ferramentas de avaliação: preparação do corpus, benchmark, QLoRA, adapters e comparação base versus adapter (EVAL-03). A API em `src/` não instala PyTorch, ROCm, PEFT ou datasets.
+`llm/` concentra tarefas que exigem GPU, muitos dados ou ferramentas de avaliação: preparação do corpus, benchmark, QLoRA, adapters e comparação base versus adapter (EVAL-03). `requirements.txt` contém apenas as dependências da aplicação atual; treino e avaliação mantêm seu ambiente em `llm/requirements.txt`.
 
 ```text
 fase3/
@@ -17,21 +17,47 @@ fase3/
 │   ├── tests/
 │   └── requirements.txt      # ambiente ROCm/LLM
 ├── src/medical_assistant/    # aplicação, API, interfaces, segurança e RAG em runtime
-├── requirements.txt          # ambiente leve da API
+├── app.py                   # entrada Streamlit
+├── requirements.txt         # API e interface
+├── requirements-dev.txt     # testes
 └── docs/PLANO_EXECUCAO.md    # tarefas, critérios e evidências
 ```
 
 O corpus RAG atual está em `llm/data/rag_pilot_v2/`, preservando o inventário v1, com geração/validação do manifesto em `llm/src/rag/` e avaliação reservada em `evaluation/`. Quando a API consultar fontes em tempo de resposta, o código de recuperação permanece em `src/medical_assistant/retrieval/`; assim ela não depende das bibliotecas de treinamento.
 
-## Ambiente da API
+## Executar a aplicação
+
+Com Docker Engine/Compose ativos, partindo da raiz:
 
 ```bash
 cd fase3
-python3 -m venv .venv-api
-.venv-api/bin/python -m pip install -r requirements.txt
+docker compose up --build -d
 ```
 
-O Docker usa este ambiente. Ele monta somente `llm/data/curated` como leitura para o protótipo consumir o corpus curado.
+Acesse http://localhost:8501 e clique em **Inicializar Sistema**. Para acompanhar logs e encerrar:
+
+```bash
+docker compose logs -f medical-assistant
+docker compose down
+```
+
+O Docker instala dependências, configura o diretório de trabalho e inicia o Streamlit. A porta é publicada apenas em localhost. Dados e logs persistem em `fase3/data/` e `fase3/logs/`; pesos, ambientes virtuais e artefatos de treinamento não entram no contexto de build. A instalação editável dentro da imagem mantém os caminhos de recursos relativos a `/app/src` usados pelo código atual.
+
+**Limite atual:** chat com respostas simuladas e workflow sequencial, sem integração FT-11/RAG/Ollama pela interface. O banco cria dados sintéticos de exemplo na primeira execução. A base opcional do protótipo é `data/curated/dataset_medico_anonimizado.json`; sua ausência não impede abrir a interface, mas deixa a busca local vazia. A API é uma entrada separada, descrita abaixo. Este Compose ainda não entrega o assistente integrado.
+
+## Desenvolvimento sem Docker
+
+No Ubuntu, a partir de `fase3`:
+
+```bash
+python3 -m venv .venv-api
+.venv-api/bin/python -m pip install -r requirements-dev.txt
+.venv-api/bin/python -m pip install -e .
+.venv-api/bin/python -m streamlit run app.py
+.venv-api/bin/python -m pytest tests -q
+```
+
+No Windows, use o executável equivalente do ambiente existente: `..\\.venv\\Scripts\\python.exe`, partindo de `fase3`. O arquivo `app.py` é a entrada do Streamlit, não um launcher Python independente. Configuração local em `.streamlit/config.toml`; o Docker sobrescreve o endereço para escutar dentro do contêiner.
 
 APP-00 implementa `POST /query` em FastAPI com modos `standard`/Qwen e `fast`/Gemma conforme `configs/config.yaml`, identidade do modelo, auditoria e erro explícito sem fallback. **21 testes mockados aprovados**. [Execução da API e limites](src/medical_assistant/application/README.md). A API ainda não carrega FT-11 nem consulta RAG/prontuário; essa integração é APP-01. CLI/Streamlit mantêm respostas simuladas.
 

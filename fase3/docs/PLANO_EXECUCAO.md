@@ -664,6 +664,64 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 **Evidência (12/10/2026):** `src/medical_assistant/application/api.py` expõe `POST /query`, contrato Pydantic com campos adicionais proibidos e modo padrão `standard`. Lê `configs/config.yaml`, seleciona `qwen_q3_k_xl:latest` ou `gemma3:latest` e faz geração Ollama sem fallback. O nome retornado precisa corresponder e o digest do inventário é conferido antes/depois da geração; mudança, identidade inválida, ausência, timeout/erro ou resposta vazia/incompleta retornam HTTP 503 `model_unavailable`. Resposta e `logs/audit.log` correlacionam modo/nome/digest/query_id. Entrada bloqueada não chama Ollama e registra identidade nula; falha registra modelo solicitado, sem atribuir identidade não confirmada. Reutilizados os filtros e o logger existentes; flag de revisão indica necessidade, não aprovação. SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4, FastAPI 0.111.0, Pydantic 2.13.4, requests 2.34.2, httpx 0.28.1. Comando: `fase3/.venv/bin/python -B -m pytest fase3/tests/test_model_policy_api.py -q -p no:cacheprovider` → **21 aprovados**, sem rede/modelo real; `git diff --check` aprovado. Fluxo HTTP exercitado via ASGI, com respostas Ollama mockadas; não é avaliação clínica ou prova de inferência real nesta tarefa. Digest é identidade declarada pelo servidor local, não atestado criptográfico dos pesos. Comandos e limites em `src/medical_assistant/application/README.md`. Nomes Ollama históricos não carregam automaticamente FT-11; `sources` vazio, sem prontuário. APP-01 integra FT-11/RAG/paciente; CLI/Streamlit continuam simulados e APP-02/SAFE-01 pendentes.
 
+### APP-00A — Corrigir execução da interface existente
+
+**Status:** CONCLUÍDA
+
+**Escopo (12/10/2026):** corrigir conexão SQLite entre reruns do Streamlit e contratos de chat/workflow, validar a interface e esclarecer comandos/limitações. Não integra FT-11/RAG nem conclui APP-01/APP-02.
+
+**Aceite:** inicialização e reruns sem erro SQLite; chat apresenta a resposta do protótipo; workflow consome dados estruturados e apresenta métricas do retorno existente; testes sem modelo/rede.
+
+**Evidência (12/10/2026):** conexão SQLite local à execução do Streamlit, fechada em `finally`; chat usa `process_query` e extrai `response`; workflow usa `execute_full_workflow` com dados do banco, instância por execução e métricas do contrato real. Interface identifica simulação; README corrige descrição de dependências/montagens e inclui comando Windows. Python 3.12.0/Windows, `.venv/Scripts/python.exe -B -m pytest fase3/tests -q -p no:cacheprovider`: **24 aprovados**, incluindo três testes Streamlit com banco temporário e auditoria isolada (reruns/inicialização, resposta do chat, sinais/exames e repetição do workflow). Um aviso preexistente de depreciação `python_multipart`. `git diff --check` aprovado. Sem alteração de dependências ou integração FT-11/RAG; APP-01/APP-02 permanecem pendentes.
+
+### APP-00B — Executar interface diretamente pelo PyCharm
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** definir padrões locais de ambiente no arquivo da interface e iniciar o servidor Streamlit quando executado diretamente, preservando a execução via `streamlit run`.
+
+**Evidência (13/10/2026):** Python 3.12.0/Streamlit 1.56.0 no Windows: `.venv/Scripts/python.exe fase3/src/medical_assistant/interfaces/streamlit_app.py --server.port 8502` iniciou servidor; `/_stcore/health` retornou HTTP 200 `ok`. Porta alternativa usada para não conflitar com a execução existente. Três testes da interface aprovados com `-B -m pytest fase3/tests/test_streamlit_app.py -q -p no:cacheprovider`; `git diff --check` aprovado. Inicialização direta detecta ausência de contexto Streamlit antes de executar a interface; variáveis usam `setdefault` para preservar configuração externa. Execução equivalente à do Run validada pelo terminal; IDE não controlada nesta validação.
+
+### APP-00C — Separar entrada e inicialização da interface
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** entrada `app.py`, configuração externa Streamlit, instalação editável e inicialização sem efeitos colaterais no import; preservar comportamento do protótipo e atualizar Docker/testes/comandos.
+
+**Evidência (13/10/2026):** entrada `app.py` chama `main`; `.streamlit/config.toml` substitui variáveis embutidas/bootstrap interno. Interface recebe banco explicitamente e abre/fecha por execução em `main`, sem estado de conexão global nem alteração de `sys.path`. Pacote instalado na `.venv` com `python -m pip install --no-build-isolation --no-deps -e ./fase3`. Python 3.12.0/Windows: `-B -m pytest fase3/tests -q -p no:cacheprovider` → **25 aprovados**, incluindo import sem inicialização e regressões da interface; aviso preexistente `python_multipart`. Em `fase3`, `python -m streamlit run app.py --server.port 8502` iniciou e health retornou 200 `ok`; processo de verificação encerrado. `git diff --check` aprovado. Dockerfile atualizado para instalar pacote/usar entrada; imagem Docker não reconstruída. README registra configuração PyCharm por módulo. Substitui a inicialização direta da APP-00B; sem integração nova de modelos/API.
+
+### APP-00D — Extrair controles existentes para safety
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** mover `SecuritySystem` para `safety/guardrails.py` e `AuditLogger` para `safety/audit.py`, preservando regras, formato e destino dos logs; atualizar consumidores e validar regressões. Não implementa SAFE-01.
+
+**Evidência (13/10/2026):** classes extraídas sem alteração de seus métodos; imports do assistente, API e teste Streamlit atualizados. A profundidade de `safety/audit.py` preserva a resolução de `fase3/logs`. Python 3.12.0/Windows: `.venv/Scripts/python.exe -B -m pytest fase3/tests -q -p no:cacheprovider` → **25 aprovados**, um aviso preexistente `python_multipart`; `git diff --check` aprovado. Sem mudança nas regras lexicais, auditoria ou fluxo da interface.
+
+### APP-00E — Simplificar execução pelo arquivo app.py
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** permitir Run direto em `app.py`, iniciando Streamlit com o mesmo interpretador e diretório da fase; manter suporte ao comando Streamlit e interface separada.
+
+**Evidência (13/10/2026):** launcher em `app.py` usa `sys.executable -m streamlit run` em subprocesso sem shell; contexto Streamlit impede relançamento ao renderizar a página. Configuração e UI permanecem separadas. Execução `.venv/Scripts/python.exe fase3/app.py --server.port 8503` iniciou servidor, health HTTP 200; quatro testes da interface aprovados com `-B -m pytest fase3/tests/test_streamlit_app.py -q -p no:cacheprovider`. Processo de verificação encerrado. README atualizado para Run direto, sem parâmetros. Validação pelo terminal equivalente; PyCharm não controlado.
+
+### APP-00F — Separar pergunta e contexto no chat
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** passar pergunta original e contexto estruturado separadamente ao assistente; impedir que hipertensão no histórico acione a resposta fixa em perguntas sobre dor abdominal. Validar regressão, preservando a limitação de respostas simuladas.
+
+**Evidência (13/10/2026):** interface chama `process_query(prompt, patient_context=context)` com idade, gênero, queixa atual e contexto formatado no histórico, preservando os dados consultados. Teste Streamlit reproduz as duas mensagens sobre dor abdominal com paciente hipertenso, confirma pergunta original no gerador/auditoria e histórico no prompt separado; pergunta explícita sobre hipertensão mantém comportamento anterior. `.venv/Scripts/python.exe -B -m pytest fase3/tests -q -p no:cacheprovider`: **26 aprovados**, um aviso preexistente `python_multipart`; `git diff --check` aprovado. Sem chamada LLM real ou alteração das regras de segurança; respostas simuladas continuam limitadas.
+
+### APP-00G — Limpar execução Docker e preparar commit
+
+**Status:** CONCLUÍDA
+
+**Escopo (13/10/2026):** remover launcher específico de IDE, reduzir dependências e contexto Docker ao runtime atual, separar testes e ignorar pesos locais; versionar correções anteriores sem incluir arquivos alheios. Integração FT-11 permanece pendente para Ubuntu.
+
+**Evidência (13/10/2026):** entrada `app.py` mínima; Docker instala pacote/runtime e inicia Streamlit diretamente, com healthcheck. Compose publica somente localhost e mantém data/logs; mounts/modelos/redes não utilizados removidos. `.dockerignore` limita contexto aos arquivos necessários; `.gitignore` protege `fase3/models`, venv API e egg-info. Dependências de treino permanecem em `llm/`; testes separados em `requirements-dev.txt`. `docker compose -f fase3/docker-compose.yml config --quiet` aprovado; `.venv/Scripts/python.exe -B -m pytest fase3/tests -q -p no:cacheprovider`: **26 aprovados**; `git diff --check` aprovado. Build/execução da imagem não validados: engine Docker Linux indisponível (named pipe inexistente). Instalação limpa das dependências reduzidas pendente no build Ubuntu. Substitui launcher APP-00E. README explicita execução, dados opcionais e simulação; não conclui integração FT-11.
+
 ### APP-01 — Integrar LangChain, RAG e prontuário
 
 **Status:** PENDENTE

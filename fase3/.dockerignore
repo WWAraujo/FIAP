@@ -1,0 +1,14 @@
+**
+!Dockerfile
+!requirements.txt
+!pyproject.toml
+!app.py
+!src/
+!src/**
+!.streamlit/
+!.streamlit/config.toml
+!configs/
+!configs/config.yaml
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/

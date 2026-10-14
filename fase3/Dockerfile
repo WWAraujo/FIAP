@@ -1,32 +1,20 @@
 FROM python:3.12-slim
 
-# Define working directory
 WORKDIR /app
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy requirements first for better caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
+COPY pyproject.toml app.py ./
 COPY src/ ./src/
+RUN pip install --no-cache-dir --no-deps -e .
+COPY .streamlit/ ./.streamlit/
 COPY configs/ ./configs/
-COPY scripts/ ./scripts/
+RUN mkdir -p data logs
 
-# Create necessary directories
-RUN mkdir -p data models artifacts logs
-
-# Add src directory to PYTHONPATH
-ENV PYTHONPATH=/app/src:$PYTHONPATH
-
-# Expose port for Streamlit
 EXPOSE 8501
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3)"
 
-# Default command - run Streamlit app
-CMD ["streamlit", "run", "src/medical_assistant/interfaces/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["python", "-m", "streamlit", "run", "app.py", "--server.address=0.0.0.0"]

@@ -1,84 +1,95 @@
-# Fase 3 — Assistente médico com LLM
+# Fase 3 — Assistente médico acadêmico
 
-Projeto acadêmico da FIAP para treinar uma LLM com dados sintéticos/anonimizados e integrá-la a um assistente com fontes, revisão humana e auditoria. Não é validado para uso clínico.
+Protótipo para médicos/equipe assistencial, com prontuários sintéticos, FT-11 (Qwen3.5-9B com QLoRA), LangChain/LCEL, LangGraph, fontes e revisão registrada. Não foi validado clinicamente e não tem autenticação profissional. O sistema não emite prescrição ou diagnóstico definitivo.
 
-## Dois ambientes independentes
+## Iniciar no PyCharm
 
-`llm/` concentra tarefas que exigem GPU, muitos dados ou ferramentas de avaliação: preparação do corpus, benchmark, QLoRA, adapters e comparação base versus adapter (EVAL-03). `requirements.txt` contém apenas as dependências da aplicação atual; treino e avaliação mantêm seu ambiente em `llm/requirements.txt`.
+Há dois ambientes independentes. Se os SDKs já estão configurados, não os recrie.
 
-```text
-fase3/
-├── llm/
-│   ├── data/                 # fonte sintética, corpus curado, MedQuAD e splits
-│   ├── artifacts/            # benchmarks, ambiente, checkpoints e adapters
-│   ├── models/               # pesos-base locais
-│   ├── src/finetuning/       # preparação, treino e avaliação
-│   ├── src/rag/              # corpus, busca, cadeia documental local e avaliação
-│   ├── tests/
-│   └── requirements.txt      # ambiente ROCm/LLM
-├── src/medical_assistant/    # aplicação, API, interfaces, segurança e RAG em runtime
-├── app.py                   # entrada Streamlit
-├── requirements.txt         # API e interface
-├── requirements-dev.txt     # testes
-└── docs/PLANO_EXECUCAO.md    # tarefas, critérios e evidências
+| Processo | Interpretador | Configuração |
+|---|---|---|
+| FT-11/RAG | `fase3/llm/.venv/bin/python` | Script `fase3/llm/src/rag/runtime_server.py` |
+| Interface | `fase3/.venv/bin/python` | Módulo `streamlit`, parâmetros `run app.py`, diretório de trabalho `fase3` |
+
+Na raiz FIAP, inicie primeiro o modelo e aguarde a prontidão:
+
+```bash
+fase3/llm/.venv/bin/python -B fase3/llm/src/rag/runtime_server.py
 ```
 
-O corpus RAG atual está em `llm/data/rag_pilot_v2/`, preservando o inventário v1, com geração/validação do manifesto em `llm/src/rag/` e avaliação reservada em `evaluation/`. Quando a API consultar fontes em tempo de resposta, o código de recuperação permanece em `src/medical_assistant/retrieval/`; assim ela não depende das bibliotecas de treinamento.
-
-## Executar a aplicação
-
-Com Docker Engine/Compose ativos, partindo da raiz:
+Mensagem esperada: `FT-11/RAG pronto em http://127.0.0.1:8001`. Em outro terminal:
 
 ```bash
 cd fase3
-docker compose up --build -d
+.venv/bin/python -B -m streamlit run app.py
 ```
 
-Acesse http://localhost:8501 e clique em **Inicializar Sistema**. Para acompanhar logs e encerrar:
+Abra **http://localhost:8501**. Não há botão de inicialização. Selecione um paciente e use Atendimento, Prontuário, Triagem e Auditoria. O processo do modelo mantém uma cópia carregada; consultas são serializadas porque o verificador documental alterna o adapter.
+
+## Preparar outro ambiente
+
+A instalação validada usa Linux, Python 3.14.4 e GPU AMD RX 9060 XT de 16 GiB com ROCm. `llm/requirements.txt` é específico desse ambiente. Em um clone, prepare cada módulo separadamente:
 
 ```bash
-docker compose logs -f medical-assistant
-docker compose down
-```
-
-O Docker instala dependências, configura o diretório de trabalho e inicia o Streamlit. A porta é publicada apenas em localhost. Dados e logs persistem em `fase3/data/` e `fase3/logs/`; pesos, ambientes virtuais e artefatos de treinamento não entram no contexto de build. A instalação editável dentro da imagem mantém os caminhos de recursos relativos a `/app/src` usados pelo código atual.
-
-**Limite atual:** chat com respostas simuladas e workflow sequencial, sem integração FT-11/RAG/Ollama pela interface. O banco cria dados sintéticos de exemplo na primeira execução. A base opcional do protótipo é `data/curated/dataset_medico_anonimizado.json`; sua ausência não impede abrir a interface, mas deixa a busca local vazia. A API é uma entrada separada, descrita abaixo. Este Compose ainda não entrega o assistente integrado.
-
-## Desenvolvimento sem Docker
-
-No Ubuntu, a partir de `fase3`:
-
-```bash
-python3 -m venv .venv-api
-.venv-api/bin/python -m pip install -r requirements-dev.txt
-.venv-api/bin/python -m pip install -e .
-.venv-api/bin/python -m streamlit run app.py
-.venv-api/bin/python -m pytest tests -q
-```
-
-No Windows, use o executável equivalente do ambiente existente: `..\\.venv\\Scripts\\python.exe`, partindo de `fase3`. O arquivo `app.py` é a entrada do Streamlit, não um launcher Python independente. Configuração local em `.streamlit/config.toml`; o Docker sobrescreve o endereço para escutar dentro do contêiner.
-
-APP-00 implementa `POST /query` em FastAPI com modos `standard`/Qwen e `fast`/Gemma conforme `configs/config.yaml`, identidade do modelo, auditoria e erro explícito sem fallback. **21 testes mockados aprovados**. [Execução da API e limites](src/medical_assistant/application/README.md). A API ainda não carrega FT-11 nem consulta RAG/prontuário; essa integração é APP-01. CLI/Streamlit mantêm respostas simuladas.
-
-## Ambiente LLM local ROCm
-
-```bash
-cd fase3/llm
-sudo apt install python3.14-venv python3.14-dev
+cd fase3
 python3.14 -m venv .venv
-.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pip install -e .
+cd llm
+python3.14 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-
-.venv/bin/python src/finetuning/scripts/check_rocm_before_training.py
+.venv/bin/python -m pip install -e .
 ```
 
-Em 05/10/2026, a FT-11 treinou e recarregou um adaptador do `Qwen/Qwen3.5-9B` com 1.408 exemplos. No teste reservado, houve 22 respostas factuais adequadas e 11 inadequadas em 48, contra 20 e 21 do base; documentos/contexto tiveram 100/112 acertos completos contra 29/112. A seleção está em `llm/artifacts/best_model.json`. Na prova adicional, houve regressão de 6 para 5 adequados em 12 factuais, apesar de menos erros e ganho contextual; generalização parcial. Há erros e não há validação clínica. Consulte a [revisão da FT-11](llm/artifacts/experiments/20261005T120254Z_factual_v2/review.md) e os comandos atuais em [llm/README.md](llm/README.md).
+Esses comandos não instalam o driver da GPU. A base Qwen e os adapters FT-10/FT-11 são arquivos grandes locais e não estão no Git. Obtenção, reprodução e caminhos estão no [README LLM](llm/README.md). O adapter do projeto não possui URL pública registrada: é preciso copiá-lo de uma execução existente ou reproduzir os treinos e avaliar a nova seleção. Nova execução não herda o recibo do modelo histórico.
 
-Em 06/10/2026, `llm/data/factual_v3/` foi preparada com 1.920 exemplos de treino e 80/80 de validação/teste, referências MedlinePlus revisadas documentalmente por IA e temas separados. O piloto FT-13 concluiu 48 passos a partir de FT-11: na nova validação, 21/24 factuais adequadas contra 19/24 do controle e 22/24 da base, mantendo 55/56 acertos documentais/contextuais do controle. Melhorou FT-11 neste conjunto, mas não cumpriu todos os critérios para expandir; treino completo não iniciado e teste novo sem geração. Na limpeza de 10/10/2026, os pesos rejeitados FT-12/FT-13 foram removidos; seus resultados e entradas de avaliação permanecem, junto com FT-11 e seu antecessor FT-10. FT-11 permanece selecionado. Consulte a [revisão FT-13](llm/artifacts/experiments/20261006T232619Z_ft13_pilot/review.md); o resultado não é validação clínica.
+`best_model.json`, a configuração do adapter e o manifesto contêm caminhos absolutos da execução original. Preserve os caminhos canônicos ao transferir essa execução; uma mudança de identidade/configuração exige verificação e registro próprios, sem editar hashes para contornar o recibo. O runtime confere versões, módulos, índice, configuração e pesos antes de atender. Sem esses arquivos locais, o clone não executa inferência. Os testes de software usam mocks e podem ser executados sem carregar os pesos.
 
-## Próximas tarefas
+## Comportamento disponível
 
-Consulte o [plano de execução](docs/PLANO_EXECUCAO.md). A comparação local do adaptador não comprova integração à aplicação; essa integração e sua validação permanecem pendentes.
+- Prontuário: SQLite relido a cada consulta. Alergias e IMC têm rotas determinísticas com fontes.
+- Fatos do paciente: medicamentos, exames, consultas futuras, idade e sinais vitais são recuperados do contexto e conferidos pelo FT-11 na cadeia LCEL factual. A resposta copia registros fornecidos ou declara ausência, sem inferir tratamento.
+- Documentos: BM25, seleção documental FT-11, verificador-base e fontes com título, versão, trecho e offsets. O corpus oficial admitido contém páginas de portaria, sem anexos clínicos; não supor cobertura completa dos PCDTs.
+- Triagem: grafo LangGraph com estado isolado, consulta ao prontuário/documentos, exames reais pendentes/vencidos, alertas e propostas rastreáveis. Regras de prioridade são demonstrativas. Sem documento pertinente, o sistema solicita completar evidências.
+- Revisão: cada rascunho elegível tem snapshot/hash e estado pendente. O usuário informa responsável, decisão e confirmação explícita. A decisão é única e vinculada ao paciente. A identidade é declarada, não autenticação profissional; testes simulados não são aprovação clínica.
 
-O [planejamento do RAG](docs/PLANO_RAG.md) registra BM25 vencedor e **preparação documental RAG-09 concluída em 12/10/2026**. A cadeia local LCEL usa FT-11 para selecionar evidência, verificador comum na base sem adapter, contexto completo e fontes/offsets verificáveis. Validação final: 22/24 completas, duas parciais e todos os 16 casos especiais corretos em ambas as condições com RAG. No [teste final de 160 registros](llm/artifacts/experiments/20261012T184438077141Z_rag09_test/review.md), FT-11+RAG teve 19/24 completas, duas parciais e três abstenções indevidas; base+RAG 18/24, três parciais e as mesmas abstenções. Ambos 8/8 ausências, 4/4 conflitos e 4/4 instruções hostis; 24/24 spans e todo o texto útil entregues ao prompt, zero erros/omissões. Orçamento 3.072/reserva 256, pico VRAM 7,92 GiB, 42 testes de software aprovados. [Recarga pela CLI](llm/artifacts/experiments/20261012T190305897293Z_rag_query_v3/review.md) retorna ambas as assinaturas com fonte correta, sem ler perguntas/gabaritos. Comandos e recibo de aceite no [README RAG](llm/src/rag/README.md). Falhas e versões anteriores preservadas; conjuntos reservados de paráfrases compartilham corpus/conceitos, sem independência temática ou clínica. A qualidade permanece limitada; sem treino novo ou alteração dos pesos selecionados. APP-00 concluída; próxima tarefa APP-01 para integrar FT-11/RAG/prontuário; LangGraph/revisão humana no fluxo real continuam pendentes.
+O catálogo `tools` contém somente `calcular_imc`. O chat ainda usa regras para reconhecer rotas; não há agente escolhendo tools automaticamente. Não há rota geral de conhecimento livre sem documentos. Bloqueios lexicais e conferência de fontes reduzem erros, mas não garantem segurança universal.
+
+## Banco e registros locais
+
+`data/prontuarios.db` contém os prontuários; `data/reviews.db`, snapshots/decisões. `logs/audit.log` grava respostas completas, consultas, fontes, modelo, workflow e revisão correlacionados. Resultados do runtime ficam em `llm/artifacts/experiments/`. Esses dados não entram no Git.
+
+Um banco vazio recebe um paciente sintético inicial. Para gerar os dez perfis de simulação, no SDK API a partir de `fase3`:
+
+```bash
+.venv/bin/python -B -m medical_assistant.clinical.seed_patients
+```
+
+O seed conserva registros existentes, incluindo os IDs renomeados conhecidos `paciente_*`; um banco novo usa os IDs sintéticos originais. Não usar dados reais de pacientes. Para outra máquina, transfira a base de demonstração separadamente ou recrie os exemplos.
+
+## API e testes
+
+A API é opcional ao site. Na raiz FIAP:
+
+```bash
+fase3/.venv/bin/python -B -m uvicorn medical_assistant.application.api:app --app-dir fase3/src --host 127.0.0.1 --port 8000
+fase3/.venv/bin/python -B -m pytest fase3/tests -q -p no:cacheprovider
+fase3/llm/.venv/bin/python -B -m pytest fase3/llm/tests -q -p no:cacheprovider
+```
+
+Rotas: `/assistant/query`, `/workflows`, `/reviews/{id}` e `/reviews/{id}/decision`. A rota `/query` é o legado Ollama, independente do chat FT-11. Contratos em [application/README.md](src/medical_assistant/application/README.md). `FT11_RUNTIME_URL` altera o destino padrão localhost:8001; o servidor aceita `--port`. `REVIEW_DB_PATH` permite isolar a persistência de revisão em testes.
+
+## Entrega e documentação
+
+O Git inclui código da aplicação, treino/preparação, testes, corpora sintéticos/curados permitidos, metadados e evidências selecionadas. Pesos, SDKs, banco, logs e sondagens operacionais permanecem locais. Não é necessário versionar milhares de execuções.
+
+- [Proposta original](PROPOSTA.md).
+- [Relatório técnico e diagramas](docs/RELATORIO_TECNICO.md).
+- [Resumo da entrega para o grupo](docs/RESUMO_ENTREGA_GRUPO.md).
+- [Guia de validação](docs/GUIA_VALIDACAO.md).
+- [Roteiro do vídeo de até 15 minutos](docs/ROTEIRO_VIDEO.md).
+- [Plano e evidências de execução](docs/PLANO_EXECUCAO.md).
+- [Índice da revisão Markdown](docs/REVISAO_DOCUMENTACAO.md).
+- [Instruções de manutenção](AGENTS.md).
+
+Desenvolvimento do fluxo acadêmico implementado e validado no escopo registrado no relatório. Gravação/apresentação do vídeo e validação clínica por profissionais não são substituídas por código nem por decisões simuladas em testes.

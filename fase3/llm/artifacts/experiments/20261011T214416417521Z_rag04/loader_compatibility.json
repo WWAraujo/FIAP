@@ -1,7 +1,0 @@
-{
-  "change_after_real_probe": "Parâmetro opcional de atenção no carregador: backend mantém eager; CLI histórica passa None para preservar escolha anterior do Transformers. Sem mudança de caminho de inferência FT-11.",
-  "shared_loader_sha256_current": "a8c9a9af3ff73ac03d9c608b06ac7b1a41c2143f43f8d26dec753ba851a877ae",
-  "backend_script_matches_real_run": true,
-  "tests_passed": 7,
-  "test_scope": "Identidade/falhas/orçamento e carregador mockado cobrindo eager no backend/default na CLI."
-}

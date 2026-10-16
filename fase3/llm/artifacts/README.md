@@ -1,24 +1,18 @@
-# Artefatos LLM
+# Artefatos da entrega
 
-O treino selecionado e a preparação do piloto documental RAG estão concluídos. A integração à aplicação é uma etapa separada; não há validação clínica.
+A seleção para o Git está no `.gitignore` e em [versioning_policy.json](versioning_policy.json). A política inclui execução e prova acadêmica; substitui a seleção temporária de apenas quatro arquivos de runtime.
 
-| Caminho | Finalidade | Git |
-|---|---|---|
-| `best_model.json` | Seleção FT-11, identidade e hashes dos pesos | Sim |
-| `adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/` | FT-10, origem do treino FT-11 | Manifesto, ambiente e configuração; pesos locais |
-| `adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/` | FT-11 selecionado | Manifesto, ambiente e configuração; pesos locais |
-| `experiments/` | Respostas, métricas, decisões e histórico, inclusive falhas | JSON, JSONL e Markdown; logs e cópias históricas de scripts locais |
-| `evaluations/`, `environment/`, `data_audits/` | Avaliações e diagnósticos históricos | Locais, ignorados |
-| `cleanup_20261010.json` | Registro da limpeza dos pesos rejeitados e caches | Sim |
+| Conjunto | Conteúdo versionado |
+|---|---|
+| `best_model.json` | Seleção FT-11 e identidade. |
+| Adapters FT-10/FT-11 | Manifestos, ambientes e configuração LoRA; pesos locais. |
+| Sete execuções selecionadas | Configurações, métricas, respostas brutas, revisões e decisões de treino/recuperação/RAG. |
+| Outras execuções com relatório selecionado | Somente `review.md`; detalhes permanecem locais. |
+| Integração atual | Resumo `20261016T101610484760Z_delivery_live/summary.json`, sem prontuário ou decisões humanas pessoais. |
+| Limpezas | Registros de arquivos removidos nas limpezas autorizadas anteriores. |
 
-## Evidências atuais
+Não mover os arquivos exigidos pelo recibo `../data/rag_index_v3_final/readiness.json`. O teste reservado está consumido. Falhas e recibos revogados nos relatórios são resultados históricos, sem aprovação vigente.
 
-- [Treino e seleção FT-11](experiments/20261005T120254Z_factual_v2/review.md).
-- [Comparação BM25/E5](experiments/20261011T212901816585Z_rag03/review.md).
-- [Validação RAG final](experiments/20261012T182715001180Z_rag09_validation/review.md).
-- [Teste RAG final e limitações](experiments/20261012T184438077141Z_rag09_test/review.md).
-- [Consulta e recarga reais pela CLI](experiments/20261012T190305897293Z_rag_query_v3/review.md).
+Os relatórios por run_id e os model cards gerados são históricos imutáveis: descrevem a versão da época, não instruções atuais da aplicação. Consulte [relatório técnico](../../docs/RELATORIO_TECNICO.md) e [README LLM](../README.md). Links de relatórios antigos para detalhes não selecionados dependem da cópia local.
 
-Preserve os IDs das execuções e as decisões anteriores. As avaliações reprovadas e os recibos revogados explicam a seleção atual e não devem ser tratados como resultados vigentes. Não mover esses diretórios: o recibo em `../data/rag_index_v3_final/readiness.json` verifica caminhos e hashes.
-
-Os modelos-base ficam em `../models/`, fora do Git. [Download da base e reprodução dos adapters](../README.md#baixar-os-arquivos-grandes). Os adapters do projeto não têm download público registrado: copie a execução completa ou realize FT-10 e FT-11 conforme o README. Um novo treino exige nova avaliação; não herda a aprovação do recibo histórico.
+Novas consultas e experimentos são ignorados por padrão. Avaliações/diagnósticos intermediários, snapshots de código, pesos, checkpoints e dados de pacientes/revisões continuam locais. Remoção do índice usa `git rm --cached`, sem apagar o arquivo local; não elimina cópias de commits anteriores. Nenhum commit é criado automaticamente.

@@ -2,7 +2,7 @@
 
 Este pacote mede inferência de modelos via Ollama para reduzir a lista de candidatos. Ele não treina modelos e não comprova, sozinho, segurança clínica, qualidade clínica ou elegibilidade para fine-tuning.
 
-Use-o em **EVAL-01** e **EVAL-02** do [plano da fase](../../../../docs/PLANO_EXECUCAO.md). A comparação de modelo-base e adapter treinado será feita em **EVAL-03**.
+Use-o em **EVAL-01** e **EVAL-02** do [plano da fase](../../../../docs/PLANO_EXECUCAO.md). A comparação de modelo-base e adapter foi realizada em **EVAL-03** e refinada nos experimentos FT-10/FT-11; resultados atuais no [relatório técnico](../../../../docs/RELATORIO_TECNICO.md). O benchmark Ollama abaixo é uma ferramenta histórica de comparação, não o modelo em uso no chat.
 
 ## O que existe hoje
 

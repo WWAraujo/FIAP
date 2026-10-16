@@ -17,7 +17,15 @@ llm/
 └── tests/
 ```
 
+## Integração atual (16/10/2026)
+
+O runtime `src/rag/runtime_server.py` atende a aplicação com a cadeia documental v3 e a nova cadeia factual `patient_facts_chain.py`, que usa registros atuais de medicamentos/exames/consultas/idade/sinais com fontes SQLite. O SDK API executa LangGraph e revisão persistente; o SDK LLM continua com as versões congeladas pelo recibo. Não instalar LangGraph ou atualizar LangChain nesse SDK para satisfazer a UI: os ambientes são separados. [Fluxo completo e validação](../docs/RELATORIO_TECNICO.md).
+
 ## Arquivos preservados
+
+Avaliação de ferramentas do FT-11 em 15/10/2026: seleção nativa correta nas 18 perguntas operacionais, com três falhas no marcador de abstenção; **21/24 contratos/seleções corretos**. Estratégia JSON: **20/24 corretos**, incluindo falhas sintáticas e omissão em pedido misto. Nenhuma condição atingiu os critérios prévios para integração automática. [Relatório e pontuação corrigida](artifacts/experiments/20261016T000851104289Z_ft11_tool_selection/review.md). Não foram executadas ferramentas nem alterado o chat.
+
+Para uma nova execução, no SDK LLM e com GPU livre, partindo da raiz: `fase3/llm/.venv/bin/python -B fase3/llm/src/rag/evaluate_tool_selection.py`. Cada execução cria artefatos novos; os casos já observados não constituem holdout independente. A correção de parser da execução original foi validada por nove testes em `llm/tests/test_tool_selection_eval.py`.
 
 - FT-11: `artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/` e corpus `data/factual_v2/` (1.408/160/160 exemplos de treino/validação/teste).
 - FT-10: `artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/` e corpus `data/contextual_v1/` (960/120/120). Seus pesos são a origem do treino FT-11, necessários para reproduzi-lo.
@@ -109,7 +117,7 @@ FT11_ADAPTER="artifacts/adapters/<run-id-do-seu-ft11>/adapter"
 
 Revise a validação e registre a seleção antes de avaliar o teste. `score_contextual_results.py` e `score_semantic_review.py` separam contrato/conteúdo contextual de adequação factual. Os conjuntos históricos já foram observados e não constituem uma nova prova independente de generalização.
 
-No Git ficam código, dependências, corpora atuais, manifestos/configurações FT-10/FT-11 e evidências JSON/JSONL/Markdown de `experiments/`, incluindo falhas necessárias ao histórico. Pesos, ambientes, caches, logs operacionais, scripts históricos de execução, `data_audits/` e `evaluations/` ficam locais e ignorados. A [organização dos artefatos](artifacts/README.md) identifica os resultados finais e o que permanece local.
+No Git ficam código de execução/treino, dependências, corpora FT-10/FT-11 permitidos e evidências nomeadas de seleção/avaliação. Execuções novas não entram automaticamente; a seleção está no `.gitignore` e em `artifacts/versioning_policy.json`. Pesos, ambientes, caches, logs operacionais, scripts históricos de execução, `data_audits/` e `evaluations/` ficam locais e ignorados. A [organização dos artefatos](artifacts/README.md) identifica os resultados finais e o que permanece local.
 
 ## Resultado e próximo passo
 
@@ -123,4 +131,4 @@ No histórico RAG-08, o [teste/decisão](artifacts/experiments/20261012T00105741
 
 **RAG-09 concluída em 12/10/2026:** cadeia v3, BM25 sobre 15 seções integrais, seleção FT-11 e verificador comum na mesma base quantizada sem adapter. Escopo de fontes, JSON restrito, resolução literal/offsets e cobertura de todo texto útil, incluindo última linha. Validação final: ambos com RAG 22/24 completas, duas parciais e todos os 16 casos especiais corretos. [Teste final](artifacts/experiments/20261012T184438077141Z_rag09_test/review.md): FT-11+RAG 19/24 completas, duas parciais e três abstenções indevidas; base+RAG 18/24, três parciais e as mesmas abstenções. Ambos 8/8 ausências, 4/4 conflitos, 4/4 instruções hostis, 24/24 spans entregues; nenhum erro/omissão ou citação final sem suporte segundo revisão por IA. Orçamento 3.072/reserva 256, pico VRAM 7,92 GiB. 42 testes de software e [recarga pela CLI](artifacts/experiments/20261012T190305897293Z_rag_query_v3/review.md) aprovados, com ambos os signatários e fontes exatas sem consultar splits. `data/rag_index_v3_final/readiness.json` vincula módulos, índice, pacotes e pesos à decisão atual. [Comando de consulta e limites](src/rag/README.md).
 
-Preparação documental acadêmica aceita; o verificador ainda falha em algumas formulações. Holdouts são paráfrases/cobertura de regressão do mesmo corpus/conceitos/famílias, sem independência temática ou clínica. Resultados/recibos anteriores e falhas foram preservados, inclusive a revogação após detectar perda da última linha no prompt. Sem treino novo ou mudança de pesos/seleção. APP-00 concluiu a política de seleção na API Ollama, com 21 testes mockados; [comandos e limites](../src/medical_assistant/application/README.md). Conectar FT-11/RAG/prontuário em APP-01 e LangGraph continuam pendentes; `validacao_humana: true` indica necessidade de revisão, não aprovação efetiva.
+Preparação documental acadêmica aceita; o verificador ainda falha em algumas formulações. Holdouts são paráfrases/cobertura de regressão do mesmo corpus/conceitos/famílias, sem independência temática ou clínica. Resultados/recibos anteriores e falhas foram preservados, inclusive a revogação após detectar perda da última linha no prompt. Sem treino novo ou mudança de pesos/seleção. APP-00 concluiu a política de seleção na API Ollama, com 21 testes mockados; [comandos e limites](../src/medical_assistant/application/README.md). APP-01, APP-02 e SAFE-01 estão implementadas no fluxo atual, com 82 testes API/UI e 124 testes LLM aprovados, mais seis verificações de integração real; `validacao_humana: true` indica necessidade de revisão, não aprovação efetiva.

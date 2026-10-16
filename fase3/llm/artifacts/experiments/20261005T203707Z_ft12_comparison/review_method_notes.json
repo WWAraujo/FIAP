@@ -1,6 +1,0 @@
-{
-  "control_policy": "FT-11 historical grades are fixed. Provisional reviewer disagreement with a control is logged, without changing its score.",
-  "candidate_policy": "Exact decoded JSON or explicitly reviewed semantic equivalence transfers the fixed historical grade; changed factual content uses the anonymized pair review.",
-  "blinding_limit": "Pair model names concealed; style can reveal identity. Equivalence consolidation uses historical control identity. Documentary AI review, not clinical validation.",
-  "clinical_validation": false
-}

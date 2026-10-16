@@ -1,6 +1,0 @@
-{
-  "reason": "Software validation with a new named procedural query reproduced rejection of a legitimate supplemental document: corpus retrieval scope was incorrectly applied to a supplied document outside the catalog. Fix requires a new frozen validation run.",
-  "advance_to_reserved_test": false,
-  "reserved_v4_opened": false,
-  "preserve_source_snapshots_and_completed_records": true
-}

@@ -15,8 +15,7 @@ sys.path.insert(0, str(PROJECT_DIR / "src"))
 from medical_assistant.application.assistant import MedicalAssistantLangChain
 from medical_assistant.application.workflow import MedicalWorkflowGraph
 from medical_assistant.clinical.patient_database import PatientDatabase, PatientContextBuilder
-from medical_assistant.retrieval.ollama_adapter import OllamaMedicalAdapter
-from medical_assistant.training.config import FineTuningConfig
+from medical_assistant.application.contracts import PatientContext
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -29,8 +28,6 @@ class MedicalAssistantInterface:
         logger.info("Inicializando Assistente Médico - Fase 3 Tech Challenge")
 
         # Inicializar componentes
-        self.config = FineTuningConfig()
-        self.ollama_adapter = OllamaMedicalAdapter(self.config)
         self.langchain_assistant = MedicalAssistantLangChain()
         self.workflow_graph = MedicalWorkflowGraph()
         self.patient_db = PatientDatabase()
@@ -41,73 +38,16 @@ class MedicalAssistantInterface:
     def process_medical_query(self, query: str, patient_id: str = None) -> Dict[str, Any]:
         """Processa query médica completa com todos os componentes"""
 
-        logger.info(f"Processando query: {query}")
-        logger.info(f"Paciente ID: {patient_id}")
-
-        result = {
+        context = PatientContext.from_database(self.patient_db, patient_id) if patient_id else None
+        response = self.langchain_assistant.process_query(query, context)
+        return {
             "query": query,
             "patient_id": patient_id,
-            "timestamp": str(Path.cwd()),
-            "components_used": []
+            "langchain_response": response,
+            "components_used": ["FT-11", "RAG", "LangChain"] + (["patient_database"] if context else []),
+            "summary": {"requires_validation": response["requires_validation"],
+                        "security_blocked": response["security_blocked"]},
         }
-
-        # 1. Obter contexto do paciente se ID fornecido
-        patient_context = None
-        if patient_id:
-            try:
-                patient_context = self.context_builder.build_context_for_assistant(patient_id)
-                result["patient_context"] = patient_context
-                result["components_used"].append("patient_database")
-                logger.info("Contexto do paciente obtido")
-            except Exception as e:
-                logger.error(f"Erro ao obter contexto do paciente: {e}")
-                result["patient_context_error"] = str(e)
-
-        # 2. Processar query com LangChain
-        try:
-            langchain_result = self.langchain_assistant.process_query(query, patient_context)
-            result["langchain_response"] = langchain_result
-            result["components_used"].append("langchain")
-            logger.info("LangChain processou query com sucesso")
-        except Exception as e:
-            logger.error(f"Erro no LangChain: {e}")
-            result["langchain_error"] = str(e)
-
-        # 3. Executar workflow se houver dados do paciente
-        if patient_id and patient_context:
-            try:
-                patient_data = self.patient_db.get_patient_summary(patient_id)
-                workflow_result = self.workflow_graph.execute_full_workflow(patient_data, query)
-                result["workflow_result"] = workflow_result
-                result["components_used"].append("workflow_graph")
-                logger.info("Workflow executado com sucesso")
-            except Exception as e:
-                logger.error(f"Erro no workflow: {e}")
-                result["workflow_error"] = str(e)
-
-        # 4. Tentar resposta Ollama se disponível
-        try:
-            patient_data_dict = None
-            if patient_id:
-                patient_data_dict = self.patient_db.get_patient_info(patient_id)
-
-            ollama_result = self.ollama_adapter.generate_response(query, patient_data_dict)
-            result["ollama_response"] = ollama_result
-            result["components_used"].append("ollama_rag")
-            logger.info("Ollama RAG processou query")
-        except Exception as e:
-            logger.warning(f"Ollama não disponível: {e}")
-            result["ollama_error"] = str(e)
-
-        # Resumo final
-        result["summary"] = {
-            "total_components": len(result["components_used"]),
-            "requires_validation": langchain_result.get("requires_validation", True),
-            "security_blocked": langchain_result.get("security_blocked", False),
-            "workflow_intervention": result.get("workflow_result", {}).get("requires_human_intervention", False)
-        }
-
-        return result
 
     def interactive_mode(self):
         """Modo interativo para testes"""
@@ -151,7 +91,11 @@ class MedicalAssistantInterface:
         patient_id = input("ID do paciente (opcional, pressione Enter para pular): ").strip()
         patient_id = patient_id if patient_id else None
 
-        result = self.process_medical_query(query, patient_id)
+        try:
+            result = self.process_medical_query(query, patient_id)
+        except (ValueError, RuntimeError) as exc:
+            print(f"Erro na consulta: {exc}")
+            return
 
         print("\n" + "="*70)
         print("RESULTADO DA CONSULTA")

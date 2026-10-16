@@ -1,8 +1,0 @@
-{
-  "model_id": "Qwen/Qwen3.5-9B",
-  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
-  "adapter_enabled": true,
-  "adapter_weights_sha256_effective": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
-  "loaded_adapter_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
-  "quantization": "same NF4 base across conditions"
-}

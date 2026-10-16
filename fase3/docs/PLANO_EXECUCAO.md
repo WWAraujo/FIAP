@@ -1,6 +1,6 @@
 # Plano de execução — Fase 3
 
-Atualizado em 28/09/2026. Este documento controla o trabalho da Fase 3. Uma tarefa só muda para concluída após satisfazer seus critérios de aceite e registrar evidência abaixo. Não marque uma implementação parcial como concluída.
+Atualizado em 16/10/2026. Entradas datadas conservam o histórico da versão e dos caminhos da época. Estado vigente: APP-02/SAFE-01 concluídas; parte técnica/documental de ENT-01 concluída, vídeo ainda pendente. Este documento controla o trabalho da Fase 3. Uma tarefa só muda para concluída após satisfazer seus critérios de aceite e registrar evidência abaixo. Não marque uma implementação parcial como concluída.
 
 ## Fluxo de dependências
 
@@ -722,9 +722,15 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 **Evidência (13/10/2026):** entrada `app.py` mínima; Docker instala pacote/runtime e inicia Streamlit diretamente, com healthcheck. Compose publica somente localhost e mantém data/logs; mounts/modelos/redes não utilizados removidos. `.dockerignore` limita contexto aos arquivos necessários; `.gitignore` protege `fase3/models`, venv API e egg-info. Dependências de treino permanecem em `llm/`; testes separados em `requirements-dev.txt`. `docker compose -f fase3/docker-compose.yml config --quiet` aprovado; `.venv/Scripts/python.exe -B -m pytest fase3/tests -q -p no:cacheprovider`: **26 aprovados**; `git diff --check` aprovado. Build/execução da imagem não validados: engine Docker Linux indisponível (named pipe inexistente). Instalação limpa das dependências reduzidas pendente no build Ubuntu. Substitui launcher APP-00E. README explicita execução, dados opcionais e simulação; não conclui integração FT-11.
 
+**Revalidação após sincronização (14/10/2026, Ubuntu):** commit `313196b` e alterações locais preservadas. SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4. Comando na raiz: `fase3/.venv/bin/python -B -m pytest fase3/tests -q -p no:cacheprovider` → **26 aprovados**, cobrindo API mockada e interface com banco/auditoria temporários; avisos de depreciação nas dependências, sem falhas. Em `fase3`, `./.venv/bin/python -B -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501` iniciou o servidor; `/` e `/_stcore/health` retornaram HTTP 200, health `ok`. Servidor mantido para teste manual em `http://127.0.0.1:8501`. Docker não instalado no host; imagem continua sem validação de build. Inventário local Ollama não contém os nomes configurados para APP-00; não houve geração real ou download de modelo. Esta verificação comprova a inicialização do protótipo, não a integração FT-11/RAG/prontuário, LangGraph ou prontidão para entrega.
+
+**Correção da inicialização local (14/10/2026):** o primeiro acesso pelo navegador revelou `ModuleNotFoundError: medical_assistant`. Healthcheck HTTP 200 e a suíte conjunta não detectaram a ausência da instalação editável no SDK API. Executado `fase3/.venv/bin/python -m pip install --no-deps --no-build-isolation -e fase3`, conforme preparação prevista no README, sem atualizar dependências. Import conferido em processo novo a partir de `fase3`; `fase3/.venv/bin/python -B -m pytest tests/test_streamlit_app.py -q -p no:cacheprovider` (em `fase3`, executável absoluto) → **5 aprovados**, incluindo renderização da entrada e inicialização/reruns. Servidor reiniciado na porta 8501 para aplicar a instalação. Sem alteração de código da aplicação.
+
 ### APP-01 — Integrar LangChain, RAG e prontuário
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDA
+
+**Início (14/10/2026):** conectar Streamlit/CLI/API ao FT-11 e à cadeia documental v3 por processo local persistente no SDK LLM, com contrato tipado de paciente, fontes e erros explícitos. Preservar pesos, corpus, módulos congelados e alterações locais existentes; LangGraph e aprovação humana permanecem em APP-02/SAFE-01.
 
 **Objetivo:** substituir resposta simulada por cadeia real, definir contratos tipados de paciente/contexto e retornar fontes verificáveis.
 
@@ -734,9 +740,183 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 **Planejamento complementar:** [PLANO_RAG.md](PLANO_RAG.md), aprovado como escopo de planejamento em RAG-00. Primeiro validar recuperação e cadeia documental com FT-11 real; integração de prontuário e conclusão desta tarefa exigem os critérios completos acima.
 
+**Evidência (14/10/2026, Ubuntu; artefatos em UTC 15/10):** `llm/src/rag/runtime_server.py` mantém FT-11 no SDK ROCm, confere recibo/identidade e atende serialmente em localhost:8001. `PatientDocumentChain` reutiliza a cadeia LCEL v3 sem alterar os módulos/índice congelados e fornece contexto tipado do prontuário ao seletor, contado no orçamento sem corte silencioso. Streamlit/CLI e `POST /assistant/query` usam o mesmo serviço/contratos; a API resolve `patient_id` no SQLite. Prontuário relido por consulta, fontes com ID/título/versão/página/seção/trecho/offsets, identidade e execução auditadas. Falhas são explícitas; não há resposta simulada ou fallback Ollama no fluxo integrado. Rota legada APP-00 `/query` preservada. Histórico do chat limpo ao trocar de paciente.
+
+**Validação de software:** SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4: `-B -m pytest fase3/tests/test_ft11_integration.py fase3/tests/test_streamlit_app.py fase3/tests/test_model_policy_api.py -q -p no:cacheprovider` → **35 aprovados**. SDK LLM `/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python`, Python 3.14.4: `-B -m pytest fase3/llm/tests/test_app_runtime.py fase3/llm/tests/test_document_chain_v3.py fase3/llm/tests/test_rag_query.py -q -p no:cacheprovider` → **33 aprovados**. Sem rede/modelo nos testes; avisos de depreciação de dependências. Cobertos: contexto atualizado, paciente ausente/inválido, bloqueio antes de inferência, falha sem simulação, contratos/fidelidade do texto, fontes após rerun, troca de paciente, CLI e orçamento. `git diff --check` aprovado.
+
+**Validação integrada real:** servidor carregou FT-11 na GPU local. Streamlit AppTest enviou a pergunta sobre os dois signatários com `patient_001`, recebeu ambos os nomes com fonte e offsets exatos e preservou fontes após rerun. Nova consulta HTTP pela rota FastAPI via ASGI, sem paciente, retornou HTTP 200 e a mesma evidência, no mesmo runtime persistente, sem reutilizar o contexto anterior. Sem mocks nesses dois percursos. Evidência final: `llm/artifacts/experiments/20261015T005220187984Z_app01_61af36dc/integration_validation.json`; segunda execução `20261015T005246590244Z_app01_04a0130f/`. Cada diretório contém solicitação, identidade, estado completo e resposta. A primeira prova `20261015T004927575594Z_app01_2c7185a0/` foi preservada: a revisão posterior detectou remoção de espaços nas extremidades pelo contrato; a normalização das fontes foi retirada e a prova final conferiu `text[char_start:char_end] == quoted_text`. Um teste inicial de troca falhou porque a fixture tinha somente um paciente; a fixture temporária passou a incluir dois, sem alterar o banco operacional.
+
+**Limites:** validação funcional/documental, sem avaliação clínica ou demonstração de orientação personalizada. O prontuário chega ao seletor; não vira protocolo, não altera a busca pela pergunta original nem o verificador documental. Perguntas fora do corpus podem gerar pendência e contexto grande pode exceder o orçamento. As métricas de RAG-09 não são transferidas para o novo prompt. Workflow continua sequencial e aprovação humana continua pendente para APP-02/SAFE-01. Docker integrado não validado. Alterações locais anteriores preservadas, sem novos pesos, dependências ou treinamento.
+
+### DAT-07 — Popular prontuários sintéticos para simulação
+
+**Status:** CONCLUÍDA
+
+**Escopo (14/10/2026):** adicionar dez pacientes sintéticos distintos, preservando cadastros existentes, com histórico/alergias, sinais vitais, medicamentos contínuos, exames realizados/pendentes/com prazo vencido e consultas passadas/futuras. Reutilizar o SQLite existente, sem carregar prontuários no índice RAG ou alterar pesos. Incluir consultas no contrato de contexto.
+
+**Aceite:** população reproduzível sem duplicação ou sobrescrita, datas relativas à execução inicial, dez perfis distintos consultáveis na interface e informações disponíveis no contexto do paciente. Testes com banco temporário e conferência do banco local.
+
+**Evidência (14/10/2026):** `src/medical_assistant/clinical/seed_patients.py` cria `sim_001` a `sim_010` em transação, com dez condições/perfis distintos, alergias no histórico (incluindo negadas e desconhecidas), sinais vitais, nove registros de medicamentos em oito pacientes, quatro solicitações de exame com prazo administrativo vencido, quatro exames pendentes, um realizado normal e um para revisão, oito consultas futuras e dois retornos atrasados sem reagendamento. Datas relativas à primeira inserção; executar novamente preserva datas e ajustes manuais. Sem novas tabelas ou alteração dos registros existentes. `PatientContext` inclui `consultas`, mantendo exames/medicamentos/histórico separados; interface exibe consultas e próximos agendamentos. README registra o comando e a separação banco/RAG.
+
+**Validação:** SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4: `-B -m pytest fase3/tests/test_seed_patients.py fase3/tests/test_ft11_integration.py fase3/tests/test_streamlit_app.py -q -p no:cacheprovider` → **16 aprovados**, sem rede/LLM, com testes de diversidade/datas/contexto e preservação/idempotência. `-B -m medical_assistant.clinical.seed_patients` adicionou dez pacientes ao SQLite local `data/prontuarios.db`; segunda execução da função inseriu zero. Conferência: 11 cadastros totais (original `patient_001` preservado), oito agendamentos futuros, dez prontuários renderizados via Streamlit AppTest sem exceção/erro. `git diff --check` aprovado. Banco operacional permanece ignorado; código de população versionável. Runtime e interface reiniciados para carregar o campo de consultas. A tarefa não avalia a qualidade da LLM nem adiciona resposta clínica/pessoal livre ao RAG documental.
+
+### APP-01A — Consultar alergias do prontuário pelo chat
+
+**Status:** CONCLUÍDA
+
+**Escopo (14/10/2026):** corrigir a pergunta factual sobre alergias do paciente selecionado, respondendo a partir dos registros atuais do SQLite com fonte identificável, sem atribuir a consulta à LLM. Preservar o RAG documental e não ampliar para interpretação clínica ou importação de corpus.
+
+**Evidência (14/10/2026):** `clinical/patient_queries.py` reconhece formulações factuais simples sobre alergias e retorna somente registros explícitos do histórico, com identificação da linha SQLite, paciente e texto utilizado. Distingue registro positivo, alergias negadas/desconhecidas e ausência de registro; sem paciente solicita seleção. Guard de entrada continua antes da consulta. Resposta não declara inferência LLM e auditoria informa `response_origin: prontuario_sqlite`. Perguntas de protocolo permanecem no caminho documental; sem alteração dos módulos/corpus/índice RAG congelados. README descreve pastas e limitações da inclusão de documentos; não foi implementado importador.
+
+**Validação:** SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4: `-B -m pytest fase3/tests/test_patient_allergies.py fase3/tests/test_ft11_integration.py fase3/tests/test_streamlit_app.py -q -p no:cacheprovider` → **19 aprovados**, com backend proibido nos casos factuais. Streamlit AppTest com o SQLite local, sem mocks, reproduziu a pergunta original em `sim_002`: “Alergia a penicilina. Exantema relatado na simulação.”, fonte `sqlite:medical_history:7`, query `query_20261014_220958_793194`; origem SQLite visível, identidade de LLM nula e fonte preservada após rerun. `git diff --check` aprovado. Interface reiniciada para aplicar o código; processo FT-11 permanece carregado. Outros tipos de consulta ao prontuário e linguagem livre não foram ampliados nesta correção.
+
+### UI-01 — Aplicar referência visual à interface médica
+
+**Status:** CONCLUÍDA
+
+**Escopo (14/10/2026):** adaptar a interface Streamlit à imagem fornecida, com identidade visual, busca/seleção e resumo do paciente, prontuário e chat simultâneos; manter fontes, workflow e auditoria existentes. Sem novos fluxos clínicos, autenticação ou alteração do backend.
+
+**Evidência (14/10/2026):** interface Aegis IA em `interfaces/streamlit_app.py`, tema em `.streamlit/config.toml`. Atendimento com três painéis, busca por nome/ID, resumo com alergias/medicamentos/pendências/agendamento, sinais vitais compactos, tabela de medicamentos, exames/consultas detalháveis e chat com fontes. Pergunta sugerida de alergias reutiliza o serviço existente. Troca/busca sem paciente limpa o histórico; navegação conserva triagem, auditoria e prontuário. Sem médico/CRM fictício ou alegação de disponibilidade do modelo; status indica somente a sessão inicializada. Layout empilhado e navegação recolhida em celular; textos dinâmicos inseridos em HTML são escapados.
+
+**Validação:** SDK API Python 3.14.4, `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python -B -m pytest fase3/tests/test_streamlit_app.py fase3/tests/test_ft11_integration.py fase3/tests/test_patient_allergies.py -q -p no:cacheprovider` → **20 aprovados**. Novo teste cobre busca de Bruno, seleção, resposta e fonte SQLite pela pergunta sugerida, busca vazia e limpeza do histórico. Uma tentativa de reposicionar o input com rerun apresentou mensagem duplicada no teste; substituída por container de conversa e limpeza das sugestões, com regressão aprovada. Chromium/Playwright temporários fora do projeto (`/tmp/fiap-ui-review`), sem dependência nova da aplicação: verificados desktop 1600×1100 e celular 390×844, sem erro JavaScript ou overflow horizontal; busca/consulta real de alergia de Bruno e fonte confirmadas. Capturas inspecionadas: `/tmp/fiap-ui-review/desktop.png` e `mobile.png`. Corrigidos recorte inicial do cabeçalho e navegação aberta no celular. `git diff --check` aprovado. Streamlit reiniciado em localhost:8501; backend/pesos/banco preservados.
+
+### UI-02 — Inicializar assistente automaticamente
+
+**Status:** CONCLUÍDA
+
+**Escopo:** remover o botão de inicialização e criar o assistente automaticamente por sessão ao abrir a aplicação, preservando erros explícitos e a reutilização nos reruns.
+
+**Evidência (14/10/2026):** `main()` chama a inicialização após preparar a sessão, sem efeitos no import. Removidos botão, mensagem de sucesso e instruções de clique; erros de inicialização continuam visíveis e o chat indisponível orienta atualizar a página. Não altera o processo externo de inferência. README atualizado. SDK API Python 3.14.4: `fase3/.venv/bin/python -B -m pytest fase3/tests/test_streamlit_app.py fase3/tests/test_ft11_integration.py -q -p no:cacheprovider` → **15 aprovados**, incluindo inicialização sem clique, identidade da instância preservada após rerun, ausência do botão e consulta pelo chat. `git diff --check` aprovado. Interface reiniciada em localhost:8501.
+
+### APP-01B — Calcular IMC a partir do prontuário
+
+**Status:** CONCLUÍDA
+
+**Escopo:** responder à pergunta sobre excesso de peso com cálculo determinístico usando peso/altura da mesma medição mais recente, identificando registro/data e referência de classificação por idade. Não interpretar tratamento nem alterar RAG/pesos.
+
+**Evidência (14/10/2026):** `bmi_query` em `clinical/patient_queries.py` atende formulações de IMC/excesso de peso, incluindo “a cima do peso”. Cálculo peso/altura² com kg/m da mesma medição mais recente, sem buscar medidas antigas para completar campos ausentes. Critérios explícitos do MS/SISVAN 2008 para 20–59 anos e ≥60 anos; classificação antes do arredondamento, sem classificar menores de 20 anos ou idade ausente. Peso/altura ausentes, não finitos, não positivos ou altura incompatível com metros retornam pendência. Resultado apresenta fórmula, data, fonte SQLite e link do critério, sem diagnóstico, sugestão de tratamento ou atribuição à LLM. Referência conferida em `https://www.gov.br/saude/pt-br/composicao/saps/vigilancia-alimentar-e-nutricional/arquivos/protocolos-do-sistema-de-vigilancia-alimentar-e-nutricional-sisvan/@@download/file`, seções Adultos/Idosos (páginas PDF 18/21). Não altera o corpus RAG congelado.
+
+**Validação:** SDK API Python 3.14.4: `fase3/.venv/bin/python -B -m pytest fase3/tests/test_patient_bmi.py fase3/tests/test_patient_allergies.py fase3/tests/test_streamlit_app.py fase3/tests/test_ft11_integration.py -q -p no:cacheprovider` → **38 aprovados**, incluindo limites por idade, arredondamento, unidades/valores inválidos e proibição de chamada LLM no cálculo. Reproduzida pergunta original via Streamlit AppTest/SQLite real em `sim_001` (Ana, 62 anos): 74 kg / 1,62² = 28,20 kg/m², faixa de sobrepeso para ≥60 anos, fonte `sqlite:vital_signs:4`, query `query_20261014_224333_089950`. `git diff --check` aprovado; interface reiniciada para aplicar o código. Continua limitada a cálculo e classificação de triagem, sem avaliação clínica individual.
+
+### EVAL-TOOLS-01 — Verificar seleção de ferramentas pelo FT-11
+
+**Status:** CONCLUÍDA
+
+**Escopo (15/10/2026):** avaliar o FT-11 real, sem treino ou alteração do chat, na seleção de consulta ao prontuário, cálculo de IMC e busca documental. Comparar formato nativo do tokenizer (XML de tool calling) e roteamento JSON sem decodificação restrita. Registrar casos, prompts, parâmetros, identidade e saídas brutas antes de decidir integração.
+
+**Critérios prévios:** piloto de 24 perguntas novas, iguais nas duas condições, incluindo paráfrases, solicitações mistas e seis controles críticos de recusa/esclarecimento. Para cada condição candidata: pelo menos 90% de seleções/argumentos corretos, 95% de contratos válidos e 100% dos controles críticos sem chamada indevida. Nenhuma ferramenta é executada; gabaritos não entram nos prompts. Resultados não comprovam capacidade clínica, qualidade das ferramentas, ciclo agente completo ou generalização. Não ajustar prompts com base nos erros e reapresentar os mesmos casos como teste novo.
+
+**Evidência (15/10/2026, UTC 16/10):** `llm/src/rag/evaluate_tool_selection.py`, FT-11 real na RX 9060 XT, 48 gerações sem decodificação restrita/treino/fallback. Protocolo congelado antes da carga; identidade, mensagens, prompts renderizados e respostas brutas em `llm/artifacts/experiments/20261016T000851104289Z_ft11_tool_selection/`. Nativo: 18/18 questões operacionais corretas, mas 3 controles com marcador plural fora do contrato → **21/24 corretos/válidos**. JSON: **20/24 corretos**, 21/24 válidos, três erros sintáticos e uma omissão de ferramenta em pedido misto. Ambas as condições reprovadas para avanço segundo os critérios prévios. Abstenções nativas semanticamente corretas não foram confundidas com tentativa de ação indevida. Nenhuma ferramenta foi executada.
+
+**Correção/validação:** parser original deixava um token de encerramento quando o modelo emitia `im_end` + `endoftext`; pontuação original 0/48 inválida preservada com `evaluator_original.py`. Corrigida somente a remoção de tokens terminais, sem reparar respostas ou alterar prompt/gabarito; mesmas saídas reavaliadas offline em `review_20261016T001441080251Z/`, com hashes/proveniência. Relatório definitivo `review.md` distingue as pontuações. SDK `/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python`, Python 3.14.4, torch 2.13.0+rocm10.0.0, transformers 5.17.0, peft 0.20.0, bitsandbytes 0.50.2; pico 7,48 GiB. Comandos na raiz: `-B -m pytest fase3/llm/tests/test_tool_selection_eval.py -q -p no:cacheprovider` → **9 aprovados**; `-B fase3/llm/src/rag/evaluate_tool_selection.py`; `-B fase3/llm/src/rag/evaluate_tool_selection.py --rescore fase3/llm/artifacts/experiments/20261016T000851104289Z_ft11_tool_selection`. `git diff --check` aprovado. Não foi alterado o fluxo de aplicação; LangGraph/execução real de tools e novos testes ponta a ponta continuam pendentes.
+
+### EVAL-TOOLS-02 — Demonstração simples dos três caminhos
+
+**Status:** CONCLUÍDA — demonstração executada; aceite 3/3 não atingido
+
+**Escopo (15/10/2026, ajustado pelo usuário):** somente três perguntas: tool de IMC, resposta educativa sem consulta e recuperação documental com fonte. Usar FT-11 real. Aceite 3/3, sem reparo de respostas ou alterações durante a execução. Se passar, o usuário autorizou criar o pacote de tools, sem autorizar por isso a integração completa do agente ao chat. A pergunta educativa foi escolhida de um tema do treino; não é teste reservado nem prova de origem exclusiva do conhecimento. Preservar a avaliação anterior.
+
+**Evidência (15/10/2026, UTC 16/10):** `llm/src/rag/smoke_test_tools.py`, SDK LLM Python 3.14.4, FT-11 real na AMD Radeon RX 9060 XT. Comando na raiz: `fase3/llm/.venv/bin/python -B fase3/llm/src/rag/smoke_test_tools.py`. Protocolo anterior à carga, identidade, prompts, saídas brutas e execução em `llm/artifacts/experiments/20261016T002602034519Z_three_routes/`; pico de VRAM alocada 8.328.018.944 bytes. IMC: chamada nativa `calcular_imc` e execução do método existente com paciente sintético sim_001 → 28,20 kg/m², fonte SQLite. Conhecimento: sem ferramenta nem RAG, resposta de conteúdo esperado sobre herança autossômica recessiva, porém `status="ok"` e `dados` string violam `DocumentaryAnswer`; o prompt solicitou cinco chaves, mas não explicitou o enum de status nem a estrutura interna de dados. RAG: chamada `buscar_documentos`, execução real da cadeia v3 e citação dos dois signatários da portaria de dislipidemia, com offsets conferidos. Resultado: três caminhos selecionados corretamente, **2/3 aprovados no contrato completo**. Sem reparar/repetir respostas, alterar aplicação ou criar pacote de tools. Não comprova ciclo de agente no chat, generalização ou validação clínica.
+
+### TOOLS-01 — Implementar somente a ferramenta de IMC
+
+**Status:** CONCLUÍDA
+
+**Escopo (15/10/2026):** autorização explícita após EVAL-TOOLS-02 para implementar apenas `calcular_imc` como base/modelo em `src/medical_assistant/tools/`. Separar o cálculo existente da detecção textual, disponibilizar schema e execução validada com paciente vinculado pela aplicação e manter o comportamento atual do chat. Não integrar seleção por LLM ao chat nem implementar outras ferramentas.
+
+**Evidência (15/10/2026):** `tools/bmi.py` recebe o cálculo existente, preservando mensagens, critérios, validações e fontes. `tools/__init__.py` expõe catálogo com um único schema e `execute_tool`, que aceita apenas `calcular_imc` com argumentos `{}`; contexto e query_id são fornecidos pela aplicação. `clinical/patient_queries.py` conserva o reconhecimento textual e delega à ferramenta, sem duplicar cálculo. Exemplo e limites em `tools/README.md`; nenhuma dependência, peso, configuração ou ferramenta adicional. A chamada já interpretada pode ser executada sem pergunta textual; não há parser de resposta de modelo nem agente conectado ao chat nesta etapa.
+
+**Validação:** SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python`, Python 3.14.4. Na raiz: `fase3/.venv/bin/python -B -m pytest fase3/tests/test_bmi_tool.py fase3/tests/test_patient_bmi.py fase3/tests/test_patient_allergies.py fase3/tests/test_ft11_integration.py fase3/tests/test_streamlit_app.py -q -p no:cacheprovider` → **46 aprovados**, 12 avisos de depreciação das dependências. Inclui execução direta com dois pacientes sucessivos, rejeição de paciente/medidas nos argumentos, nome desconhecido, paciente ausente e regressão do cálculo/chat/API/interface. Sem rede ou inferência real nesta implementação; evidência FT-11 anterior preservada. `git diff --check` aprovado.
+
+### DB-IDS-01 — Alinhar vínculos dos prontuários após alteração manual de IDs
+
+**Status:** CONCLUÍDA
+
+**Escopo (15/10/2026):** preservar nomes e IDs atuais de `patients`, corrigindo somente `patient_id` nas tabelas relacionadas do SQLite local. Conferir correspondência por registros originais/perfis, criar backup e validar integridade na mesma transação. `patient_001` corresponde a `paciente_001`; `sim_001` corresponde a `paciente_011` (62 anos, F); `sim_002` a `sim_010` correspondem a `paciente_002` a `paciente_010`. Não recriar dados nem alterar o seed ou a aplicação.
+
+**Evidência (15/10/2026, UTC 16/10):** migração local transacional via `sqlite3` da biblioteca padrão, executada com SDK API `/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python -B -` (Python 3.14.4). Backup SQLite anterior à alteração: `data/prontuarios_before_id_alignment_20261016T004834446042Z.db`. Mapeamento e resultado em `data/id_alignment_20261016T004834446042Z.json`. Atualizados **81 vínculos**: histórico 23, sinais vitais 13, exames 13, medicamentos 12 e consultas 20. Conferidos todos os registros antes/depois, permitindo alteração somente de `patient_id`; tabela `patients` integralmente preservada. `PRAGMA foreign_key_check` sem violações e `PRAGMA integrity_check` = `ok` antes do commit. Nenhuma alteração de código, seed ou pesos. Banco/backup/relatório locais não devem ser versionados.
+
+### CLEAN-OLLAMA-01 — Remover adaptador Ollama legado
+
+**Status:** CONCLUÍDA
+
+**Escopo:** remover `retrieval/ollama_adapter.py`, autorizado pelo usuário, e a demonstração dependente em `scripts/demo.py`. Preservar FT-11/RAG, a rota Ollama legada da API e os registros históricos.
+
+**Evidência (15/10/2026):** arquivo removido junto ao import, função e chamada/resumo da demonstração antiga no `demo.py`. Busca em fontes Python sem referências restantes ao módulo/classes removidos. SDK API Python 3.14.4: `runpy.run_path('fase3/scripts/demo.py', run_name='import_validation')` importou o script sem executar demonstrações; `pytest.main(['fase3/tests/test_ft11_integration.py', '-q', '-p', 'no:cacheprovider'])` → **9 aprovados**, com avisos de depreciação das dependências. `git diff --check` aprovado. Registros históricos preservados; sem chamadas ao modelo, mudança de dependências ou do chat.
+
+### CLEAN-DEMO-01 — Remover demonstração antiga e sua pasta
+
+**Status:** CONCLUÍDA
+
+**Escopo:** remover `scripts/demo.py` e a pasta `scripts/`, conforme solicitado. A inspeção encontrou apenas esse script e cache Python. Sem alterar a aplicação ou registros históricos.
+
+**Evidência (15/10/2026):** removidos script, cache e diretório vazio. Busca em `src/`, `tests/` e `app.py` sem imports/referências ao script ou pacote removido; `git diff --check` aprovado. Sem testes de execução, pois foi removida somente uma demonstração sem dependência da aplicação. Menções históricas preservadas.
+
+### AUDIT-FILES-01 — Revisar necessidade dos arquivos da Fase 3
+
+**Status:** CONCLUÍDA
+
+**Escopo:** inventariar arquivos por pasta, verificar dependências/entradas e distinguir aplicação atual, treino/avaliação, evidências históricas, dados/modelos e arquivos regeneráveis. Produzir recomendações justificadas por arquivo, sem exclusões, mudanças de comportamento ou execução de treino/modelos. Ambientes/cache e binários serão classificados pela finalidade e metadados, sem tratar ausência de import como prova de inutilidade.
+
+**Evidência (15/10/2026, UTC 16/10):** relatório `docs/REVISAO_ARQUIVOS_FASE3.md` e inventário local `docs/INVENTARIO_ARQUIVOS_FASE3.csv` com **3.057 linhas de arquivos**, inclusive ignorados pelo Git, excluindo somente instalações de terceiros `.venv/` e `llm/.venv/`. CSV é local, ignorado pela regra global `*.csv`; uma linha por caminho com tamanho, ação, motivo, método e referências estáticas. Código/configuração/docs analisados por texto e AST/imports, incluindo snapshots; artefatos por estrutura JSON/proveniência; binários por metadados e finalidade, sem revisão clínica de cada exemplo/resposta e sem abrir JSONL reservado como perguntas/gabaritos. Todos os Python inventariados passaram em `ast.parse`; 94 Python de código/testes atuais na tabela detalhada. Oito hashes de módulos do recibo, hash da decisão final e da configuração do índice conferidos: **10/10 correspondentes**. Sem reler ~19 GB de pesos-base.
+
+**Resultado:** um candidato claro à exclusão (`llm/src/finetuning/training/config.py`), 19 arquivos regeneráveis de cache, sete arquivos E5 opcionais para comparação offline; `DOCKER.md` para revisar/retirar. Manter `api.py` (rota FT-11 e legado Ollama), módulos v1/v2 herdados pelo RAG v3, loader compartilhado, corpora/pesos/evidências. Registradas inconsistências de seed/smoke/demonstração com IDs renomeados e métodos legados no assistente, sem corrigir ou excluir nesta tarefa. Inspeção por scripts temporários com SDK API Python 3.14.4 (`/home/wallace/PycharmProjects/FIAP/fase3/.venv/bin/python -B`), sem import de modelo, testes de execução, rede ou alteração do SQLite. `git diff --check` aprovado. A auditoria não comprova execução integrada, reprodutibilidade integral nem validação clínica.
+
+### CLEAN-FILES-01 — Executar limpeza autorizada após auditoria
+
+**Status:** CONCLUÍDA
+
+**Escopo:** remover configuração de treino sem consumidor (`llm/src/finetuning/training/config.py`), Dockerfile/Compose/.dockerignore/guia Docker (execução atual local, Docker não disponível neste host), caches regeneráveis do projeto fora dos ambientes virtuais e cópia local do modelo E5 não usado no chat. Preservar API, cadeia RAG v1/v2/v3, base/adapter FT-11, FT-10 de origem, datasets, testes, resultados e decisões. Manter código de comparação E5 para reprodução com novo download. Atualizar somente orientações ativas afetadas e registrar arquivos removidos.
+
+**Evidência (15/10/2026, UTC 16/10):** Docker não encontrado no PATH e nenhum processo Streamlit/runtime/Compose ativo na inspeção; execução local documentada mantida. Removidos os cinco arquivos de código/configuração/guia autorizados, `llm/models/embeddings/multilingual-e5-small/` e caches regeneráveis fora dos SDKs. Manifesto local `llm/artifacts/cleanup_20261016T011257030230Z.json` registra **31 arquivos / 493.314.066 bytes** (~470,46 MiB), incluindo a lista individual. Conferidos tamanho/mtime de **2.913 arquivos preservados** em dados, artefatos e base; hashes do banco, seleção, recibo, decisão, configuração e módulos críticos inalterados. Os oito hashes de módulos do recibo continuam válidos. Não foram removidos pesos Qwen/FT-10/FT-11, dados ou evidências; somente o modelo E5 recebeu autorização específica para exclusão. Comparação E5 continua reproduzível pelo executor que baixa novamente a revisão fixada.
+
+**Validação:** SDK API Python 3.14.4, comando na raiz `fase3/.venv/bin/python -B -m pytest fase3/tests/test_model_policy_api.py fase3/tests/test_ft11_integration.py fase3/tests/test_streamlit_app.py -q -p no:cacheprovider` → **36 aprovados**, com 91 avisos de depreciação das dependências. `git diff --check` aprovado; nenhuma referência ativa a Docker no README/aplicação/testes. README agora orienta execução local; relatório/CSV da auditoria anterior preservados como fotografia histórica, com nota sobre esta limpeza. Sem inferência real, treinamento, alteração do banco ou remoção de bibliotecas dos ambientes virtuais.
+
+### GIT-ARTIFACTS-01 — Selecionar evidências versionáveis
+
+**Status:** CONCLUÍDA
+
+**Escopo:** substituir liberação ampla de experimentos por seleção explícita de evidências de FT-10/FT-11, RAG aceito, dependências dos validadores e testes de tools. Retirar do índice Git os artefatos históricos não selecionados, mantendo todos no disco e preservando outras alterações preparadas. Não criar commit, apagar dados/pesos ou reescrever histórico. Conferir política de ignore, dependências e integridade das evidências.
+
+**Evidência (15/10/2026, UTC 16/10):** `.gitignore` passou a ignorar artefatos por padrão e liberar JSON/JSONL/Markdown de dez execuções nomeadas, seis metadados dos adapters FT-10/FT-11, seleção/limpezas/política, código original do avaliador de tools e 32 relatórios/decisões históricos explicitamente selecionados. `llm/artifacts/versioning_policy.json` registra execuções/motivos; README esclarece histórico local e limites dos links antigos. Aplicado `git rm --cached` via lista NUL de caminhos e preparado somente `.gitignore` e a seleção em `llm/artifacts/`: **2.351 → 739 rastreados**, com **1.678 retirados do índice e preservados no disco**, e **66 novos selecionados**. Nenhum commit ou reescrita de histórico; os arquivos continuam presentes nos commits anteriores.
+
+**Verificações:** comparação byte a byte das entradas do índice confirmou que todas as outras alterações preparadas permaneceram iguais. Conferidos SHA-256/tamanhos dos artefatos existentes (exceto README editado nesta tarefa), presença local de todos os retirados, nenhum arquivo ignorado ainda rastreado e versionamento dos índices/configurações históricos exigidos por código/testes. Hashes dos oito módulos do recibo e das revisões/resumos das decisões finais continuam correspondentes. Pesos, consultas manuais e execução futura fictícia verificados como ignorados. `git diff --check` e `git diff --cached --check` aprovados no escopo alterado; o check global do índice identifica apenas linha em branco ao fim de `tools/bmi.py` já preparada anteriormente, preservada fora desta tarefa.
+
+**Testes:** SDK LLM `/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python`, Python 3.14.4: `-B -m pytest fase3/llm/tests/test_ft11_backend.py fase3/llm/tests/test_rag_query.py fase3/llm/tests/test_rag_reserved.py fase3/llm/tests/test_rag_v3_gate.py fase3/llm/tests/test_document_chain.py fase3/llm/tests/test_document_chain_v2.py fase3/llm/tests/test_document_chain_v3.py -q -p no:cacheprovider` → **70 aprovados**, avisos de depreciação das dependências. Conferências do Git/hashes via biblioteca padrão no SDK API, sem modelo, rede ou teste reservado real. Testes executados na cópia local; não equivalem a avaliação de modelo nem a um clone completo com pesos distribuídos.
+
+### GIT-ARTIFACTS-02 — Versionar somente dependências do runtime na Fase 3
+
+**Status:** CONCLUÍDA
+
+**Escopo:** aplicar o novo critério do usuário, ampliado explicitamente a toda a Fase 3: manter no Git a aplicação atual, dependências de runtime e guia mínimo de execução. Relatórios, evidências, testes, treinamento, documentação histórica e políticas ficam locais; nenhum arquivo existente será apagado ou movido. Verificar cadeia de carregamento e preservar alterações de índice fora do escopo.
+
+**Evidência (15/10/2026, UTC 16/10):** em `llm/artifacts/`, **739 → 4 rastreados**: `best_model.json`, manifesto/configuração do adapter FT-11 e `decision.json` aceito, conferido pelo recibo. Os outros **735** foram retirados somente do índice e todos os **2.836 arquivos locais existentes** foram preservados. Depois da ampliação de escopo, mais **111 caminhos** saíram do índice da fase: **104 existentes preservados locais** e sete arquivos já apagados na limpeza anterior (não houve novas exclusões do disco). Incluído `runtime_server.py`, ainda não rastreado e necessário à aplicação. Resultado final: **48 arquivos** da Fase 3 no índice. `.gitignore` usa lista explícita por caminho, sem liberação de execuções futuras, testes ou datasets de treino. `versioning_policy.json` e este plano são registros locais ignorados. README raiz atualizado para execução; conteúdo anterior integralmente copiado para `docs/README_COMPLETO_ANTES_GIT_MINIMO.md`, local. API, triagem usada pela interface, cadeia v1/v2/v3, loader, corpus, prompt, índice e recibo necessários permaneceram selecionados. SDKs, banco, pesos e provas continuam no disco; nenhum commit, publicação ou reescrita de histórico.
+
+**Validação mínima isolada:** cópia temporária `/tmp/fase3-minimal-runtime-check/` construída somente com os 48 arquivos selecionados, sem histórico de treino/testes. SDK API Python 3.14.4: imports resolvidos dessa cópia, `POST /assistant/query` de IMC via TestClient aprovado, banco inicial criado e Streamlit AppTest inicializado sem exceções. SDK LLM Python 3.14.4: imports dessa cópia, `check_readiness()` e construção de `DocumentChainV3` aprovados com as 15 seções do índice, sem abrir teste reservado ou carregar pesos. A cópia usa SDKs existentes, não representa instalação nova em outra máquina. Conferidos hashes dos arquivos críticos, dados locais preservados e índice externo à fase inalterado; mantidas as versões dos arquivos de código já preparados pelo usuário. Whitespace verificado no escopo alterado. Algumas avaliações históricas locais exigem arquivos não enviados no clone mínimo, conforme o novo critério solicitado.
+
+### APP-SMOKE-01 — Subir aplicação e verificar fluxo atual
+
+**Status:** CONCLUÍDA
+
+**Escopo:** solicitação seguinte do usuário para rodar novamente o projeto e testar após a seleção mínima de arquivos. Usar banco atual e FT-11 real, sem treinar, alterar pesos ou modificar comportamento.
+
+**Evidência (15/10/2026, UTC 16/10):** iniciados `fase3/llm/.venv/bin/python -B fase3/llm/src/rag/runtime_server.py` e, no diretório `fase3`, `.venv/bin/python -B -m streamlit run app.py --server.headless=true --server.address=127.0.0.1`. Processo FT-11 carregado e pronto em `127.0.0.1:8001`; Streamlit em `127.0.0.1:8501`. Health checks aprovados. Roteiro temporário `/tmp/fase3_live_smoke.py`, SDK API Python 3.14.4, executou AppTest usando a aplicação, SQLite atual, cliente HTTP e backend FT-11 reais, sem mock de modelo: **7/7 verificações aprovadas** (dois servidores, banco com 11 pacientes/zero violações FK, IMC paciente_011 de 28,20 kg/m² com fonte correta, alergia a penicilina do paciente_002/troca de paciente sem histórico anterior, RAG com ambos os signatários e offsets corretos, fontes preservadas no rerun, API de alergia HTTP 200). Modelo documental identificado `Qwen/Qwen3.5-9B`; execução/fontes e resumo em `llm/artifacts/experiments/20261016T013324740779Z_live_app_smoke/`, local ignorado. A primeira tentativa do roteiro parou por tratar `st.error` de alergia esperada como exceção; corrigida apenas a asserção do roteiro, sem alteração do produto ou reparo de resposta.
+
+**Limites:** verificação funcional com Streamlit AppTest, sem automação visual de navegador e sem validação clínica. Não comprova todas as formulações, agente de tools ou LangGraph. A seleção da rota IMC continua textual; consultas fora do corpus podem se abster. Os dois serviços permaneceram em execução para o usuário.
+
+### AUDIT-PROPOSTA-01 — Conferir conclusão do desenvolvimento contra o enunciado
+
+**Status:** CONCLUÍDA
+
+**Escopo (16/10/2026):** revisar as cinco páginas originais da proposta, comparar requisitos e entregáveis ao código, evidências locais e seleção atual do Git. Distinguir desenvolvimento, funcionamento comprovado e pacote acadêmico. Não implementar pendências, alterar pesos, restaurar arquivos ao Git ou reabrir testes reservados nesta revisão.
+
+**Evidência:** análise em `docs/REVISAO_ATENDIMENTO_PROPOSTA.md`, local/ignorada conforme a política vigente. Confirmados FT-11 real com corpus 1.408/160/160 e categorias exigidas, cadeia LCEL real no RAG, consultas SQLite, contexto enviado ao modelo e fontes rastreáveis. Identificados LangGraph ausente (execução sequencial em `workflow.py`), cobertura contextual limitada pelas rotas atuais, validação humana somente sinalizada e rastreabilidade do workflow ainda por concluir. Diferenciados critérios explícitos da proposta das escolhas adicionais do plano (não impor agente de tools/SQL autônomo como exigência literal). Página 4 exige pipeline de treino no Git; esse código existe localmente, mas está fora da seleção de runtime. Relatório técnico consolidado não encontrado nas pastas de documentação; relatórios por experimento e exemplos sintéticos existem localmente. Recomendada recomposição seletiva dos entregáveis no Git, sem versionar pesos ou todos os experimentos.
+
+**Conclusão:** não é 100% completo em desenvolvimento nem em pacote de entrega. APP-02, SAFE-01 e ENT-01 permanecem pendentes. Inspeção estática e confrontação com evidências anteriores; nenhum novo teste, geração de modelo, instalação ou alteração de código/índice Git. Sem atribuir porcentagem arbitrária ou declarar validação clínica. Somente este registro e a revisão local foram atualizados.
+
 ### APP-02 — Implementar LangGraph e isolar estado
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDA
 
 **Objetivo:** converter fluxo sequencial em grafo LangGraph compilado e separar estado por execução/paciente.
 
@@ -744,9 +924,11 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 **Aceite:** `StateGraph` compilado e invocado; duas execuções não compartilham decisões/alertas; exames e sinais vitais do banco afetam o resultado esperado.
 
+**Evidência (16/10/2026):** `workflow.py` compila `StateGraph`, executa nós reais com transições condicionais de erro e usa cópia isolada de estado em cada nó/invocação. Mantida assinatura usada pela UI/CLI. Fixadas versões já instaladas no SDK API: langgraph 1.2.11 e langchain-core 1.6.4, sem alterar SDK LLM congelado. Testes `test_workflow_graph.py` e `test_streamlit_app.py`: **9 aprovados**, cobrindo duas execuções, concorrência, dados de exames/sinais e parada em falha. O fechamento de revisão/auditoria integra SAFE-01.
+
 ### SAFE-01 — Aplicar guardrails, auditoria e revisão humana ao fluxo real
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDA
 
 **Objetivo:** bloquear ou encaminhar entradas/respostas inseguras antes da geração final, registrar decisão e exigir aprovação humana onde aplicável.
 
@@ -754,15 +936,27 @@ O adapter é rejeitado: houve loop de repetição em 12/50 respostas, várias de
 
 **Aceite:** testes cobrem prescrições, diagnóstico definitivo, dados insuficientes e fontes ausentes; resposta bloqueada nunca alcança o modelo; log correlaciona query, modelo, fontes, decisão e aprovação.
 
+**Evidência (16/10/2026):** `patient_evidence.py` recupera fatos do contexto atual e `PatientFactsChain` usa LCEL/FT-11 para selecionar evidência de medicamentos, exames, consultas, idade e sinais, sem alterar os módulos documentais congelados. Validação tipada exige citações/offsets e fontes fornecidas; fontes de outro paciente são rejeitadas. `workflow_service.py` encadeia SQLite, resposta documental e StateGraph, com pendências dos exames reais e propostas rastreáveis; ausência documental não gera conduta inventada. `reviews.py` persiste rascunho/hash, estado pendente e decisão única vinculada ao paciente, com identificação declarada e confirmação explícita. UI/API oferecem revisão; não há aprovação automática. Auditoria grava resposta completa, workflow e decisão/hashes correlacionados; removido formato duplicado da UI. Guardas tratam variantes de prescrição/diagnóstico e instruções de aprovação forjada. Identidade é autodeclarada no protótipo, sem autenticação/validação de registro profissional.
+
+**Validação:** suíte final de 82 testes API/UI e 124 testes LLM aprovada, incluindo regressões de seed/revisão visual, cadeia nova e cadeias documentais. Execução real `llm/artifacts/experiments/20261016T101610484760Z_delivery_live/`: **6/6** (medicamento, exame vencido, consulta futura, portaria, bloqueio, workflow com fontes e revisão pendente), FT-11 real, sem aprovar rascunhos locais. Aprovação/rejeição e adulteração foram exercitadas exclusivamente em bases temporárias de testes. Seed reconhece IDs renomeados para evitar duplicação. Não comprova cobertura clínica universal, resistência a todo ataque ou autenticação profissional.
+
 ### ENT-01 — Consolidar entrega e vídeo
 
-**Status:** PENDENTE
+**Status:** EM ANDAMENTO
 
 **Objetivo:** revisar documentação histórica, relatório técnico e roteiro de demonstração com artefatos reais.
 
 **Depende de:** EVAL-03 e SAFE-01.
 
 **Aceite:** relatório explica fine-tuning executado, arquitetura real, avaliação e limites; vídeo mostra treino, resposta contextualizada, fluxo, fonte, log e validação; repositório contém somente artefatos permitidos.
+
+**Parte técnica concluída (16/10/2026):** relatório técnico, diagramas LCEL/LangGraph, guia de validação, roteiro de vídeo e inventário Markdown consolidados. AGENTS da fase agora define responsabilidades/atualização dos demais `.md`; AGENTS da raiz aponta a essas regras. README principal/LLM/pacotes e política do Git atualizados. Relatórios históricos e model cards preservados como evidência, sem reescrever decisões negativas. Código de treino/preparação, testes, corpora permitidos, sete execuções selecionadas e revisões históricas voltam à seleção acadêmica; pesos, bancos e logs permanecem locais. Nenhum commit/publicação.
+
+**Validação final:** SDK API Python 3.14.4, `-B -m pytest fase3/tests -q -p no:cacheprovider`: **82 aprovados**; SDK LLM Python 3.14.4, `-B -m pytest fase3/llm/tests -q -p no:cacheprovider`: **124 aprovados**. Avisos de depreciação das dependências registrados, sem falhas. Integração real FT-11: **6/6**, run `20261016T101610484760Z_delivery_live`. Testes não representam validação clínica.
+
+**Conferência do pacote:** cópia temporária `/tmp/fase3-delivery-check-jr6pi02l/` feita apenas com os **823 arquivos selecionados (13.448.496 bytes)**; os mesmos **82 + 124 testes** passaram usando os SDKs existentes e imports da cópia. Isso verifica dependências de arquivos, sem representar instalação limpa de pacotes ou distribuição dos pesos. Conferidos os oito hashes dos módulos congelados, decisão final e configuração do índice. Pesos, SQLite, logs e respostas operacionais não rastreados. Revisão de **62 Markdown próprios**, sem links relativos inexistentes nos documentos ativos; detalhes no inventário. Runtime e Streamlit com health checks aprovados em portas 8001/8501.
+
+**Pendente externo ao desenvolvimento:** gravação/apresentação do vídeo pelo responsável. ENT-01 continua em andamento por esse aceite não executado; não declarar vídeo entregue nem fabricar aprovação profissional.
 
 ## Histórico de execução
 

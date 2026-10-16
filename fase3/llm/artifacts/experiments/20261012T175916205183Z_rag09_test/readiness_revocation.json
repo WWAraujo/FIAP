@@ -1,7 +1,0 @@
-{
-  "historical_decision_preserved": true,
-  "active_readiness_revoked": true,
-  "reason": "Independent CLI query exposed silent loss of the final paragraph in rendering. Coverage must be repaired and the corrected runtime reevaluated before local readiness.",
-  "previous_receipt_preserved": "readiness_before_paragraph_fix.json",
-  "reserved_v4_consumed": true
-}

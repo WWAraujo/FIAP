@@ -1,3 +1,5 @@
+> Registro da preparação documental RAG-02 (10/10/2026). Expressões como “futura avaliação” e “nenhuma resposta gerada” descrevem essa etapa histórica. A cadeia v3 foi avaliada depois e está integrada; veja [README RAG](../../src/rag/README.md) e [relatório técnico](../../../docs/RELATORIO_TECNICO.md). Não sobrescrever snapshots nem testes consumidos.
+
 # Corpus documental e avaliação — RAG-02
 
 Versão congelada em 10/10/2026, preservando `rag_pilot_v1`. `catalog.json` contém o conteúdo admitido; `manifest.json` contém IDs e hashes; `sources.json` registra os downloads. Dez documentos/versões, nove elegíveis: seis procedimentos sintéticos vigentes, uma versão substituída e três atos oficiais. São 17 seções, 15 elegíveis.

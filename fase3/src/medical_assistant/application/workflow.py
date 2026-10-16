@@ -4,11 +4,13 @@ Implementa workflows automatizados para triagem, sugestão de tratamentos e aler
 """
 
 import json
+from copy import deepcopy
 import logging
 from pathlib import Path
 from typing import Dict, List, Any, Optional, TypedDict, Annotated
 from datetime import datetime
 from enum import Enum
+from langgraph.graph import END, START, StateGraph
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -25,6 +27,7 @@ class WorkflowState(TypedDict):
     recommendations: List[Dict[str, Any]]
     requires_human_intervention: bool
     completed: bool
+    error: str | None
 
 
 class TriagePriority(Enum):
@@ -39,21 +42,47 @@ class MedicalWorkflowGraph:
     """Grafo de workflow para decisões médicas automatizadas"""
 
     def __init__(self):
-        self.state = {
-            "patient_data": {},
-            "query": "",
-            "current_step": "initial",
-            "collected_info": {},
-            "decisions": [],
-            "alerts": [],
-            "recommendations": [],
-            "requires_human_intervention": False,
-            "completed": False
+        self.graph = self._build_graph()
+        self.state = self._initial_state()
+
+    @staticmethod
+    def _initial_state():
+        return {
+            "patient_data": {}, "query": "", "current_step": "initial",
+            "collected_info": {}, "decisions": [], "alerts": [], "recommendations": [],
+            "requires_human_intervention": False, "completed": False, "error": None,
         }
+
+    def _build_graph(self):
+        builder = StateGraph(WorkflowState)
+        steps = ("initial_assessment", "triage_classification", "protocol_selection",
+                 "exam_check", "treatment_suggestion", "completion")
+        for name in steps:
+            builder.add_node(name, self._node_for(name))
+        builder.add_edge(START, steps[0])
+        for current, following in zip(steps, steps[1:]):
+            builder.add_conditional_edges(current, lambda state: "stop" if state.get("error") else "next",
+                                          {"stop": END, "next": following})
+        builder.add_edge(steps[-1], END)
+        return builder.compile()
+
+    @staticmethod
+    def _node_for(name):
+        def node(state):
+            worker = object.__new__(MedicalWorkflowGraph)
+            worker.state = deepcopy(state)
+            try:
+                return getattr(worker, "step_" + name)()
+            except Exception as error:
+                worker.state.update(error=str(error), completed=False, requires_human_intervention=True,
+                                    current_step="failed")
+                return worker.state
+        return node
 
     def start_workflow(self, patient_data: Dict[str, Any], query: str) -> WorkflowState:
         """Inicia workflow com dados do paciente e query"""
-        self.state["patient_data"] = patient_data
+        self.state = self._initial_state()
+        self.state["patient_data"] = deepcopy(patient_data)
         self.state["query"] = query
         self.state["current_step"] = "initial"
         self.state["completed"] = False
@@ -149,6 +178,9 @@ class MedicalWorkflowGraph:
         completed_exams = patient_data.get("completed_exams", [])
 
         pending_exams = [exam for exam in required_exams if exam not in completed_exams]
+        if 'exams' in patient_data:
+            required_exams = [e['exam_type'] for e in patient_data['exams']]
+            pending_exams = [e['exam_type'] for e in patient_data['exams'] if e.get('status') in ('Pendente','Vencido')]
 
         exam_check = {
             "step": "exam_check",
@@ -333,6 +365,13 @@ class MedicalWorkflowGraph:
     def _select_protocol(self, query: str, patient_data: Dict) -> Dict[str, str]:
         """Seleciona protocolo adequado"""
         query_lower = query.lower()
+        if 'documentary_response' in patient_data:
+            documents = [s for s in patient_data['documentary_response']['sources'] if s.get('source_type') == 'documento']
+            if not documents:
+                return {'id':'SEM_EVIDENCIA','name':'Sem orientação documental suficiente',
+                        'rationale':'Não inferir conduta; conferir os documentos e o contexto com o responsável.'}
+            source = documents[0]
+            return {'id':source['id'],'name':source['title'],'rationale':source['quoted_text']}
 
         if "hipertensão" in query_lower or "pressão" in query_lower:
             return {
@@ -375,6 +414,20 @@ class MedicalWorkflowGraph:
     def _generate_treatment_suggestions(self, patient_data: Dict, protocol: Dict, exam_check: Dict) -> List[Dict]:
         """Gera sugestões de tratamento"""
         suggestions = []
+        if 'documentary_response' in patient_data:
+            if exam_check.get('pending_exams'):
+                suggestions.append({'type':'recorded_exam_review','priority':'revisão',
+                    'description':'Revisar pendências administrativas registradas: '+', '.join(exam_check['pending_exams']),
+                    'requires_validation':True,
+                    'source_ids':[s['id'] for s in patient_data['record_sources'] if s['section_id']=='exams']})
+            for source in patient_data['documentary_response']['sources']:
+                suggestions.append({'type':'documentary_reference','priority':'revisão',
+                    'description':source['quoted_text'],'requires_validation':True,'source_ids':[source['id']]})
+            if not patient_data['documentary_response']['sources']:
+                suggestions.append({'type':'missing_evidence','priority':'pendente',
+                    'description':'Sem evidência documental para propor conduta. Completar dados/fontes e solicitar avaliação profissional.',
+                    'requires_validation':True,'source_ids':[]})
+            return suggestions
 
         # Sugestão baseada em exames pendentes
         if exam_check.get("pending_exams"):
@@ -406,26 +459,11 @@ class MedicalWorkflowGraph:
 
     def execute_full_workflow(self, patient_data: Dict, query: str) -> WorkflowState:
         """Executa workflow completo"""
-        self.start_workflow(patient_data, query)
-
-        steps = [
-            self.step_initial_assessment,
-            self.step_triage_classification,
-            self.step_protocol_selection,
-            self.step_exam_check,
-            self.step_treatment_suggestion,
-            self.step_completion
-        ]
-
-        for step in steps:
-            try:
-                self.state = step()
-            except Exception as e:
-                logger.error(f"Erro no passo {step.__name__}: {e}")
-                self.state["requires_human_intervention"] = True
-                break
-
-        return self.state
+        initial = self._initial_state()
+        initial.update(patient_data=deepcopy(patient_data), query=query)
+        result = self.graph.invoke(initial)
+        self.state = deepcopy(result)
+        return result
 
 
 def main():

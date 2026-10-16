@@ -33,7 +33,7 @@ class AuditLogger:
         log_entry = {
             "timestamp": datetime.now().isoformat(),
             "query_id": query_id,
-            "response": response[:500],  # Limitar tamanho
+            "response": response,
             "sources": sources,
             "requires_validation": requires_validation,
             "type": "response"
@@ -45,6 +45,10 @@ class AuditLogger:
             log_entry["error"] = error
 
         self._write_log(log_entry)
+
+    def log_event(self, event_type, *, query_id, patient_id=None, **details):
+        self._write_log({"timestamp": datetime.now().isoformat(), "type": event_type,
+                         "query_id": query_id, "patient_id": patient_id, **details})
 
     def _write_log(self, log_entry: Dict):
         """Escreve entrada no log de auditoria"""

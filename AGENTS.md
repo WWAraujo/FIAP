@@ -116,14 +116,14 @@ FIAP/
 │   └── requirements.txt
 │
 ├── resultados/               # Outputs dos experimentos
-└── fase3/                    # Assistente médico LLM: protótipo parcial
+└── fase3/                    # Assistente médico LLM: protótipo acadêmico
     ├── PROPOSTA.md           # Requisitos do Tech Challenge
     ├── README.md            # Objetivos, estrutura, execução e estado atual
     ├── AGENTS.md            # Orientações específicas desta fase
-    ├── data/                # Dados brutos, curados e divisões de treinamento
-    ├── artifacts/           # Relatórios de benchmark e artefatos gerados
-    ├── src/medical_assistant/ # Pacotes por objetivo: dados, avaliação, treino, recuperação e aplicação
-    ├── scripts/             # Demonstrações e comandos auxiliares
+    ├── data/                # Prontuários e revisões SQLite locais
+    ├── llm/                 # Dados, treino, RAG, pesos e evidências
+    ├── src/medical_assistant/ # Aplicação, contexto, tools, segurança e interfaces
+    ├── tests/               # Testes da aplicação e interface
     └── docs/
         └── PLANO_EXECUCAO.md # Tarefas, dependências, critérios e evidências
 ```
@@ -203,7 +203,7 @@ Consulte [fase3/requirements.txt](fase3/requirements.txt) e as instruções de a
 
 ### Fase 3
 
-O fluxo planejado é preparar dados, comparar modelos elegíveis ao treinamento, executar fine-tuning, avaliar o modelo adaptado e integrá-lo ao assistente com LangChain/LangGraph, contexto, validação e auditoria. A implementação atual e as etapas pendentes estão discriminadas no [README](fase3/README.md) e no [plano](fase3/docs/PLANO_EXECUCAO.md).
+O fluxo implementado inclui preparação/avaliação e fine-tuning FT-11, integrado ao assistente com LangChain/LCEL, LangGraph, contexto SQLite, fontes, revisão persistente e auditoria. A implementação atual e as etapas pendentes estão discriminadas no [README](fase3/README.md) e no [plano](fase3/docs/PLANO_EXECUCAO.md).
 
 ## Comandos Úteis
 
@@ -295,7 +295,7 @@ As responsabilidades dos pacotes, os critérios de validação e as regras de at
 
 ### Fase 3
 
-- Protótipo acadêmico parcial; a existência de interfaces e Docker não comprova funcionamento integrado ou prontidão para produção.
+- Protótipo acadêmico com integração validada nos casos registrados; isso não comprova prontidão para produção.
 - Benchmark de inferência é uma etapa da seleção; a escolha para treino também exige verificar licença, pesos treináveis e recursos disponíveis.
 - Recuperação de contexto (RAG), configuração de treinamento e respostas simuladas não comprovam fine-tuning executado.
 - Segurança, fontes e auditoria precisam ser validadas no fluxo real de resposta. Não declarar conformidade ou segurança total com base apenas em filtros ou anonimização.
@@ -331,7 +331,7 @@ python -m pytest tests/
 
 ### Fase 3
 
-Execute uma tarefa por vez seguindo [fase3/AGENTS.md](fase3/AGENTS.md) e [fase3/docs/PLANO_EXECUCAO.md](fase3/docs/PLANO_EXECUCAO.md). Conclua cada tarefa com sua validação e registro de evidências; a lista do plano não autoriza implementar todas as etapas de uma só vez.
+Execute uma tarefa por vez seguindo [fase3/AGENTS.md](fase3/AGENTS.md) e [fase3/docs/PLANO_EXECUCAO.md](fase3/docs/PLANO_EXECUCAO.md). Conclua cada tarefa com validação e evidências. Uma solicitação explícita do usuário para concluir várias etapas autoriza executá-las em sequência. As responsabilidades de cada arquivo Markdown e regras para relatórios históricos estão em [fase3/AGENTS.md](fase3/AGENTS.md).
 
 ## Contato e Suporte
 
@@ -361,6 +361,6 @@ Use o [README da fase](fase3/README.md) para orientação e o [plano de execuç�
 
 ### Fase 3
 
-**Status:** PROTÓTIPO PARCIAL — entrega em desenvolvimento.
+**Status:** PROTÓTIPO ACADÊMICO — desenvolvimento do fluxo implementado; entrega humana pendente.
 
-Há scripts de benchmark, preparação de dados, recuperação de contexto com Ollama, banco SQLite e protótipos de interfaces e workflow. Ainda faltam treinamento comprovado, integração real com LangChain/LangGraph, correções do fluxo integrado e validação da entrega. Consulte o [README](fase3/README.md) para o inventário atual e o [plano de execução](fase3/docs/PLANO_EXECUCAO.md) para tarefas concluídas e pendentes.
+Há FT-11 treinado com evidências, integração LangChain/LCEL com documentos e fatos do prontuário, SQLite, interface e LangGraph compilado, com revisão de rascunhos persistida por decisão explícita. É um protótipo acadêmico sem autenticação profissional nem validação clínica; vídeo/apresentação dependem de participação humana. Consulte o [README](fase3/README.md) para o inventário atual e o [plano de execução](fase3/docs/PLANO_EXECUCAO.md) para tarefas concluídas e pendentes.

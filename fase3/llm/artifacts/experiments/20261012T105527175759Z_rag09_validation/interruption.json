@@ -1,1 +1,0 @@
-{"reason":"Diagnostic probe stopped after false negative support classifications and a verifier contract error. Classifier confused negative answer with absence of support. Ten completed records preserved; no held-out test read or approval.","completed_cases":10,"accepted":false,"source_snapshot":"source/","clinical_validation":false}

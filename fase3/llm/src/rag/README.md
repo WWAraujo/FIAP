@@ -1,5 +1,19 @@
 # RAG — corpus, recuperação e cadeia documental
 
+`smoke_test_tools.py` demonstra três caminhos com o FT-11 real: chamada/execução de IMC, conhecimento sem consulta e busca documental. Partindo de `fase3/llm`, execute no SDK LLM `.venv/bin/python -B src/rag/smoke_test_tools.py`; gera evidências novas em `artifacts/experiments/*_three_routes/`. A [primeira execução](../../artifacts/experiments/20261016T002602034519Z_three_routes/review.md) escolheu os três caminhos esperados, com 2/3 aprovações completas: o conteúdo educativo foi correto, mas seu JSON violou o contrato da aplicação. Não integra agente/tools ao chat.
+
+## Integração local APP-01
+
+`runtime_server.py` mantém o FT-11 carregado, confere o mesmo recibo de `query_document.py` e expõe `/query` em localhost:8001 para a aplicação. Inicie no SDK LLM, partindo de `fase3/llm`: `.venv/bin/python -B src/rag/runtime_server.py`. Aguarde a mensagem de prontidão antes de consultar pela interface. `/health` confirma o servidor após a carga. Não exige Ollama ou pacotes adicionais.
+
+A integração usa uma subclasse de `DocumentChainV3` que acrescenta contexto tipado do prontuário ao prompt do seletor. O verificador continua avaliando suporte documental, e a recuperação continua baseada na pergunta original. O orçamento inclui o paciente inteiro; excesso gera erro explícito, sem corte silencioso. A resposta continua extrativa/documental e pode abster-se em perguntas clínicas. As métricas abaixo pertencem à versão documental original; não são métricas de qualidade clínica desta integração. Modelos, índice e módulos congelados não foram alterados.
+
+Desde 16/10/2026, perguntas factuais de medicamentos/exames/consultas/idade/sinais usam `patient_facts_chain.py`, cadeia LCEL separada. `clinical/patient_evidence.py` recupera registros do contexto atual com IDs/offsets; o FT-11 escolhe evidência fornecida ou ausência, e o servidor resolve a resposta literal. Campo ausente não gera chamada ao modelo; contratos inválidos, orçamento excedido ou truncamento geram erro explícito. Essa extensão tem testes próprios e não herda métricas de RAG-09. Alergias/IMC continuam nas rotas determinísticas da aplicação.
+
+LangGraph e revisão ficam no SDK API: `workflow_service.py` conecta dados/documentos ao grafo e cria rascunho pendente. Aprovação/rejeição são registros persistentes feitos por usuário com confirmação explícita; o campo `validacao_humana` do modelo continua apenas indicando necessidade. A identidade do revisor é declarada no protótipo. [Fluxo e validação atuais](../../../docs/RELATORIO_TECNICO.md).
+
+Cada requisição produz `artifacts/experiments/*_app01_*/` com contexto sintético, identidade, estado completo e resposta. Consultas são serializadas porque o verificador altera temporariamente o estado do adapter. A mesma instância do modelo atende pedidos consecutivos; o contexto é exclusivo por cadeia/requisição. Comandos completos e configurações PyCharm no [README da aplicação](../../../README.md).
+
 ## Cadeia v3 — preparação documental concluída
 
 O comando de consulta atual usa `DocumentChainV3` e exige o recibo de aceite em `data/rag_index_v3_final/readiness.json`. A consulta não abre perguntas nem gabaritos de avaliação. A configuração atual usa BM25 sobre 15 seções integrais do corpus elegível, top-3, normalização lexical e escopo por nomes de documentos derivados do corpus. Orçamento total de 3.072 tokens, reserva de 256, sem corte silencioso de evidência. A revisão do orçamento mediu as 455 combinações de três seções com o tokenizer real: entrada máxima de 2.577 tokens para a pergunta genérica registrada em `data/rag_index_v3_final/budget_validation.json`.
@@ -28,7 +42,7 @@ Execução da avaliação, para registro do protocolo (o teste é de uso único)
 .venv/bin/python -B src/rag/evaluate_v3.py --split test --approved-validation artifacts/experiments/20261012T182715001180Z_rag09_validation
 ```
 
-`review_v3.py` produz revisão/resumo/decisão offline, sem fornecer gabaritos à cadeia. `--documentary-signoff` requer inspeção prévia das perguntas, citações e falhas; equivalências semânticas e respostas parciais exigem justificativa em `annotations.json`. O runner congela fontes e configuração antes de gerar. Não há API, prontuário ou LangGraph integrados nesta preparação.
+`review_v3.py` produz revisão/resumo/decisão offline, sem fornecer gabaritos à cadeia. `--documentary-signoff` requer inspeção prévia das perguntas, citações e falhas; equivalências semânticas e respostas parciais exigem justificativa em `annotations.json`. O runner congela fontes e configuração antes de gerar. A avaliação documental congelada não executava API, prontuário ou LangGraph; a integração atual está descrita no início deste README.
 
 ## Histórico do piloto e das versões anteriores
 
@@ -54,7 +68,7 @@ A CLI cria novo experimento, baixa/confere E5 na revisão fixa e usa somente os 
 
 O backend resolve `artifacts/best_model.json`, confere elegibilidade, SHA-256 do adapter, modelo/revisão do manifesto, configuração LoRA, presença dos shards e prompt de sistema do FT-11. Registra hashes dos pesos-base locais; a revisão declarada não é verificação remota dos shards. Reutiliza o carregamento ROCm da CLI de fine-tuning, com NF4 e atenção eager, sem download ou substituição de modelo. Ausência/corrupção é erro explícito. O carregamento acontece uma vez por instância, sem treino; cada chamada recebe somente seu prompt. Orçamento conservador de 512 tokens totais, sem corte silencioso; geração determinística, thinking desativado. A resposta bruta não constitui validação de fontes ou aprovação clínica.
 
-O comando cria `artifacts/experiments/*_rag04/` com identidade/hashes, solicitações, respostas e recursos; se falhar, registra `error.json` e termina com erro. Caminhos absolutos históricos na seleção devem apontar às cópias locais corretas; em outro ambiente, fornecer uma seleção local com `--selection`, mantendo identidade e hash do adapter. A API leve não importa este backend ROCm: a comunicação com um processo de inferência e a cadeia LangChain ficam para a integração posterior.
+O comando cria `artifacts/experiments/*_rag04/` com identidade/hashes, solicitações, respostas e recursos; se falhar, registra `error.json` e termina com erro. Caminhos absolutos históricos na seleção devem apontar às cópias locais corretas; em outro ambiente, fornecer uma seleção local com `--selection`, mantendo identidade e hash do adapter. A API leve não importa este backend ROCm: a comunicação atual é via `ft11_client.py` com o runtime HTTP, conforme descrito no início deste README.
 
 RAG-04 concluída em 11/10/2026: FT-11 real carregado na RX 9060 XT, 2/2 probes aprovados, sete testes de software aprovados; carga 58,58 s, pico de VRAM alocada 7,40 GiB. [Evidências e limites](../../artifacts/experiments/20261011T214416417521Z_rag04/review.md). RAG-05 conectou esse backend ao BM25 pela cadeia documental abaixo.
 
@@ -158,6 +172,6 @@ RAG-07 concluiu 160 registros revisados: FT-11+RAG 21/24 adequadas, 8/8 ausênci
 .venv/bin/python -B src/rag/evaluate_reserved.py
 ```
 
-Três testes do gate aprovados. A [execução do teste](../../artifacts/experiments/20261012T001057419178Z_rag08_test/review.md) concluiu 160 registros: base+RAG 18/24 adequadas e duas parciais; FT-11+RAG 19/24 e duas parciais. Ambos 8/8 ausências e 4/4 conflitos; ataques 0/4 e 1/4, integralmente expostos. 22/24 spans efetivamente recuperados/fornecidos (somente ID de seção indicaria 24/24), sem omissões/truncamentos. Uma citação FT-11 de dislipidemia responde pergunta sobre diabetes; nos ataques 38/39/40, FT-11 declara ausência apesar de regras disponíveis. Citações existentes/literais não garantem pertinência; abstenção indevida não comprova resistência. **Critérios do teste não atendidos; não avançar à integração.**
+Três testes do gate aprovados. A [execução do teste](../../artifacts/experiments/20261012T001057419178Z_rag08_test/review.md) concluiu 160 registros: base+RAG 18/24 adequadas e duas parciais; FT-11+RAG 19/24 e duas parciais. Ambos 8/8 ausências e 4/4 conflitos; ataques 0/4 e 1/4, integralmente expostos. 22/24 spans efetivamente recuperados/fornecidos (somente ID de seção indicaria 24/24), sem omissões/truncamentos. Uma citação FT-11 de dislipidemia responde pergunta sobre diabetes; nos ataques 38/39/40, FT-11 declara ausência apesar de regras disponíveis. Citações existentes/literais não garantem pertinência; abstenção indevida não comprova resistência. **Critérios históricos do teste RAG-08 não atendidos; aquela versão não foi liberada para integração.**
 
 Na conclusão histórica da RAG-08, o teste RAG-02 foi consumido e a v2 teve aceite negativo; suas decisões/resultados permanecem congelados. A RAG-09 foi concluída pela cadeia v3, com novas validações/reservados, correção de cobertura do prompt e limites descritos no início deste README. A consulta livre atual usa o recibo da v3 aceita. Sem treino novo, mudança de pesos/seleção, API/prontuário ou validação clínica.

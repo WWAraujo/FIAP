@@ -12,6 +12,12 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from medical_assistant.safety.audit import AuditLogger
 from medical_assistant.safety.guardrails import SecuritySystem
+from medical_assistant.application.assistant import MedicalAssistantLangChain
+from medical_assistant.application.contracts import AssistantResponse, PatientContext
+from medical_assistant.clinical.patient_database import PatientDatabase
+from medical_assistant.retrieval.ft11_client import InferenceUnavailable
+from medical_assistant.application.workflow_service import start_workflow
+from medical_assistant.safety.reviews import ReviewStore
 
 Mode = Literal["standard", "fast"]
 CONFIG_PATH = Path(__file__).resolve().parents[3] / "configs/config.yaml"
@@ -40,6 +46,12 @@ class QueryResponse(BaseModel):
     sources: list[str] = Field(default_factory=list)
 
 
+class AssistantQueryRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
+    query: str = Field(min_length=1, max_length=8000)
+    patient_id: str | None = Field(default=None, min_length=1)
+
+
 class ModelSettings(BaseModel):
     base_model: str = Field(min_length=1)
     alternative_model: str = Field(min_length=1)
@@ -49,6 +61,21 @@ class ModelSettings(BaseModel):
 
     def select(self, mode: Mode) -> str:
         return self.alternative_model if mode == "fast" else self.base_model
+
+
+class WorkflowRequest(BaseModel):
+    model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
+    patient_id: str = Field(min_length=1)
+    query: str = Field(min_length=1,max_length=8000)
+
+
+class ReviewDecision(BaseModel):
+    model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
+    patient_id: str | None
+    reviewer: str = Field(min_length=1,max_length=120)
+    decision: Literal['approved','rejected']
+    notes: str = Field(default='',max_length=2000)
+    confirmed_human: Literal[True]
 
 
 class ModelUnavailable(RuntimeError):
@@ -97,6 +124,46 @@ def create_app(config_path: Path = CONFIG_PATH) -> FastAPI:
     audit = AuditLogger()
     security = SecuritySystem()
     application = FastAPI(title="FIAP — inferência acadêmica", version="0.1.0")
+
+    @application.post('/workflows')
+    def workflow(request: WorkflowRequest):
+        try:
+            return start_workflow(request.patient_id,request.query)
+        except ValueError as exc:
+            raise HTTPException(status_code=400,detail=str(exc)) from exc
+        except InferenceUnavailable as exc:
+            raise HTTPException(status_code=503,detail=str(exc)) from exc
+
+    @application.get('/reviews/{review_id}')
+    def review(review_id: str):
+        try:
+            return ReviewStore().get(review_id)
+        except ValueError as exc:
+            raise HTTPException(status_code=404,detail=str(exc)) from exc
+
+    @application.post('/reviews/{review_id}/decision')
+    def decide(review_id: str, request: ReviewDecision):
+        try:
+            return ReviewStore().decide(review_id,**request.model_dump())
+        except ValueError as exc:
+            raise HTTPException(status_code=409,detail=str(exc)) from exc
+
+    @application.post("/assistant/query", response_model=AssistantResponse)
+    def assistant_query(request: AssistantQueryRequest) -> AssistantResponse:
+        context = None
+        if request.patient_id is not None:
+            db = PatientDatabase()
+            try:
+                context = PatientContext.from_database(db, request.patient_id)
+            except ValueError as exc:
+                raise HTTPException(status_code=404, detail=str(exc)) from exc
+            finally:
+                db.close()
+        try:
+            result = MedicalAssistantLangChain().process_query(request.query, context)
+        except InferenceUnavailable as exc:
+            raise HTTPException(status_code=503, detail={"code": "model_unavailable", "message": str(exc)}) from exc
+        return AssistantResponse.model_validate(result)
 
     @application.post("/query", response_model=QueryResponse)
     def query(request: QueryRequest) -> QueryResponse:

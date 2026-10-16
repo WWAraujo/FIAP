@@ -1,21 +1,31 @@
-# Aplicação
+# Aplicação e contratos
 
-O chat Streamlit passa a pergunta original e o contexto do paciente separadamente para `process_query`. O histórico compõe o prompt/contexto auditado, mas não é concatenado à pergunta usada para selecionar a resposta simulada. Isso evita acionar a resposta de hipertensão apenas por essa condição constar no prontuário; não adiciona inferência real nem compreensão conversacional ao protótipo.
+`assistant.py` valida entrada, registra consulta, aplica guardas e consulta alergia/IMC ou o cliente FT-11. `contracts.py` preserva fontes e exige offsets literais; fontes de outro paciente são recusadas. O histórico de chat serve à interface, não é memória clínica ilimitada enviada ao modelo.
 
-Os controles compartilhados ficam em `medical_assistant.safety`: `guardrails.py` contém `SecuritySystem` e `audit.py` contém `AuditLogger`. Assistente e API importam essas classes; a extração preserva os filtros lexicais e o formato/destino da auditoria, sem implementar a validação integrada prevista em SAFE-01.
+`workflow.py` compila e invoca um `StateGraph` real com nós de avaliação, prioridade, referência documental, exames, proposta e conclusão. Os nós trabalham com cópias independentes; falha encerra sem afirmar conclusão. `workflow_service.py` obtém dados do SQLite, consulta documentos com FT-11, invoca o grafo, registra fontes e cria revisão pendente. Exames pendentes/vencidos são os do banco; ausência de evidência não autoriza conduta inventada. Regras de triagem são demonstrativas, não validadas clinicamente.
 
-`api.py` implementa APP-00: inferência Ollama com seleção controlada por `configs/config.yaml`. O cliente envia somente `query` e, opcionalmente, `mode` (`standard` ou `fast`); campos adicionais são rejeitados. `standard` usa `model.base_model` (Qwen configurado) e `fast` usa `model.alternative_model` (Gemma configurado). `OLLAMA_BASE_URL` pode substituir o endereço do servidor.
+## API local
 
-Partindo da raiz, com o ambiente API instalado:
+Da raiz FIAP:
 
 ```bash
-fase3/.venv/bin/python -m uvicorn medical_assistant.application.api:app --app-dir fase3/src --host 127.0.0.1 --port 8000
-curl -X POST http://127.0.0.1:8000/query -H 'Content-Type: application/json' \
-  -d '{"query":"Quais são as limitações deste assistente?","mode":"standard"}'
+fase3/.venv/bin/python -B -m uvicorn medical_assistant.application.api:app --app-dir fase3/src --host 127.0.0.1 --port 8000
 ```
 
-O servidor Ollama e os dois modelos configurados precisam existir no host. Esta API não baixa modelos e não troca automaticamente de modelo quando há falha. A resposta e `fase3/logs/audit.log` registram modo, nome e digest. A identidade vem do inventário [`/api/tags`](https://docs.ollama.com/api/tags), conferido antes e depois da geração; o nome retornado por [`/api/generate`](https://docs.ollama.com/api/generate) também precisa corresponder. Alteração detectada, resposta vazia/incompleta, modelo ausente ou erro do servidor retornam HTTP 503 com `model_unavailable`. Isso é rastreabilidade do servidor local, não atestado criptográfico dos pesos executados.
+| Rota | Entrada/uso |
+|---|---|
+| `POST /assistant/query` | `query`, `patient_id` opcional. Resposta, fontes, modelo/run_id e revisão pendente. |
+| `POST /workflows` | `patient_id` e `query`. Executa grafo e retorna rascunho, fontes, decisões e `review_id`. |
+| `GET /reviews/{review_id}` | Consulta snapshot, hash, status e eventual decisão. |
+| `POST /reviews/{review_id}/decision` | `patient_id` (ou null em conversa sem paciente), `reviewer`, `decision` (`approved`/`rejected`), `notes` opcional e `confirmed_human: true`. |
+| `POST /query` | Rota legada Ollama: `query` e `mode` (`standard`/`fast`). Não é o chat FT-11. |
 
-Entradas bloqueadas pelos filtros existentes não chamam Ollama: o nome e o digest ficam nulos porque não houve modelo utilizado. Erros registram o modelo solicitado e identidade utilizada não confirmada. As respostas requerem revisão; não representam aprovação humana.
+A decisão de revisão é única e vinculada ao snapshot/paciente; não altera o rascunho. Sem identificação, confirmação ou evidências válidas não há aprovação. A interface permite decisão explícita; a aplicação não escolhe aprovação pelo profissional. A identidade é declarada, sem autenticação ou conferência de registro profissional. O endpoint é para protótipo local e não deve ser exposto como sistema clínico autenticado.
 
-**Limite atual:** os nomes Ollama desta política são os configurados historicamente; não carregam automaticamente o adapter FT-11. APP-01 ainda deve conectar o FT-11 real, a cadeia documental RAG e o prontuário, com fontes verificáveis e contratos compartilhados. Aqui `sources` é vazio; não há consulta ao banco nem alegação de cobertura clínica. CLI/Streamlit continuam usando o protótipo `assistant.py`, com respostas simuladas; `workflow.py` continua sequencial até APP-02. Os filtros existentes não constituem validação clínica nem segurança completa; SAFE-01 avalia o fluxo integrado.
+A rota Ollama preserva a política de `configs/config.yaml`, conferindo nome/digest antes/depois da geração, sem fallback. `OLLAMA_BASE_URL` altera o destino. FT-11 usa `FT11_RUNTIME_URL`, padrão localhost:8001; erros de inferência são explícitos. Fontes ausentes representam pendência, não sucesso clínico.
+
+## Persistência e auditoria
+
+`data/prontuarios.db` armazena pacientes sintéticos. `data/reviews.db` armazena snapshots e decisões; `REVIEW_DB_PATH` permite outro destino (usado para isolar testes). `logs/audit.log` registra consultas, respostas completas, fontes, modelo, eventos do workflow e revisão com hash e identificadores correlacionados. Registros do modelo ficam em `llm/artifacts/experiments/*_app01_*/`.
+
+Dados e logs são locais e ignorados. Não enviar prontuários reais ou decisões simuladas como aprovação de médicos. Confira o [guia de validação](../../../docs/GUIA_VALIDACAO.md) e o [README principal](../../../README.md).

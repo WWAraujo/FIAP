@@ -4,3 +4,5 @@ pydantic==2.13.4
 pyyaml==6.0.3
 requests==2.34.2
 streamlit==1.56.0
+langgraph==1.2.11
+langchain-core==1.6.4

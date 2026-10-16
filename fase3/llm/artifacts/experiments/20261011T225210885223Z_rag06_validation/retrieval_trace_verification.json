@@ -1,8 +1,0 @@
-{
-  "gold_evidence_spans_retrieved_at_3": {
-    "base_with_rag": 24,
-    "ft11_with_rag": 24
-  },
-  "provided_evidence_spans_per_condition": 15,
-  "test_evaluated": false
-}

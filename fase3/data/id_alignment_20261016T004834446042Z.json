@@ -1,0 +1,27 @@
+{
+  "backup": "/home/wallace/PycharmProjects/FIAP/fase3/data/prontuarios_before_id_alignment_20261016T004834446042Z.db",
+  "mapping": {
+    "patient_001": "paciente_001",
+    "sim_001": "paciente_011",
+    "sim_002": "paciente_002",
+    "sim_003": "paciente_003",
+    "sim_004": "paciente_004",
+    "sim_005": "paciente_005",
+    "sim_006": "paciente_006",
+    "sim_007": "paciente_007",
+    "sim_008": "paciente_008",
+    "sim_009": "paciente_009",
+    "sim_010": "paciente_010"
+  },
+  "updated_rows": {
+    "medical_history": 23,
+    "vital_signs": 13,
+    "exams": 13,
+    "medications": 12,
+    "consultations": 20
+  },
+  "total_updated": 81,
+  "foreign_key_violations": 0,
+  "integrity_check": "ok",
+  "patients_unchanged": true
+}

@@ -43,7 +43,7 @@ python3.14 -m venv .venv
 
 Esses comandos não instalam o driver da GPU. A base Qwen e os adapters FT-10/FT-11 são arquivos grandes locais e não estão no Git. Obtenção, reprodução e caminhos estão no [README LLM](llm/README.md). O adapter do projeto não possui URL pública registrada: é preciso copiá-lo de uma execução existente ou reproduzir os treinos e avaliar a nova seleção. Nova execução não herda o recibo do modelo histórico.
 
-`best_model.json`, a configuração do adapter e o manifesto contêm caminhos absolutos da execução original. Preserve os caminhos canônicos ao transferir essa execução; uma mudança de identidade/configuração exige verificação e registro próprios, sem editar hashes para contornar o recibo. O runtime confere versões, módulos, índice, configuração e pesos antes de atender. Sem esses arquivos locais, o clone não executa inferência. Os testes de software usam mocks e podem ser executados sem carregar os pesos.
+`best_model.json`, a configuração do adapter e o manifesto contêm caminhos absolutos da execução original. Quando esses caminhos não existem, o runtime procura o adapter em `llm/artifacts/adapters/<run_id>/adapter`, a base em `llm/models/base/Qwen3.5-9B` e o prompt em `llm/data/factual_v2/`; isso permite extrair o pacote FT-11 nesse layout em outro clone sem alterar hashes. O runtime confere versões, módulos, índice, configuração e pesos antes de atender. Sem os arquivos locais de modelo, o clone não executa inferência. Os testes de software usam mocks e podem ser executados sem carregar os pesos.
 
 ## Comportamento disponível
 

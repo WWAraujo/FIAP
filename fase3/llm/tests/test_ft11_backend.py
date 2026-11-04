@@ -45,6 +45,45 @@ def test_selection_matches_identity_without_loading_model(tmp_path):
     assert identity["model_revision"] == "revision-fixed"
 
 
+def test_selection_uses_clone_layout_when_historical_paths_are_absent(tmp_path, monkeypatch):
+    monkeypatch.setattr(backend, "ROOT", tmp_path)
+    base = tmp_path / "models/base/Qwen3.5-9B"
+    adapter = tmp_path / "artifacts/adapters/FT11-MOCK/adapter"
+    prompt = tmp_path / "data/factual_v2/system_prompt.txt"
+    base.mkdir(parents=True)
+    adapter.mkdir(parents=True)
+    prompt.parent.mkdir(parents=True)
+    (base / "part.safetensors").write_bytes(b"synthetic")
+    (base / "model.safetensors.index.json").write_text(json.dumps({"weight_map": {"weight": "part.safetensors"}}))
+    weights = adapter / "adapter_model.safetensors"
+    weights.write_bytes(b"synthetic adapter")
+    prompt.write_text("Sistema documental")
+    historical_base = "/historical/models/Qwen3.5-9B"
+    (adapter.parent / "manifest.json").write_text(json.dumps({
+        "run_id": "FT11-MOCK", "model": {"id": "test/base", "revision": "revision-fixed"},
+        "environment": {"system_prompt": {"sha256": hashlib.sha256(prompt.read_bytes()).hexdigest()}},
+    }))
+    (adapter / "adapter_config.json").write_text(json.dumps({
+        "peft_type": "LORA", "base_model_name_or_path": historical_base,
+    }))
+    selection_path = tmp_path / "artifacts/best_model.json"
+    selection_path.parent.mkdir(exist_ok=True)
+    selection_path.write_text(json.dumps({
+        "eligible": True,
+        "adapter": "/historical/artifacts/adapters/FT11-MOCK/adapter",
+        "base": historical_base,
+        "adapter_weights_sha256": hashlib.sha256(weights.read_bytes()).hexdigest(),
+        "model_id": "test/base",
+        "model_revision": "revision-fixed",
+        "system_prompt": "/historical/data/factual_v2/system_prompt.txt",
+    }))
+
+    identity = backend.resolve_selection(selection_path)
+
+    assert identity["adapter"] == str(adapter)
+    assert identity["base"] == str(base)
+
+
 @pytest.mark.parametrize("failure", ["missing_adapter", "corrupt_adapter", "missing_base", "wrong_revision"])
 def test_invalid_weights_or_revision_fail_without_fallback(tmp_path, failure):
     path, adapter, base = selection(tmp_path)

@@ -54,6 +54,8 @@ fase3/**
 !fase3/src/**/README.md
 !fase3/tests/**/*.py
 !fase3/llm/src/**/*.py
+!fase3/llm/src/finetuning/scripts/package_ft14_for_sharing.sh
+!fase3/llm/src/finetuning/scripts/export_ft14_to_gguf.sh
 !fase3/llm/src/**/README.md
 !fase3/llm/src/finetuning/evaluation/clinical_cases.jsonl
 !fase3/llm/tests/**/*.py
@@ -67,6 +69,8 @@ fase3/**
 !fase3/docs/ROTEIRO_VIDEO.md
 !fase3/docs/REVISAO_DOCUMENTACAO.md
 !fase3/docs/RESUMO_ENTREGA_GRUPO.md
+!fase3/docs/COMPARTILHAR_FT14.md
+!fase3/docs/EXECUTAR_PROJETO_E_FT14.md
 !fase3/llm/docs/DADOS_EXTERNOS.md
 !fase3/llm/data/contextual_v1/**/*.json
 !fase3/llm/data/contextual_v1/**/*.jsonl

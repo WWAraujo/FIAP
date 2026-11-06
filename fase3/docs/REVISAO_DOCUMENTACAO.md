@@ -1,5 +1,7 @@
 # Revisão da documentação Markdown
 
+Atualização de 05/11/2026: incluído o guia ativo `docs/COMPARTILHAR_FT14.md`, que descreve a distribuição local do adapter FT-14 e a execução reproduzível. O pacote binário e seus checksums são locais e não entram no Git.
+
 Revisão de 16/10/2026, após APP-02/SAFE-01 e consolidação técnica ENT-01. Escopo: todos os `.md` próprios existentes na Fase 3, incluindo evidências locais ignoradas. Bibliotecas dos SDKs e documentação do modelo-base são de terceiros e não foram reescritas. O AGENTS da raiz foi conferido/atualizado nas referências à Fase 3; não havia referência à fase nos demais Markdown da raiz que exigisse alteração.
 
 ## Resultado e regras
@@ -21,6 +23,8 @@ Conferência automática dos links relativos Markdown: nenhum destino inexistent
 | `PROPOSTA.md` | Ativo | Instruções/resultados atuais conferidos; links locais válidos. |
 | `README.md` | Ativo | Instruções/resultados atuais conferidos; links locais válidos. |
 | `docs/GUIA_VALIDACAO.md` | Ativo | Instruções/resultados atuais conferidos; links locais válidos. |
+| `docs/COMPARTILHAR_FT14.md` | Ativo | Instruções simples para transferir, conferir e executar localmente o adapter candidato FT-14. |
+| `docs/EXECUTAR_PROJETO_E_FT14.md` | Ativo | Distingue o teste multiplataforma do GGUF da execução integrada FT-11/RAG. |
 | `docs/PLANO_EXECUCAO.md` | Ativo | Instruções/resultados atuais conferidos; links locais válidos. |
 | `docs/PLANO_RAG.md` | Ativo | Plano histórico identificado; encaminhamento atual e preservação do piloto atualizados. |
 | `docs/README_COMPLETO_ANTES_GIT_MINIMO.md` | Histórico | Snapshot anterior; identificado como histórico. |
@@ -35,17 +39,7 @@ Conferência automática dos links relativos Markdown: nenhum destino inexistent
 | `llm/artifacts/README.md` | Ativo | Instruções/resultados atuais conferidos; links locais válidos. |
 | `llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/adapter/README.md` | Gerado/histórico | Model card PEFT gerado; preservado sem reescrever. |
 | `llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter/README.md` | Gerado/histórico | Model card PEFT gerado; preservado sem reescrever. |
-| `llm/artifacts/data_audits/20260930_dat07_resume/RESULTADOS.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T175422Z_eval03/reference_quality_audit.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T175422Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T182438Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T192204Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T215546Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T230117Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T232622Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930T233923Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20260930_eval06_conditional_prompt/comparison_review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
-| `llm/artifacts/evaluations/20261001_ft09_9b_adapter/20261001T102530Z_eval03/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
+| `llm/artifacts/evaluation_audit_summary.md` | Ativo | Consolida resultados/decisões das avaliações e auditorias históricas cujos arquivos brutos foram removidos localmente em 20/10/2026. |
 | `llm/artifacts/experiments/20261005T095351Z_contextual_v1/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
 | `llm/artifacts/experiments/20261005T120254Z_factual_v2/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |
 | `llm/artifacts/experiments/20261005T203707Z_ft12_comparison/review.md` | Histórico | Evidência de execução; bytes/decisões preservados. |

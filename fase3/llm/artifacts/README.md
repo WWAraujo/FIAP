@@ -1,18 +1,16 @@
 # Artefatos da entrega
 
-A seleção para o Git está no `.gitignore` e em [versioning_policy.json](versioning_policy.json). A política inclui execução e prova acadêmica; substitui a seleção temporária de apenas quatro arquivos de runtime.
+A seleção para o Git está no `.gitignore` e em [versioning_policy.json](versioning_policy.json). A política descreve os arquivos selecionados para versionamento; a limpeza local autorizada pelo usuário removeu os diretórios antigos de `experiments` da cópia de trabalho.
 
-| Conjunto | Conteúdo versionado |
+| Conteúdo local | Localização / finalidade |
 |---|---|
-| `best_model.json` | Seleção FT-11 e identidade. |
-| Adapters FT-10/FT-11 | Manifestos, ambientes e configuração LoRA; pesos locais. |
-| Sete execuções selecionadas | Configurações, métricas, respostas brutas, revisões e decisões de treino/recuperação/RAG. |
-| Outras execuções com relatório selecionado | Somente `review.md`; detalhes permanecem locais. |
-| Integração atual | Resumo `20261016T101610484760Z_delivery_live/summary.json`, sem prontuário ou decisões humanas pessoais. |
-| Limpezas | Registros de arquivos removidos nas limpezas autorizadas anteriores. |
+| Modelo selecionado FT-11 | `best_model.json` identifica a seleção; os pesos do adapter permanecem em `adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter/`. |
+| Execução FT-14 concluída | `experiments/20261020T_ft14_medpt_full_restart/`, com candidato aguardando revisão semântica. |
+| Histórico consolidado dos treinamentos | [training_history.md](training_history.md), criado antes da remoção dos resultados detalhados antigos. |
+| Avaliações e auditorias históricas | [evaluation_audit_summary.md](evaluation_audit_summary.md), resumo dos resultados e decisões de `evaluations/` e `data_audits/`. |
+| Pacote multiplataforma para o grupo | `shares/FT14_MedPT_20261020-Q4_K_M.gguf` (5,3 GB), com checksum/prompt; instruções em `../../docs/COMPARTILHAR_FT14.md`. |
+| Dados e dependências do runtime | Permanecem em `../data/`, no SDK local e nos diretórios de modelo necessários. |
 
-Não mover os arquivos exigidos pelo recibo `../data/rag_index_v3_final/readiness.json`. O teste reservado está consumido. Falhas e recibos revogados nos relatórios são resultados históricos, sem aprovação vigente.
+As demais pastas e arquivos que estavam dentro de `experiments/` foram removidos localmente, exceto a execução FT-14 em andamento. Também foram removidas as pastas de adapters diferentes do FT-11 selecionado. O conteúdo detalhado removido não pode ser recuperado desta cópia; o resumo preserva as métricas e decisões de treinamento que estavam disponíveis. O adapter FT-11 não foi alterado. A limpeza local não altera commits anteriores; nenhuma nova commit foi criada.
 
-Os relatórios por run_id e os model cards gerados são históricos imutáveis: descrevem a versão da época, não instruções atuais da aplicação. Consulte [relatório técnico](../../docs/RELATORIO_TECNICO.md) e [README LLM](../README.md). Links de relatórios antigos para detalhes não selecionados dependem da cópia local.
-
-Novas consultas e experimentos são ignorados por padrão. Avaliações/diagnósticos intermediários, snapshots de código, pesos, checkpoints e dados de pacientes/revisões continuam locais. Remoção do índice usa `git rm --cached`, sem apagar o arquivo local; não elimina cópias de commits anteriores. Nenhum commit é criado automaticamente.
+Os resultados brutos antigos de `evaluations/` e os arquivos de auditoria de `data_audits/` também foram consolidados em [evaluation_audit_summary.md](evaluation_audit_summary.md) e removidos. `evaluations/` permanece vazio como destino padrão para novas avaliações; `data_audits/` não é necessário para executar o runtime ou o treino FT-14 atual.

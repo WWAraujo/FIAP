@@ -87,6 +87,8 @@ O Git inclui código da aplicação, treino/preparação, testes, corpora sinté
 - [Relatório técnico e diagramas](docs/RELATORIO_TECNICO.md).
 - [Resumo da entrega para o grupo](docs/RESUMO_ENTREGA_GRUPO.md).
 - [Guia de validação](docs/GUIA_VALIDACAO.md).
+- [Guia simples para compartilhar o candidato FT-14](docs/COMPARTILHAR_FT14.md).
+- [Como executar o projeto e o FT-14](docs/EXECUTAR_PROJETO_E_FT14.md).
 - [Roteiro do vídeo de até 15 minutos](docs/ROTEIRO_VIDEO.md).
 - [Plano e evidências de execução](docs/PLANO_EXECUCAO.md).
 - [Índice da revisão Markdown](docs/REVISAO_DOCUMENTACAO.md).

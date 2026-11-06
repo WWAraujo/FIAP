@@ -26,6 +26,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--adapter-dir", type=Path, required=True, help="Diretório adapter/ gerado pelo treino.")
     parser.add_argument("--model-dir", type=Path, default=project_dir / "models" / "base" / "Qwen3-8B")
     parser.add_argument("--prompt", default="Quais são os sintomas de hipertensão?")
+    parser.add_argument(
+        "--system-prompt-file",
+        type=Path,
+        help="Arquivo de prompt de sistema usado na geração; se omitido, usa o prompt técnico padrão.",
+    )
     parser.add_argument("--max-new-tokens", type=int, default=128)
     return parser.parse_args()
 
@@ -91,10 +96,17 @@ def main() -> None:
     adapter_dir = args.adapter_dir.resolve()
     model_dir = args.model_dir.resolve()
     run_id = load_run_id(adapter_dir)
+    system_prompt = (
+        args.system_prompt_file.read_text(encoding="utf-8").strip()
+        if args.system_prompt_file
+        else SYSTEM_PROMPT
+    )
+    if not system_prompt:
+        raise ValueError("O prompt de sistema não pode estar vazio.")
     started = time.perf_counter()
     model, tokenizer, torch, device = load_adapter(model_dir, adapter_dir, attention_implementation=None)
     inputs = tokenizer.apply_chat_template(
-        [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": args.prompt}],
+        [{"role": "system", "content": system_prompt}, {"role": "user", "content": args.prompt}],
         add_generation_prompt=True,
         enable_thinking=False,
         tokenize=True,
@@ -118,6 +130,7 @@ def main() -> None:
                 "adapter_dir": str(adapter_dir),
                 "model_dir": str(model_dir),
                 "prompt": args.prompt,
+                "system_prompt_file": str(args.system_prompt_file.resolve()) if args.system_prompt_file else None,
                 "response": response,
                 "latency_seconds": round(time.perf_counter() - started, 3),
             },

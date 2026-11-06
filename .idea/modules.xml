@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FIAP.iml" filepath="$PROJECT_DIR$/.idea/FIAP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fiap-medical-assistant.iml" filepath="$PROJECT_DIR$/.idea/fiap-medical-assistant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fiap-medical-assistant-llm.iml" filepath="$PROJECT_DIR$/.idea/fiap-medical-assistant-llm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/techchallenge-fase2.iml" filepath="$PROJECT_DIR$/.idea/techchallenge-fase2.iml" />
     </modules>
   </component>
 </project>

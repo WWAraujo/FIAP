@@ -26,27 +26,11 @@ def sha(path):
     return digest.hexdigest()
 
 
-def resolve_artifact_path(value, portable_path):
-    """Usa o caminho histórico quando disponível e o layout do clone caso contrário."""
-    historical = Path(value).expanduser()
-    if historical.exists():
-        return historical.resolve()
-    return portable_path.resolve()
-
-
 def resolve_selection(selection_path):
     selected = read(selection_path)
     if selected.get("eligible") is not True:
         raise ValueError("Seleção não elegível; nenhum modelo alternativo será carregado.")
-    historical_adapter = Path(selected["adapter"]).expanduser()
-    historical_base = Path(selected["base"]).expanduser()
-    adapter = resolve_artifact_path(
-        selected["adapter"], ROOT / "artifacts" / "adapters" / historical_adapter.parent.name / "adapter"
-    )
-    base = resolve_artifact_path(selected["base"], ROOT / "models" / "base" / historical_base.name)
-    prompt_path = resolve_artifact_path(
-        selected["system_prompt"], ROOT / "data" / "factual_v2" / Path(selected["system_prompt"]).name
-    )
+    adapter, base = Path(selected["adapter"]).resolve(), Path(selected["base"]).resolve()
     weights = adapter / "adapter_model.safetensors"
     if sha(weights) != selected["adapter_weights_sha256"]:
         raise ValueError("Hash do adapter diverge da seleção FT-11.")
@@ -55,8 +39,7 @@ def resolve_selection(selection_path):
     if not manifest.get("run_id") or manifest["model"]["id"] != selected["model_id"] or manifest["model"]["revision"] != selected["model_revision"]:
         raise ValueError("Identidade/revisão do manifesto diverge da seleção.")
     config = read(adapter / "adapter_config.json")
-    configured_base = Path(config["base_model_name_or_path"]).expanduser().resolve()
-    if configured_base not in {base, historical_base.resolve()} or config["peft_type"] != "LORA":
+    if Path(config["base_model_name_or_path"]).resolve() != base or config["peft_type"] != "LORA":
         raise ValueError("Configuração do adapter incompatível com a base selecionada.")
     index = read(base / "model.safetensors.index.json")
     shards = sorted(set(index["weight_map"].values()))
@@ -65,6 +48,7 @@ def resolve_selection(selection_path):
     for name in shards:
         if not (base / name).is_file():
             raise FileNotFoundError(f"Shard da base indisponível: {base / name}")
+    prompt_path = Path(selected["system_prompt"])
     prompt = prompt_path.read_text(encoding="utf-8").strip()
     prompt_hash = hashlib.sha256(prompt.encode()).hexdigest()
     if not prompt or prompt_hash != manifest["environment"]["system_prompt"]["sha256"]:

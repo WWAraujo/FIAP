@@ -137,9 +137,10 @@ def test_workflow_uses_patient_data_and_does_not_accumulate(isolated_app):
     assert any('Aguardando revisão' in e.value for e in app.info)
     metrics = {m.label: m.value for m in app.metric}
     assert metrics == {"Prioridade": "alta", "Alertas": "2", "Recomendações": "2"}
-    pending = next(item.value for item in app.warning if "pending_exams" in item.value)
+    pending = next(item.value for item in app.warning if "Exames pendentes:" in item.value)
     assert "Hemoglobina Glicada" in pending
     assert "Eletrocardiograma" not in pending
+    assert "pending_exams" not in pending
     app.button[0].click().run()
     assert not app.exception
     assert not app.error

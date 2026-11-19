@@ -35,6 +35,15 @@ def test_missing_patient_returns_explicit_pending_message():
     assert "Selecione um paciente" in result.response and not result.sources
 
 
+def test_bmi_direct_question_does_not_start_with_yes_or_no():
+    context = PatientContext(patient_id="adult", idade=40,
+        sinais_vitais=[{"id": 1, "weight": 80, "height": 1.77}])
+    result = execute_tool("calcular_imc", {}, patient_context=context, query_id="test")
+    assert result.response.startswith("Pelo critério")
+    assessed = execute_tool("calcular_imc", {}, patient_context=context, query_id="test", weight_assessment=True)
+    assert assessed.response.startswith("Sim, o IMC")
+
+
 def test_only_bmi_is_exposed_without_model_arguments():
     assert len(TOOLS) == 1
     function = TOOLS[0]["function"]

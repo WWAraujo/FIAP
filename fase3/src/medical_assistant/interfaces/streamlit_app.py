@@ -420,7 +420,7 @@ def display_workflow_interface(db):
     for decision in result['decisions']:
         st.write(decision)
     for alert in result['alerts']:
-        st.warning(str(alert))
+        st.warning(alert.get('message', 'Alerta de triagem sem mensagem.'))
     for recommendation in result['recommendations']:
         st.info(recommendation['description'])
     with st.expander('Fontes e rastreabilidade'):

@@ -14,9 +14,11 @@ def bmi_query(request, query_id):
         r"(?:(?:(?:esse|este|essa|esta|o|a) )?paciente |ele |ela )?(?:esta|tem) (?:acima do peso|sobrepeso|excesso de peso)",
         r"(?:qual (?:e )?(?:o )?|calcule (?:o )?)?imc(?: (?:desse|deste|dessa|desta|do|da) paciente| dele| dela)?",
     )
-    if not any(re.fullmatch(pattern, question) for pattern in patterns):
+    weight_assessment = bool(re.fullmatch(patterns[0], question))
+    if not weight_assessment and not re.fullmatch(patterns[1], question):
         return None
-    return execute_tool("calcular_imc", {}, patient_context=request.patient_context, query_id=query_id)
+    return execute_tool("calcular_imc", {}, patient_context=request.patient_context, query_id=query_id,
+                        weight_assessment=weight_assessment)
 
 
 def allergy_query(request, query_id):

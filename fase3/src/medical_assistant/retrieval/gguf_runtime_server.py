@@ -12,6 +12,35 @@ from medical_assistant.application.contracts import AssistantRequest, Documentar
 from medical_assistant.safety.guardrails import SecuritySystem
 
 
+def format_model_content(content):
+    """Exibe a resposta estruturada do FT-14 sem expor seu JSON de transporte."""
+    candidate = content.strip()
+    if candidate.startswith("```json") and candidate.endswith("```"):
+        candidate = candidate[7:-3].strip()
+    try:
+        parsed = json.loads(candidate)
+    except json.JSONDecodeError:
+        return content
+    if not isinstance(parsed, dict):
+        return content
+    data = parsed.get("dados", parsed)
+    if not isinstance(data, dict):
+        return str(data)
+    lines = []
+    for key, value in data.items():
+        label = str(key).replace("_", " ").capitalize()
+        if isinstance(value, list):
+            rendered = "\n".join(f"- {item}" for item in value)
+            lines.append(f"**{label}:**\n{rendered}")
+        elif isinstance(value, dict):
+            rendered = "\n".join(f"- **{str(item_key).replace('_', ' ').capitalize()}:** {item_value}"
+                                 for item_key, item_value in value.items())
+            lines.append(f"**{label}:**\n{rendered}")
+        else:
+            lines.append(f"**{label}:** {value}")
+    return "\n\n".join(lines) or content
+
+
 class Runtime:
     def __init__(self, llama_url, system_prompt):
         self.llama_url = llama_url.rstrip("/")
@@ -30,7 +59,7 @@ class Runtime:
         content = response.json()["choices"][0]["message"]["content"].strip()
         if not content:
             raise ValueError("FT-14 retornou resposta vazia.")
-        answer = DocumentaryAnswer(status="pendente", dados={"trecho": content},
+        answer = DocumentaryAnswer(status="pendente", dados={"trecho": format_model_content(content)},
             pendencias=["Resposta do FT-14 GGUF sem RAG documental; revisão profissional necessária."],
             fonte=None, validacao_humana=True)
         return RuntimeResponse(answer=answer, sources=[], error=None,

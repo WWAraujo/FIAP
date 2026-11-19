@@ -18,7 +18,7 @@ CALCULAR_IMC_SCHEMA = {
 }
 
 
-def calcular_imc(context: PatientContext | None, query_id: str) -> AssistantResponse:
+def calcular_imc(context: PatientContext | None, query_id: str, *, weight_assessment: bool = False) -> AssistantResponse:
     if context is None:
         return AssistantResponse(query_id=query_id, response="Selecione um paciente para calcular o IMC.")
     if not context.sinais_vitais:
@@ -42,12 +42,20 @@ def calcular_imc(context: PatientContext | None, query_id: str) -> AssistantResp
         classification = "Não apliquei classificação: é necessária idade válida e critério específico para menores de 20 anos."
     elif age >= 60:
         label = "baixo peso" if bmi < 22 else "faixa adequada" if bmi < 27 else "sobrepeso"
-        classification = ("Sim, o IMC indica sobrepeso" if bmi >= 27 else "O IMC não indica excesso de peso")
-        classification += f" pelo critério para pessoas com 60 anos ou mais ({label}; sobrepeso a partir de 27 kg/m²)."
+        if weight_assessment:
+            classification = ("Sim, o IMC indica sobrepeso" if bmi >= 27 else "O IMC não indica excesso de peso")
+            classification += f" pelo critério para pessoas com 60 anos ou mais ({label}; sobrepeso a partir de 27 kg/m²)."
+        else:
+            classification = (f"Pelo critério para pessoas com 60 anos ou mais, a classificação é {label} "
+                              "(sobrepeso a partir de 27 kg/m²).")
     else:
         label = "baixo peso" if bmi < 18.5 else "faixa adequada" if bmi < 25 else "sobrepeso" if bmi < 30 else "faixa de obesidade"
-        classification = ("Sim, o IMC indica excesso de peso" if bmi >= 25 else "O IMC não indica excesso de peso")
-        classification += f" pelo critério para adultos de 20 a 59 anos ({label}; excesso a partir de 25 kg/m²)."
+        if weight_assessment:
+            classification = ("Sim, o IMC indica excesso de peso" if bmi >= 25 else "O IMC não indica excesso de peso")
+            classification += f" pelo critério para adultos de 20 a 59 anos ({label}; excesso a partir de 25 kg/m²)."
+        else:
+            classification = (f"Pelo critério para adultos de 20 a 59 anos, a classificação é {label} "
+                              "(excesso de peso a partir de 25 kg/m²).")
     def number(value):
         return f"{value:g}".replace(".", ",")
     recorded = vital.get("recorded_at") or "data não informada"

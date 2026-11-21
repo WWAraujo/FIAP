@@ -1,0 +1,47 @@
+{
+  "version": 3,
+  "task": "ENT-01",
+  "scope": "Fase 3: execução e entregáveis da proposta",
+  "criteria": [
+    "Código de treino/preparação e testes fazem parte da entrega, mesmo sem uso no runtime.",
+    "Corpora permitidos FT-10/FT-11 com split, seed, proveniência e atribuição.",
+    "Evidências completas das execuções selecionadas e relatórios históricos de decisões; não versionar toda sondagem.",
+    "Pesos, SDKs, SQLite, logs, resultados de consultas operacionais e decisões pessoais permanecem locais."
+  ],
+  "selected_experiments": {
+    "20261005T095351Z_contextual_v1": "Treino FT-10 de origem.",
+    "20261005T120254Z_factual_v2": "Treino/seleção FT-11, avaliação base/adapter e limitações.",
+    "20261011T212901816585Z_rag03": "Índice histórico e comparação de recuperação usada pelos testes.",
+    "20261011T215906287410Z_rag05": "Configuração congelada usada pelos validadores.",
+    "20261011T235027290179Z_rag07_validation": "Evidências do gate histórico de avaliação.",
+    "20261012T182715001180Z_rag09_validation": "Validação documental final.",
+    "20261012T184438077141Z_rag09_test": "Teste documental final, decisão e evidências completas."
+  },
+  "historical_reports": [
+    "experiments/20261005T203707Z_ft12_comparison/review.md",
+    "experiments/20261006T232619Z_ft13_pilot/review.md",
+    "experiments/20261011T212752609941Z_rag03/review.md",
+    "experiments/20261011T214416417521Z_rag04/review.md",
+    "experiments/20261011T215705006500Z_rag05/review.md",
+    "experiments/20261011T225210885223Z_rag06_validation/review.md",
+    "experiments/20261011T234356000996Z_rag07_validation/review.md",
+    "experiments/20261012T001057419178Z_rag08_test/review.md",
+    "experiments/20261012T104756171442Z_rag09_validation/review.md",
+    "experiments/20261012T105941618852Z_rag09_validation/review.md",
+    "experiments/20261012T112732865793Z_rag09_validation/review.md",
+    "experiments/20261012T121124698742Z_rag09_validation/review.md",
+    "experiments/20261012T122108946656Z_rag09_validation/review.md",
+    "experiments/20261012T170701149180Z_rag09_test/review.md",
+    "experiments/20261012T174142028524Z_rag09_validation/review.md",
+    "experiments/20261012T175916205183Z_rag09_test/review.md",
+    "experiments/20261012T190305897293Z_rag_query_v3/review.md",
+    "experiments/20261016T000851104289Z_ft11_tool_selection/review.md",
+    "experiments/20261016T002602034519Z_three_routes/review.md"
+  ],
+  "integration_summary": "experiments/20261016T101610484760Z_delivery_live/summary.json",
+  "notes": [
+    "Autoriza novos módulos do fluxo e documentação técnica atualizada.",
+    "Políticas anteriores de runtime mínimo foram substituídas pelo pedido explícito de concluir a entrega acadêmica.",
+    "Commits dependem de solicitação explícita; pesos e arquivos operacionais permanecem locais, sem reescrita de histórico."
+  ]
+}

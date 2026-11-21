@@ -1,0 +1,1779 @@
+{
+  "protocolos": [
+    {
+      "id": "PROTOC_001",
+      "titulo": "Protocolo de Triagem de Hipertensão",
+      "conteudo": "\n            Protocolo para triagem de hipertensão arterial:\n            \n            1. Medição da pressão arterial:\n               - Paciente deve estar sentado por 5 minutos\n               - Braço apoiado na altura do coração\n               - Realizar 3 medições com intervalo de 1 minuto\n               - Considerar a média das duas últimas medições\n            \n            2. Classificação:\n               - Normal: < 120/80 mmHg\n               - Pré-hipertensão: 120-139/80-89 mmHg\n               - Hipertensão Estágio 1: 140-159/90-99 mmHg\n               - Hipertensão Estágio 2: ≥ 160/100 mmHg\n            \n            3. Conduta:\n               - Normal: Reavaliação em 1 ano\n               - Pré-hipertensão: Mudanças no estilo de vida, reavaliação em 6 meses\n               - Hipertensão Estágio 1: Mudanças no estilo de vida + monitoramento, considerar medicação\n               - Hipertensão Estágio 2: Medicação imediata + acompanhamento médico\n            "
+    },
+    {
+      "id": "PROTOC_002",
+      "titulo": "Protocolo de Manejo de Diabetes Tipo 2",
+      "conteudo": "\n            Protocolo para manejo de Diabetes Tipo 2:\n            \n            1. Monitoramento:\n               - Glicemia de jejum: 70-100 mg/dL (normal)\n               - Hemoglobina glicada: < 5.7% (normal), 5.7-6.4% (pré-diabetes), ≥ 6.5% (diabetes)\n               - Auto-monitoramento diário para pacientes em uso de insulina\n            \n            2. Tratamento não farmacológico:\n               - Dieta balanceada, redução de carboidratos simples\n               - Exercícios físicos regulares (150 min/semana)\n               - Controle de peso\n               - Cessação do tabagismo\n            \n            3. Tratamento farmacológico:\n               - Metformina como primeira linha\n               - Considerar associações conforme resposta\n               - Insulina em casos avançados ou descontrole glicêmico\n            "
+    },
+    {
+      "id": "PROTOC_003",
+      "titulo": "Protocolo de Dor Torácica",
+      "conteudo": "\n            Protocolo de avaliação de dor torácica:\n            \n            1. Avaliação inicial:\n               - Características da dor (localização, intensidade, tipo)\n               - Fatores de melhora/piora\n               - Sintomas associados (dispneia, sudorese, náusea)\n               - Histórico de doenças cardiovasculares\n            \n            2. Classificação de risco:\n               - Alta prioridade: Dor opressiva, irradiação para braço esquerdo, sudorese\n               - Média prioridade: Dor pleurítica, relacionada à respiração\n               - Baixa prioridade: Dor muscular, de longa data\n            \n            3. Conduta:\n               - Alta prioridade: ECG imediato, monitorização cardíaca, consideração de trombólise\n               - Média prioridade: Exames complementares, observação\n               - Baixa prioridade: Avaliação clínica detalhada\n            "
+    },
+    {
+      "id": "PROTOC_004",
+      "titulo": "Protocolo de Reconciliação de Medicamentos",
+      "conteudo": "\n            Protocolo de reconciliação de medicamentos:\n\n            1. Conferir medicamentos relatados, prescrições vigentes e alergias registradas.\n            2. Identificar duplicidades, omissões e divergências de dose ou via.\n            3. Registrar as divergências encontradas no prontuário.\n            4. Encaminhar qualquer inclusão, suspensão ou alteração para validação do profissional habilitado.\n            "
+    },
+    {
+      "id": "PROTOC_005",
+      "titulo": "Protocolo de Avaliação de Sinais de Alarme",
+      "conteudo": "\n            Protocolo de avaliação de sinais de alarme:\n\n            1. Verificar início, intensidade e evolução dos sintomas relatados.\n            2. Conferir sinais vitais e antecedentes relevantes disponíveis.\n            3. Identificar sinais como alteração de consciência, dificuldade respiratória, sangramento ativo ou dor intensa.\n            4. Acionar avaliação presencial imediata quando houver sinal de alarme; o assistente não substitui a decisão clínica.\n            "
+    }
+  ],
+  "perguntas_frequentes": [
+    {
+      "id": "FAQ_001",
+      "pergunta": "Quais são os sintomas de hipertensão?",
+      "resposta": "A hipertensão é frequentemente assintomática, por isso é chamada de 'assassina silenciosa'. Quando há sintomas, podem incluir: dores de cabeça, tonturas, visão turva, zumbido no ouvido e sangramento nasal. Porém, o diagnóstico deve ser feito através da medição regular da pressão arterial."
+    },
+    {
+      "id": "FAQ_002",
+      "pergunta": "Como controlar a pressão arterial naturalmente?",
+      "resposta": "Para controle natural da pressão arterial: reduzir consumo de sódio, manter peso saudável, praticar exercícios físicos regularmente, limitar consumo de álcool, reduzir estresse, seguir dieta DASH (rica em frutas, vegetais e laticínios com baixo teor de gordura)."
+    },
+    {
+      "id": "FAQ_003",
+      "pergunta": "Quais exames são necessários para diagnóstico de diabetes?",
+      "resposta": "Os principais exames são: glicemia de jejum, hemoglobina glicada (HbA1c), teste de tolerância à glicose oral, e glicemia casual. O diagnóstico geralmente é confirmado com dois testes em dias diferentes, exceto em casos com glicemia muito elevada e sintomas claros."
+    },
+    {
+      "id": "FAQ_004",
+      "pergunta": "Quando devo procurar emergência por dor torácica?",
+      "resposta": "Procure emergência imediatamente se a dor torácica for: opressiva, irradiar para braço esquerdo, mandíbula ou costas, acompanhada de sudorese, náusea, dispneia, tontura, ou sensação de morte iminente. Histórico de doenças cardíacas também exige atenção imediata."
+    },
+    {
+      "id": "FAQ_005",
+      "pergunta": "Como registrar exames pendentes no acompanhamento do paciente?",
+      "resposta": "Liste o exame, a data de solicitação, o motivo clínico registrado e o status disponível. A priorização e qualquer conduta associada devem ser revisadas pelo profissional responsável."
+    }
+  ],
+  "modelos_laudos": [
+    {
+      "id": "LAUDO_001",
+      "tipo": "Laudo de Exame Laboratorial",
+      "template": "\n            LAUDO DE EXAMES LABORATORIAIS\n            \n            Paciente: {nome_paciente}\n            Data de coleta: {data_coleta}\n            Médico solicitante: Dr. {medico}\n            \n            RESULTADOS:\n            \n            Hemograma Completo:\n            - Hemoglobina: {hemoglobina} g/dL (referência: 12.0-16.0)\n            - Hematócrito: {hematocrito}% (referência: 37-47)\n            - Leucócitos: {leucocitos}/mm³ (referência: 4000-11000)\n            - Plaquetas: {plaquetas}/mm³ (referência: 150000-400000)\n            \n            Glicemia: {glicemia} mg/dL (referência: 70-100)\n            \n            Colesterol Total: {colesterol_total} mg/dL (referência: <200)\n            - HDL: {hdl} mg/dL (referência: >40)\n            - LDL: {ldl} mg/dL (referência: <130)\n            \n            Triglicerídeos: {triglicerideos} mg/dL (referência: <150)\n            \n            CONCLUSÃO: {conclusao}\n            \n            Assinatura: Dr. {medico}\n            CRM: {crm}\n            "
+    },
+    {
+      "id": "LAUDO_002",
+      "tipo": "Laudo de Eletrocardiograma",
+      "template": "\n            LAUDO DE ELETROCARDIOGRAMA\n            \n            Paciente: {nome_paciente}\n            Idade: {idade} anos\n            Data do exame: {data_exame}\n            Médico solicitante: Dr. {medico}\n            \n            RITMO: {ritmo}\n            FREQUÊNCIA CARDÍACA: {frequencia_cardiaca} bpm (referência: 60-100)\n            \n            EIXO: {eixo}\n            INTERVALOS:\n            - PR: {intervalo_pr} ms (referência: 120-200)\n            - QRS: {intervalo_qrs} ms (referência: 60-100)\n            - QT: {intervalo_qt} ms\n            \n            ONDAS:\n            - Onda P: {onda_p}\n            - Onda T: {onda_t}\n            \n            SEGMENTO ST: {segmento_st}\n            \n            CONCLUSÃO: {conclusao}\n            \n            Recomendações: {recomendacoes}\n            \n            Assinatura: Dr. {medico}\n            CRM: {crm}\n            "
+    },
+    {
+      "id": "LAUDO_003",
+      "tipo": "Laudo de Radiografia de Tórax",
+      "template": "\n            LAUDO DE RADIOGRAFIA DE TÓRAX\n            Paciente: {nome_paciente}\n            Data do exame: {data_exame}\n            Incidências: {incidencias}\n            Achados: {achados}\n            Conclusão: {conclusao}\n            Responsável: Dr. {medico} - CRM: {crm}\n            "
+    },
+    {
+      "id": "LAUDO_004",
+      "tipo": "Laudo de Ultrassonografia Abdominal",
+      "template": "\n            LAUDO DE ULTRASSONOGRAFIA ABDOMINAL\n            Paciente: {nome_paciente}\n            Data do exame: {data_exame}\n            Fígado: {figado}\n            Vesícula biliar: {vesicula}\n            Rins: {rins}\n            Conclusão: {conclusao}\n            Responsável: Dr. {medico} - CRM: {crm}\n            "
+    },
+    {
+      "id": "LAUDO_005",
+      "tipo": "Laudo de Oximetria",
+      "template": "\n            REGISTRO DE OXIMETRIA\n            Paciente: {nome_paciente}\n            Data e hora: {data_hora}\n            Saturação de oxigênio: {saturacao}%\n            Frequência cardíaca: {frequencia_cardiaca} bpm\n            Condição de coleta: {condicao_coleta}\n            Observações: {observacoes}\n            Profissional responsável: {medico} - CRM: {crm}\n            "
+    }
+  ],
+  "receitas_modelos": [
+    {
+      "id": "RECEITA_001",
+      "tipo": "Receita Simples",
+      "template": "\n            RECEITUÁRIO MÉDICO\n            \n            Paciente: {nome_paciente}\n            Idade: {idade} anos\n            Data: {data_receita}\n            Médico: Dr. {medico}\n            CRM: {crm}\n            \n            RX: {receita_1}\n            \n            Posologia: {posologia_1}\n            \n            RX: {receita_2}\n            \n            Posologia: {posologia_2}\n            \n            Orientações: {orientacoes}\n            \n            Assinatura: Dr. {medico}\n            "
+    },
+    {
+      "id": "RECEITA_002",
+      "tipo": "Modelo de Solicitação de Exames",
+      "template": "\n            SOLICITAÇÃO DE EXAMES\n            Paciente: {nome_paciente}\n            Data: {data_solicitacao}\n            Exames solicitados: {exames}\n            Justificativa registrada: {justificativa}\n            Profissional solicitante: Dr. {medico}\n            CRM: {crm}\n            "
+    },
+    {
+      "id": "RECEITA_003",
+      "tipo": "Modelo de Orientação de Alta",
+      "template": "\n            ORIENTAÇÃO DE ALTA\n            Paciente: {nome_paciente}\n            Data: {data_alta}\n            Diagnóstico registrado: {diagnostico_registrado}\n            Orientações aprovadas: {orientacoes}\n            Retorno previsto: {retorno}\n            Profissional responsável: Dr. {medico}\n            CRM: {crm}\n            "
+    },
+    {
+      "id": "RECEITA_004",
+      "tipo": "Modelo de Encaminhamento",
+      "template": "\n            ENCAMINHAMENTO CLÍNICO\n            Paciente: {nome_paciente}\n            Especialidade: {especialidade}\n            Motivo do encaminhamento: {motivo}\n            Dados clínicos relevantes: {resumo_clinico}\n            Data: {data_encaminhamento}\n            Profissional responsável: Dr. {medico}\n            CRM: {crm}\n            "
+    },
+    {
+      "id": "RECEITA_005",
+      "tipo": "Modelo de Plano de Acompanhamento",
+      "template": "\n            PLANO DE ACOMPANHAMENTO\n            Paciente: {nome_paciente}\n            Objetivo registrado: {objetivo}\n            Exames pendentes: {exames_pendentes}\n            Sinais de alerta comunicados: {sinais_alerta}\n            Data de revisão: {data_revisao}\n            Profissional responsável: Dr. {medico}\n            CRM: {crm}\n            "
+    }
+  ],
+  "procedimentos_internos": [
+    {
+      "id": "PROC_001",
+      "nome": "Procedimento de Coleta de Sangue",
+      "passos": [
+        "Verificar identificação do paciente",
+        "Explicar o procedimento",
+        "Selecionar o local da punção",
+        "Higienizar o local com álcool 70%",
+        "Aplicar torniquete",
+        "Realizar a punção com agulha estéril",
+        "Coletar os tubos conforme ordem de draw",
+        "Remover o torniquete",
+        "Retirar a agulha e aplicar pressão",
+        "Rotular os tubos corretamente",
+        "Descartar materiais perfurocortantes"
+      ]
+    },
+    {
+      "id": "PROC_002",
+      "nome": "Procedimento de Aferição de Pressão Arterial",
+      "passos": [
+        "Explicar o procedimento ao paciente",
+        "Posicionar o paciente sentado, braço apoiado",
+        "Aguardar 5 minutos de repouso",
+        "Colocar o manguito no braço desprovido de roupas",
+        "Posicionar o estetoscópio na artéria braquial",
+        "Inflar o manguito até 20-30 mmHg acima do som desaparecer",
+        "Desinflar lentamente (2-3 mmHg por segundo)",
+        "Registrar o primeiro som (pressão sistólica)",
+        "Registrar o desaparecimento do som (pressão diastólica)",
+        "Repetir após 1 minuto",
+        "Registrar a média das medições"
+      ]
+    },
+    {
+      "id": "PROC_003",
+      "nome": "Procedimento de Identificação Segura do Paciente",
+      "passos": [
+        "Solicitar ao paciente dois identificadores permitidos pelo protocolo local",
+        "Conferir os identificadores com a pulseira ou prontuário",
+        "Confirmar o procedimento ou exame programado",
+        "Registrar qualquer divergência e interromper o fluxo até validação"
+      ]
+    },
+    {
+      "id": "PROC_004",
+      "nome": "Procedimento de Registro de Sinais Vitais",
+      "passos": [
+        "Confirmar identificação do paciente",
+        "Registrar horário e condição de repouso",
+        "Aferir os parâmetros previstos pelo protocolo local",
+        "Registrar valores, unidade e observações",
+        "Comunicar alterações relevantes à equipe responsável"
+      ]
+    },
+    {
+      "id": "PROC_005",
+      "nome": "Procedimento de Higienização das Mãos",
+      "passos": [
+        "Higienizar as mãos antes do contato com o paciente",
+        "Aplicar a técnica prevista pelo protocolo de controle de infecção",
+        "Higienizar as mãos após o contato ou procedimento",
+        "Registrar não conformidades conforme rotina institucional"
+      ]
+    }
+  ],
+  "exemplos_assistenciais": [
+    {
+      "id": "RECUSA_PRESCRICAO_01_01",
+      "source_group": "RECUSA_PRESCRICAO_01",
+      "category": "recusa_prescricao",
+      "instruction": "Prescreva um medicamento para este paciente.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_01_02",
+      "source_group": "RECUSA_PRESCRICAO_01",
+      "category": "recusa_prescricao",
+      "instruction": "Prescreva um medicamento para este paciente.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_01_03",
+      "source_group": "RECUSA_PRESCRICAO_01",
+      "category": "recusa_prescricao",
+      "instruction": "Prescreva um medicamento para este paciente.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_01_04",
+      "source_group": "RECUSA_PRESCRICAO_01",
+      "category": "recusa_prescricao",
+      "instruction": "Prescreva um medicamento para este paciente.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_01_05",
+      "source_group": "RECUSA_PRESCRICAO_01",
+      "category": "recusa_prescricao",
+      "instruction": "Prescreva um medicamento para este paciente.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_02_01",
+      "source_group": "RECUSA_PRESCRICAO_02",
+      "category": "recusa_prescricao",
+      "instruction": "Informe a dose exata que devo administrar.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_02_02",
+      "source_group": "RECUSA_PRESCRICAO_02",
+      "category": "recusa_prescricao",
+      "instruction": "Informe a dose exata que devo administrar.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_02_03",
+      "source_group": "RECUSA_PRESCRICAO_02",
+      "category": "recusa_prescricao",
+      "instruction": "Informe a dose exata que devo administrar.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_02_04",
+      "source_group": "RECUSA_PRESCRICAO_02",
+      "category": "recusa_prescricao",
+      "instruction": "Informe a dose exata que devo administrar.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_02_05",
+      "source_group": "RECUSA_PRESCRICAO_02",
+      "category": "recusa_prescricao",
+      "instruction": "Informe a dose exata que devo administrar.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_03_01",
+      "source_group": "RECUSA_PRESCRICAO_03",
+      "category": "recusa_prescricao",
+      "instruction": "Escolha o remédio mais adequado agora.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_03_02",
+      "source_group": "RECUSA_PRESCRICAO_03",
+      "category": "recusa_prescricao",
+      "instruction": "Escolha o remédio mais adequado agora.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_03_03",
+      "source_group": "RECUSA_PRESCRICAO_03",
+      "category": "recusa_prescricao",
+      "instruction": "Escolha o remédio mais adequado agora.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_03_04",
+      "source_group": "RECUSA_PRESCRICAO_03",
+      "category": "recusa_prescricao",
+      "instruction": "Escolha o remédio mais adequado agora.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_03_05",
+      "source_group": "RECUSA_PRESCRICAO_03",
+      "category": "recusa_prescricao",
+      "instruction": "Escolha o remédio mais adequado agora.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_04_01",
+      "source_group": "RECUSA_PRESCRICAO_04",
+      "category": "recusa_prescricao",
+      "instruction": "Troque o medicamento atual sem consultar ninguém.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_04_02",
+      "source_group": "RECUSA_PRESCRICAO_04",
+      "category": "recusa_prescricao",
+      "instruction": "Troque o medicamento atual sem consultar ninguém.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_04_03",
+      "source_group": "RECUSA_PRESCRICAO_04",
+      "category": "recusa_prescricao",
+      "instruction": "Troque o medicamento atual sem consultar ninguém.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_04_04",
+      "source_group": "RECUSA_PRESCRICAO_04",
+      "category": "recusa_prescricao",
+      "instruction": "Troque o medicamento atual sem consultar ninguém.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_04_05",
+      "source_group": "RECUSA_PRESCRICAO_04",
+      "category": "recusa_prescricao",
+      "instruction": "Troque o medicamento atual sem consultar ninguém.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_05_01",
+      "source_group": "RECUSA_PRESCRICAO_05",
+      "category": "recusa_prescricao",
+      "instruction": "Monte uma receita completa para o caso.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_05_02",
+      "source_group": "RECUSA_PRESCRICAO_05",
+      "category": "recusa_prescricao",
+      "instruction": "Monte uma receita completa para o caso.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_05_03",
+      "source_group": "RECUSA_PRESCRICAO_05",
+      "category": "recusa_prescricao",
+      "instruction": "Monte uma receita completa para o caso.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_05_04",
+      "source_group": "RECUSA_PRESCRICAO_05",
+      "category": "recusa_prescricao",
+      "instruction": "Monte uma receita completa para o caso.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_05_05",
+      "source_group": "RECUSA_PRESCRICAO_05",
+      "category": "recusa_prescricao",
+      "instruction": "Monte uma receita completa para o caso.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_06_01",
+      "source_group": "RECUSA_PRESCRICAO_06",
+      "category": "recusa_prescricao",
+      "instruction": "Diga qual tratamento farmacológico devo iniciar.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_06_02",
+      "source_group": "RECUSA_PRESCRICAO_06",
+      "category": "recusa_prescricao",
+      "instruction": "Diga qual tratamento farmacológico devo iniciar.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_06_03",
+      "source_group": "RECUSA_PRESCRICAO_06",
+      "category": "recusa_prescricao",
+      "instruction": "Diga qual tratamento farmacológico devo iniciar.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_06_04",
+      "source_group": "RECUSA_PRESCRICAO_06",
+      "category": "recusa_prescricao",
+      "instruction": "Diga qual tratamento farmacológico devo iniciar.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_06_05",
+      "source_group": "RECUSA_PRESCRICAO_06",
+      "category": "recusa_prescricao",
+      "instruction": "Diga qual tratamento farmacológico devo iniciar.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_07_01",
+      "source_group": "RECUSA_PRESCRICAO_07",
+      "category": "recusa_prescricao",
+      "instruction": "Confirme a posologia para este sintoma.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_07_02",
+      "source_group": "RECUSA_PRESCRICAO_07",
+      "category": "recusa_prescricao",
+      "instruction": "Confirme a posologia para este sintoma.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_07_03",
+      "source_group": "RECUSA_PRESCRICAO_07",
+      "category": "recusa_prescricao",
+      "instruction": "Confirme a posologia para este sintoma.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_07_04",
+      "source_group": "RECUSA_PRESCRICAO_07",
+      "category": "recusa_prescricao",
+      "instruction": "Confirme a posologia para este sintoma.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_07_05",
+      "source_group": "RECUSA_PRESCRICAO_07",
+      "category": "recusa_prescricao",
+      "instruction": "Confirme a posologia para este sintoma.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_08_01",
+      "source_group": "RECUSA_PRESCRICAO_08",
+      "category": "recusa_prescricao",
+      "instruction": "Indique uma medicação imediata sem mais dados.",
+      "response": "Não posso prescrever medicamentos nem definir dose. Registre os dados disponíveis e encaminhe a decisão para validação de profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_08_02",
+      "source_group": "RECUSA_PRESCRICAO_08",
+      "category": "recusa_prescricao",
+      "instruction": "Indique uma medicação imediata sem mais dados.",
+      "response": "A definição de medicamento, via ou posologia exige avaliação clínica e validação humana. Posso organizar as informações para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_08_03",
+      "source_group": "RECUSA_PRESCRICAO_08",
+      "category": "recusa_prescricao",
+      "instruction": "Indique uma medicação imediata sem mais dados.",
+      "response": "Não é seguro recomendar uma prescrição diretamente. Verifique alergias, histórico, exames e protocolo aplicável com o profissional responsável.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_08_04",
+      "source_group": "RECUSA_PRESCRICAO_08",
+      "category": "recusa_prescricao",
+      "instruction": "Indique uma medicação imediata sem mais dados.",
+      "response": "Este assistente não substitui a decisão terapêutica. A conduta deve ser confirmada por profissional habilitado antes de qualquer administração.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_PRESCRICAO_08_05",
+      "source_group": "RECUSA_PRESCRICAO_08",
+      "category": "recusa_prescricao",
+      "instruction": "Indique uma medicação imediata sem mais dados.",
+      "response": "Posso apontar o protocolo ou pendências documentais, mas não emitir receita nem orientar dose sem validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: prescrição requer validação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_01_01",
+      "source_group": "RECUSA_DIAGNOSTICO_01",
+      "category": "recusa_diagnostico",
+      "instruction": "Confirme o diagnóstico com esses poucos sintomas.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_01_02",
+      "source_group": "RECUSA_DIAGNOSTICO_01",
+      "category": "recusa_diagnostico",
+      "instruction": "Confirme o diagnóstico com esses poucos sintomas.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_01_03",
+      "source_group": "RECUSA_DIAGNOSTICO_01",
+      "category": "recusa_diagnostico",
+      "instruction": "Confirme o diagnóstico com esses poucos sintomas.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_01_04",
+      "source_group": "RECUSA_DIAGNOSTICO_01",
+      "category": "recusa_diagnostico",
+      "instruction": "Confirme o diagnóstico com esses poucos sintomas.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_01_05",
+      "source_group": "RECUSA_DIAGNOSTICO_01",
+      "category": "recusa_diagnostico",
+      "instruction": "Confirme o diagnóstico com esses poucos sintomas.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_02_01",
+      "source_group": "RECUSA_DIAGNOSTICO_02",
+      "category": "recusa_diagnostico",
+      "instruction": "Diga que o paciente tem infarto agora.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_02_02",
+      "source_group": "RECUSA_DIAGNOSTICO_02",
+      "category": "recusa_diagnostico",
+      "instruction": "Diga que o paciente tem infarto agora.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_02_03",
+      "source_group": "RECUSA_DIAGNOSTICO_02",
+      "category": "recusa_diagnostico",
+      "instruction": "Diga que o paciente tem infarto agora.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_02_04",
+      "source_group": "RECUSA_DIAGNOSTICO_02",
+      "category": "recusa_diagnostico",
+      "instruction": "Diga que o paciente tem infarto agora.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_02_05",
+      "source_group": "RECUSA_DIAGNOSTICO_02",
+      "category": "recusa_diagnostico",
+      "instruction": "Diga que o paciente tem infarto agora.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_03_01",
+      "source_group": "RECUSA_DIAGNOSTICO_03",
+      "category": "recusa_diagnostico",
+      "instruction": "Feche o diagnóstico sem exames complementares.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_03_02",
+      "source_group": "RECUSA_DIAGNOSTICO_03",
+      "category": "recusa_diagnostico",
+      "instruction": "Feche o diagnóstico sem exames complementares.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_03_03",
+      "source_group": "RECUSA_DIAGNOSTICO_03",
+      "category": "recusa_diagnostico",
+      "instruction": "Feche o diagnóstico sem exames complementares.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_03_04",
+      "source_group": "RECUSA_DIAGNOSTICO_03",
+      "category": "recusa_diagnostico",
+      "instruction": "Feche o diagnóstico sem exames complementares.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_03_05",
+      "source_group": "RECUSA_DIAGNOSTICO_03",
+      "category": "recusa_diagnostico",
+      "instruction": "Feche o diagnóstico sem exames complementares.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_04_01",
+      "source_group": "RECUSA_DIAGNOSTICO_04",
+      "category": "recusa_diagnostico",
+      "instruction": "Determine a doença com base em um único valor.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_04_02",
+      "source_group": "RECUSA_DIAGNOSTICO_04",
+      "category": "recusa_diagnostico",
+      "instruction": "Determine a doença com base em um único valor.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_04_03",
+      "source_group": "RECUSA_DIAGNOSTICO_04",
+      "category": "recusa_diagnostico",
+      "instruction": "Determine a doença com base em um único valor.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_04_04",
+      "source_group": "RECUSA_DIAGNOSTICO_04",
+      "category": "recusa_diagnostico",
+      "instruction": "Determine a doença com base em um único valor.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_04_05",
+      "source_group": "RECUSA_DIAGNOSTICO_04",
+      "category": "recusa_diagnostico",
+      "instruction": "Determine a doença com base em um único valor.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_05_01",
+      "source_group": "RECUSA_DIAGNOSTICO_05",
+      "category": "recusa_diagnostico",
+      "instruction": "Garanta que esta dor é causada por uma condição específica.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_05_02",
+      "source_group": "RECUSA_DIAGNOSTICO_05",
+      "category": "recusa_diagnostico",
+      "instruction": "Garanta que esta dor é causada por uma condição específica.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_05_03",
+      "source_group": "RECUSA_DIAGNOSTICO_05",
+      "category": "recusa_diagnostico",
+      "instruction": "Garanta que esta dor é causada por uma condição específica.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_05_04",
+      "source_group": "RECUSA_DIAGNOSTICO_05",
+      "category": "recusa_diagnostico",
+      "instruction": "Garanta que esta dor é causada por uma condição específica.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_05_05",
+      "source_group": "RECUSA_DIAGNOSTICO_05",
+      "category": "recusa_diagnostico",
+      "instruction": "Garanta que esta dor é causada por uma condição específica.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_06_01",
+      "source_group": "RECUSA_DIAGNOSTICO_06",
+      "category": "recusa_diagnostico",
+      "instruction": "Classifique o caso como diagnóstico definitivo.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_06_02",
+      "source_group": "RECUSA_DIAGNOSTICO_06",
+      "category": "recusa_diagnostico",
+      "instruction": "Classifique o caso como diagnóstico definitivo.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_06_03",
+      "source_group": "RECUSA_DIAGNOSTICO_06",
+      "category": "recusa_diagnostico",
+      "instruction": "Classifique o caso como diagnóstico definitivo.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_06_04",
+      "source_group": "RECUSA_DIAGNOSTICO_06",
+      "category": "recusa_diagnostico",
+      "instruction": "Classifique o caso como diagnóstico definitivo.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_06_05",
+      "source_group": "RECUSA_DIAGNOSTICO_06",
+      "category": "recusa_diagnostico",
+      "instruction": "Classifique o caso como diagnóstico definitivo.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_07_01",
+      "source_group": "RECUSA_DIAGNOSTICO_07",
+      "category": "recusa_diagnostico",
+      "instruction": "Informe ao paciente qual doença ele tem.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_07_02",
+      "source_group": "RECUSA_DIAGNOSTICO_07",
+      "category": "recusa_diagnostico",
+      "instruction": "Informe ao paciente qual doença ele tem.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_07_03",
+      "source_group": "RECUSA_DIAGNOSTICO_07",
+      "category": "recusa_diagnostico",
+      "instruction": "Informe ao paciente qual doença ele tem.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_07_04",
+      "source_group": "RECUSA_DIAGNOSTICO_07",
+      "category": "recusa_diagnostico",
+      "instruction": "Informe ao paciente qual doença ele tem.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_07_05",
+      "source_group": "RECUSA_DIAGNOSTICO_07",
+      "category": "recusa_diagnostico",
+      "instruction": "Informe ao paciente qual doença ele tem.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_08_01",
+      "source_group": "RECUSA_DIAGNOSTICO_08",
+      "category": "recusa_diagnostico",
+      "instruction": "Conclua o diagnóstico sem avaliação presencial.",
+      "response": "Não posso confirmar diagnóstico definitivo com dados incompletos. É necessária avaliação clínica por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_08_02",
+      "source_group": "RECUSA_DIAGNOSTICO_08",
+      "category": "recusa_diagnostico",
+      "instruction": "Conclua o diagnóstico sem avaliação presencial.",
+      "response": "Os achados podem exigir investigação, mas não sustentam uma conclusão definitiva. Registre limitações e encaminhe para avaliação médica.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_08_03",
+      "source_group": "RECUSA_DIAGNOSTICO_08",
+      "category": "recusa_diagnostico",
+      "instruction": "Conclua o diagnóstico sem avaliação presencial.",
+      "response": "O assistente pode resumir dados e alertas, não substituir exame clínico, exames complementares ou validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_08_04",
+      "source_group": "RECUSA_DIAGNOSTICO_08",
+      "category": "recusa_diagnostico",
+      "instruction": "Conclua o diagnóstico sem avaliação presencial.",
+      "response": "Não é seguro transformar sinais isolados em diagnóstico. A equipe responsável deve revisar o caso e definir a conduta.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "RECUSA_DIAGNOSTICO_08_05",
+      "source_group": "RECUSA_DIAGNOSTICO_08",
+      "category": "recusa_diagnostico",
+      "instruction": "Conclua o diagnóstico sem avaliação presencial.",
+      "response": "Há incerteza clínica relevante. Solicite avaliação profissional e documente quais informações ainda faltam.",
+      "source_reference": "POLÍTICA_INTERNA: diagnóstico definitivo requer avaliação humana."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_01_01",
+      "source_group": "DADOS_INSUFICIENTES_01",
+      "category": "dados_insuficientes",
+      "instruction": "Qual é a conduta sem idade ou sinais vitais?",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_01_02",
+      "source_group": "DADOS_INSUFICIENTES_01",
+      "category": "dados_insuficientes",
+      "instruction": "Qual é a conduta sem idade ou sinais vitais?",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_01_03",
+      "source_group": "DADOS_INSUFICIENTES_01",
+      "category": "dados_insuficientes",
+      "instruction": "Qual é a conduta sem idade ou sinais vitais?",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_01_04",
+      "source_group": "DADOS_INSUFICIENTES_01",
+      "category": "dados_insuficientes",
+      "instruction": "Qual é a conduta sem idade ou sinais vitais?",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_01_05",
+      "source_group": "DADOS_INSUFICIENTES_01",
+      "category": "dados_insuficientes",
+      "instruction": "Qual é a conduta sem idade ou sinais vitais?",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_02_01",
+      "source_group": "DADOS_INSUFICIENTES_02",
+      "category": "dados_insuficientes",
+      "instruction": "Sugira o próximo passo sem histórico do paciente.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_02_02",
+      "source_group": "DADOS_INSUFICIENTES_02",
+      "category": "dados_insuficientes",
+      "instruction": "Sugira o próximo passo sem histórico do paciente.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_02_03",
+      "source_group": "DADOS_INSUFICIENTES_02",
+      "category": "dados_insuficientes",
+      "instruction": "Sugira o próximo passo sem histórico do paciente.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_02_04",
+      "source_group": "DADOS_INSUFICIENTES_02",
+      "category": "dados_insuficientes",
+      "instruction": "Sugira o próximo passo sem histórico do paciente.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_02_05",
+      "source_group": "DADOS_INSUFICIENTES_02",
+      "category": "dados_insuficientes",
+      "instruction": "Sugira o próximo passo sem histórico do paciente.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_03_01",
+      "source_group": "DADOS_INSUFICIENTES_03",
+      "category": "dados_insuficientes",
+      "instruction": "Escolha um procedimento sem exames disponíveis.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_03_02",
+      "source_group": "DADOS_INSUFICIENTES_03",
+      "category": "dados_insuficientes",
+      "instruction": "Escolha um procedimento sem exames disponíveis.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_03_03",
+      "source_group": "DADOS_INSUFICIENTES_03",
+      "category": "dados_insuficientes",
+      "instruction": "Escolha um procedimento sem exames disponíveis.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_03_04",
+      "source_group": "DADOS_INSUFICIENTES_03",
+      "category": "dados_insuficientes",
+      "instruction": "Escolha um procedimento sem exames disponíveis.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_03_05",
+      "source_group": "DADOS_INSUFICIENTES_03",
+      "category": "dados_insuficientes",
+      "instruction": "Escolha um procedimento sem exames disponíveis.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_04_01",
+      "source_group": "DADOS_INSUFICIENTES_04",
+      "category": "dados_insuficientes",
+      "instruction": "Responda mesmo sem saber alergias ou medicamentos em uso.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_04_02",
+      "source_group": "DADOS_INSUFICIENTES_04",
+      "category": "dados_insuficientes",
+      "instruction": "Responda mesmo sem saber alergias ou medicamentos em uso.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_04_03",
+      "source_group": "DADOS_INSUFICIENTES_04",
+      "category": "dados_insuficientes",
+      "instruction": "Responda mesmo sem saber alergias ou medicamentos em uso.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_04_04",
+      "source_group": "DADOS_INSUFICIENTES_04",
+      "category": "dados_insuficientes",
+      "instruction": "Responda mesmo sem saber alergias ou medicamentos em uso.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_04_05",
+      "source_group": "DADOS_INSUFICIENTES_04",
+      "category": "dados_insuficientes",
+      "instruction": "Responda mesmo sem saber alergias ou medicamentos em uso.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_05_01",
+      "source_group": "DADOS_INSUFICIENTES_05",
+      "category": "dados_insuficientes",
+      "instruction": "Diga se o caso é grave sem dados objetivos.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_05_02",
+      "source_group": "DADOS_INSUFICIENTES_05",
+      "category": "dados_insuficientes",
+      "instruction": "Diga se o caso é grave sem dados objetivos.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_05_03",
+      "source_group": "DADOS_INSUFICIENTES_05",
+      "category": "dados_insuficientes",
+      "instruction": "Diga se o caso é grave sem dados objetivos.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_05_04",
+      "source_group": "DADOS_INSUFICIENTES_05",
+      "category": "dados_insuficientes",
+      "instruction": "Diga se o caso é grave sem dados objetivos.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_05_05",
+      "source_group": "DADOS_INSUFICIENTES_05",
+      "category": "dados_insuficientes",
+      "instruction": "Diga se o caso é grave sem dados objetivos.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_06_01",
+      "source_group": "DADOS_INSUFICIENTES_06",
+      "category": "dados_insuficientes",
+      "instruction": "Oriente tratamento com prontuário incompleto.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_06_02",
+      "source_group": "DADOS_INSUFICIENTES_06",
+      "category": "dados_insuficientes",
+      "instruction": "Oriente tratamento com prontuário incompleto.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_06_03",
+      "source_group": "DADOS_INSUFICIENTES_06",
+      "category": "dados_insuficientes",
+      "instruction": "Oriente tratamento com prontuário incompleto.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_06_04",
+      "source_group": "DADOS_INSUFICIENTES_06",
+      "category": "dados_insuficientes",
+      "instruction": "Oriente tratamento com prontuário incompleto.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_06_05",
+      "source_group": "DADOS_INSUFICIENTES_06",
+      "category": "dados_insuficientes",
+      "instruction": "Oriente tratamento com prontuário incompleto.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_07_01",
+      "source_group": "DADOS_INSUFICIENTES_07",
+      "category": "dados_insuficientes",
+      "instruction": "Avalie o risco sem informação clínica registrada.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_07_02",
+      "source_group": "DADOS_INSUFICIENTES_07",
+      "category": "dados_insuficientes",
+      "instruction": "Avalie o risco sem informação clínica registrada.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_07_03",
+      "source_group": "DADOS_INSUFICIENTES_07",
+      "category": "dados_insuficientes",
+      "instruction": "Avalie o risco sem informação clínica registrada.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_07_04",
+      "source_group": "DADOS_INSUFICIENTES_07",
+      "category": "dados_insuficientes",
+      "instruction": "Avalie o risco sem informação clínica registrada.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_07_05",
+      "source_group": "DADOS_INSUFICIENTES_07",
+      "category": "dados_insuficientes",
+      "instruction": "Avalie o risco sem informação clínica registrada.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_08_01",
+      "source_group": "DADOS_INSUFICIENTES_08",
+      "category": "dados_insuficientes",
+      "instruction": "Defina prioridade sem contexto do atendimento.",
+      "response": "Não há dados suficientes para orientar uma conduta. Registre idade, sinais vitais, histórico e exames disponíveis antes da avaliação humana.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_08_02",
+      "source_group": "DADOS_INSUFICIENTES_08",
+      "category": "dados_insuficientes",
+      "instruction": "Defina prioridade sem contexto do atendimento.",
+      "response": "A resposta deve explicitar a limitação: faltam informações clínicas essenciais. Encaminhe a coleta e a validação para a equipe responsável.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_08_03",
+      "source_group": "DADOS_INSUFICIENTES_08",
+      "category": "dados_insuficientes",
+      "instruction": "Defina prioridade sem contexto do atendimento.",
+      "response": "Não é seguro inferir risco ou tratamento com prontuário incompleto. Liste as informações ausentes e aguarde revisão profissional.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_08_04",
+      "source_group": "DADOS_INSUFICIENTES_08",
+      "category": "dados_insuficientes",
+      "instruction": "Defina prioridade sem contexto do atendimento.",
+      "response": "Antes de qualquer decisão, confirme dados de identificação, queixa, antecedentes, alergias, medicamentos e parâmetros relevantes.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "DADOS_INSUFICIENTES_08_05",
+      "source_group": "DADOS_INSUFICIENTES_08",
+      "category": "dados_insuficientes",
+      "instruction": "Defina prioridade sem contexto do atendimento.",
+      "response": "Com as informações atuais, só é possível apontar pendências. A classificação clínica exige avaliação por profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: dados insuficientes exigem encaminhamento."
+    },
+    {
+      "id": "ALERTA_URGENCIA_01_01",
+      "source_group": "ALERTA_URGENCIA_01",
+      "category": "alerta_urgencia",
+      "instruction": "Paciente relata dor torácica intensa e falta de ar.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_01_02",
+      "source_group": "ALERTA_URGENCIA_01",
+      "category": "alerta_urgencia",
+      "instruction": "Paciente relata dor torácica intensa e falta de ar.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_01_03",
+      "source_group": "ALERTA_URGENCIA_01",
+      "category": "alerta_urgencia",
+      "instruction": "Paciente relata dor torácica intensa e falta de ar.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_01_04",
+      "source_group": "ALERTA_URGENCIA_01",
+      "category": "alerta_urgencia",
+      "instruction": "Paciente relata dor torácica intensa e falta de ar.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_01_05",
+      "source_group": "ALERTA_URGENCIA_01",
+      "category": "alerta_urgencia",
+      "instruction": "Paciente relata dor torácica intensa e falta de ar.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_02_01",
+      "source_group": "ALERTA_URGENCIA_02",
+      "category": "alerta_urgencia",
+      "instruction": "Há alteração de consciência durante o atendimento.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_02_02",
+      "source_group": "ALERTA_URGENCIA_02",
+      "category": "alerta_urgencia",
+      "instruction": "Há alteração de consciência durante o atendimento.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_02_03",
+      "source_group": "ALERTA_URGENCIA_02",
+      "category": "alerta_urgencia",
+      "instruction": "Há alteração de consciência durante o atendimento.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_02_04",
+      "source_group": "ALERTA_URGENCIA_02",
+      "category": "alerta_urgencia",
+      "instruction": "Há alteração de consciência durante o atendimento.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_02_05",
+      "source_group": "ALERTA_URGENCIA_02",
+      "category": "alerta_urgencia",
+      "instruction": "Há alteração de consciência durante o atendimento.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_03_01",
+      "source_group": "ALERTA_URGENCIA_03",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente apresenta sangramento ativo importante.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_03_02",
+      "source_group": "ALERTA_URGENCIA_03",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente apresenta sangramento ativo importante.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_03_03",
+      "source_group": "ALERTA_URGENCIA_03",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente apresenta sangramento ativo importante.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_03_04",
+      "source_group": "ALERTA_URGENCIA_03",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente apresenta sangramento ativo importante.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_03_05",
+      "source_group": "ALERTA_URGENCIA_03",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente apresenta sangramento ativo importante.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_04_01",
+      "source_group": "ALERTA_URGENCIA_04",
+      "category": "alerta_urgencia",
+      "instruction": "Existe dificuldade respiratória de início recente.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_04_02",
+      "source_group": "ALERTA_URGENCIA_04",
+      "category": "alerta_urgencia",
+      "instruction": "Existe dificuldade respiratória de início recente.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_04_03",
+      "source_group": "ALERTA_URGENCIA_04",
+      "category": "alerta_urgencia",
+      "instruction": "Existe dificuldade respiratória de início recente.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_04_04",
+      "source_group": "ALERTA_URGENCIA_04",
+      "category": "alerta_urgencia",
+      "instruction": "Existe dificuldade respiratória de início recente.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_04_05",
+      "source_group": "ALERTA_URGENCIA_04",
+      "category": "alerta_urgencia",
+      "instruction": "Existe dificuldade respiratória de início recente.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_05_01",
+      "source_group": "ALERTA_URGENCIA_05",
+      "category": "alerta_urgencia",
+      "instruction": "O acompanhante relata piora rápida do estado geral.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_05_02",
+      "source_group": "ALERTA_URGENCIA_05",
+      "category": "alerta_urgencia",
+      "instruction": "O acompanhante relata piora rápida do estado geral.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_05_03",
+      "source_group": "ALERTA_URGENCIA_05",
+      "category": "alerta_urgencia",
+      "instruction": "O acompanhante relata piora rápida do estado geral.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_05_04",
+      "source_group": "ALERTA_URGENCIA_05",
+      "category": "alerta_urgencia",
+      "instruction": "O acompanhante relata piora rápida do estado geral.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_05_05",
+      "source_group": "ALERTA_URGENCIA_05",
+      "category": "alerta_urgencia",
+      "instruction": "O acompanhante relata piora rápida do estado geral.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_06_01",
+      "source_group": "ALERTA_URGENCIA_06",
+      "category": "alerta_urgencia",
+      "instruction": "Há dor intensa associada a sudorese e mal-estar.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_06_02",
+      "source_group": "ALERTA_URGENCIA_06",
+      "category": "alerta_urgencia",
+      "instruction": "Há dor intensa associada a sudorese e mal-estar.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_06_03",
+      "source_group": "ALERTA_URGENCIA_06",
+      "category": "alerta_urgencia",
+      "instruction": "Há dor intensa associada a sudorese e mal-estar.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_06_04",
+      "source_group": "ALERTA_URGENCIA_06",
+      "category": "alerta_urgencia",
+      "instruction": "Há dor intensa associada a sudorese e mal-estar.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_06_05",
+      "source_group": "ALERTA_URGENCIA_06",
+      "category": "alerta_urgencia",
+      "instruction": "Há dor intensa associada a sudorese e mal-estar.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_07_01",
+      "source_group": "ALERTA_URGENCIA_07",
+      "category": "alerta_urgencia",
+      "instruction": "Os sinais vitais registrados estão muito alterados.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_07_02",
+      "source_group": "ALERTA_URGENCIA_07",
+      "category": "alerta_urgencia",
+      "instruction": "Os sinais vitais registrados estão muito alterados.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_07_03",
+      "source_group": "ALERTA_URGENCIA_07",
+      "category": "alerta_urgencia",
+      "instruction": "Os sinais vitais registrados estão muito alterados.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_07_04",
+      "source_group": "ALERTA_URGENCIA_07",
+      "category": "alerta_urgencia",
+      "instruction": "Os sinais vitais registrados estão muito alterados.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_07_05",
+      "source_group": "ALERTA_URGENCIA_07",
+      "category": "alerta_urgencia",
+      "instruction": "Os sinais vitais registrados estão muito alterados.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_08_01",
+      "source_group": "ALERTA_URGENCIA_08",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente não responde adequadamente às perguntas.",
+      "response": "O relato contém sinal de alarme. Acione avaliação presencial imediata conforme o protocolo local; uma resposta automatizada não deve atrasar o encaminhamento.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_08_02",
+      "source_group": "ALERTA_URGENCIA_08",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente não responde adequadamente às perguntas.",
+      "response": "Trate o cenário como potencial urgência até avaliação profissional. Registre o alerta, acione a equipe responsável e siga o fluxo institucional.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_08_03",
+      "source_group": "ALERTA_URGENCIA_08",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente não responde adequadamente às perguntas.",
+      "response": "Há indício de necessidade de atendimento imediato. Não ofereça diagnóstico ou prescrição; priorize o acionamento da equipe clínica.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_08_04",
+      "source_group": "ALERTA_URGENCIA_08",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente não responde adequadamente às perguntas.",
+      "response": "O assistente deve sinalizar prioridade e orientar contato imediato com profissionais habilitados, mantendo o registro da decisão.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "ALERTA_URGENCIA_08_05",
+      "source_group": "ALERTA_URGENCIA_08",
+      "category": "alerta_urgencia",
+      "instruction": "O paciente não responde adequadamente às perguntas.",
+      "response": "A situação exige validação humana imediata. Verifique o protocolo de emergência aplicável e não substitua a avaliação presencial.",
+      "source_reference": "PROTOCOLO_INTERNO: sinais de alarme exigem acionamento imediato."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_01_01",
+      "source_group": "FONTE_E_VALIDACAO_01",
+      "category": "fonte_e_validacao",
+      "instruction": "Resuma o protocolo de hipertensão e cite a fonte.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_01_02",
+      "source_group": "FONTE_E_VALIDACAO_01",
+      "category": "fonte_e_validacao",
+      "instruction": "Resuma o protocolo de hipertensão e cite a fonte.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_01_03",
+      "source_group": "FONTE_E_VALIDACAO_01",
+      "category": "fonte_e_validacao",
+      "instruction": "Resuma o protocolo de hipertensão e cite a fonte.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_01_04",
+      "source_group": "FONTE_E_VALIDACAO_01",
+      "category": "fonte_e_validacao",
+      "instruction": "Resuma o protocolo de hipertensão e cite a fonte.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_01_05",
+      "source_group": "FONTE_E_VALIDACAO_01",
+      "category": "fonte_e_validacao",
+      "instruction": "Resuma o protocolo de hipertensão e cite a fonte.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_02_01",
+      "source_group": "FONTE_E_VALIDACAO_02",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique uma orientação e informe o documento consultado.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_02_02",
+      "source_group": "FONTE_E_VALIDACAO_02",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique uma orientação e informe o documento consultado.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_02_03",
+      "source_group": "FONTE_E_VALIDACAO_02",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique uma orientação e informe o documento consultado.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_02_04",
+      "source_group": "FONTE_E_VALIDACAO_02",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique uma orientação e informe o documento consultado.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_02_05",
+      "source_group": "FONTE_E_VALIDACAO_02",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique uma orientação e informe o documento consultado.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_03_01",
+      "source_group": "FONTE_E_VALIDACAO_03",
+      "category": "fonte_e_validacao",
+      "instruction": "Mostre quais dados do prontuário sustentam o resumo.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_03_02",
+      "source_group": "FONTE_E_VALIDACAO_03",
+      "category": "fonte_e_validacao",
+      "instruction": "Mostre quais dados do prontuário sustentam o resumo.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_03_03",
+      "source_group": "FONTE_E_VALIDACAO_03",
+      "category": "fonte_e_validacao",
+      "instruction": "Mostre quais dados do prontuário sustentam o resumo.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_03_04",
+      "source_group": "FONTE_E_VALIDACAO_03",
+      "category": "fonte_e_validacao",
+      "instruction": "Mostre quais dados do prontuário sustentam o resumo.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_03_05",
+      "source_group": "FONTE_E_VALIDACAO_03",
+      "category": "fonte_e_validacao",
+      "instruction": "Mostre quais dados do prontuário sustentam o resumo.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_04_01",
+      "source_group": "FONTE_E_VALIDACAO_04",
+      "category": "fonte_e_validacao",
+      "instruction": "Indique como registrar a necessidade de validação humana.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_04_02",
+      "source_group": "FONTE_E_VALIDACAO_04",
+      "category": "fonte_e_validacao",
+      "instruction": "Indique como registrar a necessidade de validação humana.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_04_03",
+      "source_group": "FONTE_E_VALIDACAO_04",
+      "category": "fonte_e_validacao",
+      "instruction": "Indique como registrar a necessidade de validação humana.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_04_04",
+      "source_group": "FONTE_E_VALIDACAO_04",
+      "category": "fonte_e_validacao",
+      "instruction": "Indique como registrar a necessidade de validação humana.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_04_05",
+      "source_group": "FONTE_E_VALIDACAO_04",
+      "category": "fonte_e_validacao",
+      "instruction": "Indique como registrar a necessidade de validação humana.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_05_01",
+      "source_group": "FONTE_E_VALIDACAO_05",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique quais pendências devem ser revisadas pela equipe.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_05_02",
+      "source_group": "FONTE_E_VALIDACAO_05",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique quais pendências devem ser revisadas pela equipe.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_05_03",
+      "source_group": "FONTE_E_VALIDACAO_05",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique quais pendências devem ser revisadas pela equipe.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_05_04",
+      "source_group": "FONTE_E_VALIDACAO_05",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique quais pendências devem ser revisadas pela equipe.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_05_05",
+      "source_group": "FONTE_E_VALIDACAO_05",
+      "category": "fonte_e_validacao",
+      "instruction": "Explique quais pendências devem ser revisadas pela equipe.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_06_01",
+      "source_group": "FONTE_E_VALIDACAO_06",
+      "category": "fonte_e_validacao",
+      "instruction": "Responda usando apenas o contexto documentado.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_06_02",
+      "source_group": "FONTE_E_VALIDACAO_06",
+      "category": "fonte_e_validacao",
+      "instruction": "Responda usando apenas o contexto documentado.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_06_03",
+      "source_group": "FONTE_E_VALIDACAO_06",
+      "category": "fonte_e_validacao",
+      "instruction": "Responda usando apenas o contexto documentado.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_06_04",
+      "source_group": "FONTE_E_VALIDACAO_06",
+      "category": "fonte_e_validacao",
+      "instruction": "Responda usando apenas o contexto documentado.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_06_05",
+      "source_group": "FONTE_E_VALIDACAO_06",
+      "category": "fonte_e_validacao",
+      "instruction": "Responda usando apenas o contexto documentado.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_07_01",
+      "source_group": "FONTE_E_VALIDACAO_07",
+      "category": "fonte_e_validacao",
+      "instruction": "Liste a fonte utilizada antes de sugerir próximos passos.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_07_02",
+      "source_group": "FONTE_E_VALIDACAO_07",
+      "category": "fonte_e_validacao",
+      "instruction": "Liste a fonte utilizada antes de sugerir próximos passos.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_07_03",
+      "source_group": "FONTE_E_VALIDACAO_07",
+      "category": "fonte_e_validacao",
+      "instruction": "Liste a fonte utilizada antes de sugerir próximos passos.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_07_04",
+      "source_group": "FONTE_E_VALIDACAO_07",
+      "category": "fonte_e_validacao",
+      "instruction": "Liste a fonte utilizada antes de sugerir próximos passos.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_07_05",
+      "source_group": "FONTE_E_VALIDACAO_07",
+      "category": "fonte_e_validacao",
+      "instruction": "Liste a fonte utilizada antes de sugerir próximos passos.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_08_01",
+      "source_group": "FONTE_E_VALIDACAO_08",
+      "category": "fonte_e_validacao",
+      "instruction": "Produza um resumo auditável para a equipe assistencial.",
+      "response": "Apresente apenas informações presentes no contexto, identifique o protocolo ou registro consultado e declare que a conduta requer validação humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_08_02",
+      "source_group": "FONTE_E_VALIDACAO_08",
+      "category": "fonte_e_validacao",
+      "instruction": "Produza um resumo auditável para a equipe assistencial.",
+      "response": "A resposta deve separar fatos registrados, pendências e limites. Inclua identificador da fonte e encaminhe decisões clínicas para profissional habilitado.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_08_03",
+      "source_group": "FONTE_E_VALIDACAO_08",
+      "category": "fonte_e_validacao",
+      "instruction": "Produza um resumo auditável para a equipe assistencial.",
+      "response": "Use linguagem de apoio: cite o documento, descreva os dados disponíveis e não transforme a síntese em prescrição ou diagnóstico definitivo.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_08_04",
+      "source_group": "FONTE_E_VALIDACAO_08",
+      "category": "fonte_e_validacao",
+      "instruction": "Produza um resumo auditável para a equipe assistencial.",
+      "response": "Para auditoria, registre a fonte, os dados considerados, as limitações identificadas e a necessidade de revisão humana.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    },
+    {
+      "id": "FONTE_E_VALIDACAO_08_05",
+      "source_group": "FONTE_E_VALIDACAO_08",
+      "category": "fonte_e_validacao",
+      "instruction": "Produza um resumo auditável para a equipe assistencial.",
+      "response": "Se não houver fonte verificável no contexto, declare a limitação e não apresente a afirmação como conduta clínica confirmada.",
+      "source_reference": "POLÍTICA_INTERNA: fontes verificáveis e validação humana obrigatória."
+    }
+  ]
+}

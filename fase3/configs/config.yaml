@@ -1,0 +1,77 @@
+# Configuração Principal - Fase 3 Tech Challenge
+
+# Modelo LLM Base
+model:
+  base_model: "qwen_q3_k_xl:latest"
+  alternative_model: "gemma3:latest"
+  default_mode: "standard"
+  fast_mode: "fast"
+  ollama_url: "http://localhost:11434"
+
+# Fine-tuning
+fine_tuning:
+  enabled: false  # FT-01 ainda não foi executada.
+  device: "cpu"  # PyTorch atual não detecta aceleração AMD/ROCm neste Windows.
+  output_dir: "./models/fine_tuned"
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2e-4
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 500
+  max_seq_length: 512
+
+# Dataset
+dataset:
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/curated"
+  fine_tuning_data_dir: "./data/splits"
+  split_seed: 42
+  anonymization_enabled: true
+
+# LangChain
+langchain:
+  temperature: 0.7
+  max_tokens: 1000
+  chain_type: "conversation"
+  memory_enabled: true
+  memory_limit: 10  # número de mensagens na memória
+
+# LangGraph
+langgraph:
+  enabled: true
+  max_steps: 10
+  timeout: 60
+
+# Segurança
+security:
+  max_response_length: 2000
+  forbidden_topics:
+    - "prescrição direta de medicamentos"
+    - "diagnóstico definitivo sem validação"
+    - "procedimentos invasivos sem supervisão"
+  require_human_validation:
+    - "prescrição de medicamentos"
+    - "diagnóstico médico"
+    - "procedimentos cirúrgicos"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "json"
+  log_dir: "./logs"
+  log_file: "assistant.log"
+  audit_log: "audit.log"
+
+# Database
+database:
+  type: "sqlite"
+  path: "./data/prontuarios.db"
+
+# Explainability
+explainability:
+  enabled: true
+  include_sources: true
+  include_confidence: true
+  max_sources: 5

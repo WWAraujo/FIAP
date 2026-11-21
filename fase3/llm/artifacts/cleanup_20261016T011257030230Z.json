@@ -1,0 +1,151 @@
+{
+  "task": "CLEAN-FILES-01",
+  "created_at_utc": "2026-10-16T01:12:57.030203+00:00",
+  "removed": [
+    {
+      "path": "llm/src/finetuning/training/config.py",
+      "bytes": 2355
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 605
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 176
+    },
+    {
+      "path": ".dockerignore",
+      "bytes": 179
+    },
+    {
+      "path": "DOCKER.md",
+      "bytes": 4801
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/.gitignore",
+      "bytes": 1
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/CACHEDIR.TAG",
+      "bytes": 191
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/README.md.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/README.md.metadata",
+      "bytes": 100
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/config.json.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/config.json.metadata",
+      "bytes": 101
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/model.safetensors.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/model.safetensors.metadata",
+      "bytes": 125
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/sentencepiece.bpe.model.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/sentencepiece.bpe.model.metadata",
+      "bytes": 125
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/special_tokens_map.json.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/special_tokens_map.json.metadata",
+      "bytes": 100
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/tokenizer.json.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/tokenizer.json.metadata",
+      "bytes": 125
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/tokenizer_config.json.lock",
+      "bytes": 0
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/download/tokenizer_config.json.metadata",
+      "bytes": 100
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/.cache/huggingface/trees/614241f622f53c4eeff9890bdc4f31cfecc418b3.json",
+      "bytes": 7120
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/README.md",
+      "bytes": 497538
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/config.json",
+      "bytes": 655
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/model.safetensors",
+      "bytes": 470641600
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/sentencepiece.bpe.model",
+      "bytes": 5069051
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/special_tokens_map.json",
+      "bytes": 167
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/tokenizer.json",
+      "bytes": 17082730
+    },
+    {
+      "path": "llm/models/embeddings/multilingual-e5-small/tokenizer_config.json",
+      "bytes": 443
+    },
+    {
+      "path": "src/medical_assistant/__pycache__/__init__.cpython-314.pyc",
+      "bytes": 235
+    },
+    {
+      "path": "tests/__pycache__/test_verify_accelerator.cpython-314.pyc",
+      "bytes": 5443
+    }
+  ],
+  "removed_files": 31,
+  "removed_bytes": 493314066,
+  "critical_hashes_unchanged": {
+    "llm/src/rag/document_chain_v3.py": "f87942edf06752f3b5348304de3ace48b4a83708a8f1d1f3d33433244cd87670",
+    "llm/src/rag/document_chain_v2.py": "f3d74100c08b0c1f982100d8dfce5cbd7e97fe30f2b4b89ce2c0dac93a0ddf35",
+    "llm/src/rag/document_chain.py": "632e19aea75027b714cbfab4cd2ff9d92934eff136de1696027b45402d79cd30",
+    "llm/src/rag/ft11_backend.py": "233480fc58a0139b676690ce28f69d4a7dab47ee0ce807cc1775c5ce4888e2e7",
+    "llm/src/rag/compare_retrieval.py": "f74997a86dec7025296bb24ab2f2c2c7a34a0eab9d724e14795d8e2357477686",
+    "llm/src/rag/prepare_manifest.py": "7ed0fc7632010e9ee38fb182758c98c531e4a5be7f9952170a3f5a3d0f80137d",
+    "llm/src/rag/query_document.py": "24b4d612a38ea62d2db0a4adbd85fea199fc46fd66140147b88e96bf8f22dd8d",
+    "llm/src/rag/../finetuning/scripts/run_qwen3_adapter_rocm.py": "a8c9a9af3ff73ac03d9c608b06ac7b1a41c2143f43f8d26dec753ba851a877ae",
+    "llm/data/rag_index_v3_final/readiness.json": "9ef9a2fceeda4b7b7ac2b39075d59739db026f0e42b3cf041a7484f300ce3ed2",
+    "llm/artifacts/best_model.json": "4edb92d1afd48d93bc6209a82350b1dac260a60e18b0c7978e61cec37753fb1e",
+    "data/prontuarios.db": "b8069fea1cb4e1fcb39e7db0e10125145bd61505ad7ca5d52456bae6b8914d77",
+    "llm/artifacts/experiments/20261012T184438077141Z_rag09_test/decision.json": "9e54e09d0a270208d626357b57f5ecd81b32d85bfed6362abdc437d5cb752741",
+    "llm/data/rag_index_v3_final/frozen_config.json": "6127775b67bc09cf3cbfc0b06362be4449b67187abf219550dc8a7e349b7ba11"
+  },
+  "preserved_file_metadata_count": 2913,
+  "virtual_environments_preserved": true,
+  "historical_results_preserved": true,
+  "e5_comparison_code_preserved": true
+}

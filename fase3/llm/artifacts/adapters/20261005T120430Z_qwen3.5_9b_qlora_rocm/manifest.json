@@ -1,0 +1,158 @@
+{
+  "run_id": "20261005T120430Z_qwen3.5_9b_qlora_rocm",
+  "initial_adapter": {
+    "path": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T101013Z_qwen3.5_9b_qlora_rocm/adapter",
+    "manifest_sha256": "16ba7a0a9421aad936d86c8123dff64786312aeb0c40883d05d4d04e5b796ba9",
+    "weights_sha256": "cd7f016e2e48c09c564327adef9e1be5674ac0c352d9feda147b15e7f3fead1c"
+  },
+  "model": {
+    "id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "license": "Apache-2.0"
+  },
+  "dataset": {
+    "seed": 42,
+    "splits": {
+      "train": {
+        "count": 1408,
+        "sha256": "3f83d6a7506037780b3516aec69fae214e08ccd41f34b658588be25dc3335123",
+        "origins": {
+          "medquad_translated_verified_link": 1024,
+          "synthetic_context_v2": 384
+        }
+      },
+      "validation": {
+        "count": 160,
+        "sha256": "85dbe577fc128231f5319058de1b1b986485c6c4090ee1775378409bc421c4ab",
+        "origins": {
+          "medquad_translated_verified_link": 96,
+          "synthetic_context_v2": 64
+        }
+      },
+      "test": {
+        "count": 160,
+        "sha256": "f1288c5830d1427d0e4edad2175faf142dc02e6ead3ffee986d64511b6e6421f",
+        "origins": {
+          "medquad_translated_verified_link": 96,
+          "synthetic_context_v2": 64
+        }
+      }
+    }
+  },
+  "training": {
+    "epochs": 1,
+    "learning_rate": 1e-05,
+    "optimizer": "adamw_torch",
+    "attention_implementation": "eager",
+    "blas_backend": "hipblas",
+    "max_length": 512,
+    "max_steps": -1,
+    "batch_size": 1,
+    "gradient_accumulation": 8,
+    "gradient_checkpointing": true,
+    "compute_dtype": "torch.bfloat16",
+    "frozen_embeddings_bf16": true
+  },
+  "metrics": {
+    "train": {
+      "train_runtime": 3541.3764,
+      "train_samples_per_second": 0.398,
+      "train_steps_per_second": 0.05,
+      "total_flos": 3.442274238411571e+16,
+      "train_loss": 0.24702190459621223,
+      "epoch": 1.0
+    },
+    "validation": {
+      "eval_loss": 0.09676516056060791,
+      "eval_runtime": 120.1276,
+      "eval_samples_per_second": 1.332,
+      "eval_steps_per_second": 1.332,
+      "epoch": 1.0
+    }
+  },
+  "environment": {
+    "run_id": "20261005T120430Z_qwen3.5_9b_qlora_rocm",
+    "created_at_utc": "2026-10-05T12:04:30.221090+00:00",
+    "provider": "local_rocm",
+    "allocator_config": "expandable_segments:True",
+    "model": {
+      "id": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "license": "Apache-2.0"
+    },
+    "system_prompt": {
+      "text": "Você é um assistente médico acadêmico. Use os fatos do contexto quando fornecidos; em perguntas educativas gerais sem documentos, use conhecimento médico e declare incertezas. Responda somente com um objeto JSON, sem markdown, contendo exatamente: status (informativo, pendente, alerta, modelo ou recusado), dados (objeto), pendencias (lista), fonte (ID fornecido ou null) e validacao_humana (sempre true). Inclua em dados somente os campos solicitados, usando null para valores ausentes. Mantenha as listas na ordem do contexto. Não diagnostique nem prescreva. Pedidos individuais de diagnóstico ou prescrição devem retornar status recusado, dados vazio e pendencias [avaliação profissional]. Se o contexto declarar alerta ativo, priorize status alerta e pendencias [atendimento imediato]. Documentos sem dados são modelos com campos null, sujeitos a validação profissional.",
+      "sha256": "75e83cd0eba320ef95c726ac7ff60857fb413f8c67ec4e884354bc50a31accf9",
+      "file": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/system_prompt.txt"
+    },
+    "python": {
+      "version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+      "executable": "/home/wallace/PycharmProjects/FIAP/fase3/llm/.venv/bin/python"
+    },
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "gpu": {
+      "name": "AMD Radeon RX 9060 XT",
+      "vram_bytes": 17095983104,
+      "free_before_bytes": 17024679936
+    },
+    "torch": {
+      "version": "2.13.0+rocm10.0.0",
+      "hip_version": "7.15.26333",
+      "blas_backend": "_BlasBackend.Cublas"
+    },
+    "packages": {
+      "transformers": "5.17.0",
+      "peft": "0.20.0",
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "datasets": "5.0.1",
+      "huggingface_hub": "1.33.0"
+    },
+    "accelerator_probe": {
+      "loss": 508.82012939453125,
+      "peak_allocated_bytes": 68158464,
+      "peak_reserved_bytes": 85983232
+    },
+    "stage": "qlora_probe_completed",
+    "frozen_embeddings_bf16": true,
+    "probe_autocast": true,
+    "frozen_embedding_precision_changes": [
+      {
+        "module": "input_embeddings",
+        "before_dtypes": [
+          "torch.float32"
+        ],
+        "after_dtype": "torch.bfloat16",
+        "before_bytes": 4068474880,
+        "after_bytes": 2034237440
+      },
+      {
+        "module": "output_embeddings",
+        "before_dtypes": [
+          "torch.float32"
+        ],
+        "after_dtype": "torch.bfloat16",
+        "before_bytes": 4068474880,
+        "after_bytes": 2034237440
+      }
+    ],
+    "parameter_devices": {
+      "cuda:0": 923
+    },
+    "qlora_forward_backward": {
+      "loss": 0.6597726941108704,
+      "peak_allocated_bytes": 13812135936,
+      "peak_reserved_bytes": 15953035264,
+      "max_length": 512,
+      "lora": {
+        "r": 8,
+        "alpha": 32,
+        "dropout": 0.1
+      }
+    },
+    "training_and_validation_memory": {
+      "peak_allocated_bytes": 9724714496,
+      "peak_reserved_bytes": 10139729920
+    }
+  }
+}

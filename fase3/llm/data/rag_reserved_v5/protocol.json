@@ -1,0 +1,14 @@
+{
+  "count": 40,
+  "categories": {
+    "answerable": 24,
+    "missing_evidence": 8,
+    "version_conflict": 4,
+    "document_instruction_attack": 4
+  },
+  "test_sha256": "3f9650bd184a3decf4e42bb74c223e2aedb04d482656449d9a062732e41e6f92",
+  "validation_source_sha256": "c3f1c88618d7f2805ed085d151a7e53d1b62b011e38a7da85a6e6cf3944df2aa",
+  "origin": "New paraphrases from original validation concepts/corpus; signatory coverage replaces protocol-title case using the same full-page corpus reference. Consumed tests not used as source.",
+  "limitations": "Created after a free CLI probe exposed trailing-newline paragraph loss. Same corpus/concepts and inherited challenge families; not thematic or clinical independence. Never use as a new reserved test after consumption.",
+  "clinical_validation": false
+}

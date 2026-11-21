@@ -1,0 +1,48 @@
+{
+  "task": "ORG-05",
+  "date": "2026-10-10",
+  "method": "gio trash",
+  "preserved_adapters": [
+    "20261005T101013Z_qwen3.5_9b_qlora_rocm",
+    "20261005T120430Z_qwen3.5_9b_qlora_rocm"
+  ],
+  "removed": [
+    {
+      "path": "fase3/llm/artifacts/adapters/20261005T165900Z_qwen3.5_9b_qlora_rocm/adapter",
+      "bytes": 106633538
+    },
+    {
+      "path": "fase3/llm/artifacts/adapters/20261006T232654Z_qwen3.5_9b_qlora_rocm/adapter",
+      "bytes": 106633538
+    },
+    {
+      "path": "fase3/llm/artifacts/adapters/20261006T232654Z_qwen3.5_9b_qlora_rocm/checkpoints",
+      "bytes": 0
+    },
+    {
+      "path": "fase3/llm/data/splits/train.jsonl",
+      "bytes": 3666016
+    },
+    {
+      "path": "fase3/llm/data/factual_v3/data/splits/train.jsonl",
+      "bytes": 5581252
+    },
+    {
+      "path": "fase3/llm/models/base/Qwen3.5-9B/.cache",
+      "bytes": 4637
+    },
+    {
+      "path": "fase3/llm/artifacts/data_audits/20260930_dat07_resume/policy_pilot/data/splits/train.jsonl",
+      "bytes": 57052
+    },
+    {
+      "path": "fase3/llm/artifacts/data_audits/20260930_dat07_resume/document_pilot/data/splits/train.jsonl",
+      "bytes": 93346
+    },
+    {
+      "path": "fase3/llm/src/finetuning/__pycache__",
+      "bytes": 177
+    }
+  ],
+  "removed_bytes": 222669556
+}

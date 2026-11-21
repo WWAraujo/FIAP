@@ -1,0 +1,86 @@
+{
+  "collected_at": "2026-10-10",
+  "sources": [
+    {
+      "document_id": "MS-PCDT-HAS",
+      "version": "portaria_49_2025",
+      "path": "snapshots/has.pdf",
+      "sha256": "1f39016a1f1df510b5221d1809a6ff40674d9bad6797bb68b7fc14094c85b608",
+      "bytes": 1646828,
+      "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/@@download/file",
+      "extraction": {
+        "path": "extracted/has.txt",
+        "sha256": "b94cdb03bc1b799df74f5ddeee12f7bbb55e4a7548db9954b8613ab55f87b561",
+        "command": "pdftotext -layout snapshots/has.pdf extracted/has.txt",
+        "pages": 97,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "review": "Revisão documental por IA, página 1; nenhuma revisão clínica.",
+      "issued_at": "2025-07-23",
+      "published_at": "2025-07-24",
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/view"
+      ]
+    },
+    {
+      "document_id": "MS-PCDT-DM2",
+      "version": "portaria_13_2026",
+      "path": "snapshots/dm2.pdf",
+      "sha256": "f90b782997a5f90842877c6526432cd382b596ad6cb7ad95da0a2fd776dfae09",
+      "bytes": 1826727,
+      "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/@@download/file",
+      "extraction": {
+        "path": "extracted/dm2.txt",
+        "sha256": "d2a2a2d12693a589bf50ec8c9587eb7ad5612e81e8702c89a28c6e18ad32c8af",
+        "command": "pdftotext -layout snapshots/dm2.pdf extracted/dm2.txt",
+        "pages": 80,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "review": "Revisão documental por IA, página 1; nenhuma revisão clínica.",
+      "issued_at": "2026-02-21",
+      "published_at": "2026-02-24",
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/view"
+      ]
+    },
+    {
+      "document_id": "MS-PCDT-DISLIPIDEMIA",
+      "version": "portaria_8_2019_anexo_2022",
+      "path": "snapshots/dislipidemia.pdf",
+      "sha256": "2c91c780af80b8e0e4f95bbe74542d0f072fb6440e87d382f53df92e9e7ac39c",
+      "bytes": 696754,
+      "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/@@download/file",
+      "extraction": {
+        "path": "extracted/dislipidemia.txt",
+        "sha256": "9cf23254a4de2c83d71d73fbc0a8d819cc9d539fb0e54a9c9b1e49e479476043",
+        "command": "pdftotext -layout snapshots/dislipidemia.pdf extracted/dislipidemia.txt",
+        "pages": 31,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "review": "Revisão documental por IA, página 1; nenhuma revisão clínica.",
+      "issued_at": "2019-07-30",
+      "published_at": "2019-08-07",
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/view"
+      ]
+    }
+  ],
+  "attribution": "Ministério da Saúde / Conitec, Brasil. Originais sem alterações; trechos de atos oficiais identificados por página.",
+  "validity_checked_at": "2026-10-10",
+  "catalog_reference": "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt"
+}

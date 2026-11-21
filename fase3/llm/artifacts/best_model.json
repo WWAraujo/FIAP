@@ -1,0 +1,88 @@
+{
+  "experiment": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2",
+  "adapter": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/adapters/20261005T120430Z_qwen3.5_9b_qlora_rocm/adapter",
+  "adapter_weights_sha256": "6d050564ef3979d75066aabb7eec4eeedc78488fe52491d5ee9012db1478946b",
+  "base": "/home/wallace/PycharmProjects/FIAP/fase3/llm/models/base/Qwen3.5-9B",
+  "model_id": "Qwen/Qwen3.5-9B",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "dataset": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2",
+  "system_prompt": "/home/wallace/PycharmProjects/FIAP/fase3/llm/data/factual_v2/system_prompt.txt",
+  "eligible": true,
+  "selected_by_validation_before_test": true,
+  "confirmed_on_reserved_test": true,
+  "scope": "Comparação local de perguntas educativas gerais e tarefas documentais/contextuais; não comprova cobertura universal",
+  "validation_factual": {
+    "adapter_validation": {
+      "adequado": 23,
+      "parcial": 8,
+      "inadequado": 17
+    },
+    "base_validation": {
+      "inadequado": 25,
+      "adequado": 21,
+      "parcial": 2
+    },
+    "parent_validation": {
+      "inadequado": 27,
+      "parcial": 6,
+      "adequado": 15
+    }
+  },
+  "test_factual": {
+    "base_test": {
+      "inadequado": 21,
+      "parcial": 7,
+      "adequado": 20
+    },
+    "adapter_test": {
+      "adequado": 22,
+      "parcial": 15,
+      "inadequado": 11
+    }
+  },
+  "test_document_context_exact": {
+    "base": 29,
+    "adapter": 100,
+    "count": 112
+  },
+  "test_alert_status": {
+    "base": 6,
+    "adapter": 8,
+    "count": 8
+  },
+  "test_refusal_status": {
+    "base": 8,
+    "adapter": 8,
+    "count": 8
+  },
+  "challenge_stage": "completed",
+  "clinical_validation": false,
+  "statistical_noninferiority_proven": false,
+  "review": "/home/wallace/PycharmProjects/FIAP/fase3/llm/artifacts/experiments/20261005T120254Z_factual_v2/review.md",
+  "limitations": [
+    "Erros factuais permanecem; revisão documental por IA, sem avaliação clínica.",
+    "Corpus concentrado em doenças raras/genética; curadoria semântica amostral.",
+    "FAQs falham no contrato de chaves em formulação não vista.",
+    "Separação de grupos reduz vazamento entre splits, sem garantir ausência de memorização ou conhecimento prévio pelo base.",
+    "Prova adicional: 5/12 factuais adequados contra 6/12 da base, apesar de reduzir inadequados de 5 para 3."
+  ],
+  "challenge_factual": {
+    "base_challenge": {
+      "adequado": 6,
+      "inadequado": 5,
+      "parcial": 1
+    },
+    "adapter_challenge": {
+      "adequado": 5,
+      "parcial": 4,
+      "inadequado": 3
+    }
+  },
+  "challenge_document_context_exact": {
+    "base": 9,
+    "adapter": 24,
+    "count": 28
+  },
+  "challenge_adequate_regression_vs_base": true,
+  "completed_at": "2026-10-05T15:12:27.265431+00:00"
+}

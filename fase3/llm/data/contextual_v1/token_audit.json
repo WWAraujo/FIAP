@@ -1,0 +1,20 @@
+{
+  "train": {
+    "count": 960,
+    "max_tokens": 360,
+    "over_384": 0,
+    "eos_retained": 960
+  },
+  "validation": {
+    "count": 120,
+    "max_tokens": 352,
+    "over_384": 0,
+    "eos_retained": 120
+  },
+  "test": {
+    "count": 120,
+    "max_tokens": 350,
+    "over_384": 0,
+    "eos_retained": 120
+  }
+}

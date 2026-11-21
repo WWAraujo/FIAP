@@ -1,0 +1,445 @@
+{
+  "version": "rag_pilot_v2",
+  "scope": "Piloto documental em português: procedimentos sintéticos e somente portarias de identificação/aprovação dos três PCDTs. Anexos clínicos, tabelas e recomendações terapêuticas não admitidos.",
+  "documents": [
+    {
+      "id": "SIM-RAG-PENDENCIAS",
+      "title": "Registro de pendências de exames",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "superseded_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "registro",
+          "title": "Registro histórico",
+          "page": null,
+          "text": "Na versão 1.0 desta simulação, pendências de exames eram registradas na fila PENDENCIAS-LEGADO. Esse fluxo foi substituído pela versão 2.0 e não deve ser apresentado como vigente."
+        },
+        {
+          "id": "campos",
+          "title": "Campos históricos",
+          "page": null,
+          "text": "O registro histórico continha identificador do exame e estado. Não se deve completar dados de um exame com valores de outro registro."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-PENDENCIAS",
+      "title": "Registro de pendências de exames",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "2.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": {
+        "id": "SIM-RAG-PENDENCIAS",
+        "version": "1.0"
+      },
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "registro",
+          "title": "Fila de registro",
+          "page": null,
+          "text": "Na versão 2.0 desta simulação, a fila de registro é PENDENCIAS-DOCUMENTAIS. Copie apenas exames explicitamente marcados como pendentes, na ordem fornecida. Não inclua exames concluídos nem crie solicitações clínicas."
+        },
+        {
+          "id": "campos",
+          "title": "Campos obrigatórios",
+          "page": null,
+          "text": "Cada pendência documental deve conter identificador do exame, estado informado, data do registro quando disponível e responsável pela conferência. Uma ausência deve permanecer indicada como não informada; não presuma que ausência de resultado significa exame pendente."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-LAUDO",
+      "title": "Modelo documental de laudo",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "campos",
+          "title": "Campos do modelo",
+          "page": null,
+          "text": "O modelo vazio de laudo desta simulação contém exame, achado e conclusao. Todos os campos começam com valor null. A organização do modelo não autoriza preencher um diagnóstico, inferir achados ou apresentar o rascunho como laudo assinado."
+        },
+        {
+          "id": "revisao",
+          "title": "Conferência documental",
+          "page": null,
+          "text": "A conferência do rascunho deve registrar versão do modelo, identificador da fonte e necessidade de validação profissional. O nome da pessoa responsável e a aprovação efetiva só podem ser registrados quando fornecidos; necessidade de revisão não equivale a aprovação."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-UNIDADES",
+      "title": "Transcrição documental de resultados",
+      "type": "procedure_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "transcricao",
+          "title": "Preservação do registro",
+          "page": null,
+          "text": "Transcreva o nome do exame, o resultado e a unidade exatamente como fornecidos. Preserve vírgulas decimais, negações e valores ausentes. Por exemplo, um valor sintético 4,7 mmol/L deve permanecer 4,7 mmol/L, sem conversão automática nem interpretação clínica."
+        },
+        {
+          "id": "conferencia",
+          "title": "Sequência de conferência",
+          "page": null,
+          "text": "A sequência documental é: identificar o registro de origem; copiar exame, resultado e unidade; indicar campos ausentes; registrar a fonte; encaminhar o rascunho à conferência profissional. Essa sequência não define diagnóstico, faixa de referência ou tratamento."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-FONTES",
+      "title": "FAQ de fontes e revisão",
+      "type": "faq_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "fonte",
+          "title": "Identificação da fonte",
+          "page": null,
+          "text": "Uma citação documental deve informar identificador do documento, versão e seção efetivamente utilizados. Um link localizado durante busca não prova que seu conteúdo sustenta a resposta. Se a fonte não estiver disponível ou o trecho não responder à pergunta, indique informação insuficiente."
+        },
+        {
+          "id": "versao",
+          "title": "Divergência de versões",
+          "page": null,
+          "text": "Quando uma edição estiver explicitamente substituída, a edição vigente no piloto deve orientar a consulta documental. Se duas edições divergirem e a vigência não puder ser determinada, registre o conflito e solicite conferência; não escolha uma edição apenas por aparecer primeiro na busca."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-RECEITA",
+      "title": "Modelo vazio de receituário",
+      "type": "protocol_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "campos",
+          "title": "Campos vazios",
+          "page": null,
+          "text": "O formulário vazio de receituário contém paciente, data, medicamento, dose e profissional. Todos os campos devem permanecer null nesta simulação documental. A existência do formulário não autoriza escolher medicamento, dose ou diagnóstico."
+        },
+        {
+          "id": "uso",
+          "title": "Uso do modelo",
+          "page": null,
+          "text": "Identifique o resultado como modelo documental sujeito a validação profissional. Não trate um formulário sem preenchimento como prescrição emitida. Não reutilize dados de outro paciente ou de outra execução para completar campos ausentes."
+        }
+      ]
+    },
+    {
+      "id": "SIM-RAG-ESTOQUE",
+      "title": "Conferência de estoque de formulários",
+      "type": "procedure_simulation",
+      "origin": "FIAP — instituição fictícia do piloto RAG",
+      "url": null,
+      "version": "1.0",
+      "published_at": "2026-10-10",
+      "collected_at": "2026-10-10",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Conteúdo sintético próprio do projeto; sem texto externo incorporado",
+        "url": null
+      },
+      "validity": "current_in_pilot",
+      "validity_scope": "Exclusivamente a simulação acadêmica; não é protocolo hospitalar real",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "supersedes": null,
+      "pending_checks": [],
+      "sections": [
+        {
+          "id": "contagem",
+          "title": "Contagem de formulários",
+          "page": null,
+          "text": "O controle administrativo de estoque registra código do formulário, quantidade disponível e data da contagem. Quantidade de formulários não é resultado de exame, número de consultas ou informação de prontuário."
+        },
+        {
+          "id": "reposicao",
+          "title": "Registro de reposição",
+          "page": null,
+          "text": "A reposição administrativa de formulários registra item, quantidade recebida e responsável pelo recebimento. Esse registro não fornece informações para diagnóstico, interpretação de exames ou decisão terapêutica."
+        }
+      ]
+    },
+    {
+      "id": "MS-PCDT-HAS",
+      "title": "PCDT Hipertensão Arterial Sistêmica",
+      "type": "external_official_act",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/view",
+      "version": "portaria_49_2025",
+      "published_at": "2025-07-24",
+      "catalog_page_updated_at": "2025-07-24",
+      "collected_at": "2026-10-10",
+      "collection_scope": "PDF original preservado; somente página PDF 1 admitida",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Texto da portaria: ato oficial — Lei 9.610/1998, art. 8º, IV",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "scope": "Somente o texto da portaria na primeira página; não estende esta decisão às ilustrações, tabelas ou anexos clínicos.",
+        "portal_notice": "CC BY-ND 3.0 no portal; atribuição ao Ministério da Saúde preservada."
+      },
+      "validity": "current_in_pilot",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "pending_checks": [],
+      "catalog_note": "Conferido cabeçalho, decisão e artigos contra a página 1 disponibilizada na fonte oficial; sem resumo, tradução ou normalização.",
+      "sections": [
+        {
+          "id": "portaria",
+          "title": "Identificação e aprovação/atualização — portaria",
+          "page": 1,
+          "text": "                               MINISTÉRIO DA SAÚDE\n      SECRETARIA DE CIÊNCIA, TECNOLOGIA, INOVAÇÃO E DO COMPLEXO ECONÔMICO-\n                           INDUSTRIAL DA SAÚDE\n\n\n\n                   PORTARIA SECTICS/MS Nº 49, DE 23 DE JULHO DE 2025\n\n\n                                                       Torna pública a decisão de aprovar, no âmbito do\n                                                     Sistema Único de Saúde - SUS, o Protocolo Clínico\n                                                        e Diretrizes Terapêuticas da Hipertensão Arterial\n                                                                                              Sistêmica.\n\n\n         A SECRETÁRIA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO E DO COMPLEXO\nECONÔMICO-INDUSTRIAL DA SAÚDE DO MINISTÉRIO DA SAÚDE, no uso das atribuições que\nlhe conferem a alínea \"c\" do inciso I do art. 32 do Decreto nº 11.798, de 28 de novembro de 2023, e tendo\nem vista o disposto nos arts. 20, 22 e 23 do Decreto nº 7.646, de 21 de dezembro de 2011, resolve:\n         Art. 1º Fica aprovado, no âmbito do Sistema Único de Saúde - SUS, o Protocolo Clínico e\nDiretrizes Terapêuticas da Hipertensão Arterial Sistêmica.\n         Art. 2º O relatório de recomendação da Comissão Nacional de Incorporação de Tecnologias no\nSistema Único de Saúde - Conitec estará disponível no endereço\neletrônico: https://www.gov.br/conitec/pt-br.\n         Art. 3º Esta Portaria entra em vigor na data de sua publicação.\n\n                                            FERNANDA DE NEGRI\n\n\n\n\n                                                                                                       1\n"
+        }
+      ],
+      "validity_scope": "Edição listada pelo Ministério/Conitec em 10/10/2026, admitida apenas para consulta documental; reavaliar antes de atualizar o corpus.",
+      "snapshot": {
+        "path": "snapshots/has.pdf",
+        "sha256": "1f39016a1f1df510b5221d1809a6ff40674d9bad6797bb68b7fc14094c85b608",
+        "bytes": 1646828,
+        "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/@@download/file"
+      },
+      "extraction": {
+        "path": "extracted/has.txt",
+        "sha256": "b94cdb03bc1b799df74f5ddeee12f7bbb55e4a7548db9954b8613ab55f87b561",
+        "command": "pdftotext -layout snapshots/has.pdf extracted/has.txt",
+        "pages": 97,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/h/hipertensao-arterial-sistemica.pdf/view"
+      ],
+      "issued_at": "2025-07-23"
+    },
+    {
+      "id": "MS-PCDT-DM2",
+      "title": "PCDT Diabete Melito Tipo 2",
+      "type": "external_official_act",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/view",
+      "version": "portaria_13_2026",
+      "published_at": "2026-02-24",
+      "catalog_page_updated_at": "2026-02-24",
+      "collected_at": "2026-10-10",
+      "collection_scope": "PDF original preservado; somente página PDF 1 admitida",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Texto da portaria: ato oficial — Lei 9.610/1998, art. 8º, IV",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "scope": "Somente o texto da portaria na primeira página; não estende esta decisão às ilustrações, tabelas ou anexos clínicos.",
+        "portal_notice": "CC BY-ND 3.0 no portal; atribuição ao Ministério da Saúde preservada."
+      },
+      "validity": "current_in_pilot",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "pending_checks": [],
+      "catalog_note": "Conferido cabeçalho, decisão e artigos contra a página 1 disponibilizada na fonte oficial; sem resumo, tradução ou normalização.",
+      "sections": [
+        {
+          "id": "portaria",
+          "title": "Identificação e aprovação/atualização — portaria",
+          "page": 1,
+          "text": "                               MINISTÉRIO DA SAÚDE\n                SECRETARIA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO EM SAÚDE\n\n\n                      PORTARIA SCTIE/MS Nº 13, DE 21 DE FEVEREIRO DE 2026\n\n\n                                                         Torna pública a decisão de atualizar, no âmbito\n                                                         do Sistema Único de Saúde - SUS, o Protocolo\n                                                         Clínico e Diretrizes Terapêuticas do Diabete\n                                                         Melito Tipo 2.\n\n\n         A SECRETÁRIA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO EM SAÚDE DO MINISTÉRIO\nDA SAÚDE, no uso das atribuições que lhe confere o art. 68 do Decreto nº 11.798, de 28 de novembro de\n2023, e do disposto nos arts. 20, 22 e 23 do Decreto nº 7.646, de 21 de dezembro de 2011, resolve:\n         Art. 1º Fica atualizado, no âmbito do Sistema Único de Saúde - SUS, o Protocolo Clínico e\nDiretrizes Terapêuticas do Diabete Melito Tipo 2.\n         Art. 2º O relatório de recomendação da Comissão Nacional de Incorporação de Tecnologias no\nSistema Único de Saúde - Conitec estará disponível no endereço eletrônico: https://www.gov.br/conitec/pt-\nbr.\n         Art. 3º Fica revogada a Portaria SECTICS/MS nº 7, de 28 de fevereiro de 2024, publicada no\nDiário Oficial da União nº 42, de 1º de março de 2024, Seção 1, pág. 85.\n         Art. 4º Esta Portaria entra em vigor na data de sua publicação.\n\n                                       FERNANDA DE NEGRI\n\n\n\n\n                                                                                                       1\n"
+        }
+      ],
+      "related_revision_url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-de-recomendacao-1074-pcdt-diabete-melito-tipo-2",
+      "validity_scope": "Edição listada pelo Ministério/Conitec em 10/10/2026, admitida apenas para consulta documental; reavaliar antes de atualizar o corpus.",
+      "snapshot": {
+        "path": "snapshots/dm2.pdf",
+        "sha256": "f90b782997a5f90842877c6526432cd382b596ad6cb7ad95da0a2fd776dfae09",
+        "bytes": 1826727,
+        "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/@@download/file"
+      },
+      "extraction": {
+        "path": "extracted/dm2.txt",
+        "sha256": "d2a2a2d12693a589bf50ec8c9587eb7ad5612e81e8702c89a28c6e18ad32c8af",
+        "command": "pdftotext -layout snapshots/dm2.pdf extracted/dm2.txt",
+        "pages": 80,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/diabete-melito-tipo-2.pdf/view"
+      ],
+      "supersedes": {
+        "id": "MS-PCDT-DM2",
+        "version": "portaria_7_2024",
+        "evidence": "Art. 3º da portaria 13/2026 revoga expressamente a portaria 7/2024."
+      },
+      "issued_at": "2026-02-21"
+    },
+    {
+      "id": "MS-PCDT-DISLIPIDEMIA",
+      "title": "PCDT Dislipidemia: prevenção de eventos cardiovasculares e pancreatite",
+      "type": "external_official_act",
+      "origin": "Ministério da Saúde — diretriz externa, não protocolo interno",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/view",
+      "version": "portaria_8_2019_anexo_2022",
+      "published_at": "2019-08-07",
+      "catalog_page_updated_at": "2025-01-20",
+      "collected_at": "2026-10-10",
+      "collection_scope": "PDF original preservado; somente página PDF 1 admitida",
+      "language": "pt-BR",
+      "license": {
+        "status": "checked",
+        "name": "Texto da portaria: ato oficial — Lei 9.610/1998, art. 8º, IV",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/l9610.htm",
+        "scope": "Somente o texto da portaria na primeira página; não estende esta decisão às ilustrações, tabelas ou anexos clínicos.",
+        "portal_notice": "CC BY-ND 3.0 no portal; atribuição ao Ministério da Saúde preservada."
+      },
+      "validity": "current_in_pilot",
+      "admission_status": "available",
+      "review_status": "documentary_checked",
+      "clinical_review": null,
+      "pending_checks": [],
+      "catalog_note": "Conferido cabeçalho, decisão e artigos contra a página 1 disponibilizada na fonte oficial; sem resumo, tradução ou normalização. Anexo alterado em 01/04/2022 segundo página do MS; consulta pública 94/2026 não tomada como aprovação/substituição.",
+      "sections": [
+        {
+          "id": "portaria",
+          "title": "Identificação e aprovação/atualização — portaria",
+          "page": 1,
+          "text": "                                                  MINISTÉRIO DA SAÚDE\n       SECRETARIA DE ATENÇÃO ESPECIALIZADA À SAÚDE SECRETARIA DE CIÊNCIA, TECNOLOGIA E\n                                                 INSUMOS ESTRATÉGICOS\n\n\n                                 PORTARIA CONJUNTA Nº 8, DE 30 DE JULHO DE 2019.\n\n\n                                                             Aprova o Protocolo Clínico e Diretrizes Terapêuticas da\n                                                             Dislipidemia: prevenção de eventos cardiovasculares e pancreatite.\n\n     O SECRETÁRIO DE ATENÇÃO ESPECIALIZADA À SAÚDE e o SECRETÁRIO DE CIÊNCIA, TECNOLOGIA E\nINSUMOS ESTRATÉGICOS, no uso de suas atribuições,\n\n      Considerando a necessidade de se atualizarem parâmetros sobre a dislipidemia no Brasil e diretrizes nacionais para\ndiagnóstico, tratamento e acompanhamento dos indivíduos com esta condição;\n      Considerando que os protocolos clínicos e diretrizes terapêuticas são resultado de consenso técnico-científico e são\nformulados dentro de rigorosos parâmetros de qualidade e precisão de indicação;\n      Considerando o Registro de Deliberação No 440/2019 e o Relatório de Recomendação no 451 – Maio de 2019 da\nComissão Nacional de Incorporação de Tecnologias no SUS (CONITEC), a atualização da busca e avaliação da literatura; e\n      Considerando a avaliação técnica do Departamento de Gestão e Incorporação de Tecnologias em Saúde\n(DGITS/SCTIE/MS), do Departamento de Assistência Farmacêutica e Insumos Estratégicos (DAF/SCTIE/MS) e do\nDepartamento de Atenção Especializada e Temática (DAET/SAES/MS), resolvem:\n\n        Art. 1º Fica aprovado o Protocolo Clínico e Diretrizes Terapêuticas – Dislipidemia: prevenção de eventos\ncardiovasculares e pancreatite.\nParágrafo único. O Protocolo objeto deste artigo, que contém o conceito geral da dislipidemia, critérios de diagnóstico, critérios\nde inclusão e de exclusão, tratamento e mecanismos de regulação, controle e avaliação, disponível no\nsítio http://portalms.saude.gov.br/protocolos-e-diretrizes, é de caráter nacional e deve ser utilizado pelas Secretarias de Saúde\ndos Estados, do Distrito Federal e dos Municípios na regulação do acesso assistencial, autorização, registro e ressarcimento dos\nprocedimentos correspondentes.\n\n       Art. 2º É obrigatória a cientificação do paciente, ou de seu responsável legal, dos potenciais riscos e efeitos colaterais\nrelacionados ao uso de procedimento ou medicamento preconizados para o controle da dislipidemia.\n\n       Art. 3º Os gestores estaduais, distrital e municipais do SUS, conforme a sua competência e pactuações, deverão estruturar\na rede assistencial, definir os serviços referenciais e estabelecer os fluxos para o atendimento dos indivíduos com essa condição\nem todas as etapas descritas na Portaria, disponível no sítio citado no parágrafo único do art. 1º.\n\n       Art. 4º Esta Portaria entra em vigor na data de sua publicação.\n\n       Art. 5º Fica revogada a Portaria nº 200/SAS/MS, de 25 de fevereiro de 2013, publicada no Diário Oficial da União nº 39,\nde 27 de fevereiro de 2013, seção 1, páginas 116-120.\n\n                                        FRANCISCO DE ASSIS FIGUEIREDO\n\n\n                                                  DENIZAR VIANNA\n"
+        }
+      ],
+      "validity_scope": "Edição listada pelo Ministério/Conitec em 10/10/2026, admitida apenas para consulta documental; reavaliar antes de atualizar o corpus.",
+      "snapshot": {
+        "path": "snapshots/dislipidemia.pdf",
+        "sha256": "2c91c780af80b8e0e4f95bbe74542d0f072fb6440e87d382f53df92e9e7ac39c",
+        "bytes": 696754,
+        "download_url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/@@download/file"
+      },
+      "extraction": {
+        "path": "extracted/dislipidemia.txt",
+        "sha256": "9cf23254a4de2c83d71d73fbc0a8d819cc9d539fb0e54a9c9b1e49e479476043",
+        "command": "pdftotext -layout snapshots/dislipidemia.pdf extracted/dislipidemia.txt",
+        "pages": 31,
+        "admitted_pages": [
+          1
+        ],
+        "excluded_pages_reason": "Anexo clínico e suas tabelas/unidades/negações não revisados; não usar como evidência.",
+        "tool_version": "pdftotext 26.01.0 (Poppler)"
+      },
+      "validity_evidence_urls": [
+        "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt",
+        "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia/view"
+      ],
+      "issued_at": "2019-07-30"
+    }
+  ]
+}
